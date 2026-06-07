@@ -1,0 +1,1446 @@
+{
+  "products": [
+    {
+      "id": 2286,
+      "name": "Эхинацея Mellow Yellows",
+      "category": "Цветы многолетние",
+      "categoryKey": "perennials",
+      "price": 300,
+      "stock": 6,
+      "status": "ok",
+      "description": "Эхинацея пурпурная Mellow Yellow (Echinacea purpurea Mellow Yellow) — многолетнее травянистое растение с крупными жёлтыми цветками. Отличается неприхотливостью, длительным периодом цветения и декоративными качествами Характеристики Высота. 60–80 см. Диаметр ц...",
+      "care": {
+        "height": "60–80 см",
+        "bloom": "С июля по сентябрь",
+        "light": "Солнечное",
+        "hardiness": "Зона 4 (до −29 °C или −34 °C в зависимости от источника)"
+      },
+      "image": "/assets/products/001-ehinaceya-mellow-yellows.webp",
+      "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/%d1%8d%d1%85%d0%b8%d0%bd%d0%b0%d1%86%d0%b5%d1%8f-mellow-yellows/"
+    },
+    {
+      "id": 2284,
+      "name": "Эхинацея пурпурная «Бравадо»",
+      "category": "Цветы многолетние",
+      "categoryKey": "perennials",
+      "price": 300,
+      "stock": 0,
+      "status": "out",
+      "description": "Эхинацея пурпурная «Бравадо» (Echinacea purpurea «Bravado») — многолетнее травянистое растение с крупными тёмно-розовыми цветками. Отличается высокой декоративностью, устойчивостью к болезням и засухе, а также длительным периодом цветения. Характеристики Высо...",
+      "care": {
+        "height": "До 100 см",
+        "bloom": "С июля по сентябрь",
+        "light": "Солнечные участки или лёгкая полутень",
+        "hardiness": "Выдерживает температуры до −35 °C"
+      },
+      "image": "/assets/products/002-ehinaceya-purpurnaya-bravado.webp",
+      "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/%d1%8d%d1%85%d0%b8%d0%bd%d0%b0%d1%86%d0%b5%d1%8f-%d0%bf%d1%83%d1%80%d0%bf%d1%83%d1%80%d0%bd%d0%b0%d1%8f-%d0%b1%d1%80%d0%b0%d0%b2%d0%b0%d0%b4%d0%be/"
+    },
+    {
+      "id": 2282,
+      "name": "Эхинацея Пау-Вау White",
+      "category": "Цветы многолетние",
+      "categoryKey": "perennials",
+      "price": 300,
+      "stock": 6,
+      "status": "ok",
+      "description": "Эхинацея пурпурная Пау Вау Уайт (Echinacea purpurea Pow Wow White) — многолетнее травянистое растение с крупными белыми цветками. Подходит для декоративного озеленения, создания миксбордеров, групповых посадок и срезки. Характеристики Высота. 40–70 см. Диамет...",
+      "care": {
+        "height": "40–70 см",
+        "bloom": "С июня по сентябрь около 60 дней",
+        "light": "Солнце, полутень"
+      },
+      "image": "/assets/products/003-ehinaceya-pau-vau-white.webp",
+      "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/%d1%8d%d1%85%d0%b8%d0%bd%d0%b0%d1%86%d0%b5%d1%8f-%d0%bf%d0%b0%d1%83-%d0%b2%d0%b0%d1%83-white/"
+    },
+    {
+      "id": 2272,
+      "name": "Сальвия (Шалфей) дубравная «Блю Куин»",
+      "category": "Цветы многолетние",
+      "categoryKey": "perennials",
+      "price": 300,
+      "stock": 8,
+      "status": "ok",
+      "description": "Шалфей дубравный Blue Queen — один из самых популярных сортов для солнечных цветников, бордюров и природных композиций. Отличается длительным цветением, неприхотливостью и выразительным цветом. Особенности сорта: ✔ насыщенные сине-фиолетовые соцветия ✔ компак...",
+      "care": {
+        "height": "30–50 см",
+        "bloom": "м, неприхотливостью и выразительным цветом",
+        "light": "солнце",
+        "hardiness": "высокая"
+      },
+      "image": "/assets/products/004-salviya-shalfey-dubravnaya-blyu-kuin.webp",
+      "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/%d1%81%d0%b0%d0%bb%d1%8c%d0%b2%d0%b8%d1%8f-%d1%88%d0%b0%d0%bb%d1%84%d0%b5%d0%b9-%d0%b4%d1%83%d0%b1%d1%80%d0%b0%d0%b2%d0%bd%d0%b0%d1%8f-%d0%b1%d0%bb%d1%8e-%d0%ba%d1%83%d0%b8%d0%bd/"
+    },
+    {
+      "id": 2253,
+      "name": "Шалфей дубравный New Dimension Blue",
+      "category": "Цветы многолетние",
+      "categoryKey": "perennials",
+      "price": 300,
+      "stock": 8,
+      "status": "ok",
+      "description": "Ширина: 30-40 см Период цветения: июнь-июль, после обрезки зацветает повторно август-сентябрь Цветение: повторное после обрезки Соцветие: сине-фиолетовое Лист: узкий, зелёный Форма куста: компактная, округлая Полив: умеренный Почва: рыхлая, достаточно сухая,...",
+      "care": {
+        "bloom": "июнь-июль, после обрезки зацветает повторно август-сентябрь",
+        "hardiness": "4 зона (-28/-34⁰C)"
+      },
+      "image": "/assets/products/005-shalfey-dubravnyy-new-dimension-blue.webp",
+      "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/%d1%88%d0%b0%d0%bb%d1%84%d0%b5%d0%b9-%d0%b4%d1%83%d0%b1%d1%80%d0%b0%d0%b2%d0%bd%d1%8b%d0%b9-new-dimension-blue/"
+    },
+    {
+      "id": 2249,
+      "name": "Шалфей дубравный New Dimension Rose",
+      "category": "Цветы многолетние",
+      "categoryKey": "perennials",
+      "price": 300,
+      "stock": 8,
+      "status": "ok",
+      "description": "Ширина: 30-40 см Период цветения: июнь-июль, после обрезки зацветает повторно август-сентябрь Цветение: повторное после обрезки Соцветие: розовое Лист: узкий, зелёный Форма куста: компактная, округлая Полив: умеренный Почва: рыхлая, достаточно сухая, не любит...",
+      "care": {
+        "bloom": "июнь-июль, после обрезки зацветает повторно август-сентябрь",
+        "hardiness": "4 зона (-28/-34⁰C)"
+      },
+      "image": "/assets/products/006-shalfey-dubravnyy-new-dimension-rose.webp",
+      "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/%d1%88%d0%b0%d0%bb%d1%84%d0%b5%d0%b9-new-dimension-rose/"
+    },
+    {
+      "id": 2236,
+      "name": "Армерия «Morning Star White»",
+      "category": "Цветы многолетние",
+      "categoryKey": "perennials",
+      "price": 300,
+      "stock": 8,
+      "status": "ok",
+      "description": "Ширина: 30 см Период цветения: май-июнь, после обрезки зацветает повторно Цветение: повторное Цветок: шаровидный, белый Лист: зелёный, узкий, линейной формы, собраны в прикорневую розетку, вечнозеленый Форма куста: компактная, подушковидная Полив: умеренный П...",
+      "care": {
+        "bloom": "май-июнь, после обрезки зацветает повторно",
+        "hardiness": "4 зона (-28/-34⁰C)"
+      },
+      "image": "/assets/products/007-armeriya-morning-star-white.webp",
+      "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/%d0%b0%d1%80%d0%bc%d0%b5%d1%80%d0%b8%d1%8f-morning-star-white/"
+    },
+    {
+      "id": 2234,
+      "name": "Армерия «Morning Star Deep Rose»",
+      "category": "Цветы многолетние",
+      "categoryKey": "perennials",
+      "price": 300,
+      "stock": 8,
+      "status": "ok",
+      "description": "Ширина: 30 см Период цветения: май-июнь, после обрезки зацветает повторно Цветение: повторное после обрезки Цветок: малиновый Соцветие: плотные округлые головки на длинных жестких стеблях Лист: зелёный, узкий, линейной формы, собраны в прикорневую розетку, ве...",
+      "care": {
+        "bloom": "май-июнь, после обрезки зацветает повторно",
+        "hardiness": "4 зона (-28/-34⁰C)"
+      },
+      "image": "/assets/products/008-armeriya-morning-star-deep-rose.webp",
+      "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/%d0%b0%d1%80%d0%bc%d0%b5%d1%80%d0%b8%d1%8f-morning-star-deep-rose/"
+    },
+    {
+      "id": 2223,
+      "name": "Хризантема мультифлора Bransound Lemon",
+      "category": "Цветы однолетние",
+      "categoryKey": "annuals",
+      "price": 450,
+      "stock": 4,
+      "status": "ok",
+      "description": "Условия выращивания Освещение: полное солнце, минимум 5-6 часов прямого света в день Температура днём: 18-24 °C — оптимум для роста и закладки бутонов Температура ночью: 14-18 °C, прохладные ночи усиливают окраску цветка Минимум: кратковременно переносит +2…+...",
+      "care": {},
+      "image": "/assets/products/009-hrizantema-multiflora-bransound-lemon.webp",
+      "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/%d1%85%d1%80%d0%b8%d0%b7%d0%b0%d0%bd%d1%82%d0%b5%d0%bc%d0%b0-%d0%bc%d1%83%d0%bb%d1%8c%d1%82%d0%b8%d1%84%d0%bb%d0%be%d1%80%d0%b0-bransound-lemon/"
+    },
+    {
+      "id": 2200,
+      "name": "Жимолость",
+      "category": "Без категории",
+      "categoryKey": "other",
+      "price": 150,
+      "stock": 8,
+      "status": "ok",
+      "description": "",
+      "care": {},
+      "image": "/assets/products/010-zhimolost.webp",
+      "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/%d0%b6%d0%b8%d0%bc%d0%be%d0%bb%d0%be%d1%81%d1%82%d1%8c/"
+    },
+    {
+      "id": 2189,
+      "name": "Хризантема мультифлора Sunbeam Lucky Purple",
+      "category": "Цветы однолетние",
+      "categoryKey": "annuals",
+      "price": 450,
+      "stock": 4,
+      "status": "ok",
+      "description": "Условия выращивания Освещение: полное солнце — не менее 6 часов прямого солнечного света в день; при недостатке света цветение слабеет, куст вытягивается Температура днём: комфортный диапазон для активного роста — умеренное тепло без экстремальной жары Темпер...",
+      "care": {
+        "bloom": "слабеет, куст вытягивается"
+      },
+      "image": "/assets/products/011-hrizantema-multiflora-sunbeam-lucky-purple.webp",
+      "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/%d1%85%d1%80%d0%b8%d0%b7%d0%b0%d0%bd%d1%82%d0%b5%d0%bc%d0%b0-%d0%bc%d1%83%d0%bb%d1%8c%d1%82%d0%b8%d1%84%d0%bb%d0%be%d1%80%d0%b0-sunbeam-lucky-purple/"
+    },
+    {
+      "id": 2184,
+      "name": "Хризантема мультифлора Ditto White",
+      "category": "Цветы однолетние",
+      "categoryKey": "annuals",
+      "price": 450,
+      "stock": 0,
+      "status": "out",
+      "description": "Условия выращивания Освещение: полное солнце или лёгкая полутень; не менее 6 часов прямого света Температура днём: 20–24 °C в период активного роста Температура ночью: 16–18 °C; прохладные ночи усиливают компактность куста Минимально допустимая: около 0 °C; ч...",
+      "care": {},
+      "image": "/assets/products/012-hrizantema-multiflora-ditto-white.webp",
+      "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/%d1%85%d1%80%d0%b8%d0%b7%d0%b0%d0%bd%d1%82%d0%b5%d0%bc%d0%b0-%d0%bc%d1%83%d0%bb%d1%8c%d1%82%d0%b8%d1%84%d0%bb%d0%be%d1%80%d0%b0-ditto-white/"
+    },
+    {
+      "id": 2167,
+      "name": "Хризантема мультифлора Branbeach Orange",
+      "category": "Цветы однолетние",
+      "categoryKey": "annuals",
+      "price": 450,
+      "stock": 2,
+      "status": "low",
+      "description": "Хризантема мультифлора Branbeach Orange — эффектный сорт с яркими оранжевыми соцветиями Мультифлора формирует компактные шаровидные кусты, усыпанные многочисленными соцветиями насыщенного оранжевого оттенка. Относится к семейству Asteraceae. Этот сорт отличае...",
+      "care": {
+        "bloom": "м и"
+      },
+      "image": "/assets/products/013-hrizantema-multiflora-branbeach-orange.webp",
+      "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/%d1%85%d1%80%d0%b8%d0%b7%d0%b0%d0%bd%d1%82%d0%b5%d0%bc%d0%b0-%d0%bc%d1%83%d0%bb%d1%8c%d1%82%d0%b8%d1%84%d0%bb%d0%be%d1%80%d0%b0branbeach-orange/"
+    },
+    {
+      "id": 2156,
+      "name": "Хризантема мультифлора Branfountain Apricot",
+      "category": "Цветы однолетние",
+      "categoryKey": "annuals",
+      "price": 450,
+      "stock": 4,
+      "status": "ok",
+      "description": "Условия выращивания Освещение: прямое солнце не менее 6 часов в день; в полутени куст вытягивается и теряет шаровидную форму Температура днём: 18–24 °C в активной фазе роста Температура ночью: 14–18 °C, для закладки бутонов желателен прохладный ночной режим М...",
+      "care": {},
+      "image": "/assets/products/014-hrizantema-multiflora-branfountain-apricot.webp",
+      "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/%d1%85%d1%80%d0%b8%d0%b7%d0%b0%d0%bd%d1%82%d0%b5%d0%bc%d0%b0-%d0%bc%d1%83%d0%bb%d1%8c%d1%82%d0%b8%d1%84%d0%bb%d0%be%d1%80%d0%b0-branfountain-apricot/"
+    },
+    {
+      "id": 2150,
+      "name": "Хризантема мультифлора Branfountain Pink",
+      "category": "Цветы однолетние",
+      "categoryKey": "annuals",
+      "price": 450,
+      "stock": 3,
+      "status": "low",
+      "description": "Условия выращивания Освещение: предпочитает яркий рассеянный свет, хорошо растет на солнечных участках Полив: регулярный, умеренный, без переувлажнения и пересушивания Грунт: рыхлый, питательный, с хорошим дренажом, нейтральной или слабокислой реакции Темпера...",
+      "care": {},
+      "image": "/assets/products/015-hrizantema-multiflora-branfountain-pink.webp",
+      "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/%d1%85%d1%80%d0%b8%d0%b7%d0%b0%d0%bd%d1%82%d0%b5%d0%bc%d0%b0-%d0%bc%d1%83%d0%bb%d1%8c%d1%82%d0%b8%d1%84%d0%bb%d0%be%d1%80%d0%b0-branfountain-pink/"
+    },
+    {
+      "id": 2145,
+      "name": "Хризантема мультифлора Meridian Cherry Red",
+      "category": "Цветы однолетние",
+      "categoryKey": "annuals",
+      "price": 450,
+      "stock": 3,
+      "status": "low",
+      "description": "Условия выращивания Освещение: солнечное место, допустима легкая полутень Почва: плодородная, рыхлая, хорошо дренированная Полив: регулярный, умеренный, без переувлажнения Температурный режим: теплолюбива, требует защиты от заморозков в период активной вегета...",
+      "care": {
+        "light": ", допустима легкая полутень"
+      },
+      "image": "/assets/products/016-hrizantema-multiflora-meridian-cherry-red.webp",
+      "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/%d1%85%d1%80%d0%b8%d0%b7%d0%b0%d0%bd%d1%82%d0%b5%d0%bc%d0%b0-%d0%bc%d1%83%d0%bb%d1%8c%d1%82%d0%b8%d1%84%d0%bb%d0%be%d1%80%d0%b0-meridian-cherry-red/"
+    },
+    {
+      "id": 2142,
+      "name": "Хризантема мультифлора Branfountain Salmon",
+      "category": "Цветы однолетние",
+      "categoryKey": "annuals",
+      "price": 450,
+      "stock": 2,
+      "status": "low",
+      "description": "Условия выращивания Освещение: солнечное местоположение, допустима легкая полутень Почва: плодородная, хорошо дренированная, нейтральная или слабокислая Полив: регулярный, умеренный, без переувлажнения Зимостойкость: требует укрытия или выкапывания на зиму в...",
+      "care": {
+        "light": ", допустима легкая полутень",
+        "hardiness": "требует укрытия или выкапывания на зиму в большинстве регионов России"
+      },
+      "image": "/assets/products/017-hrizantema-multiflora-branfountain-salmon.webp",
+      "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/%d1%85%d1%80%d0%b8%d0%b7%d0%b0%d0%bd%d1%82%d0%b5%d0%bc%d0%b0-%d0%bc%d1%83%d0%bb%d1%8c%d1%82%d0%b8%d1%84%d0%bb%d0%be%d1%80%d0%b0-branfountain-salmon/"
+    },
+    {
+      "id": 2134,
+      "name": "Хризантема мультифлора Branfountain White",
+      "category": "Цветы однолетние",
+      "categoryKey": "annuals",
+      "price": 450,
+      "stock": 0,
+      "status": "out",
+      "description": "Условия выращивания Освещение: полное солнце, минимум 5–6 часов прямого света в день Температура днём: комфортная для садовой хризантемы — 18–24 °C Температура ночью: 12–16 °C, не ниже 10 °C для активного роста Минимум: укоренять при температуре от 10 °C, жел...",
+      "care": {},
+      "image": "/assets/products/018-hrizantema-multiflora-branfountain-white.webp",
+      "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/%d1%85%d1%80%d0%b8%d0%b7%d0%b0%d0%bd%d1%82%d0%b5%d0%bc%d0%b0-%d0%bc%d1%83%d0%bb%d1%8c%d1%82%d0%b8%d1%84%d0%bb%d0%be%d1%80%d0%b0-branfountain-white/"
+    },
+    {
+      "id": 2131,
+      "name": "Хризантема мультифлора Branfountain Lemon",
+      "category": "Цветы однолетние",
+      "categoryKey": "annuals",
+      "price": 450,
+      "stock": 0,
+      "status": "out",
+      "description": "Условия выращивания Освещение: полное солнце, минимум 5–6 часов прямого света в день Температура днём: комфортная для садовой хризантемы — 18–24 °C Температура ночью: 12–16 °C, не ниже 10 °C для активного роста Минимум: укоренять при температуре от 10 °C, жел...",
+      "care": {},
+      "image": "/assets/products/019-hrizantema-multiflora-branfountain-lemon.webp",
+      "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/%d1%85%d1%80%d0%b8%d0%b7%d0%b0%d0%bd%d1%82%d0%b5%d0%bc%d0%b0-%d0%bc%d1%83%d0%bb%d1%8c%d1%82%d0%b8%d1%84%d0%bb%d0%be%d1%80%d0%b0-branfountain-lemon/"
+    },
+    {
+      "id": 2127,
+      "name": "Хризантема мультифлора Branfountain Purple",
+      "category": "Цветы однолетние",
+      "categoryKey": "annuals",
+      "price": 450,
+      "stock": 0,
+      "status": "out",
+      "description": "Условия выращивания Освещение: полное солнце, минимум 6 часов прямого света; в полутени куст вытягивается и хуже цветёт Температура днём: комфортно 18–24°C, переносит 28°C при достаточном поливе Температура ночью: 12–18°C ускоряет окрашивание бутонов Минимум:...",
+      "care": {},
+      "image": "/assets/products/020-hrizantema-multiflora-branfountain-purple.webp",
+      "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/%d1%85%d1%80%d0%b8%d0%b7%d0%b0%d0%bd%d1%82%d0%b5%d0%bc%d0%b0-%d0%bc%d1%83%d0%bb%d1%8c%d1%82%d0%b8%d1%84%d0%bb%d0%be%d1%80%d0%b0-branfountain-purple/"
+    },
+    {
+      "id": 2101,
+      "name": "Бегония Waterfall Dreams Angel Soft Pink",
+      "category": "Цветы однолетние",
+      "categoryKey": "annuals",
+      "price": 600,
+      "stock": 1,
+      "status": "low",
+      "description": "",
+      "care": {},
+      "image": "/assets/products/021-begoniya-waterfall-dreams-angel-soft-pink.webp",
+      "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/%d0%b1%d0%b5%d0%b3%d0%be%d0%bd%d0%b8%d1%8f-waterfall-dreams-angel-soft-pink/"
+    },
+    {
+      "id": 2038,
+      "name": "Рассада огурца в ассортименте",
+      "category": "Овощная рассада",
+      "categoryKey": "vegetables",
+      "price": 85,
+      "stock": 18,
+      "status": "ok",
+      "description": "",
+      "care": {},
+      "image": "/assets/products/022-rassada-ogurca-v-assortimente.webp",
+      "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/%d1%80%d0%b0%d1%81%d1%81%d0%b0%d0%b4%d0%b0-%d0%be%d0%b3%d1%83%d1%80%d1%86%d0%b0-%d0%b2-%d0%b0%d1%81%d1%81%d0%be%d1%80%d1%82%d0%b8%d0%bc%d0%b5%d0%bd%d1%82%d0%b5/"
+    },
+    {
+      "id": 1949,
+      "name": "Вискария глазковая",
+      "category": "Цветы однолетние",
+      "categoryKey": "annuals",
+      "price": 150,
+      "stock": 8,
+      "status": "ok",
+      "description": "🌱Рассада в объёме 0,1л Однолетнее растение высотой до 50 см. На вершинах побегов находятся пятилепестковые цветки диаметром 2-2,5 см, белой, розовой, красной, сиреневой и голубой окраски. Цветет с начала июля и до заморозков. Используют для цветников, бордюро...",
+      "care": {
+        "light": "должно быть хорошо освещённым"
+      },
+      "image": "/assets/products/023-viskariya-glazkovaya.webp",
+      "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/%d0%b2%d0%b8%d1%81%d0%ba%d0%b0%d1%80%d0%b8%d1%8f-%d0%b3%d0%bb%d0%b0%d0%b7%d0%ba%d0%be%d0%b2%d0%b0%d1%8f/"
+    },
+    {
+      "id": 1931,
+      "name": "КАЛИБРАХОА MINIFAMOUS ORO DOUBLE BLUE",
+      "category": "Цветы однолетние",
+      "categoryKey": "annuals",
+      "price": 250,
+      "stock": 8,
+      "status": "ok",
+      "description": "🌱Рассада в объёме 0,5л 🎁В подарок каждому покупателю рекомендации по уходу и посадке Калибрахоа серии MiniFamous с махровыми цветками – куст сильно ветвящийся, высота 15-25 см, ширина 30-40 см, плети достигают 50-60 см. Цветки некрупные, диаметром 3-5 см, в ф...",
+      "care": {
+        "height": "15-25 см, ширина 30-40 см, плети достигают 50-60 см",
+        "bloom": "м даже в условиях недостатка освещения, не теряют своей красоты после дождя"
+      },
+      "image": "/assets/products/024-kalibrahoa-minifamous-oro-double-blue.webp",
+      "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/%d0%ba%d0%b0%d0%bb%d0%b8%d0%b1%d1%80%d0%b0%d1%85%d0%be%d0%b0-minifamous-oro-double-blue/"
+    },
+    {
+      "id": 1929,
+      "name": "КАЛИБРАХОА MINIFAMOUS ORO DOUBLE LIGHT BLUE",
+      "category": "Цветы однолетние",
+      "categoryKey": "annuals",
+      "price": 250,
+      "stock": 8,
+      "status": "ok",
+      "description": "🌱Рассада в объёме 0,5л 🎁В подарок каждому покупателю рекомендации по уходу и посадке Калиброхоа серии MiniFamous – куст сильно ветвящийся, плети достигают 50-60 см. Цветение очень обильное. Цветки некрупные, диаметром 3-5 см. Обладают ранним, обильным и непре...",
+      "care": {
+        "bloom": "очень обильное"
+      },
+      "image": "/assets/products/025-kalibrahoa-minifamous-oro-double-light-blue.webp",
+      "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/%d0%ba%d0%b0%d0%bb%d0%b8%d0%b1%d1%80%d0%b0%d1%85%d0%be%d0%b0-minifamous-oro-double-light/"
+    },
+    {
+      "id": 1924,
+      "name": "Остеоспермум 3D STEEL BLUE",
+      "category": "Цветы однолетние",
+      "categoryKey": "annuals",
+      "price": 250,
+      "stock": 2,
+      "status": "low",
+      "description": "В объёме 0,5л Кусты прямостоячие, ветвистые. Цветки до 6 см в диаметре, есть белые, розовые, желтые, пурпурные сорта, иногда с контрастным диском. Цветут с конца мая до сентября. Высота 25 – 35 см, ширина 35 – 50 см.",
+      "care": {
+        "height": "25 – 35 см, ширина 35 – 50 см"
+      },
+      "image": "/assets/products/026-osteospermum-3d-steel-blue.webp",
+      "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/%d0%be%d1%81%d1%82%d0%b5%d0%be%d1%81%d0%bf%d0%b5%d1%80%d0%bc%d1%83%d0%bc-3d-steel-blue/"
+    },
+    {
+      "id": 1911,
+      "name": "Вербена DRUMS WHITE",
+      "category": "Цветы однолетние",
+      "categoryKey": "annuals",
+      "price": 250,
+      "stock": 1,
+      "status": "low",
+      "description": "🌱Рассада в объёме 0,2л 🎁В подарок каждому покупателю рекомендации по уходу и посадке",
+      "care": {},
+      "image": "/assets/products/027-verbena-drums-white.webp",
+      "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/%d0%b2%d0%b5%d1%80%d0%b1%d0%b5%d0%bd%d0%b0-drums-white/"
+    },
+    {
+      "id": 1906,
+      "name": "Калибрахоа MINIFAMOUS UNO Double Blue",
+      "category": "Цветы однолетние",
+      "categoryKey": "annuals",
+      "price": 250,
+      "stock": 8,
+      "status": "ok",
+      "description": "🌱Рассада в объёме 0,2л",
+      "care": {},
+      "image": "/assets/products/028-kalibrahoa-minifamous-uno-double-blue.webp",
+      "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/%d0%ba%d0%b0%d0%bb%d0%b8%d0%b1%d1%80%d0%b0%d1%85%d0%be%d0%b0-minifamous-uno-double-blue/"
+    },
+    {
+      "id": 1901,
+      "name": "Калибрахоа ALOHA Double Sky BLUE",
+      "category": "Цветы однолетние",
+      "categoryKey": "annuals",
+      "price": 250,
+      "stock": 8,
+      "status": "ok",
+      "description": "🌱Рассада в объёме 0,2л 🎁В подарок каждому покупателю рекомендации по уходу и посадке",
+      "care": {},
+      "image": "/assets/products/029-kalibrahoa-aloha-double-sky-blue.webp",
+      "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/%d0%ba%d0%b0%d0%bb%d0%b8%d0%b1%d1%80%d0%b0%d1%85%d0%be%d0%b0-aloha-double-sky-blue/"
+    },
+    {
+      "id": 1897,
+      "name": "Калибрахоа ALOHA Double White",
+      "category": "Цветы однолетние",
+      "categoryKey": "annuals",
+      "price": 250,
+      "stock": 8,
+      "status": "ok",
+      "description": "🌱Рассада в объёме 0,2л 🎁В подарок каждому покупателю рекомендации по уходу и посадке",
+      "care": {},
+      "image": "/assets/products/030-kalibrahoa-aloha-double-white.webp",
+      "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/%d0%ba%d0%b0%d0%bb%d0%b8%d0%b1%d1%80%d0%b0%d1%85%d0%be%d0%b0-aloha-double-white/"
+    },
+    {
+      "id": 1894,
+      "name": "Калибрахоа ALOHA Double Soft Pink",
+      "category": "Цветы однолетние",
+      "categoryKey": "annuals",
+      "price": 250,
+      "stock": 1,
+      "status": "low",
+      "description": "🌱Рассада в объёме 0,5л 🎁В подарок каждому покупателю рекомендации по уходу и посадке",
+      "care": {},
+      "image": "/assets/products/031-kalibrahoa-aloha-double-soft-pink.webp",
+      "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/%d0%ba%d0%b0%d0%bb%d0%b8%d0%b1%d1%80%d0%b0%d1%85%d0%be%d0%b0-aloha-double-soft-pink/"
+    },
+    {
+      "id": 1878,
+      "name": "Калибрахоа ALOHA DOUBLE APRICOT",
+      "category": "Цветы однолетние",
+      "categoryKey": "annuals",
+      "price": 1200,
+      "stock": 1,
+      "status": "low",
+      "description": "🌱Кашпо 4л 🎁В подарок каждому покупателю рекомендации по уходу и посадке Великолепные шапки, усыпанные множеством очаровательных цветков. Высота 25-35 см, ширина 30-45 см. Среднего размера махровые цветки. Сильное боковое ветвление. Обильное и продолжительное...",
+      "care": {
+        "height": "25-35 см, ширина 30-45 см",
+        "bloom": "Легкость в выращивании"
+      },
+      "image": "/assets/products/032-kalibrahoa-aloha-double-apricot.webp",
+      "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/%d0%ba%d0%b0%d0%bb%d0%b8%d0%b1%d1%80%d0%b0%d1%85%d0%be%d0%b0-aloha-double-apricot/"
+    },
+    {
+      "id": 1779,
+      "name": "Калибрахоа ALOHA CLASSIC TIKI DARK BLUE",
+      "category": "Цветы однолетние",
+      "categoryKey": "annuals",
+      "price": 250,
+      "stock": 8,
+      "status": "ok",
+      "description": "🌱Рассада в объёме 0,2л 🎁В подарок каждому покупателю рекомендации по уходу и посадке Популярная вегетативная серия калибрахоа. В высоту достигает 25-35 см.",
+      "care": {},
+      "image": "/assets/products/033-kalibrahoa-aloha-classic-tiki-dark-blue.webp",
+      "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/21-%d0%ba%d0%b0%d0%bb%d0%b8%d0%b1%d1%80%d0%b0%d1%85%d0%be%d0%b0-tiki-dark-blue/"
+    },
+    {
+      "id": 1762,
+      "name": "КАЛИБРАХОА MINIFAMOUS ORO DOUBLE WHITE",
+      "category": "Цветы однолетние",
+      "categoryKey": "annuals",
+      "price": 1200,
+      "stock": 4,
+      "status": "ok",
+      "description": "🌱Кашпо 4л 🎁В подарок каждому покупателю рекомендации по уходу и посадке Популярная вегетативная серия калибрахоа. В высоту достигает 25-35 см.",
+      "care": {},
+      "image": "/assets/products/034-kalibrahoa-minifamous-oro-double-white.webp",
+      "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/4-%d0%ba%d0%b0%d0%bb%d0%b8%d0%b1%d1%80%d0%b0%d1%85%d0%be%d0%b0-minifamous-oro-double-white/"
+    },
+    {
+      "id": 1674,
+      "name": "ГЕЛИХРИЗУМ SILVER",
+      "category": "Цветы однолетние",
+      "categoryKey": "annuals",
+      "price": 250,
+      "stock": 4,
+      "status": "ok",
+      "description": "🌱 Укоренённый черенок в объёме 0,2л Рекомендуемый объём грунта 3-4 л. на 1 растение. Хорошо смотрится в композиции Отличное текстурное растение для цветочных композиций в контейнерах на открытом солнце. Серебристая, густая зелень гелихризума создает непревзой...",
+      "care": {},
+      "image": "/assets/products/035-gelihrizum-silver.webp",
+      "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/%d0%b3%d0%b5%d0%bb%d0%b8%d1%85%d1%80%d0%b8%d0%b7%d1%83%d0%bc-silver/"
+    },
+    {
+      "id": 1666,
+      "name": "ХРИЗАНТЕМА МУЛЬТИФЛОРА BLISS WHITE",
+      "category": "Цветы однолетние",
+      "categoryKey": "annuals",
+      "price": 450,
+      "stock": 1,
+      "status": "low",
+      "description": "🌱Рассада в объёме 1л Хризантема Мультифлора относится к сортам средне-раннего срока цветения, подойдет для посадки в открытый грунт, вазоны, контейнеры. Цветение — начало сентября, Цветок — 5 см, махровый Высота — 40-50 см, Форма куста — шаровидная.",
+      "care": {
+        "height": "— 40-50 см, Форма куста — шаровидная",
+        "bloom": "— начало сентября, Цветок — 5 см, махровый"
+      },
+      "image": "/assets/products/036-hrizantema-multiflora-bliss-white.webp",
+      "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/%d1%85%d1%80%d0%b8%d0%b7%d0%b0%d0%bd%d1%82%d0%b5%d0%bc%d0%b0-%d0%bc%d1%83%d0%bb%d1%8c%d1%82%d0%b8%d1%84%d0%bb%d0%be%d1%80%d0%b0-bliss-white/"
+    },
+    {
+      "id": 1655,
+      "name": "ВЕРБЕНА VANESSA BIC. LIGHT PINK",
+      "category": "Цветы однолетние",
+      "categoryKey": "annuals",
+      "price": 250,
+      "stock": 7,
+      "status": "ok",
+      "description": "🌱Рассада в объёме 0,2л 🎁В подарок каждому покупателю рекомендации по уходу и посадке Это потрясающие трехцветной окраской соцветия. И, как у всех вербен, изящная разрезная листва дает прекрасный фон для необычных цветов. Цветы среднего размера. Растение в выс...",
+      "care": {
+        "height": "а"
+      },
+      "image": "/assets/products/037-verbena-vanessa-bic-light-pink.webp",
+      "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/%d0%b2%d0%b5%d1%80%d0%b1%d0%b5%d0%bd%d0%b0-vanessa-bic-light-pink/"
+    },
+    {
+      "id": 1643,
+      "name": "КАЛИБРАХОА MINIFAMOUS DOUBLE LOOPY LAVENDER",
+      "category": "Цветы однолетние",
+      "categoryKey": "annuals",
+      "price": 1200,
+      "stock": 3,
+      "status": "low",
+      "description": "🌱Кашпо 4л 🎁В подарок каждому покупателю рекомендации по уходу и посадке куст сильно ветвящийся, высота 15-25 см, ширина 30-40 см, плети достигают 50-60 см. Цветки некрупные, в форме розочек. Обладают ранним, обильным и непрерывным цветением даже в условиях не...",
+      "care": {
+        "height": "15-25 см, ширина 30-40 см, плети достигают 50-60 см",
+        "bloom": "м даже в условиях недостатка освещения, не теряют своей красоты после дождя"
+      },
+      "image": "/assets/products/038-kalibrahoa-minifamous-double-loopy-lavender.webp",
+      "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/%d0%ba%d0%b0%d0%bb%d0%b8%d0%b1%d1%80%d0%b0%d1%85%d0%be%d0%b0-minifamous-double-loopy-lavender/"
+    },
+    {
+      "id": 1618,
+      "name": "Спирея японская «Дартс Ред»",
+      "category": "Без категории",
+      "categoryKey": "other",
+      "price": 350,
+      "stock": 8,
+      "status": "ok",
+      "description": "Собственное производство 🌱 Объём контейнера 0,5л Размеры взрослого растения: Высота 0,6-0,8 м, ширина 0,9 м. Цветёт растение малиновыми или рубиново-красными крупными соцветиями, которые появляются в верхней части побегов, выросших в текущем году. Характеризу...",
+      "care": {
+        "height": "ы взрослого растения: Высота 0,6-0,8 м, ширина 0,9 м",
+        "light": "посадки: Солнце/Полутень"
+      },
+      "image": "/assets/products/039-spireya-yaponskaya-darts-red.webp",
+      "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/%d1%81%d0%bf%d0%b8%d1%80%d0%b5%d1%8f-%d1%8f%d0%bf%d0%be%d0%bd%d1%81%d0%ba%d0%b0%d1%8f-%d0%b4%d0%b0%d1%80%d1%82%d1%81-%d1%80%d0%b5%d0%b4/"
+    },
+    {
+      "id": 1571,
+      "name": "БЕГОНИЯ SOLENIA CHOCOLATE ORANGE",
+      "category": "Цветы однолетние",
+      "categoryKey": "annuals",
+      "price": 600,
+      "stock": 0,
+      "status": "out",
+      "description": "Бегония «Solenia» — великолепная сортосерия кустовой (мультицветковой) гибридной бегонии. Характерзуется кустовидной формой, мощными стеблями и крупными пышно-махровыми цветками. Мощные, но компактные кусты, сплошь покрытые множеством ярких крупных цветков. П...",
+      "care": {
+        "height": "куста: 20-25см",
+        "bloom": "обильное, продолжительное, до заморозков"
+      },
+      "image": "/assets/products/040-begoniya-solenia-chocolate-orange.webp",
+      "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/%d0%b1%d0%b5%d0%b3%d0%be%d0%bd%d0%b8%d1%8f-solenia-chocolate-orange/"
+    },
+    {
+      "id": 1514,
+      "name": "Лапчатка кустарниковая «Ред Айс»",
+      "category": "Без категории",
+      "categoryKey": "other",
+      "price": 250,
+      "stock": 48,
+      "status": "ok",
+      "description": "Сорт «RED ACE”. Густой кустарник с нежными стелющимися побегами, подушковидной формы. Высота 0,4-0,6 м, шириной до 1,2 м. Место посадки: солнце",
+      "care": {
+        "height": "0,4-0,6 м, шириной до 1,2 м",
+        "light": "посадки: солнце"
+      },
+      "image": "/assets/products/041-lapchatka-kustarnikovaya-red-ays.webp",
+      "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/%d0%bb%d0%b0%d0%bf%d1%87%d0%b0%d1%82%d0%ba%d0%b0-%d0%ba%d1%83%d1%81%d1%82%d0%b0%d1%80%d0%bd%d0%b8%d0%ba%d0%be%d0%b2%d0%b0%d1%8f-%d1%80%d0%b5%d0%b4-%d0%b0%d0%b9%d1%81/"
+    },
+    {
+      "id": 1500,
+      "name": "ХРИЗАНТЕМА МУЛЬТИФЛОРА BRANSOUND MAGENTA",
+      "category": "Цветы однолетние",
+      "categoryKey": "annuals",
+      "price": 450,
+      "stock": 6,
+      "status": "ok",
+      "description": "Хризантема мультифлора BRANSOUND MAGENTA- Средне-ранний низкорослый сорт очень темного пурпурного цвета, зацветающий с конца августа, с цветками диаметром 4 см. Начало цветения: вторая половина августа. Куст компактный, шаровидный, высотой до 40-50 см.Срок цв...",
+      "care": {},
+      "image": "/assets/products/042-hrizantema-multiflora-bransound-magenta.webp",
+      "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/%d1%85%d1%80%d0%b8%d0%b7%d0%b0%d0%bd%d1%82%d0%b5%d0%bc%d0%b0-%d0%bc%d1%83%d0%bb%d1%8c%d1%82%d0%b8%d1%84%d0%bb%d0%be%d1%80%d0%b0-bransound-magenta/"
+    },
+    {
+      "id": 1495,
+      "name": "ХРИЗАНТЕМА МУЛЬТИФЛОРА POWER RED",
+      "category": "Цветы однолетние",
+      "categoryKey": "annuals",
+      "price": 450,
+      "stock": 2,
+      "status": "low",
+      "description": "Хризантема мультифлора Power Red – это отличный выбор для садоводов, которые хотят добавить красок своему участку.Высота: 40-50 см.Диаметр цветка: 4 см.Форма куста: шаровидная.Цвет: насыщенно-красный.Период цветения: август-октябрь. Объём контейнера: 1л",
+      "care": {
+        "height": "40-50 см",
+        "bloom": "август-октябрь"
+      },
+      "image": "/assets/products/043-hrizantema-multiflora-power-red.webp",
+      "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/%d1%85%d1%80%d0%b8%d0%b7%d0%b0%d0%bd%d1%82%d0%b5%d0%bc%d0%b0-%d0%bc%d1%83%d0%bb%d1%8c%d1%82%d0%b8%d1%84%d0%bb%d0%be%d1%80%d0%b0-power-red/"
+    },
+    {
+      "id": 1479,
+      "name": "ОСТЕОСПЕРМУМ MARGARITA DOUBLE WHITE",
+      "category": "Цветы однолетние",
+      "categoryKey": "annuals",
+      "price": 450,
+      "stock": 0,
+      "status": "out",
+      "description": "В объёме 1л Очень яркий обильноцветущий остеоспермум c махровыми цветками. Неприхотлив в уходе, засухоустойчив, хорошо переносит как жару, так и холод. Кусты хорошо разветвленные, плотные, высотой до 50 см. В наших широтах в открытом грунте выращивается как о...",
+      "care": {
+        "bloom": "раннее, продолжительное, в течение всего лета до глубокой осени"
+      },
+      "image": "/assets/products/044-osteospermum-margarita-double-white.webp",
+      "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/%d0%be%d1%81%d1%82%d0%b5%d0%be%d1%81%d0%bf%d0%b5%d1%80%d0%bc%d1%83%d0%bc-margarita-double-white/"
+    },
+    {
+      "id": 1464,
+      "name": "Хризантема мультифлора GIGI DARK PINK",
+      "category": "Цветы однолетние",
+      "categoryKey": "annuals",
+      "price": 450,
+      "stock": 4,
+      "status": "ok",
+      "description": "Объём контейнера: 1л",
+      "care": {},
+      "image": "/assets/products/045-hrizantema-multiflora-gigi-dark-pink.webp",
+      "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/%d1%85%d1%80%d0%b8%d0%b7%d0%b0%d0%bd%d1%82%d0%b5%d0%bc%d0%b0-%d0%bc%d1%83%d0%bb%d1%8c%d1%82%d0%b8%d1%84%d0%bb%d0%be%d1%80%d0%b0-gigi-dark-pink/"
+    },
+    {
+      "id": 1419,
+      "name": "Ива пурпурная «Нана»",
+      "category": "Без категории",
+      "categoryKey": "other",
+      "price": 350,
+      "stock": 128,
+      "status": "ok",
+      "description": "Компактный кустарник, достигающий высоты 1,5-2,5 метров, в ширину 3-4м. Отличается декоративными качествам и. Ива нана используется в ландшафтном дизайне для создания живых изгородей и бордюров, формирования фигурных композиций, декоративного озеленения малых...",
+      "care": {},
+      "image": "/assets/products/046-iva-purpurnaya-nana.webp",
+      "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/%d0%b8%d0%b2%d0%b0-%d0%bf%d1%83%d1%80%d0%bf%d1%83%d1%80%d0%bd%d0%b0%d1%8f-%d0%bd%d0%b0%d0%bd%d0%b0/"
+    },
+    {
+      "id": 1384,
+      "name": "Туя западная Смарагд",
+      "category": "Без категории",
+      "categoryKey": "other",
+      "price": 400,
+      "stock": 0,
+      "status": "out",
+      "description": "",
+      "care": {},
+      "image": "/assets/products/047-tuya-zapadnaya-smaragd.webp",
+      "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/%d1%82%d1%83%d1%8f-%d0%b7%d0%b0%d0%bf%d0%b0%d0%b4%d0%bd%d0%b0%d1%8f-%d1%81%d0%bc%d0%b0%d1%80%d0%b0%d0%b3%d0%b4/"
+    },
+    {
+      "id": 1336,
+      "name": "Гортензия метельчатая «Скайфолл»",
+      "category": "Гортензии",
+      "categoryKey": "hydrangea",
+      "price": 600,
+      "stock": 0,
+      "status": "out",
+      "description": "Высота взрослого растения: 1,2м Цвет соцветий: белый, розовый Период цветения: июль-сентябрь Место посадки: солнце/полутень Почва: кислая Зона зимостойкости: 4 При покупке наших саженцев вы получаете рекомендацию по посадке и уходу🎁",
+      "care": {
+        "height": "взрослого растения: 1,2м",
+        "bloom": "июль-сентябрь",
+        "light": "посадки: солнце/полутень"
+      },
+      "image": "/assets/products/048-gortenziya-metelchataya-skayfoll.webp",
+      "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/%d0%b3%d0%be%d1%80%d1%82%d0%b5%d0%bd%d0%b7%d0%b8%d1%8f-%d0%bc%d0%b5%d1%82%d0%b5%d0%bb%d1%8c%d1%87%d0%b0%d1%82%d0%b0%d1%8f-%d1%81%d0%ba%d0%b0%d0%b9%d1%84%d0%be%d0%bb%d0%bb/"
+    },
+    {
+      "id": 1318,
+      "name": "Спирея серая «Грефшайм»",
+      "category": "Без категории",
+      "categoryKey": "other",
+      "price": 350,
+      "stock": 41,
+      "status": "ok",
+      "description": "Красивоцветущий кустарник с аркообразными поникающими ветвями, с ажурной кроной. Высота и ширина взрослого растения до 2м. Цветёт в мае-июне. Солнце/полутень. Зимостойкость: зона 4 Устойчива к болезням и вредителям Объём контейнера: 0,5л. 2х летний саженец Вы...",
+      "care": {
+        "height": "и ширина взрослого растения до 2м",
+        "hardiness": "зона 4"
+      },
+      "image": "/assets/products/049-spireya-seraya-grefshaym.webp",
+      "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/%d1%81%d0%bf%d0%b8%d1%80%d0%b5%d1%8f-%d1%81%d0%b5%d1%80%d0%b0%d1%8f-%d0%b3%d1%80%d0%b5%d1%84%d1%88%d0%b0%d0%b9%d0%bc/"
+    },
+    {
+      "id": 1309,
+      "name": "КАЛИБРАХОА MINIFAMOUS ORO DOUBLE MAGENTA",
+      "category": "Цветы однолетние",
+      "categoryKey": "annuals",
+      "price": 1200,
+      "stock": 2,
+      "status": "low",
+      "description": "🌱Кашпо 4л 🎁В подарок каждому покупателю рекомендации по уходу и посадке Популярная вегетативная серия калибрахоа. В высоту достигает 25-35 см.",
+      "care": {},
+      "image": "/assets/products/050-kalibrahoa-minifamous-oro-double-magenta.webp",
+      "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/%d0%ba%d0%b0%d0%bb%d0%b8%d0%b1%d1%80%d0%b0%d1%85%d0%be%d0%b0-minifamous-oro-double-magenta/"
+    },
+    {
+      "id": 1305,
+      "name": "КАЛИБРАХОА MINIFAMOUS NEO DOUBLE PURPLE ICE",
+      "category": "Цветы однолетние",
+      "categoryKey": "annuals",
+      "price": 250,
+      "stock": 2,
+      "status": "low",
+      "description": "🌱Рассада в объёме 0,2л 🎁В подарок каждому покупателю рекомендации по уходу и посадке Популярная вегетативная серия калибрахоа. В высоту достигает 25-35 см.",
+      "care": {},
+      "image": "/assets/products/051-kalibrahoa-minifamous-neo-double-purple-ice.webp",
+      "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/%d0%ba%d0%b0%d0%bb%d0%b8%d0%b1%d1%80%d0%b0%d1%85%d0%be%d0%b0-minifamous-neo-double-purple-ice/"
+    },
+    {
+      "id": 1303,
+      "name": "КАЛИБРАХОА MINIFAMOUS UNO DOUBLE PINKMANIA",
+      "category": "Цветы однолетние",
+      "categoryKey": "annuals",
+      "price": 250,
+      "stock": 2,
+      "status": "low",
+      "description": "🌱Рассада в объёме 0,5л Популярная вегетативная серия калибрахоа. В высоту достигает 25-35 см.",
+      "care": {},
+      "image": "/assets/products/052-kalibrahoa-minifamous-uno-double-pinkmania.webp",
+      "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/%d0%ba%d0%b0%d0%bb%d0%b8%d0%b1%d1%80%d0%b0%d1%85%d0%be%d0%b0-minifamous-uno-double-pinkmania/"
+    },
+    {
+      "id": 1301,
+      "name": "КАЛИБРАХОА CALITA DOUBLE PINK",
+      "category": "Цветы однолетние",
+      "categoryKey": "annuals",
+      "price": 250,
+      "stock": 7,
+      "status": "ok",
+      "description": "🌱Рассада в объёме 0,2л 🎁В подарок каждому покупателю рекомендации по уходу и посадке Популярная вегетативная серия калибрахоа. В высоту достигает 25-35 см.",
+      "care": {},
+      "image": "/assets/products/053-kalibrahoa-calita-double-pink.webp",
+      "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/%d0%ba%d0%b0%d0%bb%d0%b8%d0%b1%d1%80%d0%b0%d1%85%d0%be%d0%b0-calita-double-pink/"
+    },
+    {
+      "id": 1295,
+      "name": "КАЛИБРАХОА ALOHA DOUBLE PINK BLUSH",
+      "category": "Цветы однолетние",
+      "categoryKey": "annuals",
+      "price": 1200,
+      "stock": 5,
+      "status": "ok",
+      "description": "🌱Кашпо 4л 🎁В подарок каждому покупателю рекомендации по уходу и посадке Популярная вегетативная серия калибрахоа. В высоту достигает 25-35 см.",
+      "care": {},
+      "image": "/assets/products/054-kalibrahoa-aloha-double-pink-blush.webp",
+      "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/%d0%ba%d0%b0%d0%bb%d0%b8%d0%b1%d1%80%d0%b0%d1%85%d0%be%d0%b0-aloha-double-pink-blush/"
+    },
+    {
+      "id": 1267,
+      "name": "Саженцы клубники",
+      "category": "Без категории",
+      "categoryKey": "other",
+      "price": 600,
+      "stock": 0,
+      "status": "out",
+      "description": "Сорт Соловушка. Среднего срока созревания Кассета 6шт",
+      "care": {},
+      "image": "/assets/products/055-sazhency-klubniki.webp",
+      "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/%d1%81%d0%b0%d0%b6%d0%b5%d0%bd%d1%86%d1%8b-%d0%ba%d0%bb%d1%83%d0%b1%d0%bd%d0%b8%d0%ba%d0%b8/"
+    },
+    {
+      "id": 1240,
+      "name": "Малина",
+      "category": "Без категории",
+      "categoryKey": "other",
+      "price": 450,
+      "stock": 0,
+      "status": "out",
+      "description": "Ремонтантная малина среднего срока созревания. Ягоды крупные, красно-рубинового цвета, сладкие, десертного вкуса. Урожайность стабильно высокая",
+      "care": {},
+      "image": "/assets/products/056-malina.webp",
+      "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/%d0%bc%d0%b0%d0%bb%d0%b8%d0%bd%d0%b0/"
+    },
+    {
+      "id": 1097,
+      "name": "БЕГОНИЯ BELINA VANILLA",
+      "category": "Цветы однолетние",
+      "categoryKey": "annuals",
+      "price": 600,
+      "stock": 0,
+      "status": "out",
+      "description": "🌱Рассада в объёме 0,5л В подарок получаете рекомендации по уходу за бегонией. Бегония Belina — ампельный сорт с крупными, махровыми цветками с многообразием цветов. Цветение непрерывное, в течение всего сезона, до первых заморозков. Длина побегов 25-30 см. Вы...",
+      "care": {
+        "height": "взрослого растения 30 см",
+        "bloom": "непрерывное, в течение всего сезона, до первых заморозков"
+      },
+      "image": "/assets/products/057-begoniya-belina-vanilla.webp",
+      "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/%d0%b1%d0%b5%d0%b3%d0%be%d0%bd%d0%b8%d1%8f-belina-vanilla/"
+    },
+    {
+      "id": 1082,
+      "name": "БЕГОНИЯ BELLECONIA SALMON",
+      "category": "Цветы однолетние",
+      "categoryKey": "annuals",
+      "price": 600,
+      "stock": 3,
+      "status": "low",
+      "description": "В подарок получаете рекомендации по уходу за бегонией. Cерия Belleconia одна из новейших серий ампельной бегонии с крупными махровыми цветами. Эти растения отличаются высокой устойчивостью к болезням и вредителям. Цветут обильно, образуя длинные, свисающие по...",
+      "care": {
+        "height": "куста 20-25см",
+        "bloom": "Тень или полутень"
+      },
+      "image": "/assets/products/058-begoniya-belleconia-salmon.webp",
+      "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/%d0%b1%d0%b5%d0%b3%d0%be%d0%bd%d0%b8%d1%8f-belleconia-salmon/"
+    },
+    {
+      "id": 1080,
+      "name": "БЕГОНИЯ BELLECONIA HOT ORANGE",
+      "category": "Цветы однолетние",
+      "categoryKey": "annuals",
+      "price": 600,
+      "stock": 1,
+      "status": "low",
+      "description": "В подарок получаете рекомендации по уходу за бегонией. Cерия Belleconia одна из новейших серий ампельной бегонии с крупными махровыми цветами. Эти растения отличаются высокой устойчивостью к болезням и вредителям. Цветут обильно, образуя длинные, свисающие по...",
+      "care": {
+        "height": "куста 20-25см Форма куста: ампельный Обильное цветение Тень или полутень",
+        "bloom": "Тень или полутень"
+      },
+      "image": "/assets/products/059-begoniya-belleconia-hot-orange.webp",
+      "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/%d0%b1%d0%b5%d0%b3%d0%be%d0%bd%d0%b8%d1%8f-belleconia-hot-orange/"
+    },
+    {
+      "id": 1078,
+      "name": "БЕГОНИЯ WATERFALLS ENCANTO PINK",
+      "category": "Цветы однолетние",
+      "categoryKey": "annuals",
+      "price": 600,
+      "stock": 0,
+      "status": "out",
+      "description": "В подарок получаете рекомендации по уходу за бегонией. Высота куста: 20-25см. Форма куста: полуампельный.",
+      "care": {
+        "height": "куста: 20-25см"
+      },
+      "image": "/assets/products/060-begoniya-waterfalls-encanto-pink.webp",
+      "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/%d0%b1%d0%b5%d0%b3%d0%be%d0%bd%d0%b8%d1%8f-waterfalls-encanto-pink/"
+    },
+    {
+      "id": 1053,
+      "name": "КАЛИБРАХОА TIK TOK GRAPE",
+      "category": "Цветы однолетние",
+      "categoryKey": "annuals",
+      "price": 250,
+      "stock": 3,
+      "status": "low",
+      "description": "Укоренённый черенок в объёме 0.2л",
+      "care": {},
+      "image": "/assets/products/061-kalibrahoa-tik-tok-grape.webp",
+      "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/%d0%ba%d0%b0%d0%bb%d0%b8%d0%b1%d1%80%d0%b0%d1%85%d0%be%d0%b0-tik-tok-grape/"
+    },
+    {
+      "id": 1049,
+      "name": "КАЛИБРАХОА CHAMELEON MILKY PINK",
+      "category": "Цветы однолетние",
+      "categoryKey": "annuals",
+      "price": 1200,
+      "stock": 2,
+      "status": "low",
+      "description": "🌱Кашпо 4л 🎁В подарок каждому покупателю рекомендации по уходу и посадке Новая концепция в мире калибрахоа! Цветы-хамелеоны меняют свой цвет в течение сезона, в зависимости от уровня освещенности и продолжительности дня. Создается впечатление, что перед нами ц...",
+      "care": {
+        "height": "куста: компакт средний"
+      },
+      "image": "/assets/products/062-kalibrahoa-chameleon-milky-pink.webp",
+      "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/%d0%ba%d0%b0%d0%bb%d0%b8%d0%b1%d1%80%d0%b0%d1%85%d0%be%d0%b0-chameleon-milky-pink/"
+    },
+    {
+      "id": 1048,
+      "name": "КАЛИБРАХОА ALOHA DOUBLE PURPLE",
+      "category": "Цветы однолетние",
+      "categoryKey": "annuals",
+      "price": 250,
+      "stock": 0,
+      "status": "out",
+      "description": "Объём контейнера 0,2л Популярная вегетативная серия калибрахоа. Куст шарообразной формы. В высоту достигает 25-35 см. Обильное боковое ветвление и продолжительное цветение непременно является преимуществом этого сорта. Сорт легок в выращивании, подойдет даже...",
+      "care": {
+        "bloom": "непременно является преимуществом этого сорта"
+      },
+      "image": "/assets/products/063-kalibrahoa-aloha-double-purple.webp",
+      "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/%d0%ba%d0%b0%d0%bb%d0%b8%d0%b1%d1%80%d0%b0%d1%85%d0%be%d0%b0-aloha-double-purple/"
+    },
+    {
+      "id": 1029,
+      "name": "Гортензия метельчатая «Сильвер Доллар»",
+      "category": "Гортензии",
+      "categoryKey": "hydrangea",
+      "price": 1500,
+      "stock": 4,
+      "status": "ok",
+      "description": "Собственное производство. Высота взрослого растения: 250 см Цвет соцветий: Белый, розовый Период цветения: июль-сентябрь. Место посадки: Солнце/Полутень. Почва: Кислая. Полив: Обильный. Зона морозостойкости: 4. Применение: в качестве акцента в цветниках, живы...",
+      "care": {
+        "height": "взрослого растения: 250 см",
+        "bloom": "июль-сентябрь",
+        "light": "посадки: Солнце/Полутень"
+      },
+      "image": "/assets/products/064-gortenziya-metelchataya-silver-dollar.webp",
+      "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/%d0%b3%d0%be%d1%80%d1%82%d0%b5%d0%bd%d0%b7%d0%b8%d1%8f-%d0%bc%d0%b5%d1%82%d0%b5%d0%bb%d1%8c%d1%87%d0%b0%d1%82%d0%b0%d1%8f-%d1%81%d0%b8%d0%bb%d1%8c%d0%b2%d0%b5%d1%80-%d0%b4%d0%be%d0%bb%d0%bb%d0%b0/"
+    },
+    {
+      "id": 1022,
+      "name": "Гортензия метельчатая «Самарская Лидия»",
+      "category": "Гортензии",
+      "categoryKey": "hydrangea",
+      "price": 600,
+      "stock": 0,
+      "status": "out",
+      "description": "Собственное производство. Высота взрослого растения: 120 см Цвет соцветий: Белый, розовый, бордовый Период цветения: июль-сентябрь. Место посадки: Солнце/Полутень. Почва: Кислая. Полив: Регулярный. Зона морозостойкости: 4. Применение: в качестве акцента в цве...",
+      "care": {
+        "height": "взрослого растения: 120 см",
+        "bloom": "июль-сентябрь",
+        "light": "посадки: Солнце/Полутень"
+      },
+      "image": "/assets/products/065-gortenziya-metelchataya-samarskaya-lidiya.webp",
+      "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/%d0%b3%d0%be%d1%80%d1%82%d0%b5%d0%bd%d0%b7%d0%b8%d1%8f-%d0%bc%d0%b5%d1%82%d0%b5%d0%bb%d1%8c%d1%87%d0%b0%d1%82%d0%b0%d1%8f-%d1%81%d0%b0%d0%bc%d0%b0%d1%80%d1%81%d0%ba%d0%b0%d1%8f-%d0%bb%d0%b8%d0%b4/"
+    },
+    {
+      "id": 1010,
+      "name": "Гортензия метельчатая «Петит Лантерн»",
+      "category": "Гортензии",
+      "categoryKey": "hydrangea",
+      "price": 600,
+      "stock": 0,
+      "status": "out",
+      "description": "Собственное производство. 🌿Объём контейнера 0,5л Высота взрослого растения: 80 см Цвет соцветий: Белый, розовый, малиновый Период цветения: июль-октябрь. Место посадки: Солнце/Полутень. Почва: Кислая. Полив: Регулярный. Зона морозостойкости: 4. Применение: в...",
+      "care": {
+        "height": "взрослого растения: 80 см",
+        "bloom": "июль-октябрь",
+        "light": "посадки: Солнце/Полутень"
+      },
+      "image": "/assets/products/066-gortenziya-metelchataya-petit-lantern.webp",
+      "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/%d0%b3%d0%be%d1%80%d1%82%d0%b5%d0%bd%d0%b7%d0%b8%d1%8f-%d0%bc%d0%b5%d1%82%d0%b5%d0%bb%d1%8c%d1%87%d0%b0%d1%82%d0%b0%d1%8f-%d0%bf%d0%b5%d1%82%d0%b8%d1%82-%d0%bb%d0%b0%d0%bd%d1%82%d0%b5%d1%80%d0%bd/"
+    },
+    {
+      "id": 756,
+      "name": "Котовник Фассена",
+      "category": "Цветы многолетние",
+      "categoryKey": "perennials",
+      "price": 300,
+      "stock": 4,
+      "status": "ok",
+      "description": "🌱Собственное производство. Котовник Фассена: растение до 30 см высотой с узкими листьями. Долго цветет с июня по сентябрь. Неприхотливый, засухоустойчивый. Привлекает в сад полезных насекомых. Все его части ароматны. Сикс Хиллз Жиант: цветы сине-голубые, лист...",
+      "care": {
+        "height": "30 — 40 см",
+        "light": "расположение: хорошо растет в солнечном, теплом месте"
+      },
+      "image": "/assets/products/067-kotovnik-fassena.webp",
+      "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/%d0%ba%d0%be%d1%82%d0%be%d0%b2%d0%bd%d0%b8%d0%ba-%d1%84%d0%b0%d1%81%d1%81%d0%b5%d0%bd%d0%b0/"
+    },
+    {
+      "id": 733,
+      "name": "Гортензия метельчатая «Сандей Фрайз»",
+      "category": "Гортензии",
+      "categoryKey": "hydrangea",
+      "price": 850,
+      "stock": 0,
+      "status": "out",
+      "description": "🌱Собственное производство. Высота взрослого растения: 120 см. Цвет соцветий: Белый, розовый. Период цветения: июль-сентябрь. Место посадки: Солнце/Полутень. Почва: Плодородная, дренированная, кислая. Полив: Обильный. Зона морозостойкости: 4.",
+      "care": {
+        "height": "взрослого растения: 120 см",
+        "bloom": "июль-сентябрь",
+        "light": "посадки: Солнце/Полутень"
+      },
+      "image": "/assets/products/068-gortenziya-metelchataya-sandey-frayz.webp",
+      "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/%d0%b3%d0%be%d1%80%d1%82%d0%b5%d0%bd%d0%b7%d0%b8%d1%8f-%d1%81%d0%b0%d0%bd%d0%b4%d0%b5%d0%b9-%d1%84%d1%80%d0%b0%d0%b9%d0%b7/"
+    },
+    {
+      "id": 726,
+      "name": "Гортензия метельчатая «Полар Бир»",
+      "category": "Гортензии",
+      "categoryKey": "hydrangea",
+      "price": 850,
+      "stock": 5,
+      "status": "ok",
+      "description": "🌱Собственное производство. Высота взрослого растения: 1,8 м. Цвет соцветий: Белый, лаймовый, розовый. Место посадки: Солнце/Полутень. Почва: Кислая, влажная. Полив: Обильный. Зона морозостойкости: 4.",
+      "care": {
+        "height": "взрослого растения: 1,8 м",
+        "light": "посадки: Солнце/Полутень"
+      },
+      "image": "/assets/products/069-gortenziya-metelchataya-polar-bir.webp",
+      "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/%d0%b3%d0%be%d1%80%d1%82%d0%b5%d0%bd%d0%b7%d0%b8%d1%8f-%d0%bc%d0%b5%d1%82%d0%b5%d0%bb%d1%8c%d1%87%d0%b0%d1%82%d0%b0%d1%8f-%d0%bf%d0%be%d0%bb%d0%b0%d1%80-%d0%b1%d0%b8%d1%80/"
+    },
+    {
+      "id": 718,
+      "name": "Гортензия метельчатая «Саммер Лав»",
+      "category": "Гортензии",
+      "categoryKey": "hydrangea",
+      "price": 600,
+      "stock": 0,
+      "status": "out",
+      "description": "🌱Объём контейнера 0,5л Собственное производство. Высота взрослого растения: 100 см. Цвет соцветий: Белый, розовый. Место посадки: Солнце/Полутень. Почва: Кислая. Полив: Обильный. Зона морозостойкости: 4.",
+      "care": {
+        "height": "взрослого растения: 100 см",
+        "light": "посадки: Солнце/Полутень"
+      },
+      "image": "/assets/products/070-gortenziya-metelchataya-sammer-lav.webp",
+      "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/%d0%b3%d0%be%d1%80%d1%82%d0%b5%d0%bd%d0%b7%d0%b8%d1%8f-%d0%bc%d0%b5%d1%82%d0%b5%d0%bb%d1%8c%d1%87%d0%b0%d1%82%d0%b0%d1%8f-%d1%81%d0%b0%d0%bc%d0%bc%d0%b5%d1%80-%d0%bb%d0%b0%d0%b2/"
+    },
+    {
+      "id": 711,
+      "name": "Гортензия метельчатая «Лаймлайт»",
+      "category": "Гортензии",
+      "categoryKey": "hydrangea",
+      "price": 950,
+      "stock": 8,
+      "status": "ok",
+      "description": "🌱Собственное производство. Высота взрослого растения: 240 см. Цвет соцветий: Зеленый, белый, розовый. Период цветения: июль-сентябрь. Место посадки: Солнце/Полутень. Почва: Кислая. Полив: Обильный. Зона морозостойкости: 4. Применение: в качестве акцента в цве...",
+      "care": {
+        "height": "взрослого растения: 240 см",
+        "bloom": "июль-сентябрь",
+        "light": "посадки: Солнце/Полутень"
+      },
+      "image": "/assets/products/071-gortenziya-metelchataya-laymlayt.webp",
+      "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/%d0%b3%d0%be%d1%80%d1%82%d0%b5%d0%bd%d0%b7%d0%b8%d1%8f-%d0%bb%d0%b0%d0%b9%d0%bc%d0%bb%d0%b0%d0%b9%d1%82/"
+    },
+    {
+      "id": 705,
+      "name": "Гортензия метельчатая Петит Черри",
+      "category": "Гортензии",
+      "categoryKey": "hydrangea",
+      "price": 950,
+      "stock": 8,
+      "status": "ok",
+      "description": "🌱Собственное производство. Переводится как «Маленькая вишня» Зацветает рано в июне белыми цветами, но уже в июле меняет свою окраску на розовый, в конце цветения соцветия становятся темно-красными. Высота — 50 см. Ширина- 40 см.",
+      "care": {
+        "height": "— 50 см"
+      },
+      "image": "/assets/products/072-gortenziya-metelchataya-petit-cherri.webp",
+      "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/%d0%b3%d0%be%d1%80%d1%82%d0%b5%d0%bd%d0%b7%d0%b8%d1%8f-%d0%bc%d0%b5%d1%82%d0%b5%d0%bb%d1%8c%d1%87%d0%b0%d1%82%d0%b0%d1%8f-%d0%bf%d0%b5%d1%82%d0%b8%d1%82-%d1%87%d0%b5%d1%80%d1%80%d0%b8/"
+    },
+    {
+      "id": 698,
+      "name": "Гортензия метельчатая «Литтл Фреско»",
+      "category": "Гортензии",
+      "categoryKey": "hydrangea",
+      "price": 600,
+      "stock": 0,
+      "status": "out",
+      "description": "🌱Собственное производство. Объём контейнера 0,5л Высота взрослого растения: 70 см. Цвет соцветий: Белый, лаймовый, розовый. Период цветения: июль-сентябрь. Место посадки: Солнце. Почва: Кислая, влажная. Полив: Регулярный. Зона морозостойкости: 4. Применение:...",
+      "care": {
+        "height": "взрослого растения: 70 см",
+        "bloom": "июль-сентябрь",
+        "light": "посадки: Солнце"
+      },
+      "image": "/assets/products/073-gortenziya-metelchataya-littl-fresko.webp",
+      "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/%d0%b3%d0%be%d1%80%d1%82%d0%b5%d0%bd%d0%b7%d0%b8%d1%8f-%d0%bb%d0%b8%d1%82%d1%82%d0%bb-%d1%84%d1%80%d0%b5%d1%81%d0%ba%d0%be/"
+    },
+    {
+      "id": 693,
+      "name": "Гортензия метельчатая Фантом",
+      "category": "Гортензии",
+      "categoryKey": "hydrangea",
+      "price": 600,
+      "stock": 2,
+      "status": "low",
+      "description": "🌱Собственное производство. Высота взрослого растения: 2,2 м. Цвет соцветий: Белый, лаймовый, розовый. Период цветения: июль-октябрь. Место посадки: Солнце/Полутень. Почва: Кислая. Полив: Обильный. Зона морозостойкости: 4. Применение: живые изгороди, групповые...",
+      "care": {
+        "height": "взрослого растения: 2,2 м",
+        "bloom": "июль-октябрь",
+        "light": "посадки: Солнце/Полутень"
+      },
+      "image": "/assets/products/074-gortenziya-metelchataya-fantom.webp",
+      "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/%d0%b3%d0%be%d1%80%d1%82%d0%b5%d0%bd%d0%b7%d0%b8%d1%8f-%d0%bc%d0%b5%d1%82%d0%b5%d0%bb%d1%8c%d1%87%d0%b0%d1%82%d0%b0%d1%8f-%d1%84%d0%b0%d0%bd%d1%82%d0%be%d0%bc/"
+    },
+    {
+      "id": 683,
+      "name": "Гортензия метельчатая Меджикал Килиманджаро",
+      "category": "Гортензии",
+      "categoryKey": "hydrangea",
+      "price": 600,
+      "stock": 0,
+      "status": "out",
+      "description": "🌱Собственное производство. Высота взрослого растения: 120 см. Цвет соцветий: Белый. Период цветения: июль-сентябрь. Место посадки: Солнце/Полутень. Почва: Плодородная, дренированная, кислая. Полив: Обильный. Зона морозостойкости: 4.",
+      "care": {
+        "height": "взрослого растения: 120 см",
+        "bloom": "июль-сентябрь",
+        "light": "посадки: Солнце/Полутень"
+      },
+      "image": "/assets/products/075-gortenziya-metelchataya-medzhikal-kilimandzharo.webp",
+      "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/%d0%b3%d0%be%d1%80%d1%82%d0%b5%d0%bd%d0%b7%d0%b8%d1%8f-%d0%bc%d0%b5%d1%82%d0%b5%d0%bb%d1%8c%d1%87%d0%b0%d1%82%d0%b0%d1%8f-%d0%bc%d0%b5%d0%b4%d0%b6%d0%b8%d0%ba%d0%b0%d0%bb-%d0%ba%d0%b8%d0%bb%d0%b8/"
+    },
+    {
+      "id": 677,
+      "name": "Гортензия метельчатая «Строберри Блоссом»",
+      "category": "Гортензии",
+      "categoryKey": "hydrangea",
+      "price": 600,
+      "stock": 0,
+      "status": "out",
+      "description": "🌱Собственное производство. Strawberry Blossom — удивительная гортензия, напоминающая нежную клубнику в сливках. «Клубничное цветение» — так переводится название этого сорта дословно. Пройти мимо такой гортензии сложно. Высота — 120 см. Ширина — 120 см. Цветы...",
+      "care": {
+        "height": "— 120 см",
+        "bloom": "» — так переводится название этого сорта дословно"
+      },
+      "image": "/assets/products/076-gortenziya-metelchataya-stroberri-blossom.webp",
+      "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/%d0%bc%d0%b5%d1%82%d0%b5%d0%bb%d1%8c%d1%87%d0%b0%d1%82%d0%b0%d1%8f-%d0%b3%d0%be%d1%80%d1%82%d0%b5%d0%bd%d0%b7%d0%b8%d1%8f-%d1%81%d1%82%d1%80%d0%be%d0%b1%d0%b5%d1%80%d1%80%d0%b8-%d0%b1%d0%bb%d0%be/"
+    },
+    {
+      "id": 667,
+      "name": "Метельчатая гортензия Распберри Пинк",
+      "category": "Гортензии",
+      "categoryKey": "hydrangea",
+      "price": 600,
+      "stock": 5,
+      "status": "ok",
+      "description": "🌱Собственное производство. Высота куста 100 см, ширина 90 см. Листья зеленые, ветви красные, крепкие, прямостоящие. Цветение с июля по сентябрь. Соцветия пышные, 20-25см, состоят из стерильных цветков, меняют цвет от белого до насыщенно-розового. Почва должна...",
+      "care": {
+        "height": "куста 100 см, ширина 90 см",
+        "bloom": "с июля по сентябрь",
+        "light": "для посадки",
+        "hardiness": "-30С"
+      },
+      "image": "/assets/products/077-metelchataya-gortenziya-raspberri-pink.webp",
+      "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/%d1%80%d0%b0%d1%81%d0%bf%d0%b1%d0%b5%d1%80%d1%80%d0%b8-%d0%bf%d0%b8%d0%bd%d0%ba-%d0%bc%d0%b5%d1%82%d0%b5%d0%bb%d1%8c%d1%87%d0%b0%d1%82%d0%b0%d1%8f-%d0%b3%d0%be%d1%80%d1%82%d0%b5%d0%bd%d0%b7%d0%b8/"
+    },
+    {
+      "id": 662,
+      "name": "Метельчатая гортензия Вайтлайт",
+      "category": "Гортензии",
+      "categoryKey": "hydrangea",
+      "price": 600,
+      "stock": 32,
+      "status": "ok",
+      "description": "🌱Собственное производство. Высота взрослого растения: 100 см. Цвет соцветий: Нежно-розовый. Период цветения: июль-сентябрь. Место посадки: Солнце/Полутень. Почва: Кислая, влажная. Полив: Обильный. Обрезка: Формовочная, санитарная. Зона морозостойкости: 4.",
+      "care": {
+        "height": "взрослого растения: 100 см",
+        "bloom": "июль-сентябрь",
+        "light": "посадки: Солнце/Полутень"
+      },
+      "image": "/assets/products/078-metelchataya-gortenziya-vaytlayt.webp",
+      "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/%d0%b2%d0%b0%d0%b9%d1%82%d0%bb%d0%b0%d0%b9%d1%82-%d0%bc%d0%b5%d1%82%d0%b5%d0%bb%d1%8c%d1%87%d0%b0%d1%82%d0%b0%d1%8f-%d0%b3%d0%be%d1%80%d1%82%d0%b5%d0%bd%d0%b7%d0%b8%d1%8f/"
+    },
+    {
+      "id": 653,
+      "name": "Пузыреплодник калинолистный «Diable D’Or”",
+      "category": "Без категории",
+      "categoryKey": "other",
+      "price": 350,
+      "stock": 50,
+      "status": "ok",
+      "description": "🌱Собственное производство. Средне- или быстрорастущий густой кустарник с полушаровидной формой кроны. Высота до 2,5 м, ширина до 1,5-2 м. Цветки бело-розовые, собраны в щитковидные соцветия. Цветение в июне-июле. Листья 3-5-лопастные, округло-эллиптические, д...",
+      "care": {
+        "height": "до 2,5 м, ширина до 1,5-2 м",
+        "bloom": "в июне-июле",
+        "hardiness": "Зона 3"
+      },
+      "image": "/assets/products/079-puzyreplodnik-kalinolistnyy-diable-d-or.webp",
+      "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/%d0%bf%d1%83%d0%b7%d1%8b%d1%80%d0%b5%d0%bf%d0%bb%d0%be%d0%b4%d0%bd%d0%b8%d0%ba-%d0%ba%d0%b0%d0%bb%d0%b8%d0%bd%d0%be%d0%bb%d0%b8%d1%81%d1%82%d0%bd%d1%8b%d0%b9-%d0%b0%d0%bd%d0%b4%d1%80%d0%b5/"
+    },
+    {
+      "id": 647,
+      "name": "Спирея японская Литл Принцесс",
+      "category": "Без категории",
+      "categoryKey": "other",
+      "price": 350,
+      "stock": 195,
+      "status": "ok",
+      "description": "🌱Собственное производство. Место посадки: солнце/полутень. Высота: 50 см. Ширина: 50 см. Период цветения: май-июнь. Цветение: однократное. Цветок: розовый. Лист: тёмно-зелёный, мелкий. Форма куста: округлая, компактная. Полив: регулярный Почва: свежая, легкая...",
+      "care": {
+        "height": "50 см",
+        "bloom": "май-июнь",
+        "light": "посадки: солнце/полутень",
+        "hardiness": "4 зона (-28/-34⁰C)"
+      },
+      "image": "/assets/products/080-spireya-yaponskaya-litl-princess.webp",
+      "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/%d1%81%d0%bf%d0%b8%d1%80%d0%b5%d1%8f-%d1%8f%d0%bf%d0%be%d0%bd%d1%81%d0%ba%d0%b0%d1%8f-%d0%bb%d0%b8%d1%82%d0%bb-%d0%bf%d1%80%d0%b8%d0%bd%d1%86%d0%b5%d1%81%d1%81/"
+    },
+    {
+      "id": 640,
+      "name": "Лапчатка кустарниковая «Кобольд»",
+      "category": "Без категории",
+      "categoryKey": "other",
+      "price": 250,
+      "stock": 9,
+      "status": "ok",
+      "description": "🌱Собственное производство. Округлый компактный кустик; крона подушковидная. Высота 0,6 — 0,8м. Ширина 1 — 1,2м. Цветёт с июня по сентябрь крупными ярко-жёлтыми цветами. Солнце/полутень. Зимостойка; нетребовательна.",
+      "care": {
+        "height": "0,6 — 0,8м"
+      },
+      "image": "/assets/products/081-lapchatka-kustarnikovaya-kobold.webp",
+      "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/%d0%bb%d0%b0%d0%bf%d1%87%d0%b0%d1%82%d0%ba%d0%b0-%d0%ba%d1%83%d1%81%d1%82%d0%b0%d1%80%d0%bd%d0%b8%d0%ba%d0%be%d0%b2%d0%b0%d1%8f-%d0%ba%d0%be%d0%b1%d0%be%d0%bb%d1%8c%d0%b4/"
+    },
+    {
+      "id": 633,
+      "name": "Пузыреплодник калинолистный «Амбер Джубиле»",
+      "category": "Без категории",
+      "categoryKey": "other",
+      "price": 350,
+      "stock": 26,
+      "status": "ok",
+      "description": "🌱Собственное производство. Компактный сорт с кроной вееровидной формы. Побеги жесткие, прямые, весной почти кораллового цвета, переходящего в ярко-вишневые тона к середине лета. Высота и ширина до 1,5м. Солнце/полутень. Морозостойкий. Устойчив к вредителям и...",
+      "care": {
+        "height": "и ширина до 1,5м"
+      },
+      "image": "/assets/products/082-puzyreplodnik-kalinolistnyy-amber-dzhubile.webp",
+      "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/%d0%bf%d1%83%d0%b7%d1%8b%d1%80%d0%b5%d0%bf%d0%bb%d0%be%d0%b4%d0%bd%d0%b8%d0%ba-%d0%ba%d0%b0%d0%bb%d0%b8%d0%bd%d0%be%d0%bb%d0%b8%d1%81%d1%82%d0%bd%d1%8b%d0%b9-%d0%b0%d0%bc%d0%b1%d0%b5%d1%80/"
+    },
+    {
+      "id": 624,
+      "name": "Спирея японская Файерлайт",
+      "category": "Без категории",
+      "categoryKey": "other",
+      "price": 350,
+      "stock": 49,
+      "status": "ok",
+      "description": "🌱Собственное производство. 🌿2х летний саженец Красивый, небольшой, густой, куполовидный кустарник. Высота до 0,6 м — 0,8 м, диаметр до 1 м. Цветёт в июне — июле. Молодые листочки оранжево-красные, летом становятся оранжево-желтыми и лимонно-зелеными. Осенняя...",
+      "care": {
+        "height": "до 0,6 м — 0,8 м, диаметр до 1 м",
+        "light": "солнце",
+        "hardiness": "зона 4"
+      },
+      "image": "/assets/products/083-spireya-yaponskaya-fayerlayt.webp",
+      "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/%d1%81%d0%bf%d0%b8%d1%80%d0%b5%d1%8f-%d1%8f%d0%bf%d0%be%d0%bd%d1%81%d0%ba%d0%b0%d1%8f-%d1%84%d0%b0%d0%b9%d0%b5%d1%80%d0%bb%d0%b0%d0%b9%d1%82/"
+    },
+    {
+      "id": 614,
+      "name": "Спирея японская Голден Принцесс",
+      "category": "Без категории",
+      "categoryKey": "other",
+      "price": 350,
+      "stock": 36,
+      "status": "ok",
+      "description": "🌱Собственное производство. Компактный, плоский шаровидный кустарник, медленнорастущий. Высотой до 0,6 м, ширина 0,3-0,8 м. Цветет в июне — июле; средняя продолжительность цветения 45 дней. Листья простые, очередные, яйцевидные, зубчатые по краю, ранней весной...",
+      "care": {
+        "light": "солнце",
+        "hardiness": "зона 4"
+      },
+      "image": "/assets/products/084-spireya-yaponskaya-golden-princess.webp",
+      "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/%d1%81%d0%bf%d0%b8%d1%80%d0%b5%d1%8f-%d1%8f%d0%bf%d0%be%d0%bd%d1%81%d0%ba%d0%b0%d1%8f-%d0%b3%d0%be%d0%bb%d0%b4%d0%b5%d0%bd-%d0%bf%d1%80%d0%b8%d0%bd%d1%86%d0%b5%d1%81%d1%81/"
+    },
+    {
+      "id": 606,
+      "name": "Спирея Берёзолистная Тор",
+      "category": "Без категории",
+      "categoryKey": "other",
+      "price": 350,
+      "stock": 1,
+      "status": "low",
+      "description": "🌱Собственное производство. Объём контейнера 0,5л. 2х летний саженец Компактный невысокий кустарник с многочисленными жесткими и ребристыми побегами коричневого цвета. Крона шаровидная. Высота и ширина 0,7-0,9 м. Цветение начинается в конце мая и продолжается...",
+      "care": {
+        "height": "и ширина 0,7-0,9 м",
+        "bloom": "начинается в конце мая и продолжается до конца июня на побегах текущего года",
+        "light": "солнце/полутень",
+        "hardiness": "зона 4"
+      },
+      "image": "/assets/products/085-spireya-berezolistnaya-tor.webp",
+      "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/%d1%81%d0%bf%d0%b8%d1%80%d0%b5%d1%8f-%d0%b1%d0%b5%d1%80%d1%91%d0%b7%d0%be%d0%bb%d0%b8%d1%81%d1%82%d0%bd%d0%b0%d1%8f-%d1%82%d0%be%d1%80/"
+    },
+    {
+      "id": 598,
+      "name": "Пузыреплодник Лютеус",
+      "category": "Без категории",
+      "categoryKey": "other",
+      "price": 350,
+      "stock": 4,
+      "status": "ok",
+      "description": "🌱Собственное производство. Пузыреплодник Лютеус. Быстрорастущий, широкий, округлый кустарник со слегка поникающими ветвями. Высота взрослого растения до 3 м, ширина до 2,5 м. Цветение в июне-июле. Солнце/полутень. Морозостойкий. Устойчив к вредителям и болезн...",
+      "care": {
+        "height": "взрослого растения до 3 м, ширина до 2,5 м",
+        "bloom": "в июне-июле"
+      },
+      "image": "/assets/products/086-puzyreplodnik-lyuteus.webp",
+      "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/%d0%bf%d1%83%d0%b7%d1%8b%d1%80%d0%b5%d0%bf%d0%bb%d0%be%d0%b4%d0%bd%d0%b8%d0%ba-%d0%bb%d1%8e%d1%82%d0%b5%d1%83%d1%81/"
+    },
+    {
+      "id": 539,
+      "name": "БЕГОНИЯ BELLECONIA ROSE",
+      "category": "Цветы однолетние",
+      "categoryKey": "annuals",
+      "price": 600,
+      "stock": 4,
+      "status": "ok",
+      "description": "🎁В подарок получаете рекомендации по уходу за бегонией. Cерия Belleconia одна из новейших серий ампельной бегонии с крупными махровыми цветами. Эти растения отличаются высокой устойчивостью к болезням и вредителям. Цветут обильно, образуя длинные, свисающие п...",
+      "care": {
+        "height": "куста 20-25см",
+        "bloom": "Тень или полутень"
+      },
+      "image": "/assets/products/087-begoniya-belleconia-rose.webp",
+      "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/%d0%b1%d0%b5%d0%b3%d0%be%d0%bd%d0%b8%d1%8f-belleconia-rose/"
+    },
+    {
+      "id": 534,
+      "name": "БЕГОНИЯ SUMMERWINGS DOUBLE CREAM",
+      "category": "Цветы однолетние",
+      "categoryKey": "annuals",
+      "price": 600,
+      "stock": 0,
+      "status": "out",
+      "description": "🎁В подарок получаете рекомендации по уходу за бегонией. Высота куста 20-25см Форма куста: ампельный Обильное цветение Устойчива к солнечным лучам",
+      "care": {
+        "height": "куста 20-25см",
+        "bloom": "Устойчива к солнечным лучам"
+      },
+      "image": "/assets/products/088-begoniya-summerwings-double-cream.webp",
+      "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/%d0%b1%d0%b5%d0%b3%d0%be%d0%bd%d0%b8%d1%8f-summerwings-double-cream/"
+    },
+    {
+      "id": 523,
+      "name": "БЕГОНИЯ BELINA PEACH",
+      "category": "Цветы однолетние",
+      "categoryKey": "annuals",
+      "price": 600,
+      "stock": 0,
+      "status": "out",
+      "description": "🌱Объём контейнера 0,5л 🎁В подарок получаете рекомендации по уходу за бегонией. Бегония Belina — ампельный сорт с крупными, махровыми цветками с многообразием цветов. •Цветение непрерывное, в течение всего сезона, до первых заморозков. •Длина побегов 25-30 см....",
+      "care": {
+        "height": "взрослого растения 30 см",
+        "bloom": "непрерывное, в течение всего сезона, до первых заморозков"
+      },
+      "image": "/assets/products/089-begoniya-belina-peach.webp",
+      "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/belina-peach/"
+    }
+  ],
+  "categories": [
+    {
+      "id": 23,
+      "name": "Гортензии",
+      "key": "hydrangea",
+      "count": 15,
+      "url": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product-category/gortenzii/"
+    },
+    {
+      "id": 17,
+      "name": "Кустарники",
+      "key": "shrubs",
+      "count": 16,
+      "url": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product-category/kustarniki/"
+    },
+    {
+      "id": 40,
+      "name": "Овощная рассада",
+      "key": "vegetables",
+      "count": 1,
+      "url": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product-category/%d0%be%d0%b2%d0%be%d1%89%d0%bd%d0%b0%d1%8f-%d1%80%d0%b0%d1%81%d1%81%d0%b0%d0%b4%d0%b0/"
+    },
+    {
+      "id": 21,
+      "name": "Цветы многолетние",
+      "key": "perennials",
+      "count": 9,
+      "url": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product-category/mnogoletnie/"
+    },
+    {
+      "id": 35,
+      "name": "Цветы однолетние",
+      "key": "annuals",
+      "count": 48,
+      "url": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product-category/%d1%86%d0%b2%d0%b5%d1%82%d1%8b-%d0%be%d0%b4%d0%bd%d0%be%d0%bb%d0%b5%d1%82%d0%bd%d0%b8%d0%b5/"
+    }
+  ],
+  "orders": [
+    {
+      "id": "AS-1048",
+      "client": "Марина С.",
+      "city": "Москва",
+      "items": 6,
+      "amount": 3240,
+      "status": "Новый",
+      "delivery": "СДЭК до ПВЗ",
+      "eta": "сегодня, 18:00"
+    },
+    {
+      "id": "AS-1047",
+      "client": "Ирина П.",
+      "city": "Одинцово",
+      "items": 11,
+      "amount": 5860,
+      "status": "Собирается",
+      "delivery": "Самовывоз",
+      "eta": "завтра, 11:30"
+    },
+    {
+      "id": "AS-1046",
+      "client": "Ольга Н.",
+      "city": "Санкт-Петербург",
+      "items": 9,
+      "amount": 4920,
+      "status": "В СДЭК",
+      "delivery": "СДЭК курьер",
+      "eta": "12 июня"
+    },
+    {
+      "id": "AS-1045",
+      "client": "Анна К.",
+      "city": "Тула",
+      "items": 4,
+      "amount": 2110,
+      "status": "Оплачен",
+      "delivery": "СДЭК до ПВЗ",
+      "eta": "ожидает сборки"
+    }
+  ],
+  "metrics": {
+    "revenueMonth": 486700,
+    "ordersToday": 18,
+    "stockAlerts": 44,
+    "deliveryQueue": 12,
+    "conversion": 4.8,
+    "avgCheck": 2940
+  },
+  "heroImages": [
+    "/assets/products/001-ehinaceya-mellow-yellows.webp",
+    "/assets/products/002-ehinaceya-purpurnaya-bravado.webp",
+    "/assets/products/003-ehinaceya-pau-vau-white.webp",
+    "/assets/products/004-salviya-shalfey-dubravnaya-blyu-kuin.webp",
+    "/assets/products/005-shalfey-dubravnyy-new-dimension-blue.webp",
+    "/assets/products/006-shalfey-dubravnyy-new-dimension-rose.webp",
+    "/assets/products/007-armeriya-morning-star-white.webp",
+    "/assets/products/008-armeriya-morning-star-deep-rose.webp"
+  ]
+}
