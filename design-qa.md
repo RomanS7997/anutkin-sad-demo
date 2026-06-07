@@ -63,7 +63,7 @@ No actionable P0/P1/P2 issues remain.
 - Added a complete storefront footer with brand copy, category counts, buyer links, contacts, delivery notes, mini product photos, and a catalog CTA.
 - Rechecked the mobile photo modal after animation completion: panel/background opacity is stable and arrows remain inside the image stage.
 - Fixed the desktop photo modal height so the large image reaches the modal bottom instead of leaving an empty blush strip below it.
-- Strengthened mobile adaptation: the product photo modal now scrolls as one mobile sheet without title/image overlap, and admin orders/products render as mobile cards instead of a clipped desktop table.
+- Strengthened mobile adaptation: the product photo modal now scrolls as one mobile sheet without title/image overlap, the close control stays accessible while scrolling, and admin orders/products render as mobile cards instead of a clipped desktop table.
 
 ## Verification
 

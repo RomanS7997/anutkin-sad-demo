@@ -4079,6 +4079,13 @@ a {
     overscroll-behavior: contain;
   }
 
+  .modal-close {
+    position: fixed;
+    top: max(14px, env(safe-area-inset-top));
+    right: max(14px, env(safe-area-inset-right));
+    z-index: 96;
+  }
+
   .photo-stage {
     height: min(44vh, 360px);
     height: min(44dvh, 360px);
