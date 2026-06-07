@@ -58,6 +58,7 @@ No actionable P0/P1/P2 issues remain.
 - Moved modal previous/next buttons into the photo stage itself, preventing overlap with text on every viewport.
 - Tightened the mobile header and mobile hero so the first screen shows product photography instead of only navigation and copy.
 - Removed buyer-facing copy that explained the website mechanics instead of selling plants.
+- Cleaned remaining demo-style delivery and admin wording: delivery now describes plant shipment, packing, pickup, and tracking directly; admin cards use operational stock/promo language.
 - Rebuilt the seasonal lookbook after visual review: removed decorative cropped asset clutter, fixed the main image height, added product mini-cards with price/stock, and shortened the headline so it no longer collides with the photo column.
 - Strengthened the storefront header with clearer brand, delivery/geography chips, stronger active navigation, and larger cart/admin actions.
 - Added a complete storefront footer with brand copy, category counts, buyer links, contacts, delivery notes, mini product photos, and a catalog CTA.
@@ -79,6 +80,7 @@ No actionable P0/P1/P2 issues remain.
 - Desktop modal gap QA passed at 1230x683: panel-minus-image bottom gap is 1px from the border, stage-minus-image bottom gap is 0px, and the details column scrolls internally when text is taller.
 - Mobile QA passed at 375x812 and 320x760: storefront/modal/admin horizontal overflow is 0, failed images are 0, Bravado modal title/photo overlap is 0px, admin order table head is hidden, and admin product price/action remain visible.
 - Desktop hero QA passed at 1440x900 and 1280x820: active header/hero width is wider, horizontal overflow is 0, failed images are 0, central hero photo and orbit photos open the product lightbox.
+- Copy QA passed on local production build for home, delivery, about, and mobile admin: removed demo/UX phrases are absent from rendered text, failed images are 0, and horizontal overflow is 0.
 - Failed network resources: 0 in the focused final local check.
 - Horizontal overflow: none on 1440px desktop and 390px mobile.
 
