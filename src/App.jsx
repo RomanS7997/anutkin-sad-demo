@@ -282,14 +282,57 @@ function StoreHeader({ routeName, go, cartCount, openCart }) {
 }
 
 function HomeExperience({ data, featured, galleryProducts, go, addToCart, openLightbox }) {
-  const heroProduct = featured[0] || data.products[0];
-  const carousel = featured.slice(0, 8);
+  const hydrangeas = galleryProducts.filter((product) => product.categoryKey === "hydrangea" && product.stock > 0);
+  const heroProduct =
+    hydrangeas.find((product) => product.image?.includes("silver-dollar")) ||
+    hydrangeas.find((product) => product.image?.includes("polar-bir")) ||
+    featured[0] ||
+    data.products[0];
+  const heroPicks = [
+    heroProduct,
+    ...hydrangeas.filter((product) => product.id !== heroProduct.id),
+    ...featured.filter((product) => product.id !== heroProduct.id),
+  ].filter((product, index, items) => product && items.findIndex((item) => item.id === product.id) === index);
+  const categoryCount = (key) => data.categories.find((category) => category.key === key)?.count || 0;
+  const categoryProduct = (key, fallbackIndex = 0) =>
+    galleryProducts.find((product) => product.categoryKey === key && product.stock > 0) ||
+    galleryProducts.find((product) => product.categoryKey === key) ||
+    featured[fallbackIndex] ||
+    heroProduct;
+  const categoryStories = [
+    {
+      key: "hydrangea",
+      title: "Гортензии",
+      text: "Метельчатые сорта для выразительных посадок и долгого цветения.",
+      product: categoryProduct("hydrangea"),
+      Icon: Plant,
+    },
+    {
+      key: "perennials",
+      title: "Многолетники",
+      text: "Эхинацеи, шалфеи и растения, которые возвращаются каждый сезон.",
+      product: categoryProduct("perennials", 1),
+      Icon: Leaf,
+    },
+    {
+      key: "annuals",
+      title: "Цветущие однолетники",
+      text: "Яркие сорта для кашпо, клумб и быстрого сезонного обновления сада.",
+      product: categoryProduct("annuals", 2),
+      Icon: Sparkle,
+    },
+    {
+      key: "other",
+      title: "Кустарники и сад",
+      text: "Спиреи, лапчатки, туи и практичные растения для структуры участка.",
+      product: categoryProduct("other", 3),
+      Icon: Package,
+    },
+  ];
 
   return (
     <>
       <section className="experience-hero">
-        <img className="floral-corner floral-corner-left" src={assetUrl("/assets/decor/floral-corner-left.webp")} alt="" aria-hidden="true" />
-        <img className="floral-corner floral-corner-right" src={assetUrl("/assets/decor/floral-corner-right.webp")} alt="" aria-hidden="true" />
         <div className="hero-copy hero-copy-v2">
           <p className="eyebrow">
             <Sparkle size={16} weight="fill" />
@@ -297,8 +340,8 @@ function HomeExperience({ data, featured, galleryProducts, go, addToCart, openLi
           </p>
           <h1>Растения для сада с доставкой по России</h1>
           <p className="hero-lede">
-            Не просто красивая витрина: покупатель видит живые остатки, подборки по сезону,
-            понятную доставку СДЭК и подробные карточки растений с фото, ценой и условиями ухода.
+            Выбирайте гортензии, многолетники, кустарники и сезонные цветы по реальным фото,
+            актуальному наличию и понятным условиям отправки.
           </p>
           <div className="hero-actions">
             <button className="primary-button" type="button" onClick={() => go("catalog")}>
@@ -317,44 +360,51 @@ function HomeExperience({ data, featured, galleryProducts, go, addToCart, openLi
           </div>
         </div>
 
-        <div className="scene3d" aria-label="3D витрина растений">
-          <div className="plant-carousel">
-            {carousel.slice(0, 6).map((product, index) => (
-              <button
-                className={`carousel-card showcase-card showcase-card-${index + 1}`}
-                key={product.id}
-                style={{ "--angle": `${index * 60}deg` }}
-                type="button"
-                onClick={() => openLightbox(product)}
-              >
-                <img src={assetUrl(product.image)} alt={product.name} />
-                <span>{product.name}</span>
-              </button>
-            ))}
-          </div>
-          <article className="hero-live-card">
-            <span>Хит сезона</span>
-            <strong>{heroProduct.name}</strong>
-            <p>{formatRub(heroProduct.price)} · {stockLabel(heroProduct)}</p>
-            <button type="button" onClick={() => addToCart(heroProduct)}>
+        <div className="hero-visual-v3" aria-label="Сезонная подборка растений">
+          <button className="hero-photo-frame" type="button" onClick={() => openLightbox(heroProduct)}>
+            <img src={assetUrl(heroProduct.image)} alt={heroProduct.name} />
+            <span>
+              <MagnifyingGlass size={17} weight="duotone" />
+              Фото крупно
+            </span>
+          </button>
+          <article className="hero-buy-panel">
+            <p>В наличии сейчас</p>
+            <h2>{heroProduct.name}</h2>
+            <div>
+              <strong>{formatRub(heroProduct.price)}</strong>
+              <span>{stockLabel(heroProduct)}</span>
+            </div>
+            <button type="button" onClick={() => addToCart(heroProduct)} disabled={heroProduct.stock === 0}>
               В корзину
               <Plus size={16} weight="bold" />
             </button>
           </article>
+          <div className="hero-pick-strip" aria-label="Популярные растения">
+            {heroPicks.slice(1, 4).map((product) => (
+              <button type="button" key={product.id} onClick={() => openLightbox(product)}>
+                <img src={assetUrl(product.image)} alt={product.name} />
+                <span>
+                  <strong>{product.name}</strong>
+                  <small>{formatRub(product.price)}</small>
+                </span>
+              </button>
+            ))}
+          </div>
         </div>
       </section>
 
-      <section className="journey-grid">
-        {[
-          ["Каталог с живыми остатками", "Фильтры, быстрый поиск, статусы наличия и красивые карточки растений.", "catalog", Package],
-          ["Страница растения", "Большое фото, характеристики, наличие и понятный следующий шаг.", `product/${heroProduct.id}`, Plant],
-          ["Доставка СДЭК", "Отдельный экран про упаковку, сроки, самовывоз и ожидания покупателя.", "delivery", Truck],
-          ["Панель хозяйства", "Продажи, заказы, остатки, очередь отправок и ежедневные действия.", "admin", ChartLineUp],
-        ].map(([title, text, target, Icon]) => (
-          <button className="journey-card" key={title} type="button" onClick={() => go(target)}>
-            <Icon size={28} weight="duotone" />
-            <strong>{title}</strong>
-            <span>{text}</span>
+      <section className="category-story-grid" aria-label="Категории растений">
+        {categoryStories.map(({ key, title, text, product, Icon }) => (
+          <button className="category-story-card" key={key} type="button" onClick={() => go("catalog")}>
+            <img src={assetUrl(product.image)} alt={product.name} />
+            <span className="category-story-shade" />
+            <span className="category-story-content">
+              <Icon size={24} weight="duotone" />
+              <strong>{title}</strong>
+              <small>{categoryCount(key)} позиций</small>
+              <em>{text}</em>
+            </span>
             <ArrowRight size={18} weight="bold" />
           </button>
         ))}
@@ -364,11 +414,11 @@ function HomeExperience({ data, featured, galleryProducts, go, addToCart, openLi
 
       <section className="immersive-band">
         <div className="band-copy">
-          <p className="script">Season drop</p>
-          <h2>Не скидка ради скидки, а сезонные сценарии покупки</h2>
+          <p className="script">Сезонная подборка</p>
+          <h2>Растения под задачу, участок и время посадки</h2>
           <p>
-            В каталоге собраны подборки: гортензии для посадки, цветущие однолетники, кустарники
-            и рассада. Так проще выбрать растения под сезон, участок и способ доставки.
+            Гортензии для выразительных посадок, цветущие однолетники для кашпо,
+            многолетники для стабильного сада и кустарники для структуры участка.
           </p>
           <button className="primary-button alt" type="button" onClick={() => go("catalog")}>
             Смотреть подборки
@@ -388,7 +438,7 @@ function HomeExperience({ data, featured, galleryProducts, go, addToCart, openLi
 
       <section className="editorial-section">
         <div className="section-head">
-          <p className="eyebrow">Витрина</p>
+          <p className="eyebrow">Выбор покупателей</p>
           <h2>Популярные растения из каталога</h2>
           <p>Крупные фото, живые остатки и быстрый переход в карточку помогают спокойно выбрать растение.</p>
         </div>
@@ -408,10 +458,10 @@ function CatalogExperience({ data, filtered, activeCategory, setActiveCategory, 
       <section className="page-hero compact">
         <div>
           <p className="eyebrow">Каталог</p>
-          <h1>Каталог, который выглядит как магазин</h1>
+          <h1>Каталог садовых растений</h1>
           <p>
-            Отдельная страница каталога помогает быстро выбрать растения: поиск, фильтры,
-            быстрый просмотр и карточки, которые хорошо смотрятся на мобильном.
+            Смотрите актуальные позиции по категориям, наличию и сезону. В карточках есть фото,
+            цена, остаток и быстрый переход к подробностям растения.
           </p>
         </div>
         <div className="catalog-stats">
@@ -544,7 +594,7 @@ function DeliveryExperience({ data, go }) {
       <section className="process-board">
         {[
           ["01", "Оплата", "Реквизиты приходят после подтверждения заказа."],
-          ["02", "Сборка", "Админка показывает, какие растения собрать и что заканчивается."],
+          ["02", "Сборка", "Сверяем состав заказа, наличие и состояние растений перед упаковкой."],
           ["03", "Упаковка", "Чек-лист: влажность, корневая, бирка, фото перед отправкой."],
           ["04", "СДЭК", "Этикетка, трек-номер и статус отправки в одном месте."],
         ].map(([num, title, text]) => (
@@ -571,7 +621,7 @@ function DeliveryExperience({ data, go }) {
             <span>Примерный срок</span>
             <strong>3-5 дней</strong>
           </div>
-          <button type="button" onClick={() => go("admin")}>Посмотреть очередь СДЭК</button>
+          <button type="button" onClick={() => go("catalog")}>Продолжить выбор</button>
         </div>
       </section>
     </>
@@ -654,8 +704,8 @@ function LookbookGallery({ products, go, openLightbox }) {
         <p className="eyebrow">Сезон в кадре</p>
         <h2>Рассмотрите растения крупно перед заказом</h2>
         <p>
-          Клик по фотографии открывает галерею: можно листать растения, смотреть детали,
-          переходить в карточку и добавлять выбранное в корзину.
+          Сезонные сорта собраны рядом: гортензии, цветущие многолетники и растения,
+          которые хорошо смотрятся в саду уже в первый год.
         </p>
         <button className="round-link" type="button" onClick={() => go("catalog")}>
           Все растения
@@ -695,15 +745,15 @@ function PhotoLightbox({ product, products, index, onClose, onMove, onPick, addT
         <button className="modal-close icon-button" type="button" onClick={onClose} aria-label="Закрыть">
           <X size={20} weight="bold" />
         </button>
-        <button className="gallery-nav gallery-prev" type="button" onClick={() => onMove(-1)} aria-label="Предыдущее фото">
-          <CaretLeft size={24} weight="bold" />
-        </button>
         <figure className="photo-stage">
           <img src={assetUrl(product.image)} alt={product.name} />
+          <button className="gallery-nav gallery-prev" type="button" onClick={() => onMove(-1)} aria-label="Предыдущее фото">
+            <CaretLeft size={24} weight="bold" />
+          </button>
+          <button className="gallery-nav gallery-next" type="button" onClick={() => onMove(1)} aria-label="Следующее фото">
+            <CaretRight size={24} weight="bold" />
+          </button>
         </figure>
-        <button className="gallery-nav gallery-next" type="button" onClick={() => onMove(1)} aria-label="Следующее фото">
-          <CaretRight size={24} weight="bold" />
-        </button>
         <section className="photo-details">
           <p className="eyebrow">{product.category}</p>
           <h2>{product.name}</h2>
