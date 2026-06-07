@@ -4065,22 +4065,43 @@ a {
   }
 
   .photo-lightbox {
-    padding: 10px;
+    align-items: start;
+    padding: 8px;
   }
 
   .photo-panel {
-    width: calc(100vw - 20px);
-    max-height: calc(100vh - 20px);
+    width: calc(100vw - 16px);
+    max-height: calc(100vh - 16px);
+    max-height: calc(100dvh - 16px);
+    display: block;
+    overflow-x: hidden;
+    overflow-y: auto;
+    overscroll-behavior: contain;
   }
 
   .photo-stage {
-    height: 42vh;
-    min-height: 260px;
+    height: min(44vh, 360px);
+    height: min(44dvh, 360px);
+    min-height: 286px;
+    border-radius: 7px 7px 0 0;
   }
 
   .photo-details {
-    padding: 28px 18px 20px;
+    min-height: auto;
+    padding: 18px 18px 20px;
+    align-content: start;
     gap: 12px;
+    overflow: visible;
+  }
+
+  .photo-details h2 {
+    font-size: clamp(30px, 10.5vw, 42px);
+    line-height: 1.02;
+  }
+
+  .photo-details > p:not(.eyebrow) {
+    font-size: 15px;
+    line-height: 1.58;
   }
 
   .photo-meta,
@@ -4125,5 +4146,225 @@ a {
 
   .floating-toolbar {
     position: static;
+  }
+}
+
+@media (max-width: 760px) {
+  .admin-main {
+    padding: 16px 12px calc(96px + env(safe-area-inset-bottom));
+  }
+
+  .admin-topbar {
+    gap: 14px;
+  }
+
+  .admin-topbar h1 {
+    font-size: clamp(28px, 8vw, 34px);
+    line-height: 1.1;
+  }
+
+  .admin-actions {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 46px;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .admin-actions .admin-search {
+    min-width: 0;
+  }
+
+  .admin-actions .icon-button {
+    width: 46px;
+    height: 46px;
+  }
+
+  .ops-command-strip {
+    grid-template-columns: 1fr;
+  }
+
+  .ops-command-card {
+    min-height: 176px;
+    padding: 17px;
+  }
+
+  .ops-command-card strong {
+    font-size: 16px;
+  }
+
+  .metric-card {
+    min-height: 128px;
+  }
+
+  .panel-title {
+    align-items: flex-start;
+  }
+
+  .panel-title button {
+    min-width: 42px;
+    padding-inline: 11px;
+    white-space: nowrap;
+  }
+
+  .table-panel {
+    overflow: visible;
+  }
+
+  .order-table {
+    min-width: 0;
+    display: grid;
+    gap: 10px;
+  }
+
+  .table-head {
+    display: none;
+  }
+
+  .order-table article {
+    min-height: 0;
+    padding: 14px;
+    border: 1px solid rgba(90, 92, 72, 0.12);
+    border-radius: 8px;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 10px 14px;
+    background: #fff;
+    box-shadow: 0 10px 26px rgba(65, 82, 71, 0.07);
+  }
+
+  .order-table article strong {
+    font-size: 17px;
+  }
+
+  .order-table article span {
+    grid-column: 1 / -1;
+    min-width: 0;
+  }
+
+  .order-table article span::before,
+  .order-table article b::before {
+    display: block;
+    margin-bottom: 3px;
+    color: #78806f;
+    font-size: 10px;
+    font-weight: 900;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+
+  .order-table article span:nth-of-type(1)::before {
+    content: "Клиент";
+  }
+
+  .order-table article span:nth-of-type(2)::before {
+    content: "Доставка";
+  }
+
+  .order-table article b {
+    color: var(--berry);
+  }
+
+  .order-table article b::before {
+    content: "Сумма";
+  }
+
+  .order-table article em {
+    grid-column: 2;
+    grid-row: 1;
+    align-self: start;
+    white-space: nowrap;
+  }
+
+  .product-admin-list {
+    gap: 10px;
+  }
+
+  .product-admin-list article {
+    min-height: 0;
+    padding: 12px;
+    grid-template-columns: 54px minmax(0, 1fr) 42px;
+    grid-template-areas:
+      "image info action"
+      "price stock stock";
+    align-items: center;
+    gap: 10px 12px;
+  }
+
+  .product-admin-list img {
+    grid-area: image;
+    width: 54px;
+    height: 54px;
+  }
+
+  .product-admin-list article div {
+    grid-area: info;
+    min-width: 0;
+  }
+
+  .product-admin-list article b {
+    grid-area: price;
+    display: block;
+    color: var(--berry);
+    font-size: 15px;
+  }
+
+  .product-admin-list article em {
+    grid-area: stock;
+    justify-self: end;
+  }
+
+  .product-admin-list article .icon-button {
+    grid-area: action;
+    display: grid;
+    width: 42px;
+    height: 42px;
+  }
+
+  .delivery-board {
+    gap: 10px;
+  }
+}
+
+@media (max-width: 420px) {
+  .mobile-admin-tabs span {
+    display: block;
+    max-width: 100%;
+    overflow: hidden;
+    font-size: 9px;
+    line-height: 1.1;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .mobile-admin-tabs button {
+    gap: 2px;
+  }
+
+  .photo-lightbox {
+    padding: 6px;
+  }
+
+  .photo-panel {
+    width: calc(100vw - 12px);
+    max-height: calc(100vh - 12px);
+    max-height: calc(100dvh - 12px);
+  }
+
+  .photo-stage {
+    height: min(42vh, 330px);
+    height: min(42dvh, 330px);
+    min-height: 270px;
+  }
+
+  .photo-details {
+    padding: 16px 16px 18px;
+  }
+
+  .photo-details h2 {
+    font-size: clamp(29px, 10vw, 38px);
+  }
+
+  .photo-thumbs button {
+    height: 44px;
   }
 }

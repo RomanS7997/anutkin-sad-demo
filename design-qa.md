@@ -63,6 +63,7 @@ No actionable P0/P1/P2 issues remain.
 - Added a complete storefront footer with brand copy, category counts, buyer links, contacts, delivery notes, mini product photos, and a catalog CTA.
 - Rechecked the mobile photo modal after animation completion: panel/background opacity is stable and arrows remain inside the image stage.
 - Fixed the desktop photo modal height so the large image reaches the modal bottom instead of leaving an empty blush strip below it.
+- Strengthened mobile adaptation: the product photo modal now scrolls as one mobile sheet without title/image overlap, and admin orders/products render as mobile cards instead of a clipped desktop table.
 
 ## Verification
 
@@ -75,6 +76,7 @@ No actionable P0/P1/P2 issues remain.
 - Redesign QA passed: old hero carousel count is 0, category cards count is 4, failed images are 0, mobile hero photo appears in the first viewport, and modal arrows report `nextOverText: false` on desktop/mobile.
 - Latest header/lookbook/footer QA passed in local Chrome: 1280px desktop and 390px mobile, failed images 0, horizontal overflow 0, footer present, lookbook present.
 - Desktop modal gap QA passed at 1230x683: panel-minus-image bottom gap is 1px from the border, stage-minus-image bottom gap is 0px, and the details column scrolls internally when text is taller.
+- Mobile QA passed at 375x812 and 320x760: storefront/modal/admin horizontal overflow is 0, failed images are 0, Bravado modal title/photo overlap is 0px, admin order table head is hidden, and admin product price/action remain visible.
 - Failed network resources: 0 in the focused final local check.
 - Horizontal overflow: none on 1440px desktop and 390px mobile.
 
