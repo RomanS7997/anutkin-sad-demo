@@ -33,14 +33,14 @@ function assetUrl(path) {
 }
 
 function formatRub(value) {
-  return new Intl.NumberFormat("ru-RU").format(value || 0) + " ₽";
+  return `${new Intl.NumberFormat("ru-RU").format(value || 0)}\u00a0\u20bd`;
 }
 
 function compactRub(value) {
-  return new Intl.NumberFormat("ru-RU", {
+  return `${new Intl.NumberFormat("ru-RU", {
     notation: "compact",
     maximumFractionDigits: 1,
-  }).format(value || 0) + " ₽";
+  }).format(value || 0)}\u00a0\u20bd`;
 }
 
 function stockLabel(product) {
@@ -95,11 +95,524 @@ export function App() {
     );
   }
 
-  return route === "admin" ? (
-    <AdminApp data={data} go={go} />
+  return route.startsWith("admin") ? (
+    <AdminApp data={data} route={route} go={go} />
   ) : (
-    <StorefrontApp data={data} go={go} />
+    <StorefrontAppV2 data={data} route={route} go={go} />
   );
+}
+
+function StorefrontAppV2({ data, route, go }) {
+  const [activeCategory, setActiveCategory] = useState("all");
+  const [query, setQuery] = useState("");
+  const [cart, setCart] = useState([]);
+  const [drawerOpen, setDrawerOpen] = useState(false);
+
+  const availableProducts = useMemo(
+    () => data.products.filter((product) => product.stock > 0 && product.image),
+    [data.products],
+  );
+
+  const featured = useMemo(() => {
+    const priority = ["hydrangea", "shrubs", "annuals", "perennials"];
+    return priority
+      .flatMap((key) => availableProducts.filter((product) => product.categoryKey === key))
+      .slice(0, 12);
+  }, [availableProducts]);
+
+  const filtered = useMemo(() => {
+    const needle = query.trim().toLowerCase();
+    return data.products.filter((product) => {
+      const matchesCategory = activeCategory === "all" || product.categoryKey === activeCategory;
+      const matchesQuery =
+        !needle ||
+        product.name.toLowerCase().includes(needle) ||
+        product.description.toLowerCase().includes(needle);
+      return matchesCategory && matchesQuery;
+    });
+  }, [activeCategory, data.products, query]);
+
+  const routeName = route === "shop" ? "home" : route.split("/")[0];
+  const productId = Number(route.split("/")[1]);
+  const selectedProduct = data.products.find((product) => product.id === productId) || featured[0] || data.products[0];
+  const cartTotal = cart.reduce((sum, item) => sum + item.price * item.qty, 0);
+  const cartCount = cart.reduce((sum, item) => sum + item.qty, 0);
+
+  const addToCart = (product) => {
+    if (!product || product.stock === 0) return;
+    setCart((items) => {
+      const existing = items.find((item) => item.id === product.id);
+      if (existing) {
+        return items.map((item) =>
+          item.id === product.id ? { ...item, qty: Math.min(item.qty + 1, product.stock) } : item,
+        );
+      }
+      return [...items, { ...product, qty: 1 }];
+    });
+    setDrawerOpen(true);
+  };
+
+  return (
+    <main className="experience-shell">
+      <StoreHeader routeName={routeName} go={go} cartCount={cartCount} openCart={() => setDrawerOpen(true)} />
+
+      {routeName === "home" && (
+        <HomeExperience
+          data={data}
+          featured={featured}
+          go={go}
+          addToCart={addToCart}
+        />
+      )}
+      {routeName === "catalog" && (
+        <CatalogExperience
+          data={data}
+          filtered={filtered}
+          activeCategory={activeCategory}
+          setActiveCategory={setActiveCategory}
+          query={query}
+          setQuery={setQuery}
+          go={go}
+          addToCart={addToCart}
+        />
+      )}
+      {routeName === "product" && (
+        <ProductExperience product={selectedProduct} products={featured} go={go} addToCart={addToCart} />
+      )}
+      {routeName === "delivery" && <DeliveryExperience data={data} go={go} />}
+      {routeName === "proposal" && <ProposalExperience data={data} go={go} />}
+      {!["home", "catalog", "product", "delivery", "proposal"].includes(routeName) && (
+        <HomeExperience data={data} featured={featured} go={go} addToCart={addToCart} />
+      )}
+
+      <CartDrawer
+        cart={cart}
+        cartTotal={cartTotal}
+        open={drawerOpen}
+        setCart={setCart}
+        setOpen={setDrawerOpen}
+      />
+    </main>
+  );
+}
+
+function StoreHeader({ routeName, go, cartCount, openCart }) {
+  const links = [
+    ["home", "Главная", "shop"],
+    ["catalog", "Каталог", "catalog"],
+    ["delivery", "Доставка", "delivery"],
+    ["proposal", "Презентация", "proposal"],
+  ];
+
+  return (
+    <header className="experience-header">
+      <button className="brand admin-brand" type="button" onClick={() => go("shop")}>
+        <span className="brand-mark">
+          <Leaf size={19} weight="fill" />
+        </span>
+        <span>
+          <strong>Анюткин сад</strong>
+          <small>новый ecommerce</small>
+        </span>
+      </button>
+      <nav className="experience-nav" aria-label="Навигация демо">
+        {links.map(([key, label, target]) => (
+          <button className={routeName === key ? "active" : ""} key={key} type="button" onClick={() => go(target)}>
+            {label}
+          </button>
+        ))}
+      </nav>
+      <div className="header-actions">
+        <button className="soft-button" type="button" onClick={() => go("admin")}>
+          <Storefront size={17} weight="duotone" />
+          Админка
+        </button>
+        <button className="icon-button" type="button" onClick={openCart} aria-label="Корзина">
+          <Basket size={20} weight="duotone" />
+          {cartCount > 0 && <span>{cartCount}</span>}
+        </button>
+      </div>
+    </header>
+  );
+}
+
+function HomeExperience({ data, featured, go, addToCart }) {
+  const heroProduct = featured[0] || data.products[0];
+  const carousel = featured.slice(0, 8);
+
+  return (
+    <>
+      <section className="experience-hero">
+        <div className="hero-copy hero-copy-v2">
+          <p className="eyebrow">
+            <Sparkle size={16} weight="fill" />
+            Демо нового сайта, каталога и админки
+          </p>
+          <h1>Сад, который продает до первого звонка</h1>
+          <p className="hero-lede">
+            Не просто красивая витрина: покупатель видит живые остатки, подборки по сезону,
+            понятную доставку СДЭК и карточки растений, которые выглядят дороже стандартного WooCommerce.
+          </p>
+          <div className="hero-actions">
+            <button className="primary-button" type="button" onClick={() => go("catalog")}>
+              Открыть каталог
+              <ArrowRight size={18} weight="bold" />
+            </button>
+            <button className="round-link" type="button" onClick={() => go("proposal")}>
+              Почему это продает
+              <Sparkle size={18} weight="duotone" />
+            </button>
+          </div>
+          <div className="proof-row">
+            <div><strong>89</strong><span>реальных товаров</span></div>
+            <div><strong>5</strong><span>категорий</span></div>
+            <div><strong>СДЭК</strong><span>в сценарии заказа</span></div>
+          </div>
+        </div>
+
+        <div className="scene3d" aria-label="3D витрина растений">
+          <div className="plant-carousel">
+            {carousel.slice(0, 6).map((product, index) => (
+              <button
+                className="carousel-card"
+                key={product.id}
+                style={{ "--angle": `${index * 60}deg` }}
+                type="button"
+                onClick={() => go(`product/${product.id}`)}
+              >
+                <img src={assetUrl(product.image)} alt={product.name} />
+                <span>{product.name}</span>
+              </button>
+            ))}
+          </div>
+          <article className="hero-live-card">
+            <span>Хит сезона</span>
+            <strong>{heroProduct.name}</strong>
+            <p>{formatRub(heroProduct.price)} · {stockLabel(heroProduct)}</p>
+            <button type="button" onClick={() => addToCart(heroProduct)}>
+              В корзину
+              <Plus size={16} weight="bold" />
+            </button>
+          </article>
+        </div>
+      </section>
+
+      <section className="journey-grid">
+        {[
+          ["Каталог с живыми остатками", "Фильтры, быстрый поиск, статусы наличия и красивые карточки растений.", "catalog", Package],
+          ["Страница растения", "Большое фото, характеристики, наличие и понятный следующий шаг.", `product/${heroProduct.id}`, Plant],
+          ["Доставка СДЭК", "Отдельный экран про упаковку, сроки, самовывоз и ожидания клиента.", "delivery", Truck],
+          ["Админка хозяйства", "Продажи, заказы, остатки, очередь отправок и ежедневные действия.", "admin", ChartLineUp],
+        ].map(([title, text, target, Icon]) => (
+          <button className="journey-card" key={title} type="button" onClick={() => go(target)}>
+            <Icon size={28} weight="duotone" />
+            <strong>{title}</strong>
+            <span>{text}</span>
+            <ArrowRight size={18} weight="bold" />
+          </button>
+        ))}
+      </section>
+
+      <section className="immersive-band">
+        <div className="band-copy">
+          <p className="script">Season drop</p>
+          <h2>Не скидка ради скидки, а сезонные сценарии покупки</h2>
+          <p>
+            Вместо плоского списка товаров демо показывает подборки: гортензии для посадки, цветущие
+            однолетники, кустарники и рассада. Это проще продать и проще объяснить клиенту.
+          </p>
+          <button className="primary-button alt" type="button" onClick={() => go("catalog")}>
+            Смотреть подборки
+            <ArrowRight size={18} weight="bold" />
+          </button>
+        </div>
+        <div className="stacked-products">
+          {featured.slice(2, 5).map((product, index) => (
+            <article key={product.id} style={{ "--stack": index }}>
+              <img src={assetUrl(product.image)} alt={product.name} />
+              <strong>{product.name}</strong>
+              <span>{formatRub(product.price)}</span>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section className="editorial-section">
+        <div className="section-head">
+          <p className="eyebrow">Витрина</p>
+          <h2>Главная продает не товар, а доверие к хозяйству</h2>
+          <p>Больше воздуха, крупнее фото, понятные сценарии и движение, которое делает демо живым.</p>
+        </div>
+        <div className="editorial-grid">
+          {featured.slice(0, 6).map((product) => (
+            <LuxuryProductCard key={product.id} product={product} go={go} addToCart={addToCart} />
+          ))}
+        </div>
+      </section>
+    </>
+  );
+}
+
+function CatalogExperience({ data, filtered, activeCategory, setActiveCategory, query, setQuery, go, addToCart }) {
+  return (
+    <>
+      <section className="page-hero compact">
+        <div>
+          <p className="eyebrow">Каталог</p>
+          <h1>Каталог, который выглядит как магазин</h1>
+          <p>
+            Отдельная страница каталога показывает, как можно уйти от WooCommerce-шаблона: поиск,
+            фильтры, быстрый просмотр и карточки, которые хорошо смотрятся на мобильном.
+          </p>
+        </div>
+        <div className="catalog-stats">
+          <strong>{filtered.length}</strong>
+          <span>позиций показано</span>
+        </div>
+      </section>
+
+      <section className="catalog-toolbar floating-toolbar" aria-label="Фильтры каталога">
+        <div className="search-field">
+          <MagnifyingGlass size={18} weight="duotone" />
+          <input
+            value={query}
+            onChange={(event) => setQuery(event.target.value)}
+            placeholder="Найти гортензию, шалфей, хризантему"
+          />
+        </div>
+        <div className="chip-row">
+          <button className={activeCategory === "all" ? "chip active" : "chip"} type="button" onClick={() => setActiveCategory("all")}>
+            Все
+          </button>
+          {data.categories.map((category) => (
+            <button
+              className={activeCategory === category.key ? "chip active" : "chip"}
+              key={category.key}
+              type="button"
+              onClick={() => setActiveCategory(category.key)}
+            >
+              {category.name}<span>{category.count}</span>
+            </button>
+          ))}
+        </div>
+      </section>
+
+      <section className="editorial-grid catalog-page-grid">
+        {filtered.slice(0, 36).map((product) => (
+          <LuxuryProductCard key={product.id} product={product} go={go} addToCart={addToCart} />
+        ))}
+      </section>
+    </>
+  );
+}
+
+function ProductExperience({ product, products, go, addToCart }) {
+  const related = products.filter((item) => item.id !== product.id).slice(0, 4);
+
+  return (
+    <>
+      <section className="product-detail-page">
+        <div className="detail-gallery">
+          <img src={assetUrl(product.image)} alt={product.name} />
+          <div className="detail-float">
+            <span>{product.category}</span>
+            <strong>{stockLabel(product)}</strong>
+          </div>
+        </div>
+        <div className="detail-copy">
+          <button className="back-link" type="button" onClick={() => go("catalog")}>
+            Каталог
+          </button>
+          <h1>{product.name}</h1>
+          <p>{product.description}</p>
+          <div className="detail-price">
+            <strong>{formatRub(product.price)}</strong>
+            <span>{product.stock > 0 ? "можно добавить в заказ" : "показываем как sold out"}</span>
+          </div>
+          <div className="care-facts">
+            {Object.entries(product.care || {}).slice(0, 4).map(([key, value]) => (
+              <article key={key}>
+                <span>{careName(key)}</span>
+                <strong>{value}</strong>
+              </article>
+            ))}
+          </div>
+          <div className="hero-actions">
+            <button className="primary-button" type="button" onClick={() => addToCart(product)} disabled={product.stock === 0}>
+              Добавить в корзину
+              <Plus size={18} weight="bold" />
+            </button>
+            <button className="round-link" type="button" onClick={() => go("delivery")}>
+              Рассчитать доставку
+              <Truck size={18} weight="duotone" />
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section className="section-head">
+        <p className="eyebrow">Похожие растения</p>
+        <h2>Продолжаем покупку</h2>
+      </section>
+      <section className="editorial-grid compact-grid">
+        {related.map((item) => (
+          <LuxuryProductCard key={item.id} product={item} go={go} addToCart={addToCart} />
+        ))}
+      </section>
+    </>
+  );
+}
+
+function DeliveryExperience({ data, go }) {
+  return (
+    <>
+      <section className="page-hero delivery-hero">
+        <div>
+          <p className="eyebrow">СДЭК и самовывоз</p>
+          <h1>Доставка объяснена до оформления заказа</h1>
+          <p>
+            Отдельная страница снимает тревогу: когда отправляют растения, как упаковывают, где
+            самовывоз и что происходит после оплаты.
+          </p>
+          <button className="primary-button" type="button" onClick={() => go("catalog")}>
+            Выбрать растения
+            <ArrowRight size={18} weight="bold" />
+          </button>
+        </div>
+        <div className="delivery-card-3d">
+          <Truck size={44} weight="duotone" />
+          <strong>СДЭК</strong>
+          <span>ПВЗ · курьер · этикетки · контроль упаковки</span>
+        </div>
+      </section>
+
+      <section className="process-board">
+        {[
+          ["01", "Оплата", "Реквизиты приходят после подтверждения заказа."],
+          ["02", "Сборка", "Админка показывает, какие растения собрать и что заканчивается."],
+          ["03", "Упаковка", "Чек-лист: влажность, корневая, бирка, фото перед отправкой."],
+          ["04", "СДЭК", "Этикетка, трек-номер и статус отправки в одном месте."],
+        ].map(([num, title, text]) => (
+          <article key={num}>
+            <strong>{num}</strong>
+            <h3>{title}</h3>
+            <p>{text}</p>
+          </article>
+        ))}
+      </section>
+
+      <section className="shipping-simulator">
+        <div>
+          <p className="eyebrow">Демо-фича</p>
+          <h2>Расчет доставки как продающий блок</h2>
+          <p>Можно показать клиенту будущий блок: город, способ, примерный срок и подсказка про упаковку.</p>
+        </div>
+        <div className="simulator-card">
+          <label>Город</label>
+          <input value="Санкт-Петербург" readOnly />
+          <label>Способ</label>
+          <input value="СДЭК до пункта выдачи" readOnly />
+          <div>
+            <span>Примерный срок</span>
+            <strong>3-5 дней</strong>
+          </div>
+          <button type="button" onClick={() => go("admin")}>Посмотреть очередь СДЭК</button>
+        </div>
+      </section>
+    </>
+  );
+}
+
+function ProposalExperience({ data, go }) {
+  return (
+    <>
+      <section className="page-hero proposal-hero">
+        <div>
+          <p className="eyebrow">Презентация для клиента</p>
+          <h1>Что именно продаем владельцу хозяйства</h1>
+          <p>
+            Не “красивый сайт”, а связку витрина + админка: меньше ручной рутины, понятнее остатки,
+            лучше мобильный опыт и больше доверия у покупателя.
+          </p>
+        </div>
+        <button className="primary-button" type="button" onClick={() => go("admin")}>
+          Открыть админку
+          <ArrowRight size={18} weight="bold" />
+        </button>
+      </section>
+
+      <section className="value-ladder">
+        {[
+          ["Сейчас", "WooCommerce выглядит как каталог с карточками, где клиенту нужно самому разбираться."],
+          ["В демо", "Появились сценарии: сезонные подборки, доставка, карточка растения, корзина, админка."],
+          ["Дальше", "Подключаем WooCommerce REST API, СДЭК, реальные заказы и управление остатками."],
+        ].map(([title, text]) => (
+          <article key={title}>
+            <h3>{title}</h3>
+            <p>{text}</p>
+          </article>
+        ))}
+      </section>
+
+      <section className="admin-sell-mock">
+        <div>
+          <p className="eyebrow">Операционная ценность</p>
+          <h2>Админка, которую хочется открыть утром</h2>
+          <p>
+            На одном экране видно {data.metrics.ordersToday} заказов за сегодня, {data.metrics.stockAlerts}
+            {" "}рисков по остаткам и очередь отправки СДЭК.
+          </p>
+          <button className="primary-button" type="button" onClick={() => go("admin")}>
+            Перейти в админку
+            <ArrowRight size={18} weight="bold" />
+          </button>
+        </div>
+        <div className="mini-dashboard">
+          <article><span>Продажи</span><strong>{compactRub(data.metrics.revenueMonth)}</strong></article>
+          <article><span>Заказы</span><strong>{data.metrics.ordersToday}</strong></article>
+          <article><span>СДЭК</span><strong>{data.metrics.deliveryQueue}</strong></article>
+        </div>
+      </section>
+    </>
+  );
+}
+
+function LuxuryProductCard({ product, go, addToCart }) {
+  return (
+    <article className={`luxury-card ${product.status}`}>
+      <button className="luxury-image" type="button" onClick={() => go(`product/${product.id}`)}>
+        {product.image ? <img src={assetUrl(product.image)} alt={product.name} /> : <Leaf size={44} weight="duotone" />}
+        <span>{product.category}</span>
+      </button>
+      <div className="luxury-body">
+        <button className="text-link" type="button" onClick={() => go(`product/${product.id}`)}>
+          <h3>{product.name}</h3>
+        </button>
+        <p>{product.description}</p>
+        <div className="product-meta">
+          <strong>{formatRub(product.price)}</strong>
+          <span>{stockLabel(product)}</span>
+        </div>
+        <div className="card-actions">
+          <button type="button" onClick={() => addToCart(product)} disabled={product.stock === 0}>
+            {product.stock === 0 ? "Нет в наличии" : "В корзину"}
+          </button>
+          <button type="button" onClick={() => go(`product/${product.id}`)}>
+            Подробнее
+          </button>
+        </div>
+      </div>
+    </article>
+  );
+}
+
+function careName(key) {
+  return {
+    height: "Высота",
+    bloom: "Цветение",
+    light: "Свет",
+    hardiness: "Зимостойкость",
+  }[key] || key;
 }
 
 function StorefrontApp({ data, go }) {
@@ -570,9 +1083,27 @@ function Overview({ data, lowStock, setTab }) {
     ["Риски по остаткам", data.metrics.stockAlerts, "проверить закупку", WarningCircle],
     ["Очередь СДЭК", data.metrics.deliveryQueue, "4 этикетки готовы", Truck],
   ];
+  const commandCards = [
+    ["Утренний сценарий", "Собрать 6 заказов, распечатать СДЭК и списать растения одним проходом.", "Запустить сборку", Truck],
+    ["AI-подсказка", `Поднять в каталоге ${lowStock[0]?.name || "товар с низким остатком"} и убрать из рекламы позиции с риском.`, "Принять план", Sparkle],
+    ["Промо недели", `Сделать подборку из ${data.products.length} растений с автоскидкой для повторных клиентов.`, "Собрать витрину", Package],
+  ];
 
   return (
     <>
+      <section className="ops-command-strip" aria-label="Приоритеты дня">
+        {commandCards.map(([label, text, action, Icon]) => (
+          <article className="ops-command-card" key={label}>
+            <Icon size={24} weight="duotone" />
+            <div>
+              <span>{label}</span>
+              <strong>{text}</strong>
+            </div>
+            <button type="button">{action}</button>
+          </article>
+        ))}
+      </section>
+
       <section className="metrics-grid">
         {cards.map(([label, value, note, Icon]) => (
           <article className="metric-card" key={label}>
