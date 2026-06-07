@@ -3267,11 +3267,13 @@ a {
 
 .photo-panel {
   width: min(1120px, calc(100vw - 32px));
+  height: min(86vh, 680px);
   max-height: calc(100vh - 48px);
   border: 1px solid rgba(255, 255, 255, 0.52);
   border-radius: 8px;
   display: grid;
   grid-template-columns: minmax(0, 1.22fr) minmax(330px, 0.78fr);
+  align-items: stretch;
   position: relative;
   overflow: hidden;
   background:
@@ -3290,9 +3292,10 @@ a {
 }
 
 .photo-stage {
-  height: min(76vh, 680px);
-  min-height: 520px;
+  height: 100%;
+  min-height: 0;
   margin: 0;
+  align-self: stretch;
   position: relative;
   overflow: hidden;
   background: #fff;
@@ -3342,10 +3345,13 @@ a {
 
 .photo-details {
   min-width: 0;
+  min-height: 0;
   padding: 42px 32px 28px;
   display: grid;
   align-content: center;
   gap: 16px;
+  overflow-y: auto;
+  scrollbar-width: thin;
 }
 
 .photo-details h2 {
@@ -3662,6 +3668,7 @@ a {
   }
 
   .photo-panel {
+    height: auto;
     grid-template-columns: 1fr;
     overflow-y: auto;
   }
