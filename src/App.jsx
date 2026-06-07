@@ -220,6 +220,8 @@ function StorefrontAppV2({ data, route, go }) {
         <HomeExperience data={data} featured={featured} galleryProducts={galleryProducts} go={go} addToCart={addToCart} openLightbox={openLightbox} />
       )}
 
+      <StoreFooter data={data} go={go} />
+
       <CartDrawer
         cart={cart}
         cartTotal={cartTotal}
@@ -251,15 +253,27 @@ function StoreHeader({ routeName, go, cartCount, openCart }) {
 
   return (
     <header className="experience-header">
-      <button className="brand admin-brand" type="button" onClick={() => go("shop")}>
-        <span className="brand-mark">
-          <Leaf size={19} weight="fill" />
-        </span>
-        <span>
-          <strong>Анюткин сад</strong>
-          <small>цветочное хозяйство</small>
-        </span>
-      </button>
+      <div className="header-brand-zone">
+        <button className="brand admin-brand" type="button" onClick={() => go("shop")}>
+          <span className="brand-mark">
+            <Leaf size={19} weight="fill" />
+          </span>
+          <span>
+            <strong>Анюткин сад</strong>
+            <small>цветочное хозяйство</small>
+          </span>
+        </button>
+        <div className="header-meta" aria-label="Условия магазина">
+          <span>
+            <Truck size={15} weight="duotone" />
+            СДЭК по России
+          </span>
+          <span>
+            <MapPin size={15} weight="duotone" />
+            Лесной городок
+          </span>
+        </div>
+      </div>
       <nav className="experience-nav" aria-label="Навигация сайта">
         {links.map(([key, label, target]) => (
           <button className={routeName === key ? "active" : ""} key={key} type="button" onClick={() => go(target)}>
@@ -278,6 +292,76 @@ function StoreHeader({ routeName, go, cartCount, openCart }) {
         </button>
       </div>
     </header>
+  );
+}
+
+function StoreFooter({ data, go }) {
+  const footerProducts = data.products
+    .filter((product) => product.stock > 0 && product.image)
+    .slice(0, 3);
+
+  return (
+    <footer className="store-footer" id="contacts">
+      <div className="footer-hero">
+        <button className="brand admin-brand" type="button" onClick={() => go("shop")}>
+          <span className="brand-mark">
+            <Leaf size={19} weight="fill" />
+          </span>
+          <span>
+            <strong>Анюткин сад</strong>
+            <small>цветочное хозяйство</small>
+          </span>
+        </button>
+        <p>
+          Декоративные растения из хозяйства: живое наличие, реальные фото, аккуратная упаковка и доставка СДЭК по России.
+        </p>
+        <div className="footer-proof">
+          <span>{data.products.length} товаров</span>
+          <span>{data.categories.length} категорий</span>
+          <span>СДЭК и самовывоз</span>
+        </div>
+      </div>
+
+      <div className="footer-columns">
+        <section>
+          <h3>Каталог</h3>
+          {data.categories.slice(0, 5).map((category) => (
+            <button type="button" key={category.key} onClick={() => go("catalog")}>
+              <span>{category.name}</span>
+              <em>{category.count}</em>
+            </button>
+          ))}
+        </section>
+        <section>
+          <h3>Покупателям</h3>
+          <button type="button" onClick={() => go("delivery")}>Доставка СДЭК</button>
+          <button type="button" onClick={() => go("about")}>О хозяйстве</button>
+          <button type="button" onClick={() => go("catalog")}>Растения в наличии</button>
+          <button type="button" onClick={() => go("admin")}>Кабинет магазина</button>
+        </section>
+        <section className="footer-contact-card">
+          <h3>Контакты</h3>
+          <a href="tel:+79127063040">+7 (912) 706-30-40</a>
+          <a href="mailto:Anytkin.sad@mail.ru">Anytkin.sad@mail.ru</a>
+          <span>Московская область, дп. Лесной городок</span>
+          <small>Заказы согласовываются перед отправкой растений.</small>
+        </section>
+      </div>
+
+      <div className="footer-strip">
+        <div className="footer-mini-gallery" aria-label="Растения в наличии">
+          {footerProducts.map((product) => (
+            <button type="button" key={product.id} onClick={() => go(`product/${product.id}`)}>
+              <img src={assetUrl(product.image)} alt={product.name} />
+            </button>
+          ))}
+        </div>
+        <button className="primary-button" type="button" onClick={() => go("catalog")}>
+          Перейти в каталог
+          <ArrowRight size={18} weight="bold" />
+        </button>
+      </div>
+    </footer>
   );
 }
 
@@ -692,20 +776,17 @@ function LookbookGallery({ products, go, openLightbox }) {
   const side = [
     ...hydrangeas.filter((product) => product.id !== lead?.id),
     ...products.filter((product) => product.id !== lead?.id),
-  ].slice(0, 6);
+  ].slice(0, 4);
 
   if (!lead) return null;
 
   return (
     <section className="lookbook-section">
-      <img className="lookbook-garland" src={assetUrl("/assets/decor/floral-garland.webp")} alt="" aria-hidden="true" />
-      <img className="lookbook-mosaic" src={assetUrl("/assets/decor/floral-mosaic.webp")} alt="" aria-hidden="true" />
       <div className="lookbook-copy">
-        <p className="eyebrow">Сезон в кадре</p>
-        <h2>Рассмотрите растения крупно перед заказом</h2>
+        <p className="eyebrow">Сезонная коллекция</p>
+        <h2>Гортензии крупным планом</h2>
         <p>
-          Сезонные сорта собраны рядом: гортензии, цветущие многолетники и растения,
-          которые хорошо смотрятся в саду уже в первый год.
+          Подборка сортов, которые легко сравнить по фото, цене и наличию перед заказом. Каждая карточка открывает крупную галерею растения.
         </p>
         <button className="round-link" type="button" onClick={() => go("catalog")}>
           Все растения
@@ -717,13 +798,18 @@ function LookbookGallery({ products, go, openLightbox }) {
           <img src={assetUrl(lead.image)} alt={lead.name} />
           <span>
             <MagnifyingGlass size={18} weight="duotone" />
-            Открыть галерею
+            Смотреть фото
           </span>
+          <strong>{lead.name}</strong>
         </button>
         <div className="lookbook-side">
           {side.map((product) => (
             <button type="button" key={product.id} onClick={() => openLightbox(product)}>
               <img src={assetUrl(product.image)} alt={product.name} />
+              <span>
+                <strong>{product.name}</strong>
+                <small>{formatRub(product.price)} · {stockLabel(product)}</small>
+              </span>
             </button>
           ))}
         </div>

@@ -1729,45 +1729,99 @@ a {
 }
 
 .experience-header {
-  width: min(1220px, calc(100% - 36px));
-  min-height: 78px;
-  margin: 18px auto 0;
-  padding: 10px 12px;
-  border: 1px solid rgba(125, 74, 91, 0.16);
+  width: min(1240px, calc(100% - 28px));
+  min-height: 92px;
+  margin: 14px auto 0;
+  padding: 12px 14px;
+  border: 1px solid rgba(125, 74, 91, 0.18);
   border-radius: 8px;
-  display: flex;
+  display: grid;
+  grid-template-columns: minmax(270px, 0.82fr) auto auto;
   align-items: center;
-  justify-content: space-between;
-  gap: 14px;
+  gap: 18px;
   position: sticky;
-  top: 12px;
+  top: 10px;
   z-index: 30;
-  background: rgba(255, 255, 255, 0.76);
-  box-shadow: 0 18px 44px rgba(117, 60, 77, 0.12);
+  overflow: hidden;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(255, 247, 249, 0.9)),
+    #fff;
+  box-shadow: 0 20px 54px rgba(78, 45, 55, 0.16);
   backdrop-filter: blur(22px);
 }
 
+.experience-header::after {
+  content: "";
+  height: 4px;
+  position: absolute;
+  left: 14px;
+  right: 14px;
+  bottom: 0;
+  border-radius: 999px 999px 0 0;
+  background: linear-gradient(90deg, var(--berry), var(--sage), #d88aa0);
+  opacity: 0.82;
+}
+
+.header-brand-zone {
+  min-width: 0;
+  display: grid;
+  gap: 9px;
+}
+
 .experience-header .admin-brand {
-  flex: 0 0 auto;
+  min-width: 0;
+  width: max-content;
+  max-width: 100%;
+}
+
+.experience-header .brand-mark {
+  width: 42px;
+  height: 42px;
+}
+
+.experience-header .admin-brand strong {
+  font-size: 21px;
+}
+
+.header-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.header-meta span {
+  min-height: 28px;
+  padding: 0 10px;
+  border: 1px solid rgba(104, 139, 98, 0.2);
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: #4d6747;
+  background: rgba(232, 240, 223, 0.72);
+  font-size: 11px;
+  font-weight: 900;
+  white-space: nowrap;
 }
 
 .experience-nav {
   min-width: 0;
-  padding: 6px;
+  padding: 7px;
   border-radius: 999px;
   display: flex;
-  gap: 4px;
-  background: #fff2f5;
+  gap: 5px;
+  background: rgba(255, 232, 239, 0.82);
+  box-shadow: inset 0 0 0 1px rgba(140, 32, 73, 0.08);
 }
 
 .experience-nav button {
-  min-height: 38px;
-  padding: 0 16px;
+  min-height: 42px;
+  padding: 0 18px;
   border: 0;
   border-radius: 999px;
   color: #5b454d;
   background: transparent;
-  font-size: 13px;
+  font-size: 13.5px;
   font-weight: 900;
   white-space: nowrap;
 }
@@ -1775,7 +1829,26 @@ a {
 .experience-nav button.active,
 .experience-nav button:hover {
   color: #fff;
-  background: var(--berry);
+  background: linear-gradient(135deg, var(--berry), #a82d5b);
+  box-shadow: 0 12px 22px rgba(140, 32, 73, 0.18);
+}
+
+.experience-header .header-actions {
+  justify-self: end;
+}
+
+.experience-header .soft-button {
+  min-height: 46px;
+  padding-inline: 18px;
+  color: var(--rosewood);
+  background: linear-gradient(135deg, #ffe3ed, #fff6f8);
+  box-shadow: inset 0 0 0 1px rgba(140, 32, 73, 0.1);
+}
+
+.experience-header .icon-button {
+  width: 46px;
+  height: 46px;
+  background: #fff;
 }
 
 .experience-hero {
@@ -2395,60 +2468,31 @@ a {
 
 .lookbook-section {
   width: min(1220px, calc(100% - 36px));
-  min-height: 530px;
-  margin: 58px auto 34px;
-  padding: 48px;
-  border: 1px solid rgba(140, 32, 73, 0.15);
+  margin: 58px auto 42px;
+  padding: 28px;
+  border: 1px solid rgba(140, 32, 73, 0.14);
   border-radius: 8px;
   display: grid;
-  grid-template-columns: minmax(310px, 0.78fr) minmax(560px, 1.22fr);
-  align-items: center;
-  gap: 38px;
+  grid-template-columns: minmax(280px, 0.64fr) minmax(620px, 1.36fr);
+  align-items: stretch;
+  gap: 24px;
   position: relative;
   overflow: hidden;
   background:
-    linear-gradient(115deg, rgba(255, 245, 247, 0.96), rgba(255, 230, 238, 0.78) 48%, rgba(236, 244, 226, 0.8)),
+    linear-gradient(128deg, rgba(255, 249, 249, 0.98), rgba(255, 235, 242, 0.78) 48%, rgba(235, 245, 224, 0.86)),
     #fff;
-  box-shadow: 0 28px 86px rgba(100, 57, 70, 0.14);
+  box-shadow: 0 26px 76px rgba(72, 46, 55, 0.13);
   isolation: isolate;
 }
 
 .lookbook-section::before {
   content: "";
-  width: 540px;
-  height: 540px;
-  border-radius: 50%;
   position: absolute;
-  right: -150px;
-  bottom: -190px;
-  z-index: -1;
-  background: radial-gradient(circle, rgba(239, 127, 166, 0.24), rgba(239, 127, 166, 0.06) 58%, transparent 70%);
-}
-
-.lookbook-garland,
-.lookbook-mosaic {
-  position: absolute;
-  pointer-events: none;
-  user-select: none;
-}
-
-.lookbook-garland {
-  width: min(560px, 48vw);
-  left: -86px;
-  top: -82px;
-  opacity: 0.7;
-  transform: rotate(-5deg);
-  filter: drop-shadow(0 24px 34px rgba(117, 61, 78, 0.12));
-}
-
-.lookbook-mosaic {
-  width: min(320px, 28vw);
-  right: 22px;
-  top: 22px;
+  inset: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.74);
   border-radius: 8px;
-  opacity: 0.16;
-  transform: rotate(7deg);
-  mix-blend-mode: multiply;
+  z-index: -1;
+  pointer-events: none;
 }
 
 .lookbook-copy,
@@ -2457,27 +2501,32 @@ a {
   z-index: 1;
 }
 
+.lookbook-copy {
+  padding: 22px 8px 22px 12px;
+  align-self: center;
+}
+
 .lookbook-copy h2 {
   margin: 0;
   color: var(--berry);
   font-family: "Playfair Display", serif;
-  font-size: clamp(36px, 4.8vw, 70px);
-  line-height: 0.98;
+  font-size: clamp(34px, 3.8vw, 52px);
+  line-height: 1;
+  overflow-wrap: break-word;
 }
 
 .lookbook-copy p:not(.eyebrow) {
-  max-width: 430px;
+  max-width: 440px;
   color: #5b4a50;
   font-size: 16px;
-  line-height: 1.72;
+  line-height: 1.66;
 }
 
 .lookbook-frame {
-  min-height: 410px;
+  min-height: 438px;
   display: grid;
-  grid-template-columns: minmax(260px, 1fr) 190px;
+  grid-template-columns: minmax(390px, 1fr) 278px;
   gap: 14px;
-  perspective: 1200px;
 }
 
 .lookbook-main,
@@ -2492,13 +2541,14 @@ a {
 }
 
 .lookbook-main {
-  min-height: 410px;
+  height: 438px;
+  min-height: 438px;
   border-radius: 8px;
-  transform: rotateY(-4deg) rotateZ(-1deg);
+  isolation: isolate;
 }
 
 .lookbook-main:hover {
-  transform: translateY(-8px) rotateY(-2deg) rotateZ(0deg);
+  transform: translateY(-6px);
   box-shadow: 0 34px 82px rgba(140, 32, 73, 0.22);
 }
 
@@ -2526,24 +2576,225 @@ a {
   backdrop-filter: blur(14px);
 }
 
+.lookbook-main > strong {
+  max-width: calc(100% - 36px);
+  padding: 12px 14px;
+  border-radius: 8px;
+  position: absolute;
+  left: 18px;
+  right: 18px;
+  bottom: 18px;
+  overflow: hidden;
+  color: #fff;
+  background: linear-gradient(90deg, rgba(36, 24, 29, 0.72), rgba(36, 24, 29, 0.28));
+  font-size: 20px;
+  line-height: 1.2;
+  text-align: left;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.28);
+}
+
+.lookbook-main span + strong {
+  bottom: 72px;
+}
+
 .lookbook-side {
   display: grid;
-  grid-template-rows: repeat(3, 1fr);
-  gap: 14px;
+  grid-template-rows: repeat(4, minmax(0, 1fr));
+  gap: 10px;
 }
 
 .lookbook-side button {
-  min-height: 126px;
+  min-height: 96px;
+  padding: 9px;
+  border-radius: 8px;
+  display: grid;
+  grid-template-columns: 84px minmax(0, 1fr);
+  gap: 10px;
+  align-items: center;
+  text-align: left;
+  background: rgba(255, 255, 255, 0.86);
+}
+
+.lookbook-side img {
+  width: 84px;
+  height: 84px;
   border-radius: 8px;
 }
 
-.lookbook-side button:nth-child(even) {
-  transform: translateX(-18px);
+.lookbook-side button:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 28px 68px rgba(140, 32, 73, 0.2);
 }
 
-.lookbook-side button:hover {
-  transform: translateY(-5px) scale(1.02);
-  box-shadow: 0 28px 68px rgba(140, 32, 73, 0.2);
+.lookbook-side span {
+  min-width: 0;
+  display: grid;
+  gap: 7px;
+}
+
+.lookbook-side strong {
+  overflow: hidden;
+  color: var(--ink);
+  font-size: 13px;
+  line-height: 1.25;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.lookbook-side small {
+  color: var(--berry);
+  font-size: 11px;
+  font-weight: 900;
+  line-height: 1.3;
+}
+
+.store-footer {
+  width: min(1220px, calc(100% - 36px));
+  margin: 76px auto 26px;
+  padding: 28px;
+  border: 1px solid rgba(140, 32, 73, 0.14);
+  border-radius: 8px;
+  display: grid;
+  grid-template-columns: minmax(280px, 0.76fr) minmax(520px, 1.24fr);
+  gap: 28px;
+  color: #fff;
+  background:
+    linear-gradient(135deg, rgba(70, 25, 39, 0.98), rgba(122, 38, 70, 0.94) 48%, rgba(82, 111, 75, 0.94)),
+    var(--rosewood);
+  box-shadow: 0 28px 86px rgba(71, 42, 51, 0.2);
+}
+
+.store-footer .brand {
+  color: #fff;
+}
+
+.store-footer .admin-brand small {
+  color: rgba(255, 255, 255, 0.68);
+}
+
+.footer-hero p {
+  max-width: 420px;
+  margin: 22px 0;
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 15px;
+  line-height: 1.68;
+}
+
+.footer-proof {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.footer-proof span {
+  padding: 8px 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 999px;
+  color: rgba(255, 255, 255, 0.82);
+  background: rgba(255, 255, 255, 0.08);
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.footer-columns {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.footer-columns section {
+  padding: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 8px;
+  display: grid;
+  align-content: start;
+  gap: 10px;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.footer-columns h3 {
+  margin: 0 0 6px;
+  font-family: "Playfair Display", serif;
+  font-size: 23px;
+}
+
+.footer-columns button,
+.footer-columns a,
+.footer-columns span {
+  min-height: 30px;
+  border: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  color: rgba(255, 255, 255, 0.78);
+  background: transparent;
+  font-size: 13px;
+  font-weight: 800;
+  text-align: left;
+}
+
+.footer-columns button:hover,
+.footer-columns a:hover {
+  color: #fff;
+}
+
+.footer-columns em {
+  min-width: 26px;
+  height: 22px;
+  border-radius: 999px;
+  display: grid;
+  place-items: center;
+  color: var(--rosewood);
+  background: rgba(255, 255, 255, 0.86);
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 900;
+}
+
+.footer-contact-card small {
+  margin-top: 6px;
+  color: rgba(255, 255, 255, 0.58);
+  line-height: 1.45;
+}
+
+.footer-strip {
+  grid-column: 1 / -1;
+  padding-top: 22px;
+  border-top: 1px solid rgba(255, 255, 255, 0.14);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+}
+
+.footer-mini-gallery {
+  display: flex;
+  align-items: center;
+}
+
+.footer-mini-gallery button {
+  width: 54px;
+  height: 54px;
+  border: 2px solid rgba(255, 255, 255, 0.78);
+  border-radius: 50%;
+  padding: 0;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.18);
+}
+
+.footer-mini-gallery button + button {
+  margin-left: -14px;
+}
+
+.footer-mini-gallery img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .immersive-band,
@@ -3384,7 +3635,30 @@ a {
   }
 
   .lookbook-frame {
-    grid-template-columns: minmax(0, 1fr) 170px;
+    min-height: 400px;
+    grid-template-columns: minmax(380px, 1fr) 260px;
+  }
+
+  .lookbook-main {
+    height: 400px;
+    min-height: 400px;
+  }
+
+  .lookbook-side {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, minmax(0, 1fr));
+  }
+
+  .store-footer {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-columns {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .footer-contact-card {
+    grid-column: 1 / -1;
   }
 
   .photo-panel {
@@ -3430,8 +3704,25 @@ a {
   }
 
   .experience-header .admin-brand {
-    grid-area: brand;
     min-width: 0;
+  }
+
+  .header-brand-zone {
+    grid-area: brand;
+    gap: 0;
+  }
+
+  .header-meta {
+    display: none;
+  }
+
+  .experience-header .brand-mark {
+    width: 34px;
+    height: 34px;
+  }
+
+  .experience-header .admin-brand strong {
+    font-size: 18px;
   }
 
   .experience-nav {
@@ -3475,6 +3766,7 @@ a {
 
   .experience-header .header-actions .icon-button {
     width: 42px;
+    height: 42px;
     min-width: 42px;
   }
 
@@ -3490,6 +3782,7 @@ a {
   .page-hero,
   .shipping-simulator,
   .admin-sell-mock,
+  .store-footer,
   .catalog-page-grid,
   .compact-grid {
     width: calc(100% - 20px);
@@ -3666,24 +3959,21 @@ a {
 
   .lookbook-section {
     min-height: auto;
-    padding: 26px;
+    padding: 18px;
     grid-template-columns: 1fr;
-    gap: 24px;
-  }
-
-  .lookbook-garland {
-    width: 330px;
-    left: -138px;
-    top: -62px;
-    opacity: 0.42;
-  }
-
-  .lookbook-mosaic {
-    display: none;
+    gap: 16px;
   }
 
   .lookbook-copy h2 {
-    font-size: clamp(34px, 11vw, 52px);
+    font-size: clamp(32px, 10vw, 46px);
+  }
+
+  .lookbook-copy {
+    padding: 6px 2px 0;
+  }
+
+  .lookbook-copy p:not(.eyebrow) {
+    font-size: 15px;
   }
 
   .lookbook-frame {
@@ -3692,20 +3982,48 @@ a {
   }
 
   .lookbook-main {
+    height: 330px;
     min-height: 330px;
     transform: none;
   }
 
+  .lookbook-main > strong {
+    bottom: 68px;
+    font-size: 16px;
+  }
+
   .lookbook-side {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: 1fr;
     grid-template-rows: none;
     gap: 8px;
   }
 
-  .lookbook-side button,
-  .lookbook-side button:nth-child(even) {
+  .lookbook-side button {
     min-height: 92px;
     transform: none;
+  }
+
+  .store-footer {
+    margin-top: 46px;
+    padding: 20px;
+    gap: 22px;
+  }
+
+  .footer-columns {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-contact-card {
+    grid-column: auto;
+  }
+
+  .footer-strip {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .footer-strip .primary-button {
+    width: 100%;
   }
 
   .immersive-band,

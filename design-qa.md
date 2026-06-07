@@ -22,6 +22,11 @@ final result: passed
   - `outputs/anutkin-redesign-modal-desktop-v1.png`, 1280x900, redesigned desktop photo modal
   - `outputs/anutkin-redesign-hero-mobile-v5.png`, 390x844, compact mobile storefront hero
   - `outputs/anutkin-redesign-modal-mobile-v4.png`, 390x844, redesigned mobile photo modal
+  - `outputs/anutkin-lookbook-desktop-v9.png`, 1280x900, redesigned seasonal lookbook
+  - `outputs/anutkin-footer-desktop-v9.png`, 1280x900, finished store footer
+  - `outputs/anutkin-header-mobile-v9.png`, 390x844, mobile header and hero
+  - `outputs/anutkin-lookbook-mobile-v9.png`, 390x844, mobile lookbook
+  - `outputs/anutkin-modal-mobile-v9.png`, 390x844, mobile photo modal after animation
 - Focused regions checked: mobile header/nav, catalog hero, product card grid, 3D carousel, admin overview command cards. Extra focused composite was not needed after the full-view mobile comparison because the remaining differences are intentional product-scope changes, not unresolved fidelity defects.
 
 ## Findings
@@ -53,6 +58,10 @@ No actionable P0/P1/P2 issues remain.
 - Moved modal previous/next buttons into the photo stage itself, preventing overlap with text on every viewport.
 - Tightened the mobile header and mobile hero so the first screen shows product photography instead of only navigation and copy.
 - Removed buyer-facing copy that explained the website mechanics instead of selling plants.
+- Rebuilt the seasonal lookbook after visual review: removed decorative cropped asset clutter, fixed the main image height, added product mini-cards with price/stock, and shortened the headline so it no longer collides with the photo column.
+- Strengthened the storefront header with clearer brand, delivery/geography chips, stronger active navigation, and larger cart/admin actions.
+- Added a complete storefront footer with brand copy, category counts, buyer links, contacts, delivery notes, mini product photos, and a catalog CTA.
+- Rechecked the mobile photo modal after animation completion: panel/background opacity is stable and arrows remain inside the image stage.
 
 ## Verification
 
@@ -63,6 +72,7 @@ No actionable P0/P1/P2 issues remain.
 - Photo modal smoke test passed: lookbook click opened a product photo, next arrow changed product, close button removed the modal.
 - Mobile modal smoke test passed at 390x844: body width remained 375px, failed images were 0, nav arrows stayed inside the photo area.
 - Redesign QA passed: old hero carousel count is 0, category cards count is 4, failed images are 0, mobile hero photo appears in the first viewport, and modal arrows report `nextOverText: false` on desktop/mobile.
+- Latest header/lookbook/footer QA passed in local Chrome: 1280px desktop and 390px mobile, failed images 0, horizontal overflow 0, footer present, lookbook present.
 - Failed network resources: 0 in the focused final local check.
 - Horizontal overflow: none on 1440px desktop and 390px mobile.
 
