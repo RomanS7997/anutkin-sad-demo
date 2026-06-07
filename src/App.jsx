@@ -2,6 +2,8 @@ import {
   ArrowRight,
   Basket,
   Bell,
+  CaretLeft,
+  CaretRight,
   ChartLineUp,
   CheckCircle,
   Clock,
@@ -107,6 +109,7 @@ function StorefrontAppV2({ data, route, go }) {
   const [query, setQuery] = useState("");
   const [cart, setCart] = useState([]);
   const [drawerOpen, setDrawerOpen] = useState(false);
+  const [lightboxIndex, setLightboxIndex] = useState(null);
 
   const availableProducts = useMemo(
     () => data.products.filter((product) => product.stock > 0 && product.image),
@@ -119,6 +122,11 @@ function StorefrontAppV2({ data, route, go }) {
       .flatMap((key) => availableProducts.filter((product) => product.categoryKey === key))
       .slice(0, 12);
   }, [availableProducts]);
+
+  const galleryProducts = useMemo(
+    () => data.products.filter((product) => product.image),
+    [data.products],
+  );
 
   const filtered = useMemo(() => {
     const needle = query.trim().toLowerCase();
@@ -137,6 +145,7 @@ function StorefrontAppV2({ data, route, go }) {
   const selectedProduct = data.products.find((product) => product.id === productId) || featured[0] || data.products[0];
   const cartTotal = cart.reduce((sum, item) => sum + item.price * item.qty, 0);
   const cartCount = cart.reduce((sum, item) => sum + item.qty, 0);
+  const lightboxProduct = lightboxIndex === null ? null : galleryProducts[lightboxIndex];
 
   const addToCart = (product) => {
     if (!product || product.stock === 0) return;
@@ -152,6 +161,29 @@ function StorefrontAppV2({ data, route, go }) {
     setDrawerOpen(true);
   };
 
+  const openLightbox = (product) => {
+    const index = galleryProducts.findIndex((item) => item.id === product.id);
+    setLightboxIndex(index >= 0 ? index : 0);
+  };
+
+  const moveLightbox = (direction) => {
+    setLightboxIndex((current) => {
+      if (current === null || galleryProducts.length === 0) return current;
+      return (current + direction + galleryProducts.length) % galleryProducts.length;
+    });
+  };
+
+  useEffect(() => {
+    if (!lightboxProduct) return undefined;
+    const onKey = (event) => {
+      if (event.key === "Escape") setLightboxIndex(null);
+      if (event.key === "ArrowLeft") moveLightbox(-1);
+      if (event.key === "ArrowRight") moveLightbox(1);
+    };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [lightboxProduct, galleryProducts.length]);
+
   return (
     <main className="experience-shell">
       <StoreHeader routeName={routeName} go={go} cartCount={cartCount} openCart={() => setDrawerOpen(true)} />
@@ -160,8 +192,10 @@ function StorefrontAppV2({ data, route, go }) {
         <HomeExperience
           data={data}
           featured={featured}
+          galleryProducts={galleryProducts}
           go={go}
           addToCart={addToCart}
+          openLightbox={openLightbox}
         />
       )}
       {routeName === "catalog" && (
@@ -174,15 +208,16 @@ function StorefrontAppV2({ data, route, go }) {
           setQuery={setQuery}
           go={go}
           addToCart={addToCart}
+          openLightbox={openLightbox}
         />
       )}
       {routeName === "product" && (
-        <ProductExperience product={selectedProduct} products={featured} go={go} addToCart={addToCart} />
+        <ProductExperience product={selectedProduct} products={featured} go={go} addToCart={addToCart} openLightbox={openLightbox} />
       )}
       {routeName === "delivery" && <DeliveryExperience data={data} go={go} />}
       {routeName === "about" && <AboutExperience data={data} go={go} />}
       {!["home", "catalog", "product", "delivery", "about"].includes(routeName) && (
-        <HomeExperience data={data} featured={featured} go={go} addToCart={addToCart} />
+        <HomeExperience data={data} featured={featured} galleryProducts={galleryProducts} go={go} addToCart={addToCart} openLightbox={openLightbox} />
       )}
 
       <CartDrawer
@@ -191,6 +226,16 @@ function StorefrontAppV2({ data, route, go }) {
         open={drawerOpen}
         setCart={setCart}
         setOpen={setDrawerOpen}
+      />
+      <PhotoLightbox
+        product={lightboxProduct}
+        products={galleryProducts}
+        index={lightboxIndex}
+        onClose={() => setLightboxIndex(null)}
+        onMove={moveLightbox}
+        onPick={setLightboxIndex}
+        addToCart={addToCart}
+        go={go}
       />
     </main>
   );
@@ -236,13 +281,15 @@ function StoreHeader({ routeName, go, cartCount, openCart }) {
   );
 }
 
-function HomeExperience({ data, featured, go, addToCart }) {
+function HomeExperience({ data, featured, galleryProducts, go, addToCart, openLightbox }) {
   const heroProduct = featured[0] || data.products[0];
   const carousel = featured.slice(0, 8);
 
   return (
     <>
       <section className="experience-hero">
+        <img className="floral-corner floral-corner-left" src={assetUrl("/assets/decor/floral-corner-left.webp")} alt="" aria-hidden="true" />
+        <img className="floral-corner floral-corner-right" src={assetUrl("/assets/decor/floral-corner-right.webp")} alt="" aria-hidden="true" />
         <div className="hero-copy hero-copy-v2">
           <p className="eyebrow">
             <Sparkle size={16} weight="fill" />
@@ -278,7 +325,7 @@ function HomeExperience({ data, featured, go, addToCart }) {
                 key={product.id}
                 style={{ "--angle": `${index * 60}deg` }}
                 type="button"
-                onClick={() => go(`product/${product.id}`)}
+                onClick={() => openLightbox(product)}
               >
                 <img src={assetUrl(product.image)} alt={product.name} />
                 <span>{product.name}</span>
@@ -313,6 +360,8 @@ function HomeExperience({ data, featured, go, addToCart }) {
         ))}
       </section>
 
+      <LookbookGallery products={galleryProducts} go={go} openLightbox={openLightbox} />
+
       <section className="immersive-band">
         <div className="band-copy">
           <p className="script">Season drop</p>
@@ -345,7 +394,7 @@ function HomeExperience({ data, featured, go, addToCart }) {
         </div>
         <div className="editorial-grid">
           {featured.slice(0, 6).map((product) => (
-            <LuxuryProductCard key={product.id} product={product} go={go} addToCart={addToCart} />
+            <LuxuryProductCard key={product.id} product={product} go={go} addToCart={addToCart} openLightbox={openLightbox} />
           ))}
         </div>
       </section>
@@ -353,7 +402,7 @@ function HomeExperience({ data, featured, go, addToCart }) {
   );
 }
 
-function CatalogExperience({ data, filtered, activeCategory, setActiveCategory, query, setQuery, go, addToCart }) {
+function CatalogExperience({ data, filtered, activeCategory, setActiveCategory, query, setQuery, go, addToCart, openLightbox }) {
   return (
     <>
       <section className="page-hero compact">
@@ -399,21 +448,27 @@ function CatalogExperience({ data, filtered, activeCategory, setActiveCategory, 
 
       <section className="editorial-grid catalog-page-grid">
         {filtered.slice(0, 36).map((product) => (
-          <LuxuryProductCard key={product.id} product={product} go={go} addToCart={addToCart} />
+          <LuxuryProductCard key={product.id} product={product} go={go} addToCart={addToCart} openLightbox={openLightbox} />
         ))}
       </section>
     </>
   );
 }
 
-function ProductExperience({ product, products, go, addToCart }) {
+function ProductExperience({ product, products, go, addToCart, openLightbox }) {
   const related = products.filter((item) => item.id !== product.id).slice(0, 4);
 
   return (
     <>
       <section className="product-detail-page">
         <div className="detail-gallery">
-          <img src={assetUrl(product.image)} alt={product.name} />
+          <button className="detail-photo-button" type="button" onClick={() => openLightbox(product)}>
+            <img src={assetUrl(product.image)} alt={product.name} />
+            <span>
+              <MagnifyingGlass size={17} weight="duotone" />
+              Открыть фото
+            </span>
+          </button>
           <div className="detail-float">
             <span>{product.category}</span>
             <strong>{stockLabel(product)}</strong>
@@ -456,7 +511,7 @@ function ProductExperience({ product, products, go, addToCart }) {
       </section>
       <section className="editorial-grid compact-grid">
         {related.map((item) => (
-          <LuxuryProductCard key={item.id} product={item} go={go} addToCart={addToCart} />
+          <LuxuryProductCard key={item.id} product={item} go={go} addToCart={addToCart} openLightbox={openLightbox} />
         ))}
       </section>
     </>
@@ -577,12 +632,124 @@ function AboutExperience({ data, go }) {
   );
 }
 
-function LuxuryProductCard({ product, go, addToCart }) {
+function LookbookGallery({ products, go, openLightbox }) {
+  const hydrangeas = products.filter((product) => product.categoryKey === "hydrangea");
+  const lead =
+    hydrangeas.find((product) => product.image?.includes("polar-bir")) ||
+    hydrangeas[0] ||
+    products[1] ||
+    products[0];
+  const side = [
+    ...hydrangeas.filter((product) => product.id !== lead?.id),
+    ...products.filter((product) => product.id !== lead?.id),
+  ].slice(0, 6);
+
+  if (!lead) return null;
+
+  return (
+    <section className="lookbook-section">
+      <img className="lookbook-garland" src={assetUrl("/assets/decor/floral-garland.webp")} alt="" aria-hidden="true" />
+      <img className="lookbook-mosaic" src={assetUrl("/assets/decor/floral-mosaic.webp")} alt="" aria-hidden="true" />
+      <div className="lookbook-copy">
+        <p className="eyebrow">Сезон в кадре</p>
+        <h2>Рассмотрите растения крупно перед заказом</h2>
+        <p>
+          Клик по фотографии открывает галерею: можно листать растения, смотреть детали,
+          переходить в карточку и добавлять выбранное в корзину.
+        </p>
+        <button className="round-link" type="button" onClick={() => go("catalog")}>
+          Все растения
+          <ArrowRight size={18} weight="bold" />
+        </button>
+      </div>
+      <div className="lookbook-frame">
+        <button className="lookbook-main" type="button" onClick={() => openLightbox(lead)}>
+          <img src={assetUrl(lead.image)} alt={lead.name} />
+          <span>
+            <MagnifyingGlass size={18} weight="duotone" />
+            Открыть галерею
+          </span>
+        </button>
+        <div className="lookbook-side">
+          {side.map((product) => (
+            <button type="button" key={product.id} onClick={() => openLightbox(product)}>
+              <img src={assetUrl(product.image)} alt={product.name} />
+            </button>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function PhotoLightbox({ product, products, index, onClose, onMove, onPick, addToCart, go }) {
+  if (!product) return null;
+
+  const thumbStart = Math.max(0, Math.min(index - 4, Math.max(0, products.length - 10)));
+  const thumbs = products.slice(thumbStart, thumbStart + 10);
+
+  return (
+    <aside className="photo-lightbox" role="dialog" aria-modal="true" aria-label="Фотография растения">
+      <button className="photo-backdrop" type="button" onClick={onClose} aria-label="Закрыть фото" />
+      <div className="photo-panel">
+        <button className="modal-close icon-button" type="button" onClick={onClose} aria-label="Закрыть">
+          <X size={20} weight="bold" />
+        </button>
+        <button className="gallery-nav gallery-prev" type="button" onClick={() => onMove(-1)} aria-label="Предыдущее фото">
+          <CaretLeft size={24} weight="bold" />
+        </button>
+        <figure className="photo-stage">
+          <img src={assetUrl(product.image)} alt={product.name} />
+        </figure>
+        <button className="gallery-nav gallery-next" type="button" onClick={() => onMove(1)} aria-label="Следующее фото">
+          <CaretRight size={24} weight="bold" />
+        </button>
+        <section className="photo-details">
+          <p className="eyebrow">{product.category}</p>
+          <h2>{product.name}</h2>
+          <p>{product.description}</p>
+          <div className="photo-meta">
+            <strong>{formatRub(product.price)}</strong>
+            <span>{stockLabel(product)}</span>
+          </div>
+          <div className="photo-actions">
+            <button className="primary-button" type="button" onClick={() => addToCart(product)} disabled={product.stock === 0}>
+              В корзину
+              <Plus size={17} weight="bold" />
+            </button>
+            <button className="round-link" type="button" onClick={() => { onClose(); go(`product/${product.id}`); }}>
+              Карточка
+              <ArrowRight size={17} weight="bold" />
+            </button>
+          </div>
+          <div className="photo-thumbs" aria-label="Миниатюры галереи">
+            {thumbs.map((item, itemIndex) => (
+              <button
+                className={thumbStart + itemIndex === index ? "active" : ""}
+                type="button"
+                key={item.id}
+                onClick={() => onPick(thumbStart + itemIndex)}
+              >
+                <img src={assetUrl(item.image)} alt={item.name} />
+              </button>
+            ))}
+          </div>
+        </section>
+      </div>
+    </aside>
+  );
+}
+
+function LuxuryProductCard({ product, go, addToCart, openLightbox }) {
   return (
     <article className={`luxury-card ${product.status}`}>
-      <button className="luxury-image" type="button" onClick={() => go(`product/${product.id}`)}>
+      <button className="luxury-image" type="button" onClick={() => openLightbox(product)}>
         {product.image ? <img src={assetUrl(product.image)} alt={product.name} /> : <Leaf size={44} weight="duotone" />}
         <span>{product.category}</span>
+        <em>
+          <MagnifyingGlass size={15} weight="duotone" />
+          фото
+        </em>
       </button>
       <div className="luxury-body">
         <button className="text-link" type="button" onClick={() => go(`product/${product.id}`)}>

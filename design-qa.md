@@ -13,6 +13,11 @@ final result: passed
   - `final-local-admin.png`, 1440x1100, `#/admin`
   - `fix2-hero-1280.png`, 1280x900, `#/shop`
   - `fix2-hero-mobile.png`, 390x1350, `#/shop`
+  - `outputs/anutkin-home-desktop-v5.png`, 1280x900, `#/shop`
+  - `outputs/anutkin-lookbook-viewport-v7.png`, 1280x900, lookbook section
+  - `outputs/anutkin-photo-modal-v6.png`, 1280x900, desktop photo modal
+  - `outputs/anutkin-home-mobile-v5.png`, 390x844, mobile storefront
+  - `outputs/anutkin-photo-modal-mobile-v2.png`, 390x844, mobile photo modal
 - Focused regions checked: mobile header/nav, catalog hero, product card grid, 3D carousel, admin overview command cards. Extra focused composite was not needed after the full-view mobile comparison because the remaining differences are intentional product-scope changes, not unresolved fidelity defects.
 
 ## Findings
@@ -34,12 +39,19 @@ No actionable P0/P1/P2 issues remain.
 - Fixed mobile storefront navigation so route buttons are visible in a compact grid.
 - Shortened the mobile catalog headline to avoid bad wrapping.
 - Reworked the first-screen hero after visual review: reduced display headline scale, replaced the rotating product wheel with a controlled 3D showcase, and separated the live product card from the main image stack.
+- Added generated bitmap floral decor assets for hero/lookbook framing: `public/assets/decor/floral-corner-left.webp`, `floral-corner-right.webp`, `floral-garland.webp`, and `floral-mosaic.webp`.
+- Added a seasonal lookbook block with a large clickable hydrangea photo, side previews, and a direct catalog action.
+- Added photo lightbox interaction across hero cards, product cards, lookbook, and product detail: desktop/mobile layout, previous/next navigation, Escape close, thumbnails around the active item, add-to-cart, and product detail navigation.
+- Fixed mobile photo modal arrows so they stay centered over the image area instead of overlapping product text.
+- Added disabled button styling for out-of-stock products in the modal and shared primary button state.
 
 ## Verification
 
 - `npm run build` passed.
 - Local browser QA passed for desktop storefront, mobile catalog, desktop admin, and mobile admin.
 - Follow-up interaction smoke test passed for storefront navigation: shop, catalog, delivery, and admin.
+- Photo modal smoke test passed: lookbook click opened a product photo, next arrow changed product, close button removed the modal.
+- Mobile modal smoke test passed at 390x844: body width remained 375px, failed images were 0, nav arrows stayed inside the photo area.
 - Failed network resources: 0 in the focused final local check.
 - Horizontal overflow: none on 1440px desktop and 390px mobile.
 
