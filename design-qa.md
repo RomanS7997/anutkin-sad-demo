@@ -19,15 +19,15 @@ final result: passed
 
 No actionable P0/P1/P2 issues remain.
 
-- Fonts and typography: the demo keeps the reference's editorial serif direction for large selling headlines and uses heavier sans UI text for controls, admin labels, filters, and metrics. Mobile catalog headline wrapping was corrected from an awkward ecommerce phrase to a cleaner Russian sales message.
+- Fonts and typography: the storefront keeps the reference's editorial serif direction for large selling headlines and uses heavier sans UI text for controls, admin labels, filters, and metrics. Mobile catalog headline wrapping was corrected to a cleaner Russian store message.
 - Spacing and layout rhythm: desktop storefront keeps a wide premium header, large hero, proof cards, product sections, and soft card shadows. Mobile header was changed from a clipped horizontal nav to a 2x2 grid so all routes are visible without a gesture.
 - Colors and visual tokens: blush, berry, soft white, and muted green remain close to the reference, with added operational green in admin dashboards for stock/sales context.
-- Image quality and assets: catalog/product imagery uses the extracted real nursery photos. Some old product photos retain source watermarks; acceptable for this demo because they are real client assets, but should be replaced in a production content pass.
-- Copy and content: the prototype now sells a complete ecommerce/admin upgrade, not a compressed one-page landing: storefront, catalog, product detail, delivery/SDEK explanation, client proposal page, and WooCommerce-style admin.
+- Image quality and assets: catalog/product imagery uses the extracted real nursery photos. Some old product photos retain source watermarks; acceptable for this build because they are real catalog assets, but should be replaced in a production content pass.
+- Copy and content: the site now reads as a ready store: storefront, catalog, product detail, delivery/SDEK explanation, about page, and admin panel.
 
 ## Patches Made Since Previous QA
 
-- Replaced the single-page storefront feel with routed pages: `#/shop`, `#/catalog`, `#/product/:id`, `#/delivery`, `#/proposal`, `#/admin`.
+- Replaced the single-page storefront feel with routed pages: `#/shop`, `#/catalog`, `#/product/:id`, `#/delivery`, `#/about`, `#/admin`.
 - Added 3D product carousel, hover elevation, animated live product card, stacked product presentation, and deeper editorial/product sections.
 - Added admin overview command cards for morning fulfillment, AI stock/promo suggestion, and weekly promo setup.
 - Fixed 3D carousel backface rendering so mirrored card backs no longer show.
@@ -46,4 +46,4 @@ No actionable P0/P1/P2 issues remain.
 ## Remaining P3 Polish
 
 - Replace source-watermarked product photos where the client has cleaner originals.
-- In the connected version, wire admin metrics/orders/stock to WooCommerce REST API and live SDEK statuses instead of mock data.
+- In the connected version, wire admin metrics/orders/stock to the production catalog API and live SDEK statuses instead of mock data.

@@ -1709,7 +1709,7 @@ a {
   }
 }
 
-/* Second-pass sales demo */
+/* Storefront and admin product */
 
 .experience-shell {
   min-height: 100vh;
@@ -2414,7 +2414,7 @@ a {
 }
 
 .delivery-hero,
-.proposal-hero {
+.about-hero {
   background:
     linear-gradient(120deg, rgba(255, 241, 225, 0.95), rgba(232, 240, 223, 0.92)),
     #fff;

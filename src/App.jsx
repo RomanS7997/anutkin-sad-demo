@@ -180,8 +180,8 @@ function StorefrontAppV2({ data, route, go }) {
         <ProductExperience product={selectedProduct} products={featured} go={go} addToCart={addToCart} />
       )}
       {routeName === "delivery" && <DeliveryExperience data={data} go={go} />}
-      {routeName === "proposal" && <ProposalExperience data={data} go={go} />}
-      {!["home", "catalog", "product", "delivery", "proposal"].includes(routeName) && (
+      {routeName === "about" && <AboutExperience data={data} go={go} />}
+      {!["home", "catalog", "product", "delivery", "about"].includes(routeName) && (
         <HomeExperience data={data} featured={featured} go={go} addToCart={addToCart} />
       )}
 
@@ -201,7 +201,7 @@ function StoreHeader({ routeName, go, cartCount, openCart }) {
     ["home", "Главная", "shop"],
     ["catalog", "Каталог", "catalog"],
     ["delivery", "Доставка", "delivery"],
-    ["proposal", "Презентация", "proposal"],
+    ["about", "О саде", "about"],
   ];
 
   return (
@@ -212,10 +212,10 @@ function StoreHeader({ routeName, go, cartCount, openCart }) {
         </span>
         <span>
           <strong>Анюткин сад</strong>
-          <small>новый ecommerce</small>
+          <small>цветочное хозяйство</small>
         </span>
       </button>
-      <nav className="experience-nav" aria-label="Навигация демо">
+      <nav className="experience-nav" aria-label="Навигация сайта">
         {links.map(([key, label, target]) => (
           <button className={routeName === key ? "active" : ""} key={key} type="button" onClick={() => go(target)}>
             {label}
@@ -225,7 +225,7 @@ function StoreHeader({ routeName, go, cartCount, openCart }) {
       <div className="header-actions">
         <button className="soft-button" type="button" onClick={() => go("admin")}>
           <Storefront size={17} weight="duotone" />
-          Админка
+          Кабинет
         </button>
         <button className="icon-button" type="button" onClick={openCart} aria-label="Корзина">
           <Basket size={20} weight="duotone" />
@@ -246,27 +246,27 @@ function HomeExperience({ data, featured, go, addToCart }) {
         <div className="hero-copy hero-copy-v2">
           <p className="eyebrow">
             <Sparkle size={16} weight="fill" />
-            Демо нового сайта, каталога и админки
+            Растения из хозяйства с доставкой СДЭК
           </p>
-          <h1>Сад, который продает до первого звонка</h1>
+          <h1>Растения для сада с доставкой по России</h1>
           <p className="hero-lede">
             Не просто красивая витрина: покупатель видит живые остатки, подборки по сезону,
-            понятную доставку СДЭК и карточки растений, которые выглядят дороже стандартного WooCommerce.
+            понятную доставку СДЭК и подробные карточки растений с фото, ценой и условиями ухода.
           </p>
           <div className="hero-actions">
             <button className="primary-button" type="button" onClick={() => go("catalog")}>
               Открыть каталог
               <ArrowRight size={18} weight="bold" />
             </button>
-            <button className="round-link" type="button" onClick={() => go("proposal")}>
-              Почему это продает
+            <button className="round-link" type="button" onClick={() => go("about")}>
+              О хозяйстве
               <Sparkle size={18} weight="duotone" />
             </button>
           </div>
           <div className="proof-row">
             <div><strong>89</strong><span>реальных товаров</span></div>
             <div><strong>5</strong><span>категорий</span></div>
-            <div><strong>СДЭК</strong><span>в сценарии заказа</span></div>
+            <div><strong>СДЭК</strong><span>в доставке заказа</span></div>
           </div>
         </div>
 
@@ -301,8 +301,8 @@ function HomeExperience({ data, featured, go, addToCart }) {
         {[
           ["Каталог с живыми остатками", "Фильтры, быстрый поиск, статусы наличия и красивые карточки растений.", "catalog", Package],
           ["Страница растения", "Большое фото, характеристики, наличие и понятный следующий шаг.", `product/${heroProduct.id}`, Plant],
-          ["Доставка СДЭК", "Отдельный экран про упаковку, сроки, самовывоз и ожидания клиента.", "delivery", Truck],
-          ["Админка хозяйства", "Продажи, заказы, остатки, очередь отправок и ежедневные действия.", "admin", ChartLineUp],
+          ["Доставка СДЭК", "Отдельный экран про упаковку, сроки, самовывоз и ожидания покупателя.", "delivery", Truck],
+          ["Панель хозяйства", "Продажи, заказы, остатки, очередь отправок и ежедневные действия.", "admin", ChartLineUp],
         ].map(([title, text, target, Icon]) => (
           <button className="journey-card" key={title} type="button" onClick={() => go(target)}>
             <Icon size={28} weight="duotone" />
@@ -318,8 +318,8 @@ function HomeExperience({ data, featured, go, addToCart }) {
           <p className="script">Season drop</p>
           <h2>Не скидка ради скидки, а сезонные сценарии покупки</h2>
           <p>
-            Вместо плоского списка товаров демо показывает подборки: гортензии для посадки, цветущие
-            однолетники, кустарники и рассада. Это проще продать и проще объяснить клиенту.
+            В каталоге собраны подборки: гортензии для посадки, цветущие однолетники, кустарники
+            и рассада. Так проще выбрать растения под сезон, участок и способ доставки.
           </p>
           <button className="primary-button alt" type="button" onClick={() => go("catalog")}>
             Смотреть подборки
@@ -340,8 +340,8 @@ function HomeExperience({ data, featured, go, addToCart }) {
       <section className="editorial-section">
         <div className="section-head">
           <p className="eyebrow">Витрина</p>
-          <h2>Главная продает не товар, а доверие к хозяйству</h2>
-          <p>Больше воздуха, крупнее фото, понятные сценарии и движение, которое делает демо живым.</p>
+          <h2>Популярные растения из каталога</h2>
+          <p>Крупные фото, живые остатки и быстрый переход в карточку помогают спокойно выбрать растение.</p>
         </div>
         <div className="editorial-grid">
           {featured.slice(0, 6).map((product) => (
@@ -361,8 +361,8 @@ function CatalogExperience({ data, filtered, activeCategory, setActiveCategory, 
           <p className="eyebrow">Каталог</p>
           <h1>Каталог, который выглядит как магазин</h1>
           <p>
-            Отдельная страница каталога показывает, как можно уйти от WooCommerce-шаблона: поиск,
-            фильтры, быстрый просмотр и карточки, которые хорошо смотрятся на мобильном.
+            Отдельная страница каталога помогает быстро выбрать растения: поиск, фильтры,
+            быстрый просмотр и карточки, которые хорошо смотрятся на мобильном.
           </p>
         </div>
         <div className="catalog-stats">
@@ -427,7 +427,7 @@ function ProductExperience({ product, products, go, addToCart }) {
           <p>{product.description}</p>
           <div className="detail-price">
             <strong>{formatRub(product.price)}</strong>
-            <span>{product.stock > 0 ? "можно добавить в заказ" : "показываем как sold out"}</span>
+            <span>{product.stock > 0 ? "можно добавить в заказ" : "нет в наличии"}</span>
           </div>
           <div className="care-facts">
             {Object.entries(product.care || {}).slice(0, 4).map(([key, value]) => (
@@ -503,9 +503,9 @@ function DeliveryExperience({ data, go }) {
 
       <section className="shipping-simulator">
         <div>
-          <p className="eyebrow">Демо-фича</p>
-          <h2>Расчет доставки как продающий блок</h2>
-          <p>Можно показать клиенту будущий блок: город, способ, примерный срок и подсказка про упаковку.</p>
+          <p className="eyebrow">Расчет доставки</p>
+          <h2>Сроки и способ доставки до оплаты</h2>
+          <p>Покупатель заранее видит город, способ отправки, примерный срок и подсказку про упаковку растений.</p>
         </div>
         <div className="simulator-card">
           <label>Город</label>
@@ -523,29 +523,29 @@ function DeliveryExperience({ data, go }) {
   );
 }
 
-function ProposalExperience({ data, go }) {
+function AboutExperience({ data, go }) {
   return (
     <>
-      <section className="page-hero proposal-hero">
+      <section className="page-hero about-hero">
         <div>
-          <p className="eyebrow">Презентация для клиента</p>
-          <h1>Что именно продаем владельцу хозяйства</h1>
+          <p className="eyebrow">О хозяйстве</p>
+          <h1>Анюткин сад: растения из хозяйства с понятной доставкой</h1>
           <p>
-            Не “красивый сайт”, а связку витрина + админка: меньше ручной рутины, понятнее остатки,
-            лучше мобильный опыт и больше доверия у покупателя.
+            Мы выращиваем и подбираем декоративные растения для сада, показываем актуальное наличие,
+            помогаем выбрать сорта по сезону и бережно отправляем заказы СДЭК.
           </p>
         </div>
-        <button className="primary-button" type="button" onClick={() => go("admin")}>
-          Открыть админку
+        <button className="primary-button" type="button" onClick={() => go("catalog")}>
+          Перейти в каталог
           <ArrowRight size={18} weight="bold" />
         </button>
       </section>
 
       <section className="value-ladder">
         {[
-          ["Сейчас", "WooCommerce выглядит как каталог с карточками, где клиенту нужно самому разбираться."],
-          ["В демо", "Появились сценарии: сезонные подборки, доставка, карточка растения, корзина, админка."],
-          ["Дальше", "Подключаем WooCommerce REST API, СДЭК, реальные заказы и управление остатками."],
+          ["Выбор", "Каталог собран по категориям, наличию и сезону, чтобы быстро найти подходящие растения."],
+          ["Упаковка", "Перед отправкой растения проверяются, маркируются и готовятся к дороге."],
+          ["Доставка", "Заказы отправляются СДЭК или передаются самовывозом после согласования."],
         ].map(([title, text]) => (
           <article key={title}>
             <h3>{title}</h3>
@@ -556,14 +556,14 @@ function ProposalExperience({ data, go }) {
 
       <section className="admin-sell-mock">
         <div>
-          <p className="eyebrow">Операционная ценность</p>
-          <h2>Админка, которую хочется открыть утром</h2>
+          <p className="eyebrow">Для сотрудников</p>
+          <h2>Рабочая панель заказов и остатков</h2>
           <p>
-            На одном экране видно {data.metrics.ordersToday} заказов за сегодня, {data.metrics.stockAlerts}
+            Внутри видно {data.metrics.ordersToday} заказов за сегодня, {data.metrics.stockAlerts}
             {" "}рисков по остаткам и очередь отправки СДЭК.
           </p>
           <button className="primary-button" type="button" onClick={() => go("admin")}>
-            Перейти в админку
+            Открыть кабинет
             <ArrowRight size={18} weight="bold" />
           </button>
         </div>
@@ -707,7 +707,7 @@ function StorefrontApp({ data, go }) {
           <h1>Анюткин сад</h1>
           <p className="hero-lede">
             Декоративные растения, гортензии, кустарники и сезонная рассада из частного цветочного
-            хозяйства. В демо сохранены реальные товары, цены и остатки текущего каталога.
+            хозяйства. В каталоге сохранены реальные товары, цены и остатки текущего ассортимента.
           </p>
           <div className="hero-actions">
             <a className="primary-button" href="#catalog">
@@ -760,8 +760,8 @@ function StorefrontApp({ data, go }) {
         <p className="eyebrow">Каталог</p>
         <h2>Растения для сада и сезона</h2>
         <p>
-          Быстрый выбор по категориям, остаткам и названию. В демо кнопки и корзина работают как
-          прототип клиентского магазина.
+          Быстрый выбор по категориям, остаткам и названию. Кнопки и корзина работают как
+          в обычном интернет-магазине.
         </p>
       </section>
 
@@ -810,7 +810,7 @@ function StorefrontApp({ data, go }) {
         <div>
           <p className="script">Сезонная подборка</p>
           <h2>Гортензии и кустарники для посадки</h2>
-          <p>Покажите клиенту готовые наборы: растения, упаковка, расчет доставки СДЭК и статус оплаты.</p>
+          <p>Выбирайте готовые наборы: растения, упаковка, расчет доставки СДЭК и статус оплаты.</p>
         </div>
         <a className="primary-button alt" href="#admin-preview">
           Смотреть админку
@@ -850,7 +850,7 @@ function StorefrontApp({ data, go }) {
       <section className="admin-preview" id="admin-preview">
         <div>
           <p className="eyebrow">Для владельца</p>
-          <h2>Админка быстрее стандартного WooCommerce</h2>
+          <h2>Панель управления заказами и остатками</h2>
           <p>
             На первом экране видны продажи, заказы, товары с риском закончиться и очередь отправок.
           </p>
@@ -943,7 +943,7 @@ function CartDrawer({ cart, cartTotal, open, setCart, setOpen }) {
         </header>
         <div className="cart-items">
           {cart.length === 0 ? (
-            <p className="empty-state">Добавьте растения из каталога, чтобы показать клиенту сценарий заказа.</p>
+            <p className="empty-state">Добавьте растения из каталога, чтобы оформить заказ.</p>
           ) : (
             cart.map((item) => (
               <article key={item.id}>
@@ -1010,7 +1010,7 @@ function AdminApp({ data, go }) {
           </span>
           <span>
             <strong>Анюткин сад</strong>
-            <small>control center</small>
+            <small>панель управления</small>
           </span>
         </button>
         <nav aria-label="Разделы админки">
@@ -1023,14 +1023,14 @@ function AdminApp({ data, go }) {
         </nav>
         <button className="soft-button" type="button" onClick={() => go("shop")}>
           <Storefront size={17} weight="duotone" />
-          На витрину
+          В магазин
         </button>
       </aside>
 
       <section className="admin-main">
         <header className="admin-topbar">
           <div>
-            <p className="eyebrow">WooCommerce demo</p>
+            <p className="eyebrow">Рабочая панель</p>
             <h1>{adminTitle(tab)}</h1>
           </div>
           <div className="admin-actions">
@@ -1086,7 +1086,7 @@ function Overview({ data, lowStock, setTab }) {
   const commandCards = [
     ["Утренний сценарий", "Собрать 6 заказов, распечатать СДЭК и списать растения одним проходом.", "Запустить сборку", Truck],
     ["AI-подсказка", `Поднять в каталоге ${lowStock[0]?.name || "товар с низким остатком"} и убрать из рекламы позиции с риском.`, "Принять план", Sparkle],
-    ["Промо недели", `Сделать подборку из ${data.products.length} растений с автоскидкой для повторных клиентов.`, "Собрать витрину", Package],
+    ["Промо недели", `Сделать подборку из ${data.products.length} растений с автоскидкой для постоянных покупателей.`, "Собрать витрину", Package],
   ];
 
   return (
@@ -1187,7 +1187,7 @@ function Stock({ products, lowStock }) {
   return (
     <section className="admin-grid">
       <article className="panel wide">
-        <PanelTitle icon={Package} title="Товары WooCommerce" action="Импорт CSV" />
+        <PanelTitle icon={Package} title="Товары каталога" action="Импорт CSV" />
         <div className="product-admin-list">
           {products.map((product) => (
             <article key={product.id}>
@@ -1244,7 +1244,7 @@ function Sales({ data }) {
         <div className="channel-list">
           <div><strong>Сайт</strong><span>64%</span></div>
           <div><strong>WhatsApp</strong><span>21%</span></div>
-          <div><strong>Повторные клиенты</strong><span>15%</span></div>
+          <div><strong>Постоянные покупатели</strong><span>15%</span></div>
         </div>
       </article>
     </section>
