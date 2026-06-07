@@ -465,8 +465,8 @@ function HomeExperience({ data, featured, galleryProducts, go, addToCart, openLi
             </button>
           </article>
           <div className="hero-pick-strip" aria-label="Популярные растения">
-            {heroPicks.slice(1, 4).map((product) => (
-              <button type="button" key={product.id} onClick={() => openLightbox(product)}>
+            {heroPicks.slice(1, 5).map((product, index) => (
+              <button className={`hero-orbit-item hero-orbit-${index + 1}`} type="button" key={product.id} onClick={() => openLightbox(product)}>
                 <img src={assetUrl(product.image)} alt={product.name} />
                 <span>
                   <strong>{product.name}</strong>

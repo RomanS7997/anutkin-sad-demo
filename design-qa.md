@@ -64,6 +64,7 @@ No actionable P0/P1/P2 issues remain.
 - Rechecked the mobile photo modal after animation completion: panel/background opacity is stable and arrows remain inside the image stage.
 - Fixed the desktop photo modal height so the large image reaches the modal bottom instead of leaving an empty blush strip below it.
 - Strengthened mobile adaptation: the product photo modal now scrolls as one mobile sheet without title/image overlap, the close control stays accessible while scrolling, and admin orders/products render as mobile cards instead of a clipped desktop table.
+- Widened desktop storefront sections and rebuilt the home hero visual as a hybrid of the current storefront and the earlier circular photo composition: central round product photo, four clickable orbit photos, and the current buy panel.
 
 ## Verification
 
@@ -77,6 +78,7 @@ No actionable P0/P1/P2 issues remain.
 - Latest header/lookbook/footer QA passed in local Chrome: 1280px desktop and 390px mobile, failed images 0, horizontal overflow 0, footer present, lookbook present.
 - Desktop modal gap QA passed at 1230x683: panel-minus-image bottom gap is 1px from the border, stage-minus-image bottom gap is 0px, and the details column scrolls internally when text is taller.
 - Mobile QA passed at 375x812 and 320x760: storefront/modal/admin horizontal overflow is 0, failed images are 0, Bravado modal title/photo overlap is 0px, admin order table head is hidden, and admin product price/action remain visible.
+- Desktop hero QA passed at 1440x900 and 1280x820: active header/hero width is wider, horizontal overflow is 0, failed images are 0, central hero photo and orbit photos open the product lightbox.
 - Failed network resources: 0 in the focused final local check.
 - Horizontal overflow: none on 1440px desktop and 390px mobile.
 

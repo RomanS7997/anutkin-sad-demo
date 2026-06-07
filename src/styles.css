@@ -1729,14 +1729,14 @@ a {
 }
 
 .experience-header {
-  width: min(1240px, calc(100% - 28px));
+  width: min(1380px, calc(100% - 40px));
   min-height: 92px;
   margin: 14px auto 0;
   padding: 12px 14px;
   border: 1px solid rgba(125, 74, 91, 0.18);
   border-radius: 8px;
   display: grid;
-  grid-template-columns: minmax(270px, 0.82fr) auto auto;
+  grid-template-columns: minmax(300px, 0.9fr) auto auto;
   align-items: center;
   gap: 18px;
   position: sticky;
@@ -1852,25 +1852,25 @@ a {
 }
 
 .experience-hero {
-  width: min(1220px, calc(100% - 36px));
-  min-height: 720px;
+  width: min(1380px, calc(100% - 48px));
+  min-height: 740px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: minmax(420px, 0.82fr) minmax(560px, 1.18fr);
+  grid-template-columns: minmax(500px, 0.86fr) minmax(640px, 1.14fr);
   align-items: center;
-  gap: 52px;
-  padding: 46px 0 68px;
+  gap: 48px;
+  padding: 44px 0 72px;
   position: relative;
   isolation: isolate;
 }
 
 .experience-hero::before {
   content: "";
-  width: min(760px, 70vw);
-  height: min(560px, 56vw);
+  width: min(860px, 70vw);
+  height: min(620px, 56vw);
   border-radius: 42% 58% 48% 52%;
   position: absolute;
-  right: -90px;
+  right: -52px;
   top: 24px;
   z-index: -2;
   background:
@@ -1907,17 +1907,17 @@ a {
 }
 
 .hero-copy-v2 h1 {
-  max-width: 560px;
+  max-width: 650px;
   margin: 0;
   color: var(--berry);
   font-family: "Playfair Display", serif;
-  font-size: clamp(50px, 5.15vw, 78px);
+  font-size: clamp(54px, 5.4vw, 84px);
   line-height: 0.96;
   letter-spacing: 0;
 }
 
 .hero-copy-v2 .hero-lede {
-  max-width: 560px;
+  max-width: 620px;
   margin-top: 26px;
   font-size: 18px;
   line-height: 1.62;
@@ -1956,41 +1956,91 @@ a {
 }
 
 .hero-visual-v3 {
-  min-height: 620px;
-  display: grid;
-  align-items: center;
+  min-height: 650px;
+  display: block;
+  position: relative;
+  isolation: isolate;
+  perspective: 1400px;
+}
+
+.hero-visual-v3::before {
+  content: "";
+  width: min(650px, 92%);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  top: 42px;
+  z-index: -2;
+  background:
+    radial-gradient(circle at 50% 48%, rgba(255, 235, 241, 0.95), rgba(255, 235, 241, 0.35) 58%, transparent 72%),
+    radial-gradient(circle at 82% 24%, rgba(232, 240, 223, 0.86), transparent 34%);
+  filter: blur(2px);
+  transform: translateX(-50%);
+}
+
+.hero-visual-v3::after {
+  content: "";
+  width: min(610px, 88%);
+  height: 90px;
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  bottom: 28px;
+  z-index: -1;
+  background: rgba(91, 39, 58, 0.14);
+  filter: blur(28px);
+  transform: translateX(-50%);
 }
 
 .hero-photo-frame {
-  width: 100%;
-  height: 600px;
+  width: min(560px, 78%);
+  aspect-ratio: 1;
+  height: auto;
   border: 0;
-  border-radius: 8px;
-  padding: 0;
+  border-radius: 50%;
+  padding: 12px;
   display: block;
   position: relative;
+  margin: 30px auto 0;
   overflow: hidden;
-  background: #fff;
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.98), rgba(255, 244, 248, 0.92)),
+    #fff;
   box-shadow:
-    0 34px 90px rgba(72, 50, 55, 0.18),
-    0 0 0 1px rgba(255, 255, 255, 0.92);
+    0 34px 90px rgba(72, 50, 55, 0.2),
+    0 0 0 1px rgba(255, 255, 255, 0.92),
+    inset 0 0 0 1px rgba(140, 32, 73, 0.08);
+  transform: rotateX(2deg) rotateY(-5deg);
+  transform-style: preserve-3d;
+  transition: transform 0.45s ease, box-shadow 0.45s ease;
 }
 
 .hero-photo-frame::after {
   content: "";
   position: absolute;
-  inset: 0;
+  inset: 12px;
+  border-radius: 50%;
   background:
-    linear-gradient(90deg, rgba(28, 19, 22, 0.38), transparent 36%, transparent 74%, rgba(28, 19, 22, 0.1)),
-    linear-gradient(180deg, transparent 58%, rgba(32, 18, 26, 0.32));
+    linear-gradient(90deg, rgba(28, 19, 22, 0.18), transparent 35%, transparent 74%, rgba(28, 19, 22, 0.08)),
+    linear-gradient(180deg, transparent 62%, rgba(32, 18, 26, 0.22));
   pointer-events: none;
 }
 
 .hero-photo-frame img {
   width: 100%;
   height: 100%;
+  border-radius: 50%;
   object-fit: cover;
   transition: transform 0.8s ease;
+}
+
+.hero-photo-frame:hover {
+  transform: translateY(-7px) rotateX(1deg) rotateY(-2deg);
+  box-shadow:
+    0 46px 110px rgba(72, 50, 55, 0.24),
+    0 0 0 1px rgba(255, 255, 255, 0.94),
+    inset 0 0 0 1px rgba(140, 32, 73, 0.08);
 }
 
 .hero-photo-frame:hover img {
@@ -2005,30 +2055,34 @@ a {
   align-items: center;
   gap: 8px;
   position: absolute;
-  left: 22px;
-  top: 22px;
+  left: 50%;
+  bottom: 112px;
   z-index: 2;
   color: var(--rosewood);
   background: rgba(255, 255, 255, 0.9);
   box-shadow: 0 16px 34px rgba(34, 20, 28, 0.14);
   font-weight: 900;
   backdrop-filter: blur(16px);
+  transform: translateX(-50%);
 }
 
 .hero-buy-panel {
-  width: min(374px, calc(100% - 44px));
-  padding: 22px;
+  width: min(520px, 76%);
+  padding: 16px 16px 16px 20px;
   border: 1px solid rgba(255, 255, 255, 0.66);
-  border-radius: 8px;
+  border-radius: 999px;
   display: grid;
-  gap: 12px;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 10px 16px;
   position: absolute;
-  left: 22px;
-  bottom: 22px;
-  z-index: 3;
-  background: rgba(255, 249, 249, 0.9);
-  box-shadow: 0 24px 62px rgba(45, 28, 34, 0.18);
-  backdrop-filter: blur(18px);
+  left: 50%;
+  bottom: 34px;
+  z-index: 6;
+  background: rgba(255, 249, 249, 0.94);
+  box-shadow: 0 26px 68px rgba(45, 28, 34, 0.19);
+  backdrop-filter: blur(20px);
+  transform: translateX(-50%);
 }
 
 .hero-buy-panel p {
@@ -2043,21 +2097,23 @@ a {
 .hero-buy-panel h2 {
   margin: 0;
   color: var(--ink);
-  font-family: "Playfair Display", serif;
-  font-size: 28px;
-  line-height: 1.03;
+  overflow: hidden;
+  font-size: 17px;
+  line-height: 1.2;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .hero-buy-panel div {
   display: flex;
   align-items: baseline;
-  justify-content: space-between;
+  justify-content: flex-start;
   gap: 12px;
 }
 
 .hero-buy-panel strong {
   color: var(--berry);
-  font-size: 26px;
+  font-size: 24px;
 }
 
 .hero-buy-panel span {
@@ -2067,9 +2123,12 @@ a {
 }
 
 .hero-buy-panel button {
-  min-height: 42px;
+  min-height: 46px;
+  padding: 0 18px;
   border: 0;
   border-radius: 999px;
+  grid-column: 2;
+  grid-row: 1 / span 3;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -2086,61 +2145,103 @@ a {
 }
 
 .hero-pick-strip {
-  width: min(224px, 42%);
-  display: grid;
-  gap: 10px;
   position: absolute;
-  right: 18px;
-  top: 88px;
-  z-index: 3;
+  inset: 0;
+  z-index: 5;
+  pointer-events: none;
 }
 
-.hero-pick-strip button {
-  min-height: 88px;
-  border: 1px solid rgba(255, 255, 255, 0.64);
-  border-radius: 8px;
-  padding: 8px;
-  display: grid;
-  grid-template-columns: 72px minmax(0, 1fr);
-  align-items: center;
-  gap: 10px;
-  text-align: left;
+.hero-orbit-item {
+  width: 118px;
+  height: 118px;
+  border: 8px solid rgba(255, 255, 255, 0.94);
+  border-radius: 50%;
+  padding: 0;
+  display: block;
+  position: absolute;
+  overflow: visible;
+  text-align: center;
   color: var(--ink);
-  background: rgba(255, 255, 255, 0.88);
-  box-shadow: 0 16px 42px rgba(45, 28, 34, 0.14);
+  background: #fff;
+  box-shadow:
+    0 24px 54px rgba(45, 28, 34, 0.18),
+    0 0 0 1px rgba(140, 32, 73, 0.06);
+  pointer-events: auto;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
-  backdrop-filter: blur(16px);
 }
 
-.hero-pick-strip button:hover {
-  transform: translateX(-5px);
-  box-shadow: 0 22px 58px rgba(45, 28, 34, 0.2);
+.hero-orbit-item:hover {
+  transform: translateY(-7px) scale(1.04);
+  box-shadow:
+    0 32px 70px rgba(45, 28, 34, 0.24),
+    0 0 0 1px rgba(140, 32, 73, 0.06);
 }
 
-.hero-pick-strip img {
-  width: 72px;
-  height: 72px;
-  border-radius: 8px;
+.hero-orbit-item img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
   object-fit: cover;
 }
 
-.hero-pick-strip strong,
-.hero-pick-strip small {
+.hero-orbit-item span {
+  min-width: 154px;
+  max-width: 190px;
+  padding: 8px 10px;
+  border-radius: 999px;
+  display: grid;
+  position: absolute;
+  left: 50%;
+  bottom: -38px;
+  opacity: 0;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.94);
+  box-shadow: 0 14px 34px rgba(45, 28, 34, 0.14);
+  transform: translateX(-50%) translateY(4px);
+  transition: opacity 0.18s ease, transform 0.18s ease;
+  backdrop-filter: blur(12px);
+}
+
+.hero-orbit-item:hover span,
+.hero-orbit-item:focus-visible span {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+.hero-orbit-item strong,
+.hero-orbit-item small {
   display: block;
   overflow: hidden;
+  font-size: 12px;
+  line-height: 1.25;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
 
-.hero-pick-strip strong {
-  font-size: 12px;
-  line-height: 1.25;
-}
-
-.hero-pick-strip small {
-  margin-top: 5px;
+.hero-orbit-item small {
+  margin-top: 3px;
   color: var(--berry);
   font-weight: 900;
+}
+
+.hero-orbit-1 {
+  left: 3%;
+  top: 74px;
+}
+
+.hero-orbit-2 {
+  right: 1%;
+  top: 142px;
+}
+
+.hero-orbit-3 {
+  left: 0;
+  bottom: 188px;
+}
+
+.hero-orbit-4 {
+  right: 7%;
+  bottom: 118px;
 }
 
 .scene3d {
@@ -2322,7 +2423,7 @@ a {
 .editorial-grid,
 .process-board,
 .value-ladder {
-  width: min(1220px, calc(100% - 36px));
+  width: min(1380px, calc(100% - 48px));
   margin: 34px auto;
   display: grid;
   gap: 18px;
@@ -2333,7 +2434,7 @@ a {
 }
 
 .category-story-grid {
-  width: min(1220px, calc(100% - 36px));
+  width: min(1380px, calc(100% - 48px));
   margin: 22px auto 54px;
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -2467,7 +2568,7 @@ a {
 }
 
 .lookbook-section {
-  width: min(1220px, calc(100% - 36px));
+  width: min(1380px, calc(100% - 48px));
   margin: 58px auto 42px;
   padding: 28px;
   border: 1px solid rgba(140, 32, 73, 0.14);
@@ -2651,7 +2752,7 @@ a {
 }
 
 .store-footer {
-  width: min(1220px, calc(100% - 36px));
+  width: min(1380px, calc(100% - 48px));
   margin: 76px auto 26px;
   padding: 28px;
   border: 1px solid rgba(140, 32, 73, 0.14);
@@ -2802,7 +2903,7 @@ a {
 .shipping-simulator,
 .product-detail-page,
 .page-hero {
-  width: min(1220px, calc(100% - 36px));
+  width: min(1380px, calc(100% - 48px));
   margin: 56px auto;
   border: 1px solid rgba(140, 32, 73, 0.13);
   border-radius: 8px;
@@ -3633,7 +3734,35 @@ a {
   }
 
   .hero-photo-frame {
-    height: 560px;
+    width: min(560px, 74vw);
+    height: auto;
+    aspect-ratio: 1;
+  }
+
+  .hero-visual-v3 {
+    min-height: 650px;
+  }
+
+  .hero-orbit-item {
+    width: 104px;
+    height: 104px;
+    border-width: 7px;
+  }
+
+  .hero-orbit-1 {
+    left: 8%;
+  }
+
+  .hero-orbit-2 {
+    right: 8%;
+  }
+
+  .hero-orbit-3 {
+    left: 8%;
+  }
+
+  .hero-orbit-4 {
+    right: 12%;
   }
 
   .category-story-grid {
@@ -3851,42 +3980,93 @@ a {
 
   .hero-visual-v3 {
     min-height: auto;
+    display: grid;
     gap: 10px;
   }
 
   .hero-photo-frame {
-    height: 360px;
+    width: min(350px, 88vw);
+    height: auto;
+    aspect-ratio: 1;
+    margin: 0 auto;
+    padding: 8px;
+    transform: none;
   }
 
   .hero-photo-frame span {
-    left: 14px;
-    top: 14px;
+    left: 50%;
+    top: auto;
+    bottom: 22px;
+    transform: translateX(-50%);
   }
 
   .hero-buy-panel {
     width: 100%;
     padding: 18px;
+    border-radius: 8px;
+    grid-template-columns: 1fr;
     position: static;
+    transform: none;
   }
 
   .hero-buy-panel h2 {
     font-size: 24px;
+    white-space: normal;
+  }
+
+  .hero-buy-panel button {
+    grid-column: auto;
+    grid-row: auto;
+    width: 100%;
   }
 
   .hero-pick-strip {
     width: 100%;
+    height: auto;
+    display: grid;
+    inset: auto;
     position: static;
     gap: 8px;
+    pointer-events: auto;
   }
 
-  .hero-pick-strip button {
+  .hero-orbit-item {
+    width: 100%;
+    height: auto;
     min-height: 76px;
+    border: 1px solid rgba(255, 255, 255, 0.64);
+    border-radius: 8px;
+    padding: 7px;
+    display: grid;
     grid-template-columns: 62px minmax(0, 1fr);
+    align-items: center;
+    gap: 9px;
+    inset: auto;
+    position: relative;
+    text-align: left;
   }
 
-  .hero-pick-strip img {
+  .hero-orbit-item:hover {
+    transform: none;
+  }
+
+  .hero-orbit-item img {
     width: 62px;
     height: 62px;
+    border-radius: 8px;
+  }
+
+  .hero-orbit-item span {
+    min-width: 0;
+    max-width: none;
+    padding: 0;
+    position: static;
+    opacity: 1;
+    overflow: hidden;
+    background: transparent;
+    box-shadow: none;
+    transform: none;
+    backdrop-filter: none;
   }
 
   .category-story-grid {
