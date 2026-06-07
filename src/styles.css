@@ -1772,23 +1772,31 @@ a {
 
 .experience-hero {
   width: min(1220px, calc(100% - 36px));
-  min-height: 720px;
+  min-height: 640px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: minmax(0, 0.9fr) minmax(520px, 1.1fr);
+  grid-template-columns: minmax(420px, 0.86fr) minmax(540px, 1.14fr);
   align-items: center;
-  gap: 48px;
+  gap: 34px;
+  padding: 18px 0 24px;
   perspective: 1400px;
 }
 
 .hero-copy-v2 h1 {
-  max-width: 680px;
+  max-width: 560px;
   margin: 0;
   color: var(--berry);
   font-family: "Playfair Display", serif;
-  font-size: clamp(58px, 7.6vw, 116px);
-  line-height: 0.92;
+  font-size: clamp(50px, 5.45vw, 84px);
+  line-height: 0.96;
   letter-spacing: 0;
+}
+
+.hero-copy-v2 .hero-lede {
+  max-width: 560px;
+  margin-top: 26px;
+  font-size: 18px;
+  line-height: 1.62;
 }
 
 .proof-row {
@@ -1824,7 +1832,7 @@ a {
 }
 
 .scene3d {
-  min-height: 600px;
+  min-height: 570px;
   display: grid;
   place-items: center;
   position: relative;
@@ -1832,16 +1840,16 @@ a {
 }
 
 .plant-carousel {
-  width: 360px;
-  height: 360px;
+  width: min(580px, 100%);
+  height: 430px;
   position: relative;
   transform-style: preserve-3d;
-  animation: carouselSpin 28s linear infinite;
+  animation: showcaseDrift 8s ease-in-out infinite;
 }
 
 .carousel-card {
-  width: 176px;
-  height: 232px;
+  width: 188px;
+  height: 238px;
   padding: 10px;
   border: 1px solid rgba(255, 255, 255, 0.86);
   border-radius: 8px;
@@ -1854,24 +1862,73 @@ a {
   color: var(--ink);
   background: rgba(255, 255, 255, 0.82);
   box-shadow: 0 24px 54px rgba(93, 54, 70, 0.18);
-  transform: rotateY(var(--angle)) translateZ(260px);
+  transform: translate3d(0, 0, 0);
   transform-style: preserve-3d;
-  transition: box-shadow 0.2s ease, scale 0.2s ease;
+  transition: box-shadow 0.2s ease, scale 0.2s ease, transform 0.24s ease;
   backdrop-filter: blur(14px);
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
 }
 
+.showcase-card-1 {
+  width: 220px;
+  height: 284px;
+  left: calc(50% - 110px);
+  top: 8px;
+  z-index: 5;
+  transform: rotateY(-8deg) rotateZ(-1deg) translateZ(58px);
+}
+
+.showcase-card-2 {
+  left: calc(50% + 122px);
+  top: 58px;
+  z-index: 3;
+  opacity: 0.94;
+  transform: rotateY(-24deg) rotateZ(5deg) scale(0.84) translateZ(-12px);
+}
+
+.showcase-card-3 {
+  left: calc(50% - 315px);
+  top: 72px;
+  z-index: 3;
+  opacity: 0.92;
+  transform: rotateY(24deg) rotateZ(-5deg) scale(0.82) translateZ(-18px);
+}
+
+.showcase-card-4 {
+  left: calc(50% + 58px);
+  top: 278px;
+  z-index: 2;
+  opacity: 0.78;
+  transform: rotateY(-12deg) rotateZ(3deg) scale(0.68) translateZ(-70px);
+}
+
+.showcase-card-5 {
+  left: calc(50% - 242px);
+  top: 282px;
+  z-index: 2;
+  opacity: 0.72;
+  transform: rotateY(14deg) rotateZ(-3deg) scale(0.66) translateZ(-80px);
+}
+
+.showcase-card-6 {
+  display: none;
+}
+
 .carousel-card:hover {
-  scale: 1.04;
+  scale: 1.025;
   box-shadow: 0 30px 70px rgba(140, 32, 73, 0.28);
 }
 
 .carousel-card img {
   width: 100%;
-  height: 160px;
+  height: 166px;
   border-radius: 8px;
   object-fit: cover;
+}
+
+.showcase-card-1 img {
+  height: 198px;
 }
 
 .carousel-card span {
@@ -1884,13 +1941,15 @@ a {
 }
 
 .hero-live-card {
-  width: min(360px, 82vw);
-  padding: 22px;
+  width: min(332px, 82vw);
+  padding: 18px;
   border: 1px solid rgba(140, 32, 73, 0.18);
   border-radius: 8px;
   position: absolute;
-  right: 16px;
-  bottom: 44px;
+  right: 40px;
+  top: 360px;
+  bottom: auto;
+  z-index: 12;
   background: rgba(255, 255, 255, 0.88);
   box-shadow: 0 26px 68px rgba(71, 42, 51, 0.18);
   animation: floatCard 5.8s ease-in-out infinite;
@@ -1908,19 +1967,19 @@ a {
 .hero-live-card strong {
   display: block;
   margin-top: 8px;
-  font-size: 22px;
+  font-size: 19px;
   line-height: 1.15;
 }
 
 .hero-live-card p {
-  margin: 8px 0 16px;
+  margin: 7px 0 12px;
   color: var(--muted);
   font-weight: 800;
 }
 
 .hero-live-card button,
 .simulator-card button {
-  min-height: 40px;
+  min-height: 38px;
   padding: 0 14px;
   border: 0;
   border-radius: 999px;
@@ -2487,12 +2546,15 @@ a {
   font-size: 34px;
 }
 
-@keyframes carouselSpin {
+@keyframes showcaseDrift {
   from {
-    transform: rotateX(-8deg) rotateY(0deg);
+    transform: rotateX(0deg) rotateY(-1deg) translateY(0);
+  }
+  50% {
+    transform: rotateX(1.5deg) rotateY(1.5deg) translateY(-10px);
   }
   to {
-    transform: rotateX(-8deg) rotateY(360deg);
+    transform: rotateX(0deg) rotateY(-1deg) translateY(0);
   }
 }
 
@@ -2637,31 +2699,62 @@ a {
   }
 
   .scene3d {
-    min-height: 430px;
+    min-height: 520px;
     overflow: hidden;
   }
 
   .plant-carousel {
-    width: 260px;
-    height: 260px;
+    width: min(350px, 100%);
+    height: 340px;
   }
 
   .carousel-card {
-    width: 136px;
-    height: 184px;
-    left: 62px;
-    top: 38px;
-    transform: rotateY(var(--angle)) translateZ(178px);
+    width: 150px;
+    height: 198px;
+    left: calc(50% - 75px);
+    top: 40px;
   }
 
   .carousel-card img {
-    height: 122px;
+    height: 132px;
+  }
+
+  .showcase-card-1 {
+    width: 180px;
+    height: 238px;
+    left: calc(50% - 90px);
+    top: 0;
+    transform: rotateY(-5deg) translateZ(42px);
+  }
+
+  .showcase-card-1 img {
+    height: 162px;
+  }
+
+  .showcase-card-2 {
+    left: calc(50% + 52px);
+    top: 56px;
+    transform: rotateY(-18deg) rotateZ(5deg) scale(0.7) translateZ(-28px);
+  }
+
+  .showcase-card-3 {
+    left: calc(50% - 204px);
+    top: 68px;
+    transform: rotateY(18deg) rotateZ(-5deg) scale(0.68) translateZ(-34px);
+  }
+
+  .showcase-card-4,
+  .showcase-card-5,
+  .showcase-card-6 {
+    display: none;
   }
 
   .hero-live-card {
-    width: calc(100% - 36px);
-    right: 18px;
-    bottom: 0;
+    width: calc(100% - 28px);
+    right: auto;
+    left: 14px;
+    top: 308px;
+    bottom: auto;
   }
 
   .immersive-band,

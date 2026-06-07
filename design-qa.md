@@ -11,6 +11,8 @@ final result: passed
   - `final-local-home.png`, 1440x1200, `#/shop`
   - `final-local-catalog-mobile.png`, 390x1300, `#/catalog`
   - `final-local-admin.png`, 1440x1100, `#/admin`
+  - `fix2-hero-1280.png`, 1280x900, `#/shop`
+  - `fix2-hero-mobile.png`, 390x1350, `#/shop`
 - Focused regions checked: mobile header/nav, catalog hero, product card grid, 3D carousel, admin overview command cards. Extra focused composite was not needed after the full-view mobile comparison because the remaining differences are intentional product-scope changes, not unresolved fidelity defects.
 
 ## Findings
@@ -31,11 +33,13 @@ No actionable P0/P1/P2 issues remain.
 - Fixed 3D carousel backface rendering so mirrored card backs no longer show.
 - Fixed mobile storefront navigation so route buttons are visible in a compact grid.
 - Shortened the mobile catalog headline to avoid bad wrapping.
+- Reworked the first-screen hero after visual review: reduced display headline scale, replaced the rotating product wheel with a controlled 3D showcase, and separated the live product card from the main image stack.
 
 ## Verification
 
 - `npm run build` passed.
 - Local browser QA passed for desktop storefront, mobile catalog, desktop admin, and mobile admin.
+- Follow-up interaction smoke test passed for storefront navigation: shop, catalog, delivery, and admin.
 - Failed network resources: 0 in the focused final local check.
 - Horizontal overflow: none on 1440px desktop and 390px mobile.
 

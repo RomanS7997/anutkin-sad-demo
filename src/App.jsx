@@ -274,7 +274,7 @@ function HomeExperience({ data, featured, go, addToCart }) {
           <div className="plant-carousel">
             {carousel.slice(0, 6).map((product, index) => (
               <button
-                className="carousel-card"
+                className={`carousel-card showcase-card showcase-card-${index + 1}`}
                 key={product.id}
                 style={{ "--angle": `${index * 60}deg` }}
                 type="button"
