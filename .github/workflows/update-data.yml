@@ -1,0 +1,48 @@
+name: Auto-update data (Avito reviews + catalog)
+
+on:
+  schedule:
+    # каждый день в 03:30 UTC (06:30 МСК)
+    - cron: "30 3 * * *"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install deps
+        run: npm ci --no-audit --no-fund
+
+      - name: Fetch Avito reviews
+        env:
+          AVITO_CLIENT_ID: ${{ secrets.AVITO_CLIENT_ID }}
+          AVITO_CLIENT_SECRET: ${{ secrets.AVITO_CLIENT_SECRET }}
+          AVITO_PROFILE_URL: ${{ vars.AVITO_PROFILE_URL }}
+        run: node scripts/fetch-avito-reviews.mjs
+
+      - name: Refetch catalog from the live site
+        run: node scripts/refetch-catalog.mjs
+
+      - name: Rebuild GitHub Pages bundle
+        run: npm run pages
+
+      - name: Commit & push if changed
+        run: |
+          git config user.name "data-bot"
+          git config user.email "actions@github.com"
+          git add public/data docs public/assets/products
+          if git diff --cached --quiet; then
+            echo "No data changes — nothing to commit."
+          else
+            git commit -m "chore: auto-update reviews & catalog data"
+            git push
+          fi

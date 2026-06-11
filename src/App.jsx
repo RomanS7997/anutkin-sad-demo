@@ -2,6 +2,7 @@ import {
   ArrowRight,
   Basket,
   Bell,
+  CaretDown,
   CaretLeft,
   CaretRight,
   ChartLineUp,
@@ -26,7 +27,7 @@ import {
   WarningCircle,
   X,
 } from "@phosphor-icons/react";
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 
 const baseUrl = import.meta.env.BASE_URL || "/";
 
@@ -117,10 +118,17 @@ function StorefrontAppV2({ data, route, go }) {
   );
 
   const featured = useMemo(() => {
-    const priority = ["hydrangea", "shrubs", "annuals", "perennials"];
-    return priority
-      .flatMap((key) => availableProducts.filter((product) => product.categoryKey === key))
-      .slice(0, 12);
+    // round-robin across categories so the home grid shows variety, not a hydrangea monoculture.
+    // NOTE: real product keys — "other" === кустарники/спиреи (there is no "shrubs" categoryKey on products).
+    const order = ["hydrangea", "annuals", "perennials", "other"];
+    const buckets = order.map((key) => availableProducts.filter((product) => product.categoryKey === key));
+    const out = [];
+    for (let i = 0; out.length < 12 && buckets.some((bucket) => bucket[i]); i += 1) {
+      for (const bucket of buckets) {
+        if (bucket[i]) out.push(bucket[i]);
+      }
+    }
+    return out.slice(0, 12);
   }, [availableProducts]);
 
   const galleryProducts = useMemo(
@@ -130,7 +138,7 @@ function StorefrontAppV2({ data, route, go }) {
 
   const filtered = useMemo(() => {
     const needle = query.trim().toLowerCase();
-    return data.products.filter((product) => {
+    const matched = data.products.filter((product) => {
       const matchesCategory = activeCategory === "all" || product.categoryKey === activeCategory;
       const matchesQuery =
         !needle ||
@@ -138,6 +146,8 @@ function StorefrontAppV2({ data, route, go }) {
         product.description.toLowerCase().includes(needle);
       return matchesCategory && matchesQuery;
     });
+    // in-stock first so greyed-out items sink to the bottom of the grid
+    return [...matched.filter((product) => product.stock > 0), ...matched.filter((product) => product.stock === 0)];
   }, [activeCategory, data.products, query]);
 
   const routeName = route === "shop" ? "home" : route.split("/")[0];
@@ -184,9 +194,79 @@ function StorefrontAppV2({ data, route, go }) {
     return () => window.removeEventListener("keydown", onKey);
   }, [lightboxProduct, galleryProducts.length]);
 
+  // Decor base (GitHub Pages / WP safe), scroll reveals, and pink-sun parallax.
+  useEffect(() => {
+    const root = document.documentElement;
+    root.style.setProperty("--decor-sprig", `url("${baseUrl}assets/decor/sprig.svg")`);
+    root.style.setProperty("--decor-leaf", `url("${baseUrl}assets/decor/leaf.svg")`);
+
+    const revealAll = () =>
+      document.querySelectorAll(".reveal:not(.in-view)").forEach((el) => el.classList.add("in-view"));
+
+    if (
+      window.matchMedia("(prefers-reduced-motion: reduce)").matches ||
+      !("IntersectionObserver" in window)
+    ) {
+      revealAll();
+      return undefined;
+    }
+
+    const io = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("in-view");
+            io.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.12, rootMargin: "0px 0px -8% 0px" },
+    );
+    const reveals = Array.from(document.querySelectorAll(".reveal:not(.in-view)"));
+    reveals.forEach((el) => io.observe(el));
+
+    // re-renders (filters, search) mount fresh .reveal nodes — pick them up too
+    const mo = new MutationObserver(() => {
+      document.querySelectorAll(".reveal:not(.in-view)").forEach((el) => io.observe(el));
+    });
+    mo.observe(document.body, { childList: true, subtree: true });
+
+    let ticking = false;
+    const onScroll = () => {
+      if (ticking) return;
+      ticking = true;
+      requestAnimationFrame(() => {
+        const mid = window.innerHeight / 2;
+        document.querySelectorAll(".sun-photo, .hero-leaf").forEach((el) => {
+          const rect = el.getBoundingClientRect();
+          el.style.setProperty("--scrollY", String(Math.round(rect.top + rect.height / 2 - mid)));
+        });
+        const header = document.querySelector(".experience-header");
+        if (header) header.classList.toggle("is-stuck", window.scrollY > 28);
+        ticking = false;
+      });
+    };
+    window.addEventListener("scroll", onScroll, { passive: true });
+    onScroll();
+
+    return () => {
+      io.disconnect();
+      mo.disconnect();
+      window.removeEventListener("scroll", onScroll);
+    };
+  }, [data, route]);
+
   return (
-    <main className="experience-shell">
-      <StoreHeader routeName={routeName} go={go} cartCount={cartCount} openCart={() => setDrawerOpen(true)} />
+    <main className="experience-shell redesign">
+      <StoreHeader
+        routeName={routeName}
+        go={go}
+        cartCount={cartCount}
+        openCart={() => setDrawerOpen(true)}
+        data={data}
+        setQuery={setQuery}
+        setActiveCategory={setActiveCategory}
+      />
 
       {routeName === "home" && (
         <HomeExperience
@@ -196,6 +276,7 @@ function StorefrontAppV2({ data, route, go }) {
           go={go}
           addToCart={addToCart}
           openLightbox={openLightbox}
+          setActiveCategory={setActiveCategory}
         />
       )}
       {routeName === "catalog" && (
@@ -243,55 +324,115 @@ function StorefrontAppV2({ data, route, go }) {
   );
 }
 
-function StoreHeader({ routeName, go, cartCount, openCart }) {
+function BrandLogo({ go, variant = "berry" }) {
+  return (
+    <button
+      className={`brand brand-lockup brand-lockup--${variant}`}
+      type="button"
+      onClick={() => go("shop")}
+      aria-label="Анюткин сад — на главную"
+    >
+      <img className="brand-mark-img" src={assetUrl(`assets/logo/mark-${variant}.svg`)} alt="" aria-hidden="true" />
+      <span className="brand-text">
+        <strong>Анюткин сад</strong>
+        <small>цветочное хозяйство</small>
+      </span>
+    </button>
+  );
+}
+
+function StoreHeader({ routeName, go, cartCount, openCart, data, setQuery, setActiveCategory }) {
   const links = [
     ["home", "Главная", "shop"],
     ["catalog", "Каталог", "catalog"],
     ["delivery", "Доставка", "delivery"],
-    ["about", "О саде", "about"],
+    ["about", "О хозяйстве", "about"],
   ];
 
+  const galleryProducts = data?.products?.filter((product) => product.image) || [];
+  const catProduct = (key) =>
+    galleryProducts.find((product) => product.categoryKey === key && product.stock > 0) ||
+    galleryProducts.find((product) => product.categoryKey === key);
+  const catCount = (countKey) => data?.categories?.find((category) => category.key === countKey)?.count || 0;
+  const megaCats = [
+    { key: "hydrangea", label: "Гортензии", countKey: "hydrangea" },
+    { key: "perennials", label: "Многолетники", countKey: "perennials" },
+    { key: "other", label: "Кустарники и сад", countKey: "shrubs" },
+    { key: "annuals", label: "Цветущие однолетники", countKey: "annuals" },
+  ].map((category) => ({ ...category, product: catProduct(category.key), count: catCount(category.countKey) }));
+
+  const openCategory = (key) => {
+    if (setActiveCategory) setActiveCategory(key);
+    go("catalog");
+  };
+
   return (
-    <header className="experience-header">
-      <div className="header-brand-zone">
-        <button className="brand admin-brand" type="button" onClick={() => go("shop")}>
-          <span className="brand-mark">
-            <Leaf size={19} weight="fill" />
-          </span>
+    <>
+      <div className="header-topbar" aria-label="Условия магазина">
+        <div className="header-topbar__inner">
           <span>
-            <strong>Анюткин сад</strong>
-            <small>цветочное хозяйство</small>
+            <Truck size={14} weight="duotone" />
+            Доставка СДЭК по всей России
           </span>
-        </button>
-        <div className="header-meta" aria-label="Условия магазина">
-          <span>
-            <Truck size={15} weight="duotone" />
-            СДЭК по России
-          </span>
-          <span>
-            <MapPin size={15} weight="duotone" />
-            Лесной городок
+          <span className="header-topbar__place">
+            <MapPin size={14} weight="duotone" />
+            Московская область, дп. Лесной городок
           </span>
         </div>
       </div>
+    <header className="experience-header">
+      <div className="header-brand-zone">
+        <BrandLogo go={go} />
+      </div>
       <nav className="experience-nav" aria-label="Навигация сайта">
-        {links.map(([key, label, target]) => (
-          <button className={routeName === key ? "active" : ""} key={key} type="button" onClick={() => go(target)}>
-            {label}
-          </button>
-        ))}
+        {links.map(([key, label, target]) =>
+          key === "catalog" ? (
+            <div className="nav-mega" key={key}>
+              <button className={routeName === key ? "active" : ""} type="button" onClick={() => go(target)}>
+                {label}
+                <CaretDown size={12} weight="bold" />
+              </button>
+              <div className="mega-menu" role="menu" aria-label="Категории каталога">
+                <div className="mega-grid">
+                  {megaCats.map((category) => (
+                    <button className="mega-card" type="button" key={category.key} onClick={() => openCategory(category.key)} role="menuitem">
+                      {category.product?.image ? (
+                        <img src={assetUrl(category.product.image)} alt={category.label} />
+                      ) : (
+                        <span className="mega-card__ph"><Leaf size={22} weight="duotone" /></span>
+                      )}
+                      <span className="mega-card__text">
+                        <strong>{category.label}</strong>
+                        <small>{category.count} сортов</small>
+                      </span>
+                    </button>
+                  ))}
+                </div>
+                <button className="mega-all" type="button" onClick={() => go("catalog")}>
+                  Весь каталог
+                  <ArrowRight size={15} weight="bold" />
+                </button>
+              </div>
+            </div>
+          ) : (
+            <button className={routeName === key ? "active" : ""} key={key} type="button" onClick={() => go(target)}>
+              {label}
+            </button>
+          ),
+        )}
       </nav>
       <div className="header-actions">
         <button className="soft-button" type="button" onClick={() => go("admin")}>
-          <Storefront size={17} weight="duotone" />
-          Кабинет
+          <Storefront size={20} weight="duotone" />
+          <span className="soft-button__label">Кабинет</span>
         </button>
         <button className="icon-button" type="button" onClick={openCart} aria-label="Корзина">
-          <Basket size={20} weight="duotone" />
+          <Basket size={23} weight="duotone" />
           {cartCount > 0 && <span>{cartCount}</span>}
         </button>
       </div>
     </header>
+    </>
   );
 }
 
@@ -303,15 +444,7 @@ function StoreFooter({ data, go }) {
   return (
     <footer className="store-footer" id="contacts">
       <div className="footer-hero">
-        <button className="brand admin-brand" type="button" onClick={() => go("shop")}>
-          <span className="brand-mark">
-            <Leaf size={19} weight="fill" />
-          </span>
-          <span>
-            <strong>Анюткин сад</strong>
-            <small>цветочное хозяйство</small>
-          </span>
-        </button>
+        <BrandLogo go={go} variant="white" />
         <p>
           Декоративные растения из хозяйства: живое наличие, реальные фото, аккуратная упаковка и доставка СДЭК по России.
         </p>
@@ -365,9 +498,10 @@ function StoreFooter({ data, go }) {
   );
 }
 
-function HomeExperience({ data, featured, galleryProducts, go, addToCart, openLightbox }) {
+function HomeExperience({ data, featured, galleryProducts, go, addToCart, openLightbox, setActiveCategory }) {
   const hydrangeas = galleryProducts.filter((product) => product.categoryKey === "hydrangea" && product.stock > 0);
   const heroProduct =
+    hydrangeas.find((product) => product.image?.includes("laymlayt")) ||
     hydrangeas.find((product) => product.image?.includes("silver-dollar")) ||
     hydrangeas.find((product) => product.image?.includes("polar-bir")) ||
     featured[0] ||
@@ -383,174 +517,694 @@ function HomeExperience({ data, featured, galleryProducts, go, addToCart, openLi
     galleryProducts.find((product) => product.categoryKey === key) ||
     featured[fallbackIndex] ||
     heroProduct;
+  const goCategory = (key) => {
+    if (setActiveCategory) setActiveCategory(key === "other" ? "other" : key);
+    go("catalog");
+  };
   const categoryStories = [
     {
       key: "hydrangea",
       title: "Гортензии",
       text: "Метельчатые сорта для выразительных посадок и долгого цветения.",
       product: categoryProduct("hydrangea"),
+      count: categoryCount("hydrangea"),
       Icon: Plant,
+      feature: true,
     },
     {
       key: "perennials",
       title: "Многолетники",
       text: "Эхинацеи, шалфеи и растения, которые возвращаются каждый сезон.",
       product: categoryProduct("perennials", 1),
+      count: categoryCount("perennials"),
       Icon: Leaf,
+    },
+    {
+      // NOTE: shrubs live under categoryKey "other"; count is declared under category.key "shrubs".
+      key: "other",
+      title: "Кустарники и сад",
+      text: "Спиреи, лапчатки, туи и практичные растения для структуры участка.",
+      product: categoryProduct("other", 3),
+      count: categoryCount("shrubs") || 16,
+      Icon: Package,
     },
     {
       key: "annuals",
       title: "Цветущие однолетники",
       text: "Яркие сорта для кашпо, клумб и быстрого сезонного обновления сада.",
       product: categoryProduct("annuals", 2),
+      count: categoryCount("annuals"),
       Icon: Sparkle,
-    },
-    {
-      key: "other",
-      title: "Кустарники и сад",
-      text: "Спиреи, лапчатки, туи и практичные растения для структуры участка.",
-      product: categoryProduct("other", 3),
-      Icon: Package,
     },
   ];
 
   return (
     <>
-      <section className="experience-hero">
-        <div className="hero-copy hero-copy-v2">
-          <p className="eyebrow">
-            <Sparkle size={16} weight="fill" />
-            Растения из хозяйства с доставкой СДЭК
-          </p>
-          <h1>Растения для сада с доставкой по России</h1>
-          <p className="hero-lede">
-            Выбирайте гортензии, многолетники, кустарники и сезонные цветы по реальным фото,
-            актуальному наличию и понятным условиям отправки.
-          </p>
-          <div className="hero-actions">
-            <button className="primary-button" type="button" onClick={() => go("catalog")}>
-              Открыть каталог
+      <HeroSection
+        slides={[
+          ...galleryProducts.filter((product) => product.stock > 0),
+          ...galleryProducts.filter((product) => product.stock === 0),
+        ]}
+        productCount={data.products.length}
+        categoryCount={data.categories.length}
+        go={go}
+        addToCart={addToCart}
+        openLightbox={openLightbox}
+      />
+
+      <FeatureStrip />
+
+      <section className="category-band reveal" aria-label="Категории растений">
+        <div className="section-head center">
+          <h2 className="section-title">Категории питомника</h2>
+          <p>Подберите растения под задачу, участок и сезон посадки.</p>
+        </div>
+        <div className="category-story-grid">
+          {categoryStories.map(({ key, title, text, product, count, Icon, feature }, index) => (
+            <button
+              className={`category-story-card elev reveal${feature ? " is-feature" : ""}`}
+              style={{ "--i": index }}
+              key={key}
+              type="button"
+              onClick={() => goCategory(key)}
+            >
+              <img src={assetUrl(product.image)} alt={product.name} />
+              <span className="category-story-shade" />
+              <span className="category-story-content">
+                <Icon size={24} weight="duotone" />
+                <strong>{title}</strong>
+                <small>{count} сортов</small>
+                <em>{text}</em>
+              </span>
               <ArrowRight size={18} weight="bold" />
             </button>
-            <button className="round-link" type="button" onClick={() => go("about")}>
-              О хозяйстве
-              <Sparkle size={18} weight="duotone" />
-            </button>
-          </div>
-          <div className="proof-row">
-            <div><strong>89</strong><span>реальных товаров</span></div>
-            <div><strong>5</strong><span>категорий</span></div>
-            <div><strong>СДЭК</strong><span>в доставке заказа</span></div>
-          </div>
-        </div>
-
-        <div className="hero-visual-v3" aria-label="Сезонная подборка растений">
-          <button className="hero-photo-frame" type="button" onClick={() => openLightbox(heroProduct)}>
-            <img src={assetUrl(heroProduct.image)} alt={heroProduct.name} />
-            <span>
-              <MagnifyingGlass size={17} weight="duotone" />
-              Фото крупно
-            </span>
-          </button>
-          <article className="hero-buy-panel">
-            <p>В наличии сейчас</p>
-            <h2>{heroProduct.name}</h2>
-            <div>
-              <strong>{formatRub(heroProduct.price)}</strong>
-              <span>{stockLabel(heroProduct)}</span>
-            </div>
-            <button type="button" onClick={() => addToCart(heroProduct)} disabled={heroProduct.stock === 0}>
-              В корзину
-              <Plus size={16} weight="bold" />
-            </button>
-          </article>
-          <div className="hero-pick-strip" aria-label="Популярные растения">
-            {heroPicks.slice(1, 5).map((product, index) => (
-              <button className={`hero-orbit-item hero-orbit-${index + 1}`} type="button" key={product.id} onClick={() => openLightbox(product)}>
-                <img src={assetUrl(product.image)} alt={product.name} />
-                <span>
-                  <strong>{product.name}</strong>
-                  <small>{formatRub(product.price)}</small>
-                </span>
-              </button>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="category-story-grid" aria-label="Категории растений">
-        {categoryStories.map(({ key, title, text, product, Icon }) => (
-          <button className="category-story-card" key={key} type="button" onClick={() => go("catalog")}>
-            <img src={assetUrl(product.image)} alt={product.name} />
-            <span className="category-story-shade" />
-            <span className="category-story-content">
-              <Icon size={24} weight="duotone" />
-              <strong>{title}</strong>
-              <small>{categoryCount(key)} позиций</small>
-              <em>{text}</em>
-            </span>
-            <ArrowRight size={18} weight="bold" />
-          </button>
-        ))}
-      </section>
-
-      <LookbookGallery products={galleryProducts} go={go} openLightbox={openLightbox} />
-
-      <section className="immersive-band">
-        <div className="band-copy">
-          <p className="script">Сезонная подборка</p>
-          <h2>Растения под задачу, участок и время посадки</h2>
-          <p>
-            Гортензии для выразительных посадок, цветущие однолетники для кашпо,
-            многолетники для стабильного сада и кустарники для структуры участка.
-          </p>
-          <button className="primary-button alt" type="button" onClick={() => go("catalog")}>
-            Смотреть подборки
-            <ArrowRight size={18} weight="bold" />
-          </button>
-        </div>
-        <div className="stacked-products">
-          {featured.slice(2, 5).map((product, index) => (
-            <article key={product.id} style={{ "--stack": index }}>
-              <img src={assetUrl(product.image)} alt={product.name} />
-              <strong>{product.name}</strong>
-              <span>{formatRub(product.price)}</span>
-            </article>
           ))}
         </div>
       </section>
 
-      <section className="editorial-section">
-        <div className="section-head">
-          <p className="eyebrow">Выбор покупателей</p>
-          <h2>Популярные растения из каталога</h2>
-          <p>Крупные фото, живые остатки и быстрый переход в карточку помогают спокойно выбрать растение.</p>
+      <SeasonalPromo product={categoryProduct("hydrangea")} go={go} />
+
+      <section className="editorial-section reveal">
+        <div className="section-head center">
+          <h2 className="section-title">Сезонный выбор</h2>
+          <p>Растения в наличии — отправляем в течение сезона посадки.</p>
         </div>
         <div className="editorial-grid">
-          {featured.slice(0, 6).map((product) => (
-            <LuxuryProductCard key={product.id} product={product} go={go} addToCart={addToCart} openLightbox={openLightbox} />
+          {featured.slice(0, 8).map((product, index) => (
+            <LuxuryProductCard
+              key={product.id}
+              product={product}
+              index={index}
+              feature={index === 2}
+              go={go}
+              addToCart={addToCart}
+              openLightbox={openLightbox}
+            />
           ))}
         </div>
       </section>
+
+      <SignatureCollection data={data} products={galleryProducts} go={go} openLightbox={openLightbox} />
+
+      <DealCountdown data={data} go={go} />
+
+      <WhyUs photo={heroProduct} />
+
+      <AvitoReviews />
     </>
   );
 }
 
+function CountUp({ value, duration = 1300 }) {
+  const ref = useRef(null);
+  const [display, setDisplay] = useState(0);
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return undefined;
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches || !("IntersectionObserver" in window)) {
+      setDisplay(value);
+      return undefined;
+    }
+    let raf = 0;
+    const io = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting) {
+          const start = performance.now();
+          const step = (now) => {
+            const progress = Math.min(1, (now - start) / duration);
+            const eased = 1 - Math.pow(1 - progress, 3);
+            setDisplay(Math.round(value * eased));
+            if (progress < 1) raf = requestAnimationFrame(step);
+          };
+          raf = requestAnimationFrame(step);
+          io.disconnect();
+        }
+      },
+      { threshold: 0.4 },
+    );
+    io.observe(el);
+    return () => {
+      io.disconnect();
+      if (raf) cancelAnimationFrame(raf);
+    };
+  }, [value, duration]);
+  return <strong ref={ref}>{display}</strong>;
+}
+
+function HeroPetals({ count = 16 }) {
+  const petals = useMemo(() => {
+    // deterministic pseudo-random per (index, salt) — stable across renders, varied per petal
+    const rand = (i, s) => {
+      const x = Math.sin(i * 99.13 + s * 37.7) * 43758.5453;
+      return x - Math.floor(x);
+    };
+    return Array.from({ length: count }, (_, i) => ({
+      x: (rand(i, 1) * 100).toFixed(1),
+      size: (9 + rand(i, 2) * 13).toFixed(1),
+      dur: (9 + rand(i, 3) * 9).toFixed(1),
+      delay: (-rand(i, 4) * 18).toFixed(1),
+      sway: (16 + rand(i, 5) * 46).toFixed(0),
+      swayDur: (2.4 + rand(i, 6) * 2.8).toFixed(1),
+      spinDur: (3.2 + rand(i, 7) * 5.5).toFixed(1),
+      spinDir: rand(i, 8) > 0.5 ? 1 : -1,
+      opacity: (0.35 + rand(i, 9) * 0.4).toFixed(2),
+      blur: rand(i, 10) > 0.72 ? 1 : 0,
+    }));
+  }, [count]);
+
+  return (
+    <div className="hero-petals" aria-hidden="true">
+      {petals.map((p, i) => (
+        <span
+          key={i}
+          className="petal"
+          style={{
+            left: `${p.x}%`,
+            "--size": `${p.size}px`,
+            "--dur": `${p.dur}s`,
+            "--delay": `${p.delay}s`,
+            "--sway": `${p.sway}px`,
+            "--sway-dur": `${p.swayDur}s`,
+            "--spin-dur": `${p.spinDur}s`,
+            "--spin-dir": p.spinDir,
+            "--opacity": p.opacity,
+            "--blur": `${p.blur}px`,
+          }}
+        >
+          <span className="petal__sway">
+            <span className="petal__shape" />
+          </span>
+        </span>
+      ))}
+    </div>
+  );
+}
+
+function HeroSection({ slides, productCount, categoryCount, go, addToCart, openLightbox }) {
+  const total = slides.length;
+  const [active, setActive] = useState(0);
+  const [paused, setPaused] = useState(false);
+
+  useEffect(() => {
+    if (paused || total < 2) return undefined;
+    const id = setInterval(() => setActive((value) => (value + 1) % total), 4500);
+    return () => clearInterval(id);
+  }, [paused, total]);
+
+  const current = slides[active] || slides[0];
+  if (!current) return null;
+  const prev = (active - 1 + total) % total;
+  const next = (active + 1) % total;
+
+  return (
+    <section className="experience-hero">
+      <span className="hero-leaf hero-leaf--1" aria-hidden="true" />
+      <span className="hero-leaf hero-leaf--2" aria-hidden="true" />
+      <HeroPetals />
+      <div className="hero-copy hero-copy-v2">
+        <p className="eyebrow reveal" style={{ "--i": 0 }}>
+          <Sparkle size={16} weight="fill" />
+          Растения из хозяйства · доставка СДЭК
+        </p>
+        <h1 className="reveal" style={{ "--i": 1 }}>
+          Растения для <span className="accent-word">сада</span> с доставкой по России
+        </h1>
+        <p className="hero-lede reveal" style={{ "--i": 2 }}>
+          Выбирайте гортензии, многолетники, кустарники и сезонные цветы по реальным фото,
+          актуальному наличию и понятным условиям отправки.
+        </p>
+        <div className="hero-rating reveal" style={{ "--i": 3 }}>
+          <span className="stars" aria-hidden="true">★★★★★</span>
+          <strong>4,9</strong>
+          <span>отзывы садоводов</span>
+        </div>
+        <div className="hero-actions reveal" style={{ "--i": 4 }}>
+          <button className="primary-button" type="button" onClick={() => go("catalog")}>
+            Открыть каталог
+            <ArrowRight size={18} weight="bold" />
+          </button>
+          <button className="round-link" type="button" onClick={() => go("about")}>
+            О хозяйстве
+            <Sparkle size={18} weight="duotone" />
+          </button>
+        </div>
+        <div className="hero-trust reveal" style={{ "--i": 5 }} aria-label="Преимущества">
+          <span><Leaf size={14} weight="duotone" />Собственное производство</span>
+          <span><Sparkle size={14} weight="duotone" />Зимостойкие сорта</span>
+          <span><Package size={14} weight="duotone" />Бережная доставка</span>
+        </div>
+        <div className="proof-row reveal" style={{ "--i": 6 }}>
+          <div><CountUp value={productCount} /><span>сортов в каталоге</span></div>
+          <div><CountUp value={categoryCount} /><span>категорий</span></div>
+          <div><strong>СДЭК</strong><span>по всей России</span></div>
+        </div>
+      </div>
+
+      <div
+        className="hero-visual-v3"
+        aria-label="Лучшие растения хозяйства"
+        onMouseEnter={() => setPaused(true)}
+        onMouseLeave={() => setPaused(false)}
+      >
+        <div className="hero-stage sun-photo">
+          <div className={`hero-carousel${paused ? " is-paused" : ""}`}>
+            {slides.map((product, index) => {
+              const inWindow = index === active || index === prev || index === next;
+              return (
+                <img
+                  key={product.id}
+                  src={inWindow ? assetUrl(product.image) : undefined}
+                  alt={index === active ? product.name : ""}
+                  className={index === active ? "is-active" : ""}
+                  loading="lazy"
+                />
+              );
+            })}
+            <button className="hero-zoom" type="button" onClick={() => openLightbox(current)} aria-label="Открыть фото крупно">
+              <MagnifyingGlass size={18} weight="bold" />
+            </button>
+            <span className="hero-progress" key={active} aria-hidden="true" />
+          </div>
+        </div>
+
+        <div className="hero-caption">
+          <div className="hero-caption__info">
+            <strong>{current.name}</strong>
+            <span>{formatRub(current.price)} · {stockLabel(current)}</span>
+          </div>
+          <button
+            className="hero-caption__add"
+            type="button"
+            onClick={() => addToCart(current)}
+            disabled={current.stock === 0}
+          >
+            <Plus size={15} weight="bold" />
+            В корзину
+          </button>
+        </div>
+
+      </div>
+    </section>
+  );
+}
+
+function FeatureStrip() {
+  const chips = [
+    [Plant, "Свежие саженцы", "из собственной теплицы"],
+    [Truck, "Доставка СДЭК", "по всей России"],
+    [Leaf, "Собственный питомник", "выращиваем сами"],
+    [Sparkle, "Для любого сада", "зимостойкость, зона 4"],
+    [Package, "Бережная упаковка", "растения едут с комом"],
+  ];
+
+  return (
+    <section className="feature-strip" aria-label="Преимущества хозяйства">
+      <div className="feature-strip__inner">
+        {chips.map(([Icon, title, sub], index) => (
+          <div className="feature-chip reveal" style={{ "--i": index }} key={title}>
+            <span className="feature-chip__icon">
+              <Icon size={22} weight="duotone" />
+            </span>
+            <strong>{title}</strong>
+            <small>{sub}</small>
+          </div>
+        ))}
+      </div>
+    </section>
+  );
+}
+
+function SeasonalPromo({ product, go }) {
+  if (!product) return null;
+  return (
+    <section className="promo-banner has-corners reveal" aria-label="Сезонное предложение">
+      <div className="promo-banner__photo sun-photo">
+        <img src={assetUrl(product.image)} alt={product.name} />
+      </div>
+      <div className="promo-banner__copy">
+        <p className="script">Сезон посадки открыт</p>
+        <h2>Скидка до 15%</h2>
+        <p className="promo-sub">на гортензии и многолетники при заказе от 3 саженцев</p>
+        <p className="promo-body">Доставка СДЭК по всей России. Успейте до конца июня.</p>
+        <div className="promo-actions">
+          <button className="round-link" type="button" onClick={() => go("catalog")}>
+            Смотреть каталог
+            <ArrowRight size={18} weight="bold" />
+          </button>
+          <button className="primary-button" type="button" onClick={() => go("catalog")}>
+            Заказать
+            <ArrowRight size={18} weight="bold" />
+          </button>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function SignatureCollection({ data, products, go, openLightbox }) {
+  const hydrangeas = products.filter((product) => product.categoryKey === "hydrangea");
+  const lead =
+    hydrangeas.find((product) => product.image?.includes("polar-bir")) || hydrangeas[0] || products[0];
+  if (!lead) return null;
+  const side = [
+    ...hydrangeas.filter((product) => product.id !== lead.id),
+    ...products.filter((product) => product.id !== lead.id),
+  ].slice(0, 4);
+  const byId = (id) => data.products.find((product) => product.id === id);
+  const sorts = [
+    { id: 711, name: "Гортензия метельчатая «Лаймлайт»", latin: "Hydrangea paniculata", price: 950, highlight: true },
+    { id: 726, name: "Гортензия «Полар Бир»", latin: "Hydrangea paniculata", price: 850 },
+    { id: 647, name: "Спирея японская «Литл Принцесс»", latin: "Spiraea japonica", price: 350 },
+    { id: 2286, name: "Эхинацея «Mellow Yellows»", latin: "Echinacea purpurea", price: 300 },
+    { id: 756, name: "Котовник Фассена", latin: "Nepeta × faassenii", price: 300 },
+  ].filter((sort) => byId(sort.id));
+
+  return (
+    <section className="signature-section reveal" aria-label="Коллекция питомника">
+      <div className="signature-list">
+        <p className="eyebrow">Коллекция питомника</p>
+        <h2 className="section-title left">Сортовые гортензии и многолетники</h2>
+        <p className="signature-sub">Проверенные сорта из собственного производства.</p>
+        <ul>
+          {sorts.map((sort) => (
+            <li key={sort.id} className={sort.highlight ? "is-highlight" : ""}>
+              <button type="button" onClick={() => go(`product/${sort.id}`)}>
+                <span className="sort-name">{sort.name}</span>
+                <span className="sort-latin">{sort.latin}</span>
+                <span className="sort-price">{formatRub(sort.price)}</span>
+              </button>
+            </li>
+          ))}
+        </ul>
+        <button className="round-link" type="button" onClick={() => go("catalog")}>
+          Весь каталог
+          <ArrowRight size={18} weight="bold" />
+        </button>
+      </div>
+      <div className="signature-frame">
+        <button className="signature-photo sun-photo" type="button" onClick={() => openLightbox(lead)}>
+          <img src={assetUrl(lead.image)} alt={lead.name} />
+          <span className="signature-photo__zoom">
+            <MagnifyingGlass size={18} weight="duotone" />
+            Смотреть фото
+          </span>
+          <strong className="signature-photo__name">{lead.name}</strong>
+        </button>
+        <div className="signature-thumbs">
+          {side.map((product) => (
+            <button className="signature-thumb" type="button" key={product.id} onClick={() => openLightbox(product)}>
+              <img src={assetUrl(product.image)} alt={product.name} />
+              <span className="signature-thumb__cap">
+                <strong>{product.name}</strong>
+                <small>{formatRub(product.price)}</small>
+              </span>
+            </button>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function useMonthCountdown() {
+  const compute = () => {
+    const now = new Date();
+    const end = new Date(now.getFullYear(), now.getMonth() + 1, 1, 0, 0, 0, 0);
+    let diff = Math.max(0, Math.floor((end.getTime() - now.getTime()) / 1000));
+    const days = Math.floor(diff / 86400);
+    diff -= days * 86400;
+    const hours = Math.floor(diff / 3600);
+    diff -= hours * 3600;
+    const mins = Math.floor(diff / 60);
+    const secs = diff - mins * 60;
+    return { days, hours, mins, secs };
+  };
+  const [time, setTime] = useState(compute);
+  useEffect(() => {
+    const id = setInterval(() => setTime(compute()), 1000);
+    return () => clearInterval(id);
+  }, []);
+  return time;
+}
+
+function DealCountdown({ data, go }) {
+  const time = useMonthCountdown();
+  const pad = (value) => String(value).padStart(2, "0");
+  const tiles = [
+    [pad(time.days), "дни"],
+    [pad(time.hours), "часы"],
+    [pad(time.mins), "мин"],
+    [pad(time.secs), "сек"],
+  ];
+  const byId = (id) => data.products.find((product) => product.id === id);
+  const annuals = data.products.filter(
+    (product) => product.categoryKey === "annuals" && product.image && product.stock > 0,
+  );
+  const photos = [byId(1301), byId(1931), byId(539)].filter(Boolean);
+  for (let i = 0; photos.length < 3 && i < annuals.length; i += 1) {
+    if (!photos.some((photo) => photo.id === annuals[i].id)) photos.push(annuals[i]);
+  }
+
+  return (
+    <section className="deal-band has-corners reveal" aria-label="До конца сезона посадки">
+      <div className="deal-photos">
+        {photos.slice(0, 3).map((product, index) => (
+          <div className={`deal-photo deal-photo--${index + 1}`} key={product.id}>
+            <img src={assetUrl(product.image)} alt={product.name} />
+          </div>
+        ))}
+      </div>
+      <div className="deal-copy">
+        <p className="script">Спешите</p>
+        <h2>До конца сезона посадки</h2>
+        <p>
+          Гортензии и многолетники со скидкой до 15% при заказе от 3 саженцев.
+          Отправляем СДЭК по всей России.
+        </p>
+        <p className="deal-clock-label">До конца окна посадки:</p>
+        <div className="deal-clock">
+          {tiles.map(([value, label]) => (
+            <div className="clock-tile" key={label}>
+              <strong>{value}</strong>
+              <small>{label}</small>
+            </div>
+          ))}
+        </div>
+        <button className="primary-button" type="button" onClick={() => go("catalog")}>
+          Перейти в каталог
+          <ArrowRight size={18} weight="bold" />
+        </button>
+      </div>
+    </section>
+  );
+}
+
+function WhyUs({ photo }) {
+  const points = [
+    ["01", "Собственное производство", "Выращиваем саженцы сами, без перекупа. Каждое растение проверяем перед отправкой."],
+    ["02", "Зимостойкие сорта", "Гортензии, спиреи и пузыреплодники зоны 3–4, переносят до −34 °C."],
+    ["03", "Рекомендации в подарок", "К каждому растению — памятка по посадке и уходу."],
+    ["04", "Бережная доставка СДЭК", "Упаковываем с земляным комом, отправляем по всей России."],
+  ];
+  const left = [points[0], points[2]];
+  const right = [points[1], points[3]];
+
+  return (
+    <section className="why-us reveal" aria-label="Почему выбирают Анюткин сад">
+      <div className="section-head center">
+        <h2 className="section-title">Почему выбирают Анюткин сад</h2>
+        <p>Собственное производство, зимостойкие сорта и бережная доставка.</p>
+      </div>
+      <div className="why-grid">
+        <div className="why-col why-col--left">
+          {left.map(([num, title, text]) => (
+            <div className="why-item reveal" key={num}>
+              <span className="ghost-num">{num}</span>
+              <strong>{title}</strong>
+              <p>{text}</p>
+            </div>
+          ))}
+        </div>
+        <div className="why-center">
+          <span className="dash-line" aria-hidden="true" />
+          <div className="sun-disc sun-photo">
+            <img src={assetUrl(photo.image)} alt={photo.name} />
+          </div>
+        </div>
+        <div className="why-col why-col--right">
+          {right.map(([num, title, text]) => (
+            <div className="why-item reveal" key={num}>
+              <span className="ghost-num">{num}</span>
+              <strong>{title}</strong>
+              <p>{text}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function AvitoReviews() {
+  const [data, setData] = useState(undefined); // undefined = loading, null = no data
+
+  useEffect(() => {
+    fetch(`${baseUrl}data/reviews.json`)
+      .then((response) => (response.ok ? response.json() : null))
+      .then((json) => setData(json && json.reviews && json.reviews.length ? json : null))
+      .catch(() => setData(null));
+  }, []);
+
+  if (data === undefined) return null;
+  if (data === null) return <Testimonial />;
+
+  const formatDate = (iso) => {
+    if (!iso) return "";
+    try {
+      return new Date(iso).toLocaleDateString("ru-RU", { month: "long", year: "numeric" });
+    } catch {
+      return "";
+    }
+  };
+  const starRow = (score) => "★".repeat(Math.max(0, Math.min(5, Math.round(score)))) + "☆".repeat(5 - Math.max(0, Math.min(5, Math.round(score))));
+  const ratingLabel = data.rating != null ? data.rating.toFixed(1).replace(".", ",") : null;
+  const reviewsWord = (n) => {
+    const mod10 = n % 10;
+    const mod100 = n % 100;
+    if (mod10 === 1 && mod100 !== 11) return "отзыв";
+    if (mod10 >= 2 && mod10 <= 4 && (mod100 < 12 || mod100 > 14)) return "отзыва";
+    return "отзывов";
+  };
+
+  return (
+    <section className="reviews-band mosaic-bg reveal" aria-label="Отзывы покупателей с Авито">
+      <div className="reviews-inner">
+        <h2 className="section-title">Отзывы садоводов</h2>
+        <div className="reviews-summary">
+          {ratingLabel && <strong className="reviews-score">{ratingLabel}</strong>}
+          <div className="reviews-summary__meta">
+            <span className="stars" aria-hidden="true">{starRow(data.rating ?? 5)}</span>
+            <span>{data.reviewsCount} {reviewsWord(data.reviewsCount)} на Авито</span>
+          </div>
+          {data.profileUrl && (
+            <a className="round-link" href={data.profileUrl} target="_blank" rel="noreferrer">
+              Все отзывы
+              <ArrowRight size={16} weight="bold" />
+            </a>
+          )}
+        </div>
+      </div>
+      <div className="reviews-marquee" aria-label="Отзывы покупателей">
+        {[
+          { items: data.reviews.slice(0, 9), reverse: false, speed: "56s" },
+          { items: data.reviews.slice(9, 18), reverse: true, speed: "68s" },
+        ].map(({ items, reverse, speed }, rowIndex) =>
+          items.length ? (
+            <div
+              className={`marquee-row${reverse ? " marquee-row--reverse" : ""}`}
+              style={{ "--speed": speed }}
+              key={rowIndex}
+            >
+              {[...items, ...items].map((review, index) => (
+                <article
+                  className="review-card"
+                  key={`${review.id || index}-${index}`}
+                  aria-hidden={index >= items.length || undefined}
+                >
+                  <span className="stars" aria-hidden="true">{starRow(review.score)}</span>
+                  <p>{review.text}</p>
+                  <footer>
+                    <strong>{review.author}</strong>
+                    <small>{formatDate(review.date)}</small>
+                  </footer>
+                </article>
+              ))}
+            </div>
+          ) : null,
+        )}
+      </div>
+    </section>
+  );
+}
+
+function Testimonial() {
+  return (
+    <section className="testimonial-band mosaic-bg reveal" aria-label="Отзывы садоводов">
+      <div className="testimonial-inner">
+        <h2 className="section-title">Отзывы садоводов</h2>
+        <span className="quote-mark" aria-hidden="true">«</span>
+        <p className="testimonial-quote">
+          Заказывала три гортензии метельчатые и спирею. Пришли с комом земли, упакованы отлично —
+          ничего не сломалось за дорогу. Прижились все, к августу «Лаймлайт» уже зацвёл.
+          Спасибо за памятки по уходу!
+        </p>
+        <div className="testimonial-author">
+          <span className="author-avatar">И</span>
+          <div className="author-name">
+            <strong>Ирина П.</strong>
+            <small>Одинцово · садовод-любитель</small>
+          </div>
+          <span className="author-rating">
+            <span className="stars" aria-hidden="true">★★★★★</span>
+            5,0
+          </span>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 function CatalogExperience({ data, filtered, activeCategory, setActiveCategory, query, setQuery, go, addToCart, openLightbox }) {
+  const inStockShown = filtered.filter((product) => product.stock > 0).length;
+  // products carry categoryKey "other" for shrubs while categories[] declares "shrubs"
+  const filterKey = (key) => (key === "shrubs" ? "other" : key);
+
   return (
     <>
-      <section className="page-hero compact">
-        <div>
-          <p className="eyebrow">Каталог</p>
+      <section className="catalog-hero">
+        <div className="catalog-hero__copy">
+          <p className="eyebrow">
+            <Sparkle size={16} weight="fill" />
+            Каталог
+          </p>
           <h1>Каталог садовых растений</h1>
-          <p>
-            Смотрите актуальные позиции по категориям, наличию и сезону. В карточках есть фото,
-            цена, остаток и быстрый переход к подробностям растения.
+          <p className="catalog-hero__sub">
+            Актуальные позиции по категориям, наличию и сезону — фото, цена и живой остаток в каждой карточке.
           </p>
         </div>
-        <div className="catalog-stats">
-          <strong>{filtered.length}</strong>
-          <span>позиций показано</span>
+        <div className="catalog-hero__stats">
+          <div className="stat-pill stat-pill--berry">
+            <strong>{filtered.length}</strong>
+            <span>позиций</span>
+          </div>
+          <div className="stat-pill">
+            <strong>{inStockShown}</strong>
+            <span>в наличии</span>
+          </div>
+          <div className="stat-pill">
+            <strong>СДЭК</strong>
+            <span>по всей России</span>
+          </div>
         </div>
       </section>
 
@@ -569,10 +1223,10 @@ function CatalogExperience({ data, filtered, activeCategory, setActiveCategory, 
           </button>
           {data.categories.map((category) => (
             <button
-              className={activeCategory === category.key ? "chip active" : "chip"}
+              className={activeCategory === filterKey(category.key) ? "chip active" : "chip"}
               key={category.key}
               type="button"
-              onClick={() => setActiveCategory(category.key)}
+              onClick={() => setActiveCategory(filterKey(category.key))}
             >
               {category.name}<span>{category.count}</span>
             </button>
@@ -580,11 +1234,29 @@ function CatalogExperience({ data, filtered, activeCategory, setActiveCategory, 
         </div>
       </section>
 
-      <section className="editorial-grid catalog-page-grid">
-        {filtered.slice(0, 36).map((product) => (
-          <LuxuryProductCard key={product.id} product={product} go={go} addToCart={addToCart} openLightbox={openLightbox} />
-        ))}
-      </section>
+      {filtered.length === 0 ? (
+        <section className="catalog-empty">
+          <Leaf size={44} weight="duotone" />
+          <h2>Ничего не нашлось</h2>
+          <p>Попробуйте изменить запрос или выберите другую категорию.</p>
+          <button
+            className="primary-button"
+            type="button"
+            onClick={() => {
+              setQuery("");
+              setActiveCategory("all");
+            }}
+          >
+            Сбросить фильтры
+          </button>
+        </section>
+      ) : (
+        <section className="editorial-grid catalog-page-grid">
+          {filtered.slice(0, 36).map((product) => (
+            <LuxuryProductCard key={product.id} product={product} go={go} addToCart={addToCart} openLightbox={openLightbox} />
+          ))}
+        </section>
+      )}
     </>
   );
 }
@@ -818,11 +1490,8 @@ function LookbookGallery({ products, go, openLightbox }) {
   );
 }
 
-function PhotoLightbox({ product, products, index, onClose, onMove, onPick, addToCart, go }) {
+function PhotoLightbox({ product, onClose, onMove, addToCart, go }) {
   if (!product) return null;
-
-  const thumbStart = Math.max(0, Math.min(index - 4, Math.max(0, products.length - 10)));
-  const thumbs = products.slice(thumbStart, thumbStart + 10);
 
   return (
     <aside className="photo-lightbox" role="dialog" aria-modal="true" aria-label="Фотография растения">
@@ -841,34 +1510,26 @@ function PhotoLightbox({ product, products, index, onClose, onMove, onPick, addT
           </button>
         </figure>
         <section className="photo-details">
-          <p className="eyebrow">{product.category}</p>
-          <h2>{product.name}</h2>
-          <p>{product.description}</p>
-          <div className="photo-meta">
-            <strong>{formatRub(product.price)}</strong>
-            <span>{stockLabel(product)}</span>
+          <div className="photo-details__scroll">
+            <p className="eyebrow">{product.category}</p>
+            <h2>{product.name}</h2>
+            <p>{product.description}</p>
           </div>
-          <div className="photo-actions">
-            <button className="primary-button" type="button" onClick={() => addToCart(product)} disabled={product.stock === 0}>
-              В корзину
-              <Plus size={17} weight="bold" />
-            </button>
-            <button className="round-link" type="button" onClick={() => { onClose(); go(`product/${product.id}`); }}>
-              Карточка
-              <ArrowRight size={17} weight="bold" />
-            </button>
-          </div>
-          <div className="photo-thumbs" aria-label="Миниатюры галереи">
-            {thumbs.map((item, itemIndex) => (
-              <button
-                className={thumbStart + itemIndex === index ? "active" : ""}
-                type="button"
-                key={item.id}
-                onClick={() => onPick(thumbStart + itemIndex)}
-              >
-                <img src={assetUrl(item.image)} alt={item.name} />
+          <div className="photo-foot">
+            <div className="photo-meta">
+              <strong>{formatRub(product.price)}</strong>
+              <span>{stockLabel(product)}</span>
+            </div>
+            <div className="photo-actions">
+              <button className="primary-button" type="button" onClick={() => addToCart(product)} disabled={product.stock === 0}>
+                В корзину
+                <Plus size={17} weight="bold" />
               </button>
-            ))}
+              <button className="round-link" type="button" onClick={() => { onClose(); go(`product/${product.id}`); }}>
+                Подробнее
+                <ArrowRight size={17} weight="bold" />
+              </button>
+            </div>
           </div>
         </section>
       </div>
@@ -876,9 +1537,9 @@ function PhotoLightbox({ product, products, index, onClose, onMove, onPick, addT
   );
 }
 
-function LuxuryProductCard({ product, go, addToCart, openLightbox }) {
+function LuxuryProductCard({ product, go, addToCart, openLightbox, index = 0, feature = false }) {
   return (
-    <article className={`luxury-card ${product.status}`}>
+    <article className={`luxury-card elev reveal ${product.status}${feature ? " is-feature" : ""}`} style={{ "--i": index % 4 }}>
       <button className="luxury-image" type="button" onClick={() => openLightbox(product)}>
         {product.image ? <img src={assetUrl(product.image)} alt={product.name} /> : <Leaf size={44} weight="duotone" />}
         <span>{product.category}</span>

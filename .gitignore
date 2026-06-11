@@ -4,3 +4,12 @@ dist/
 *.log
 *.png
 .DS_Store
+
+# redesign working docs
+redesign-*.md
+REDESIGN_SPEC.md
+redesign-shots/
+
+# secrets / raw API dumps
+.env
+scripts/avito-raw.json
