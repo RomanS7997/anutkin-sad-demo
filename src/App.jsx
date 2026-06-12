@@ -388,13 +388,23 @@ function StoreHeader({ routeName, go, cartCount, openCart, data, setQuery, setAc
   const catProduct = (key) =>
     galleryProducts.find((product) => product.categoryKey === key && product.stock > 0) ||
     galleryProducts.find((product) => product.categoryKey === key);
-  const catCount = (countKey) => data?.categories?.find((category) => category.key === countKey)?.count || 0;
-  const megaCats = [
-    { key: "hydrangea", label: "Гортензии", countKey: "hydrangea" },
-    { key: "perennials", label: "Многолетники", countKey: "perennials" },
-    { key: "other", label: "Кустарники и сад", countKey: "shrubs" },
-    { key: "annuals", label: "Цветущие однолетники", countKey: "annuals" },
-  ].map((category) => ({ ...category, product: catProduct(category.key), count: catCount(category.countKey) }));
+  const sortWord = (n) => {
+    const m10 = n % 10;
+    const m100 = n % 100;
+    if (m10 === 1 && m100 !== 11) return "сорт";
+    if (m10 >= 2 && m10 <= 4 && (m100 < 12 || m100 > 14)) return "сорта";
+    return "сортов";
+  };
+  // динамически из данных — работает с любым числом категорий
+  const productKey = (key) => (key === "shrubs" ? "other" : key);
+  const megaCats = (data?.categories || [])
+    .filter((category) => category.count > 0)
+    .map((category) => ({
+      key: productKey(category.key),
+      label: category.name,
+      count: category.count,
+      product: catProduct(productKey(category.key)),
+    }));
 
   const openCategory = (key) => {
     if (setActiveCategory) setActiveCategory(key);
@@ -438,7 +448,7 @@ function StoreHeader({ routeName, go, cartCount, openCart, data, setQuery, setAc
                       )}
                       <span className="mega-card__text">
                         <strong>{category.label}</strong>
-                        <small>{category.count} сортов</small>
+                        <small>{category.count} {sortWord(category.count)}</small>
                       </span>
                     </button>
                   ))}

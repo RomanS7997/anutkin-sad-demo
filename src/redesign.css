@@ -182,16 +182,25 @@ body { background: var(--grad-page); color: var(--ink); font-family: var(--font-
 .redesign .nav-mega:hover > button svg { transform: rotate(180deg); }
 .redesign .mega-menu {
   position: absolute; top: calc(100% + 14px); left: 50%; transform: translateX(-50%) translateY(8px);
-  width: 540px; max-width: 92vw; background: #fff; border-radius: var(--r-lg); box-shadow: var(--shadow-lg);
+  width: 580px; max-width: 92vw; background: #fff; border-radius: var(--r-lg); box-shadow: var(--shadow-lg);
   padding: var(--sp-4); opacity: 0; visibility: hidden; transition: opacity .22s ease, transform .22s ease; z-index: 60;
 }
 .redesign .mega-menu::before { content: ""; position: absolute; top: -16px; left: 0; right: 0; height: 18px; }
 .redesign .nav-mega:hover .mega-menu,
 .redesign .nav-mega:focus-within .mega-menu { opacity: 1; visibility: visible; transform: translateX(-50%) translateY(0); }
-.redesign .mega-grid { display: grid; grid-template-columns: 1fr 1fr; gap: var(--sp-3); }
+/* любое количество категорий: 2 колонки, при переполнении — скролл с фирменным скроллбаром */
+.redesign .mega-grid {
+  display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--sp-3);
+  max-height: 340px; overflow-y: auto; padding-right: 4px;
+  scrollbar-width: thin; scrollbar-color: var(--berry) var(--blush-bg);
+}
+.redesign .mega-grid::-webkit-scrollbar { width: 8px; }
+.redesign .mega-grid::-webkit-scrollbar-track { background: var(--blush-bg); border-radius: 999px; }
+.redesign .mega-grid::-webkit-scrollbar-thumb { background: var(--berry); border-radius: 999px; border: 2px solid var(--blush-bg); }
 .redesign .mega-card {
   display: flex; align-items: center; gap: 12px; padding: 8px; border: none; background: var(--blush-bg);
   border-radius: var(--r-md); cursor: pointer; text-align: left; transition: background .2s, transform .2s;
+  min-width: 0;
 }
 .redesign .mega-card:hover { background: var(--pink-band); transform: translateX(3px); }
 .redesign .mega-card img,
@@ -199,9 +208,12 @@ body { background: var(--grad-page); color: var(--ink); font-family: var(--font-
   width: 56px; height: 56px; border-radius: var(--r-sm); object-fit: cover; flex: 0 0 auto;
   display: grid; place-items: center; background: #fff; color: var(--berry);
 }
-.redesign .mega-card__text { display: flex; flex-direction: column; min-width: 0; }
-.redesign .mega-card__text strong { font-family: var(--font-serif); color: var(--ink); font-size: 1rem; line-height: 1.2; }
-.redesign .mega-card__text small { color: var(--berry); font-weight: 700; font-size: var(--fs-tiny); }
+.redesign .mega-card__text { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+.redesign .mega-card__text strong {
+  font-family: var(--font-serif); color: var(--ink); font-size: .98rem; line-height: 1.22;
+  overflow-wrap: anywhere; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;
+}
+.redesign .mega-card__text small { color: var(--berry); font-weight: 700; font-size: var(--fs-tiny); white-space: nowrap; }
 .redesign .mega-all {
   display: inline-flex; align-items: center; justify-content: center; gap: 6px; width: 100%; margin-top: var(--sp-3);
   background: var(--grad-berry); color: #fff; border: none; border-radius: var(--r-pill); padding: 11px; font-weight: 700; box-shadow: var(--shadow-btn);
