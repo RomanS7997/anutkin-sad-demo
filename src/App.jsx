@@ -651,7 +651,7 @@ function HomeExperience({ data, featured, galleryProducts, go, addToCart, openLi
         </div>
       </section>
 
-      <SeasonalPromo product={categoryProduct("hydrangea")} go={go} />
+      <SeasonalPromo product={categoryProduct("hydrangea")} go={go} openLightbox={openLightbox} />
 
       <section className="editorial-section reveal">
         <div className="section-head center">
@@ -675,9 +675,9 @@ function HomeExperience({ data, featured, galleryProducts, go, addToCart, openLi
 
       <SignatureCollection data={data} products={galleryProducts} go={go} openLightbox={openLightbox} />
 
-      <DealCountdown data={data} go={go} />
+      <DealCountdown data={data} go={go} openLightbox={openLightbox} />
 
-      <WhyUs photo={heroProduct} />
+      <WhyUs photo={heroProduct} openLightbox={openLightbox} />
 
       <AvitoReviews />
     </>
@@ -909,12 +909,14 @@ function FeatureStrip() {
   );
 }
 
-function SeasonalPromo({ product, go }) {
+function SeasonalPromo({ product, go, openLightbox }) {
   if (!product) return null;
   return (
     <section className="promo-banner has-corners reveal" aria-label="Сезонное предложение">
       <div className="promo-banner__photo sun-photo">
-        <img src={assetUrl(product.image)} alt={product.name} />
+        <button className="photo-open" type="button" onClick={() => openLightbox(product)} aria-label={`Фото: ${product.name}`}>
+          <img src={assetUrl(product.image)} alt={product.name} />
+        </button>
       </div>
       <div className="promo-banner__copy">
         <p className="script">Сезон посадки открыт</p>
@@ -1022,7 +1024,7 @@ function useMonthCountdown() {
   return time;
 }
 
-function DealCountdown({ data, go }) {
+function DealCountdown({ data, go, openLightbox }) {
   const time = useMonthCountdown();
   const pad = (value) => String(value).padStart(2, "0");
   const tiles = [
@@ -1045,7 +1047,9 @@ function DealCountdown({ data, go }) {
       <div className="deal-photos">
         {photos.slice(0, 3).map((product, index) => (
           <div className={`deal-photo deal-photo--${index + 1}`} key={product.id}>
-            <img src={assetUrl(product.image)} alt={product.name} />
+            <button className="photo-open" type="button" onClick={() => openLightbox(product)} aria-label={`Фото: ${product.name}`}>
+              <img src={assetUrl(product.image)} alt={product.name} />
+            </button>
           </div>
         ))}
       </div>
@@ -1074,7 +1078,7 @@ function DealCountdown({ data, go }) {
   );
 }
 
-function WhyUs({ photo }) {
+function WhyUs({ photo, openLightbox }) {
   const points = [
     ["01", "Собственное производство", "Выращиваем саженцы сами, без перекупа. Каждое растение проверяем перед отправкой."],
     ["02", "Зимостойкие сорта", "Гортензии, спиреи и пузыреплодники зоны 3–4, переносят до −34 °C."],
@@ -1103,7 +1107,9 @@ function WhyUs({ photo }) {
         <div className="why-center">
           <span className="dash-line" aria-hidden="true" />
           <div className="sun-disc sun-photo">
-            <img src={assetUrl(photo.image)} alt={photo.name} />
+            <button className="photo-open" type="button" onClick={() => openLightbox(photo)} aria-label={`Фото: ${photo.name}`}>
+              <img src={assetUrl(photo.image)} alt={photo.name} />
+            </button>
           </div>
         </div>
         <div className="why-col why-col--right">
@@ -1606,8 +1612,10 @@ function LookbookGallery({ products, go, openLightbox }) {
 }
 
 function PhotoLightbox({ product, onClose, onMove, addToCart, go }) {
+  const [full, setFull] = useState(false); // фото на весь экран
   const [zoom, setZoom] = useState(null); // null | {x, y} — точка увеличения в %
   useEffect(() => {
+    setFull(false);
     setZoom(null);
   }, [product]);
   if (!product) return null;
@@ -1627,28 +1635,18 @@ function PhotoLightbox({ product, onClose, onMove, addToCart, go }) {
         <button className="modal-close icon-button" type="button" onClick={onClose} aria-label="Закрыть">
           <X size={20} weight="bold" />
         </button>
-        <figure className={`photo-stage${zoom ? " is-zoomed" : ""}`}>
+        <figure className="photo-stage">
           <button
-            className="photo-zoom-area"
+            className="photo-stage-open"
             type="button"
-            aria-label={zoom ? "Уменьшить фото" : "Увеличить фото"}
-            onClick={(event) => {
-              const point = pointPct(event.clientX, event.clientY, event.currentTarget);
-              setZoom((value) => (value ? null : point));
-            }}
-            onMouseMove={(event) => {
-              if (zoom) setZoom(pointPct(event.clientX, event.clientY, event.currentTarget));
-            }}
-            onTouchMove={(event) => {
-              const touch = event.touches[0];
-              if (zoom && touch) setZoom(pointPct(touch.clientX, touch.clientY, event.currentTarget));
-            }}
+            onClick={() => setFull(true)}
+            aria-label="Открыть фото на весь экран"
           >
-            <img
-              src={assetUrl(product.image)}
-              alt={product.name}
-              style={zoom ? { transformOrigin: `${zoom.x}% ${zoom.y}%`, transform: "scale(2.4)" } : undefined}
-            />
+            <img src={assetUrl(product.image)} alt={product.name} />
+            <span className="photo-stage-hint">
+              <MagnifyingGlass size={15} weight="bold" />
+              Фото целиком
+            </span>
           </button>
           <button className="gallery-nav gallery-prev" type="button" onClick={() => onMove(-1)} aria-label="Предыдущее фото">
             <CaretLeft size={24} weight="bold" />
@@ -1657,6 +1655,50 @@ function PhotoLightbox({ product, onClose, onMove, addToCart, go }) {
             <CaretRight size={24} weight="bold" />
           </button>
         </figure>
+
+        {full && (
+          <div className="photo-fullview" role="dialog" aria-label="Фото на весь экран">
+            <button
+              className={`photo-fullview__stage${zoom ? " is-zoomed" : ""}`}
+              type="button"
+              aria-label={zoom ? "Уменьшить" : "Увеличить"}
+              onClick={(event) => {
+                const point = pointPct(event.clientX, event.clientY, event.currentTarget);
+                setZoom((value) => (value ? null : point));
+              }}
+              onMouseMove={(event) => {
+                if (zoom) setZoom(pointPct(event.clientX, event.clientY, event.currentTarget));
+              }}
+              onTouchMove={(event) => {
+                const touch = event.touches[0];
+                if (zoom && touch) setZoom(pointPct(touch.clientX, touch.clientY, event.currentTarget));
+              }}
+            >
+              <img
+                src={assetUrl(product.image)}
+                alt={product.name}
+                style={zoom ? { transformOrigin: `${zoom.x}% ${zoom.y}%`, transform: "scale(2.4)" } : undefined}
+              />
+            </button>
+            <button
+              className="photo-fullview__close icon-button"
+              type="button"
+              onClick={() => {
+                setFull(false);
+                setZoom(null);
+              }}
+              aria-label="Свернуть фото"
+            >
+              <X size={22} weight="bold" />
+            </button>
+            <button className="gallery-nav gallery-prev" type="button" onClick={() => onMove(-1)} aria-label="Предыдущее фото">
+              <CaretLeft size={26} weight="bold" />
+            </button>
+            <button className="gallery-nav gallery-next" type="button" onClick={() => onMove(1)} aria-label="Следующее фото">
+              <CaretRight size={26} weight="bold" />
+            </button>
+          </div>
+        )}
         <section className="photo-details">
           <div className="photo-details__scroll">
             <p className="eyebrow">{product.category}</p>
