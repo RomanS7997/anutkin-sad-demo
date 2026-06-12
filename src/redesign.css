@@ -718,6 +718,7 @@ body { background: var(--grad-page); color: var(--ink); font-family: var(--font-
 .redesign .marquee-row {
   display: flex; gap: var(--sp-4); width: max-content; padding-block: 4px;
   animation: marquee-left var(--speed, 56s) linear infinite;
+  will-change: transform; backface-visibility: hidden;
 }
 .redesign .marquee-row--reverse { animation-name: marquee-right; }
 /* пауза по наведению — только для устройств с мышью; на таче hover «залипает» и останавливал ряд */
@@ -987,7 +988,11 @@ body { background: var(--grad-page); color: var(--ink); font-family: var(--font-
   .redesign .catalog-toolbar { position: static; }
   .redesign .stat-pill { flex: 1 1 auto; min-width: 0; padding: 10px 12px; }
   .redesign .stat-pill strong { font-size: 1.2rem; }
-  .redesign .review-card { flex-basis: 290px; }
+  /* короткие лёгкие ряды на телефоне: без маски (баг перерисовки в Safari),
+     компактные карточки, простая тень — слой влезает в GPU-текстуру */
+  .redesign .reviews-marquee { -webkit-mask-image: none; mask-image: none; }
+  .redesign .review-card { flex-basis: 252px; padding: var(--sp-4); box-shadow: 0 3px 12px rgba(95, 102, 38, .12); }
+  .redesign .review-card p { -webkit-line-clamp: 4; }
   .redesign .experience-header .brand-mark-img { height: 38px; }
   .redesign .experience-header.is-stuck .brand-mark-img { height: 36px; }
   .redesign .experience-header .brand-text strong { font-size: 18px; }

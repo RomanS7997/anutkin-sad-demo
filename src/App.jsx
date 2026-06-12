@@ -1116,6 +1116,16 @@ function WhyUs({ photo }) {
 
 function AvitoReviews() {
   const [data, setData] = useState(undefined); // undefined = loading, null = no data
+  // на телефонах ряд должен быть коротким: ширина ленты × DPR упирается
+  // в лимит GPU-текстуры (≈16384px) — длинный ряд перестаёт анимироваться
+  const [mobile, setMobile] = useState(() => window.matchMedia("(max-width: 760px)").matches);
+
+  useEffect(() => {
+    const mq = window.matchMedia("(max-width: 760px)");
+    const onChange = () => setMobile(mq.matches);
+    mq.addEventListener("change", onChange);
+    return () => mq.removeEventListener("change", onChange);
+  }, []);
 
   useEffect(() => {
     fetch(`${baseUrl}data/reviews.json`)
@@ -1164,10 +1174,16 @@ function AvitoReviews() {
         </div>
       </div>
       <div className="reviews-marquee" aria-label="Отзывы покупателей">
-        {[
-          { items: data.reviews.slice(0, 9), reverse: false, speed: "56s" },
-          { items: data.reviews.slice(9, 18), reverse: true, speed: "68s" },
-        ].map(({ items, reverse, speed }, rowIndex) =>
+        {(mobile
+          ? [
+              { items: data.reviews.slice(0, 4), reverse: false, speed: "34s" },
+              { items: data.reviews.slice(4, 8), reverse: true, speed: "42s" },
+            ]
+          : [
+              { items: data.reviews.slice(0, 9), reverse: false, speed: "56s" },
+              { items: data.reviews.slice(9, 18), reverse: true, speed: "68s" },
+            ]
+        ).map(({ items, reverse, speed }, rowIndex) =>
           items.length ? (
             <div
               className={`marquee-row${reverse ? " marquee-row--reverse" : ""}`}
