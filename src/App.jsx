@@ -70,24 +70,37 @@ function useRoute() {
     return window.location.hash.replace("#/", "") || "shop";
   };
   const [route, setRoute] = useState(initial);
+  const routeRef = useRef(route);
+  const scrollMem = useRef(new Map()); // route -> scrollY (память позиции по страницам)
 
   useEffect(() => {
-    const onHash = () => setRoute(window.location.hash.replace("#/", "") || "shop");
+    routeRef.current = route;
+  }, [route]);
+
+  useEffect(() => {
+    const onHash = () => {
+      const next = window.location.hash.replace("#/", "") || "shop";
+      if (next !== routeRef.current) {
+        scrollMem.current.set(routeRef.current, window.scrollY);
+        setRoute(next);
+      }
+    };
     window.addEventListener("hashchange", onHash);
     return () => window.removeEventListener("hashchange", onHash);
   }, []);
 
   const go = (next) => {
+    scrollMem.current.set(routeRef.current, window.scrollY);
     window.location.hash = `/${next}`;
     setRoute(next);
   };
 
-  return [route, go];
+  return [route, go, scrollMem];
 }
 
 export function App() {
   const data = useCatalog();
-  const [route, go] = useRoute();
+  const [route, go, scrollMem] = useRoute();
 
   // Storefront hides out-of-stock products entirely (admin still sees everything).
   // Category counts are recomputed from the visible products.
@@ -112,10 +125,18 @@ export function App() {
   }
 
   // Кабинета в демо нет — все маршруты ведут на витрину.
-  return <StorefrontAppV2 data={storefrontData} route={route} go={go} />;
+  return <StorefrontAppV2 data={storefrontData} route={route} go={go} scrollMem={scrollMem} />;
 }
 
-function StorefrontAppV2({ data, route, go }) {
+function StorefrontAppV2({ data, route, go, scrollMem }) {
+  // восстановление позиции: была память — возвращаем на место, нет — в самый верх
+  useEffect(() => {
+    const saved = scrollMem?.current?.get(route) ?? 0;
+    requestAnimationFrame(() => {
+      requestAnimationFrame(() => window.scrollTo({ top: saved, left: 0, behavior: "instant" }));
+    });
+  }, [route, scrollMem]);
+
   const [activeCategory, setActiveCategory] = useState("all");
   const [query, setQuery] = useState("");
   const [cart, setCart] = useState([]);
@@ -479,10 +500,6 @@ function StoreHeader({ routeName, go, cartCount, openCart, data, setQuery, setAc
 }
 
 function StoreFooter({ data, go }) {
-  const footerProducts = data.products
-    .filter((product) => product.stock > 0 && product.image)
-    .slice(0, 3);
-
   return (
     <footer className="store-footer" id="contacts">
       <div className="footer-hero">
@@ -523,13 +540,7 @@ function StoreFooter({ data, go }) {
       </div>
 
       <div className="footer-strip">
-        <div className="footer-mini-gallery" aria-label="Растения в наличии">
-          {footerProducts.map((product) => (
-            <button type="button" key={product.id} onClick={() => go(`product/${product.id}`)}>
-              <img src={assetUrl(product.image)} alt={product.name} />
-            </button>
-          ))}
-        </div>
+        <small className="footer-copy">© Анюткин сад · цветочное хозяйство</small>
         <button className="primary-button" type="button" onClick={() => go("catalog")}>
           Перейти в каталог
           <ArrowRight size={18} weight="bold" />
@@ -1509,7 +1520,19 @@ function LookbookGallery({ products, go, openLightbox }) {
 }
 
 function PhotoLightbox({ product, onClose, onMove, addToCart, go }) {
+  const [zoom, setZoom] = useState(null); // null | {x, y} — точка увеличения в %
+  useEffect(() => {
+    setZoom(null);
+  }, [product]);
   if (!product) return null;
+
+  const pointPct = (clientX, clientY, el) => {
+    const rect = el.getBoundingClientRect();
+    return {
+      x: Math.max(0, Math.min(100, ((clientX - rect.left) / rect.width) * 100)),
+      y: Math.max(0, Math.min(100, ((clientY - rect.top) / rect.height) * 100)),
+    };
+  };
 
   return (
     <aside className="photo-lightbox" role="dialog" aria-modal="true" aria-label="Фотография растения">
@@ -1518,8 +1541,29 @@ function PhotoLightbox({ product, onClose, onMove, addToCart, go }) {
         <button className="modal-close icon-button" type="button" onClick={onClose} aria-label="Закрыть">
           <X size={20} weight="bold" />
         </button>
-        <figure className="photo-stage">
-          <img src={assetUrl(product.image)} alt={product.name} />
+        <figure className={`photo-stage${zoom ? " is-zoomed" : ""}`}>
+          <button
+            className="photo-zoom-area"
+            type="button"
+            aria-label={zoom ? "Уменьшить фото" : "Увеличить фото"}
+            onClick={(event) => {
+              const point = pointPct(event.clientX, event.clientY, event.currentTarget);
+              setZoom((value) => (value ? null : point));
+            }}
+            onMouseMove={(event) => {
+              if (zoom) setZoom(pointPct(event.clientX, event.clientY, event.currentTarget));
+            }}
+            onTouchMove={(event) => {
+              const touch = event.touches[0];
+              if (zoom && touch) setZoom(pointPct(touch.clientX, touch.clientY, event.currentTarget));
+            }}
+          >
+            <img
+              src={assetUrl(product.image)}
+              alt={product.name}
+              style={zoom ? { transformOrigin: `${zoom.x}% ${zoom.y}%`, transform: "scale(2.4)" } : undefined}
+            />
+          </button>
           <button className="gallery-nav gallery-prev" type="button" onClick={() => onMove(-1)} aria-label="Предыдущее фото">
             <CaretLeft size={24} weight="bold" />
           </button>

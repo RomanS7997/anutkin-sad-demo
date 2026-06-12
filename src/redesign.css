@@ -720,7 +720,10 @@ body { background: var(--grad-page); color: var(--ink); font-family: var(--font-
   animation: marquee-left var(--speed, 56s) linear infinite;
 }
 .redesign .marquee-row--reverse { animation-name: marquee-right; }
-.redesign .marquee-row:hover { animation-play-state: paused; }
+/* пауза по наведению — только для устройств с мышью; на таче hover «залипает» и останавливал ряд */
+@media (hover: hover) and (pointer: fine) {
+  .redesign .marquee-row:hover { animation-play-state: paused; }
+}
 @keyframes marquee-left { from { transform: translateX(0); } to { transform: translateX(-50%); } }
 @keyframes marquee-right { from { transform: translateX(-50%); } to { transform: translateX(0); } }
 
@@ -767,9 +770,7 @@ body { background: var(--grad-page); color: var(--ink); font-family: var(--font-
 .redesign .footer-contact-card span { display: block; color: rgba(255, 255, 255, .82); margin-top: 8px; font-size: var(--fs-small); }
 .redesign .footer-contact-card small { display: block; color: rgba(255, 255, 255, .6); margin-top: 8px; font-size: var(--fs-tiny); }
 .redesign .footer-strip { display: flex; align-items: center; justify-content: space-between; gap: var(--sp-5); flex-wrap: wrap; border-top: 1px solid rgba(255, 255, 255, .18); padding-top: var(--sp-5); }
-.redesign .footer-mini-gallery { display: flex; gap: var(--sp-3); }
-.redesign .footer-mini-gallery button { width: 64px; height: 64px; border-radius: var(--r-md); overflow: hidden; border: 2px solid rgba(255, 255, 255, .35); padding: 0; cursor: pointer; }
-.redesign .footer-mini-gallery img { width: 100%; height: 100%; object-fit: cover; }
+.redesign .footer-copy { color: rgba(255, 255, 255, .65); font-size: var(--fs-small); }
 .redesign .footer-strip .primary-button { background: #fff; color: var(--berry); }
 
 /* ============================================================
@@ -893,6 +894,18 @@ body { background: var(--grad-page); color: var(--ink); font-family: var(--font-
   background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 48' preserveAspectRatio='none'%3E%3Cpath fill='%23dde3b2' d='M0,24 C240,4 480,44 720,24 C960,4 1200,44 1440,24 L1440,0 L0,0 Z'/%3E%3C/svg%3E") no-repeat;
   background-size: 100% 100%;
 }
+
+/* lightbox: click-to-zoom (точка клика = центр увеличения; движение = панорама) */
+.redesign .photo-zoom-area {
+  display: block; width: 100%; height: 100%; padding: 0; border: none; background: none;
+  overflow: hidden; cursor: zoom-in; touch-action: none;
+}
+.redesign .photo-stage.is-zoomed .photo-zoom-area { cursor: zoom-out; }
+.redesign .photo-zoom-area img {
+  width: 100%; height: 100%; object-fit: cover;
+  transition: transform .3s ease; will-change: transform;
+}
+.redesign .photo-stage.is-zoomed .photo-zoom-area img { transition: transform .15s ease-out; }
 
 /* lightbox: scrollable description, meta + actions always reachable */
 .redesign .photo-panel {
