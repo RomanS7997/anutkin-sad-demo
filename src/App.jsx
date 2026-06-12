@@ -505,12 +505,12 @@ function StoreFooter({ data, go }) {
       <div className="footer-hero">
         <BrandLogo go={go} variant="white" />
         <p>
-          Декоративные растения из хозяйства: живое наличие, реальные фото, аккуратная упаковка и доставка СДЭК по России.
+          Декоративные растения: живое наличие, реальные фото, аккуратная упаковка. СДЭК по России и самовывоз в Москве.
         </p>
         <div className="footer-proof">
           <span>{data.products.length} товаров</span>
           <span>{data.categories.length} категорий</span>
-          <span>СДЭК и самовывоз</span>
+          <span>СДЭК и самовывоз в Москве</span>
         </div>
       </div>
 
@@ -651,12 +651,21 @@ function HomeExperience({ data, featured, galleryProducts, go, addToCart, openLi
         </div>
       </section>
 
-      <SeasonalPromo product={categoryProduct("hydrangea")} go={go} openLightbox={openLightbox} />
+      <SeasonalPromo
+        product={
+          galleryProducts.find((item) => /спирея/i.test(item.name) && item.stock > 0) ||
+          galleryProducts.find((item) => /пузыреплодник/i.test(item.name) && item.stock > 0) ||
+          categoryProduct("other")
+        }
+        go={go}
+        goCategory={goCategory}
+        openLightbox={openLightbox}
+      />
 
       <section className="editorial-section reveal">
         <div className="section-head center">
           <h2 className="section-title">Сезонный выбор</h2>
-          <p>Растения в наличии — отправляем в течение сезона посадки.</p>
+          <p>Живое наличие — бережно упакуем и отправим ваш заказ.</p>
         </div>
         <div className="editorial-grid">
           {featured.slice(0, 8).map((product, index) => (
@@ -674,8 +683,6 @@ function HomeExperience({ data, featured, galleryProducts, go, addToCart, openLi
       </section>
 
       <SignatureCollection data={data} products={galleryProducts} go={go} openLightbox={openLightbox} />
-
-      <DealCountdown data={data} go={go} openLightbox={openLightbox} />
 
       <WhyUs photo={heroProduct} openLightbox={openLightbox} />
 
@@ -793,7 +800,7 @@ function HeroSection({ slides, productCount, categoryCount, go, addToCart, openL
       <div className="hero-copy hero-copy-v2">
         <p className="eyebrow reveal" style={{ "--i": 0 }}>
           <Sparkle size={16} weight="fill" />
-          Растения из хозяйства · доставка СДЭК
+          СДЭК по России · самовывоз в Москве
         </p>
         <h1 className="reveal" style={{ "--i": 1 }}>
           Растения для <span className="accent-word">сада</span> с доставкой по России
@@ -909,26 +916,26 @@ function FeatureStrip() {
   );
 }
 
-function SeasonalPromo({ product, go, openLightbox }) {
+function SeasonalPromo({ product, go, goCategory, openLightbox }) {
   if (!product) return null;
   return (
-    <section className="promo-banner has-corners reveal" aria-label="Сезонное предложение">
+    <section className="promo-banner has-corners reveal" aria-label="Акция на кустарники">
       <div className="promo-banner__photo sun-photo">
         <button className="photo-open" type="button" onClick={() => openLightbox(product)} aria-label={`Фото: ${product.name}`}>
           <img src={assetUrl(product.image)} alt={product.name} />
         </button>
       </div>
       <div className="promo-banner__copy">
-        <p className="script">Сезон посадки открыт</p>
-        <h2>Скидка до 15%</h2>
-        <p className="promo-sub">на гортензии и многолетники при заказе от 3 саженцев</p>
-        <p className="promo-body">Доставка СДЭК по всей России. Успейте до конца июня.</p>
+        <p className="script">Акция на кустарники</p>
+        <h2>От 24 шт — цена ниже</h2>
+        <p className="promo-sub">спиреи и пузыреплодники для живых изгородей и массовых посадок</p>
+        <p className="promo-body">Доставка СДЭК по России и самовывоз в Москве.</p>
         <div className="promo-actions">
-          <button className="round-link" type="button" onClick={() => go("catalog")}>
-            Смотреть каталог
+          <button className="round-link" type="button" onClick={() => (goCategory ? goCategory("other") : go("catalog"))}>
+            Смотреть кустарники
             <ArrowRight size={18} weight="bold" />
           </button>
-          <button className="primary-button" type="button" onClick={() => go("catalog")}>
+          <button className="primary-button" type="button" onClick={() => (goCategory ? goCategory("other") : go("catalog"))}>
             Заказать
             <ArrowRight size={18} weight="bold" />
           </button>
@@ -998,81 +1005,6 @@ function SignatureCollection({ data, products, go, openLightbox }) {
             </button>
           ))}
         </div>
-      </div>
-    </section>
-  );
-}
-
-function useMonthCountdown() {
-  const compute = () => {
-    const now = new Date();
-    const end = new Date(now.getFullYear(), now.getMonth() + 1, 1, 0, 0, 0, 0);
-    let diff = Math.max(0, Math.floor((end.getTime() - now.getTime()) / 1000));
-    const days = Math.floor(diff / 86400);
-    diff -= days * 86400;
-    const hours = Math.floor(diff / 3600);
-    diff -= hours * 3600;
-    const mins = Math.floor(diff / 60);
-    const secs = diff - mins * 60;
-    return { days, hours, mins, secs };
-  };
-  const [time, setTime] = useState(compute);
-  useEffect(() => {
-    const id = setInterval(() => setTime(compute()), 1000);
-    return () => clearInterval(id);
-  }, []);
-  return time;
-}
-
-function DealCountdown({ data, go, openLightbox }) {
-  const time = useMonthCountdown();
-  const pad = (value) => String(value).padStart(2, "0");
-  const tiles = [
-    [pad(time.days), "дни"],
-    [pad(time.hours), "часы"],
-    [pad(time.mins), "мин"],
-    [pad(time.secs), "сек"],
-  ];
-  const byId = (id) => data.products.find((product) => product.id === id);
-  const annuals = data.products.filter(
-    (product) => product.categoryKey === "annuals" && product.image && product.stock > 0,
-  );
-  const photos = [byId(1301), byId(1931), byId(539)].filter(Boolean);
-  for (let i = 0; photos.length < 3 && i < annuals.length; i += 1) {
-    if (!photos.some((photo) => photo.id === annuals[i].id)) photos.push(annuals[i]);
-  }
-
-  return (
-    <section className="deal-band has-corners reveal" aria-label="До конца сезона посадки">
-      <div className="deal-photos">
-        {photos.slice(0, 3).map((product, index) => (
-          <div className={`deal-photo deal-photo--${index + 1}`} key={product.id}>
-            <button className="photo-open" type="button" onClick={() => openLightbox(product)} aria-label={`Фото: ${product.name}`}>
-              <img src={assetUrl(product.image)} alt={product.name} />
-            </button>
-          </div>
-        ))}
-      </div>
-      <div className="deal-copy">
-        <p className="script">Спешите</p>
-        <h2>До конца сезона посадки</h2>
-        <p>
-          Гортензии и многолетники со скидкой до 15% при заказе от 3 саженцев.
-          Отправляем СДЭК по всей России.
-        </p>
-        <p className="deal-clock-label">До конца окна посадки:</p>
-        <div className="deal-clock">
-          {tiles.map(([value, label]) => (
-            <div className="clock-tile" key={label}>
-              <strong>{value}</strong>
-              <small>{label}</small>
-            </div>
-          ))}
-        </div>
-        <button className="primary-button" type="button" onClick={() => go("catalog")}>
-          Перейти в каталог
-          <ArrowRight size={18} weight="bold" />
-        </button>
       </div>
     </section>
   );
@@ -1470,7 +1402,7 @@ function DeliveryExperience({ data, go }) {
       <section className="page-hero delivery-hero">
         <div>
           <p className="eyebrow">Доставка растений</p>
-          <h1>СДЭК по России и самовывоз из хозяйства</h1>
+          <h1>СДЭК по России и самовывоз в Москве</h1>
           <p>
             Отправляем растения после подтверждения заказа и погоды. Перед передачей в доставку
             проверяем корневую, фиксируем бирку и упаковываем так, чтобы растение спокойно доехало.
@@ -1530,7 +1462,7 @@ function AboutExperience({ data, go }) {
       <section className="page-hero about-hero">
         <div>
           <p className="eyebrow">О хозяйстве</p>
-          <h1>Анюткин сад: растения из хозяйства с понятной доставкой</h1>
+          <h1>Анюткин сад: свои растения с понятной доставкой</h1>
           <p>
             Мы выращиваем и подбираем декоративные растения для сада, показываем актуальное наличие,
             помогаем выбрать сорта по сезону и бережно отправляем заказы СДЭК.
@@ -1876,7 +1808,7 @@ function StorefrontApp({ data, go }) {
           <div className="rating-row" aria-label="Преимущества">
             <span>89 позиций</span>
             <span>5 категорий</span>
-            <span>СДЭК и самовывоз</span>
+            <span>СДЭК и самовывоз в Москве</span>
           </div>
         </div>
         <div className="hero-media" aria-label="Подборка растений">
