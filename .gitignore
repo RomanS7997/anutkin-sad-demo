@@ -13,3 +13,7 @@ redesign-shots/
 # secrets / raw API dumps
 .env
 scripts/avito-raw.json
+
+# png allowed in app assets and the published site (global *.png is for screenshots)
+!public/**/*.png
+!docs/**/*.png

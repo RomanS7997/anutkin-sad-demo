@@ -89,6 +89,19 @@ export function App() {
   const data = useCatalog();
   const [route, go] = useRoute();
 
+  // Storefront hides out-of-stock products entirely (admin still sees everything).
+  // Category counts are recomputed from the visible products.
+  const storefrontData = useMemo(() => {
+    if (!data) return null;
+    const products = data.products.filter((product) => product.stock > 0);
+    const productKey = (key) => (key === "shrubs" ? "other" : key);
+    const categories = data.categories.map((category) => ({
+      ...category,
+      count: products.filter((product) => product.categoryKey === productKey(category.key)).length,
+    }));
+    return { ...data, products, categories };
+  }, [data]);
+
   if (!data) {
     return (
       <main className="loading-screen">
@@ -98,11 +111,8 @@ export function App() {
     );
   }
 
-  return route.startsWith("admin") ? (
-    <AdminApp data={data} route={route} go={go} />
-  ) : (
-    <StorefrontAppV2 data={data} route={route} go={go} />
-  );
+  // Кабинета в демо нет — все маршруты ведут на витрину.
+  return <StorefrontAppV2 data={storefrontData} route={route} go={go} />;
 }
 
 function StorefrontAppV2({ data, route, go }) {
@@ -320,7 +330,32 @@ function StorefrontAppV2({ data, route, go }) {
         addToCart={addToCart}
         go={go}
       />
+      <MobileTabbar routeName={routeName} go={go} />
     </main>
+  );
+}
+
+function MobileTabbar({ routeName, go }) {
+  const tabs = [
+    ["home", "Главная", House, "shop"],
+    ["catalog", "Каталог", Plant, "catalog"],
+    ["delivery", "Доставка", Truck, "delivery"],
+    ["about", "О нас", Leaf, "about"],
+  ];
+  return (
+    <nav className="mobile-tabbar" aria-label="Навигация">
+      {tabs.map(([key, label, Icon, target]) => (
+        <button
+          key={key}
+          type="button"
+          className={routeName === key ? "active" : ""}
+          onClick={() => go(target)}
+        >
+          <Icon size={21} weight={routeName === key ? "fill" : "regular"} />
+          <span>{label}</span>
+        </button>
+      ))}
+    </nav>
   );
 }
 
@@ -422,13 +457,10 @@ function StoreHeader({ routeName, go, cartCount, openCart, data, setQuery, setAc
         )}
       </nav>
       <div className="header-actions">
-        <button className="soft-button" type="button" onClick={() => go("admin")}>
-          <Storefront size={20} weight="duotone" />
-          <span className="soft-button__label">Кабинет</span>
-        </button>
-        <button className="icon-button" type="button" onClick={openCart} aria-label="Корзина">
-          <Basket size={23} weight="duotone" />
-          {cartCount > 0 && <span>{cartCount}</span>}
+        <button className="cart-button" type="button" onClick={openCart} aria-label="Корзина">
+          <Basket size={20} weight="duotone" />
+          <span className="cart-button__label">Корзина</span>
+          {cartCount > 0 && <span className="cart-button__count">{cartCount}</span>}
         </button>
       </div>
     </header>
@@ -470,7 +502,6 @@ function StoreFooter({ data, go }) {
           <button type="button" onClick={() => go("delivery")}>Доставка СДЭК</button>
           <button type="button" onClick={() => go("about")}>О хозяйстве</button>
           <button type="button" onClick={() => go("catalog")}>Растения в наличии</button>
-          <button type="button" onClick={() => go("admin")}>Кабинет магазина</button>
         </section>
         <section className="footer-contact-card">
           <h3>Контакты</h3>
@@ -561,10 +592,7 @@ function HomeExperience({ data, featured, galleryProducts, go, addToCart, openLi
   return (
     <>
       <HeroSection
-        slides={[
-          ...galleryProducts.filter((product) => product.stock > 0),
-          ...galleryProducts.filter((product) => product.stock === 0),
-        ]}
+        slides={galleryProducts}
         productCount={data.products.length}
         categoryCount={data.categories.length}
         go={go}
@@ -1175,7 +1203,6 @@ function Testimonial() {
 }
 
 function CatalogExperience({ data, filtered, activeCategory, setActiveCategory, query, setQuery, go, addToCart, openLightbox }) {
-  const inStockShown = filtered.filter((product) => product.stock > 0).length;
   // products carry categoryKey "other" for shrubs while categories[] declares "shrubs"
   const filterKey = (key) => (key === "shrubs" ? "other" : key);
 
@@ -1195,11 +1222,11 @@ function CatalogExperience({ data, filtered, activeCategory, setActiveCategory, 
         <div className="catalog-hero__stats">
           <div className="stat-pill stat-pill--berry">
             <strong>{filtered.length}</strong>
-            <span>позиций</span>
+            <span>в наличии</span>
           </div>
           <div className="stat-pill">
-            <strong>{inStockShown}</strong>
-            <span>в наличии</span>
+            <strong>{data.categories.length}</strong>
+            <span>категорий</span>
           </div>
           <div className="stat-pill">
             <strong>СДЭК</strong>
@@ -1415,25 +1442,6 @@ function AboutExperience({ data, go }) {
         ))}
       </section>
 
-      <section className="admin-sell-mock">
-        <div>
-          <p className="eyebrow">Для сотрудников</p>
-          <h2>Рабочая панель заказов и остатков</h2>
-          <p>
-            Внутри видно {data.metrics.ordersToday} заказов за сегодня, {data.metrics.stockAlerts}
-            {" "}рисков по остаткам и очередь отправки СДЭК.
-          </p>
-          <button className="primary-button" type="button" onClick={() => go("admin")}>
-            Открыть кабинет
-            <ArrowRight size={18} weight="bold" />
-          </button>
-        </div>
-        <div className="mini-dashboard">
-          <article><span>Продажи</span><strong>{compactRub(data.metrics.revenueMonth)}</strong></article>
-          <article><span>Заказы</span><strong>{data.metrics.ordersToday}</strong></article>
-          <article><span>СДЭК</span><strong>{data.metrics.deliveryQueue}</strong></article>
-        </div>
-      </section>
     </>
   );
 }
