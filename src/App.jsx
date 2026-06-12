@@ -836,7 +836,13 @@ function HeroSection({ slides, productCount, categoryCount, go, addToCart, openL
         onMouseLeave={() => setPaused(false)}
       >
         <div className="hero-stage sun-photo">
-          <div className={`hero-carousel${paused ? " is-paused" : ""}`}>
+          <div
+            className={`hero-carousel${paused ? " is-paused" : ""}`}
+            onClick={() => openLightbox(current)}
+            role="button"
+            tabIndex={-1}
+            aria-label="Открыть фото крупно"
+          >
             {slides.map((product, index) => {
               const inWindow = index === active || index === prev || index === next;
               return (
