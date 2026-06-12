@@ -1134,6 +1134,69 @@ function AvitoReviews() {
       .catch(() => setData(null));
   }, []);
 
+  // Мобильные ряды: вместо CSS-анимации — нативный скролл с авто-дрейфом.
+  // CSS-marquee на реальных телефонах рендерится рывками (гигантские слои),
+  // а нативный скролл браузеры тайлят идеально + можно листать пальцем.
+  const rowARef = useRef(null);
+  const rowBRef = useRef(null);
+  useEffect(() => {
+    if (!mobile || !data) return undefined;
+    const rows = [rowARef.current, rowBRef.current].filter(Boolean);
+    if (!rows.length) return undefined;
+
+    // период = расстояние между первой карточкой и её дублем
+    const periodOf = (el) => {
+      const kids = el.children;
+      const half = Math.floor(kids.length / 2);
+      return kids[half] && kids[0] ? kids[half].offsetLeft - kids[0].offsetLeft : el.scrollWidth / 2;
+    };
+    // позицию держим в JS как float: scrollLeft округляется браузером,
+    // и дробное приращение иначе затирается (read-modify-write замерзает)
+    const lanes = rows.map((el, index) => ({
+      el,
+      speed: index === 0 ? 26 : -20, // px/сек (не px/кадр — иначе на 120Гц вдвое быстрее)
+      pos: index === 1 ? periodOf(el) / 2 : 0,
+    }));
+    lanes.forEach((lane) => {
+      lane.el.scrollLeft = lane.pos;
+    });
+
+    let pausedUntil = 0;
+    const onTouch = () => {
+      pausedUntil = Date.now() + 3500;
+    };
+    rows.forEach((el) => el.addEventListener("touchstart", onTouch, { passive: true }));
+
+    let raf = 0;
+    let last = 0;
+    const tick = (now) => {
+      const dt = last ? Math.min(now - last, 64) : 16;
+      last = now;
+      const paused = Date.now() < pausedUntil;
+      lanes.forEach((lane) => {
+        if (paused) {
+          // пользователь листает сам — синхронизируем нашу позицию
+          lane.pos = lane.el.scrollLeft;
+          return;
+        }
+        const period = periodOf(lane.el);
+        if (period > 0) {
+          lane.pos += (lane.speed * dt) / 1000;
+          if (lane.pos >= period) lane.pos -= period;
+          if (lane.pos < 0) lane.pos += period;
+          lane.el.scrollLeft = lane.pos;
+        }
+      });
+      raf = requestAnimationFrame(tick);
+    };
+    raf = requestAnimationFrame(tick);
+
+    return () => {
+      cancelAnimationFrame(raf);
+      rows.forEach((el) => el.removeEventListener("touchstart", onTouch));
+    };
+  }, [mobile, data]);
+
   if (data === undefined) return null;
   if (data === null) return <Testimonial />;
 
@@ -1189,6 +1252,7 @@ function AvitoReviews() {
               className={`marquee-row${reverse ? " marquee-row--reverse" : ""}`}
               style={{ "--speed": speed }}
               key={rowIndex}
+              ref={rowIndex === 0 ? rowARef : rowBRef}
             >
               {[...items, ...items].map((review, index) => (
                 <article

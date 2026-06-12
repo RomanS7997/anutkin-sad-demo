@@ -988,10 +988,16 @@ body { background: var(--grad-page); color: var(--ink); font-family: var(--font-
   .redesign .catalog-toolbar { position: static; }
   .redesign .stat-pill { flex: 1 1 auto; min-width: 0; padding: 10px 12px; }
   .redesign .stat-pill strong { font-size: 1.2rem; }
-  /* короткие лёгкие ряды на телефоне: без маски (баг перерисовки в Safari),
-     компактные карточки, простая тень — слой влезает в GPU-текстуру */
+  /* телефоны: вместо CSS-анимации — нативный скролл-контейнер с JS-дрейфом
+     (CSS-marquee на реальном железе рендерится рывками); ряд можно листать пальцем */
   .redesign .reviews-marquee { -webkit-mask-image: none; mask-image: none; }
-  .redesign .review-card { flex-basis: 252px; padding: var(--sp-4); box-shadow: 0 3px 12px rgba(95, 102, 38, .12); }
+  .redesign .marquee-row,
+  .redesign .marquee-row--reverse {
+    animation: none; width: 100%; overflow-x: auto; will-change: auto;
+    scrollbar-width: none; -ms-overflow-style: none; -webkit-overflow-scrolling: touch;
+  }
+  .redesign .marquee-row::-webkit-scrollbar { display: none; }
+  .redesign .review-card { flex-basis: 252px; flex-shrink: 0; padding: var(--sp-4); box-shadow: 0 3px 12px rgba(95, 102, 38, .12); }
   .redesign .review-card p { -webkit-line-clamp: 4; }
   .redesign .experience-header .brand-mark-img { height: 38px; }
   .redesign .experience-header.is-stuck .brand-mark-img { height: 36px; }
