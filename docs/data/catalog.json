@@ -195,7 +195,7 @@
       "category": "Цветы однолетние",
       "categoryKey": "annuals",
       "price": 250,
-      "stock": 5,
+      "stock": 3,
       "status": "ok",
       "description": "🌱Рассада в объёме 0,2л\n🎁В подарок каждому покупателю рекомендации по уходу и посадке\nЭто потрясающие трехцветной окраской соцветия. И, как у всех вербен, изящная разрезная листва дает прекрасный фон для необычных цветов. Цветы среднего размера. Растение в высоту до 20-30 см, сильный энергичный рост, отличная устойчивость к жаре и заболеваниям.",
       "care": {},
@@ -416,8 +416,8 @@
       "category": "Гортензии",
       "categoryKey": "hydrangea",
       "price": 600,
-      "stock": 0,
-      "status": "out",
+      "stock": 12,
+      "status": "ok",
       "description": "🌱Собственное производство.\nStrawberry Blossom — удивительная гортензия, напоминающая нежную клубнику в сливках.\n«Клубничное цветение» — так переводится название этого сорта дословно. Пройти мимо такой гортензии сложно.\nВысота — 120 см. Ширина — 120 см.\nЦветы распускаются белыми и впоследствии розовеют. К концу лета они становятся насыщенного розового цвета. Они собраны в крупные, плотные соцветия конической формы.\nТакие соцветия достигают 35 см в длину.\nНасыщенность цветов зависит от кислотности почвы, а величина соцветий от качества весенней обрезки.\nЭтот сорт совершенно точно может стать украшением любого сада!",
       "care": {
         "height": "— 120 см",
@@ -794,8 +794,10 @@
       "care": {},
       "image": "/assets/products/p1309.jpg",
       "images": [
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2025/07/81d3f5cc-6223-4393-b28a-8fa175a72f62.jpeg",
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2025/07/img_0086-1152x1536.jpeg"
+        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2025/07/img_0980-1152x1536.jpeg",
+        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2025/07/img_0976-1152x1536.jpeg",
+        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2025/07/img_0977-1152x1536.jpeg",
+        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2025/07/81d3f5cc-6223-4393-b28a-8fa175a72f62.jpeg"
       ],
       "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/%d0%ba%d0%b0%d0%bb%d0%b8%d0%b1%d1%80%d0%b0%d1%85%d0%be%d0%b0-minifamous-oro-double-magenta/"
     },
@@ -811,7 +813,8 @@
       "care": {},
       "image": "/assets/products/p1762.jpg",
       "images": [
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2025/12/57ae3391-16c1-4e66-a253-81a4cdc19d76.jpeg"
+        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2025/12/img_1042-1152x1536.jpeg",
+        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2025/12/img_1043-1152x1536.jpeg"
       ],
       "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/4-%d0%ba%d0%b0%d0%bb%d0%b8%d0%b1%d1%80%d0%b0%d1%85%d0%be%d0%b0-minifamous-oro-double-white/"
     },
@@ -906,8 +909,8 @@
       "name": "Лапчатка кустарниковая «Ред Айс»",
       "category": "Без категории",
       "categoryKey": "other",
-      "price": 250,
-      "stock": 43,
+      "price": 350,
+      "stock": 42,
       "status": "ok",
       "description": "Сорт «RED ACE”. Густой кустарник с нежными стелющимися побегами, подушковидной формы.\nВысота 0,4-0,6 м, шириной до 1,2 м.\nМесто посадки: солнце",
       "care": {
@@ -916,8 +919,8 @@
       },
       "image": "/assets/products/p1514.jpg",
       "images": [
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2025/09/08304066-1b12-4d91-aaa2-395294125993.jpeg",
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2025/09/dea4ba4d-642e-4ff7-9aa5-644887e7ab5c.jpeg",
+        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2025/09/08304066-1b12-4d91-aaa2-395294125993-1.jpeg",
+        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2025/09/dea4ba4d-642e-4ff7-9aa5-644887e7ab5c-1.jpeg",
         "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2025/09/img_0323-1152x1536.jpeg"
       ],
       "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/%d0%bb%d0%b0%d0%bf%d1%87%d0%b0%d1%82%d0%ba%d0%b0-%d0%ba%d1%83%d1%81%d1%82%d0%b0%d1%80%d0%bd%d0%b8%d0%ba%d0%be%d0%b2%d0%b0%d1%8f-%d1%80%d0%b5%d0%b4-%d0%b0%d0%b9%d1%81/"
@@ -1135,8 +1138,8 @@
       "category": "Без категории",
       "categoryKey": "other",
       "price": 350,
-      "stock": 0,
-      "status": "out",
+      "stock": 30,
+      "status": "ok",
       "description": "🌱Собственное производство. Объём контейнера 0,5л. 2х летний саженец\nКомпактный невысокий кустарник с многочисленными жесткими и ребристыми побегами коричневого цвета.\nКрона шаровидная.\nВысота и ширина 0,7-0,9 м.\nЦветение начинается в конце мая и продолжается до конца июня на побегах текущего года.\nМесто: солнце/полутень\nЗимостойкость: зона 4",
       "care": {
         "height": "и ширина 0,7-0,9 м",
@@ -1179,7 +1182,7 @@
       "category": "Без категории",
       "categoryKey": "other",
       "price": 350,
-      "stock": 8,
+      "stock": 30,
       "status": "ok",
       "description": "Собственное производство\n🌱 Объём контейнера 0,5л\nРазмеры взрослого растения: Высота 0,6-0,8 м, ширина 0,9 м.\nЦветёт растение малиновыми или рубиново-красными крупными соцветиями, которые появляются в верхней части побегов, выросших в текущем году. Характеризуется длительным периодом цветения (VI — VIII).\nМесто посадки: Солнце/Полутень",
       "care": {
@@ -1190,8 +1193,9 @@
       "image": "/assets/products/p1618.jpg",
       "images": [
         "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2025/10/img_3159-1152x1536.jpeg",
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2025/10/img_0297-1152x1536.jpeg",
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2025/10/img_0298-1152x1536.jpeg"
+        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2025/10/img_1131-1152x1536.jpeg",
+        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2025/10/img_1133-1152x1536.jpeg",
+        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2025/10/img_1135-1152x1536.jpeg"
       ],
       "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/%d1%81%d0%bf%d0%b8%d1%80%d0%b5%d1%8f-%d1%8f%d0%bf%d0%be%d0%bd%d1%81%d0%ba%d0%b0%d1%8f-%d0%b4%d0%b0%d1%80%d1%82%d1%81-%d1%80%d0%b5%d0%b4/"
     },
