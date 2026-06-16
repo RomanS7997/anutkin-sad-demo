@@ -173,6 +173,26 @@
       "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/%d0%b1%d0%b5%d0%b3%d0%be%d0%bd%d0%b8%d1%8f-waterfalls-encanto-pink/"
     },
     {
+      "id": 1913,
+      "name": "Вербена Drums Blue",
+      "category": "Цветы однолетние",
+      "categoryKey": "annuals",
+      "price": 950,
+      "stock": 1,
+      "status": "low",
+      "description": "🌱Кашпо 3,3л\n🎁В подарок каждому покупателю рекомендации по уходу и посадке\nВербена Drums Blue – эффектный сорт с насыщенными синими соцветиями. Отличается обильным и продолжительным цветением, компактной формой куста и неприхотливостью в уходе. Идеально подходит для выращивания в контейнерах, балконных ящиках, садовых клумбах и рабатках. Растение светолюбиво, засухоустойчиво, прекрасно переносит жаркое лето.",
+      "care": {
+        "bloom": "м, компактной формой куста и неприхотливостью в уходе",
+        "light": "олюбиво, засухоустойчиво, прекрасно переносит жаркое лето"
+      },
+      "image": "/assets/products/p1913.jpg",
+      "images": [
+        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2026/03/img_1057-1152x1536.jpeg",
+        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2026/03/img_1056-1152x1536.jpeg"
+      ],
+      "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/%d0%b2%d0%b5%d1%80%d0%b1%d0%b5%d0%bd%d0%b0-drums-blue/"
+    },
+    {
       "id": 1911,
       "name": "Вербена DRUMS WHITE",
       "category": "Цветы однолетние",
@@ -245,30 +265,6 @@
         "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2024/12/Rp-Da3oIuoQ.jpg"
       ],
       "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/%d0%b3%d0%be%d1%80%d1%82%d0%b5%d0%bd%d0%b7%d0%b8%d1%8f-%d0%bb%d0%b0%d0%b9%d0%bc%d0%bb%d0%b0%d0%b9%d1%82/"
-    },
-    {
-      "id": 698,
-      "name": "Гортензия метельчатая «Литтл Фреско»",
-      "category": "Гортензии",
-      "categoryKey": "hydrangea",
-      "price": 600,
-      "stock": 0,
-      "status": "out",
-      "description": "🌱Собственное производство. Объём контейнера 0,5л\nВысота взрослого растения: 70 см.\nЦвет соцветий: Белый, лаймовый, розовый.\nПериод цветения: июль-сентябрь.\nМесто посадки: Солнце.\nПочва: Кислая, влажная.\nПолив: Регулярный.\nЗона морозостойкости: 4.\nПрименение: живые изгороди, групповые посадки, миксбордеры в сочетании с травами, многолетними растениями и хвойными, кашпо, контейнеры",
-      "care": {
-        "height": "взрослого растения: 70 см",
-        "bloom": "июль-сентябрь",
-        "light": "Солнце",
-        "hardiness": "4"
-      },
-      "image": "/assets/products/p698.jpg",
-      "images": [
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2024/12/hJ6-Ciwj0UXFflcPawdbM6gECQmIYydnUGxtvf04gDdHxW3gmSig2TImvmB7QKaFSmm9PZ8DK-JNgT7oJMoGNnNi.jpg",
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2024/12/aRY1sMpRYGnt3LxaJHZkSXbhyh77JrMQTRHDk5KTrTiLGSKAZ0BWkjNSGyQAplJfoHMz157YMpW0-APdO5O0KiBX.jpg",
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2024/12/b5c4e62c-0823-4b44-bbea-438f0d0f4aee.jpeg",
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2024/12/7d45c507-9976-4287-bad6-618a29f7d72d.jpeg"
-      ],
-      "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/%d0%b3%d0%be%d1%80%d1%82%d0%b5%d0%bd%d0%b7%d0%b8%d1%8f-%d0%bb%d0%b8%d1%82%d1%82%d0%bb-%d1%84%d1%80%d0%b5%d1%81%d0%ba%d0%be/"
     },
     {
       "id": 1010,
@@ -369,8 +365,8 @@
       "category": "Гортензии",
       "categoryKey": "hydrangea",
       "price": 850,
-      "stock": 0,
-      "status": "out",
+      "stock": 5,
+      "status": "ok",
       "description": "🌱Собственное производство.\nВысота взрослого растения: 120 см.\nЦвет соцветий: Белый, розовый.\nПериод цветения: июль-сентябрь.\nМесто посадки: Солнце/Полутень.\nПочва: Плодородная, дренированная, кислая.\nПолив: Обильный.\nЗона морозостойкости: 4.",
       "care": {
         "height": "взрослого растения: 120 см",
@@ -559,7 +555,7 @@
       "price": 250,
       "stock": 12,
       "status": "ok",
-      "description": "🌱Рассада в объёме 0,2л\n🎁В подарок каждому покупателю рекомендации по уходу и посадке\nПопулярная вегетативная серия калибрахоа. В высоту достигает 25-35 см.",
+      "description": "🎁В подарок каждому покупателю рекомендации по уходу и посадке\nПопулярная вегетативная серия калибрахоа. В высоту достигает 25-35 см.",
       "care": {},
       "image": "/assets/products/p1779.png",
       "images": [
@@ -588,13 +584,29 @@
       "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/%d0%ba%d0%b0%d0%bb%d0%b8%d0%b1%d1%80%d0%b0%d1%85%d0%be%d0%b0-aloha-double-apricot/"
     },
     {
+      "id": 1289,
+      "name": "КАЛИБРАХОА ALOHA DOUBLE LAVENDER",
+      "category": "Цветы однолетние",
+      "categoryKey": "annuals",
+      "price": 250,
+      "stock": 4,
+      "status": "ok",
+      "description": "🌱Рассада в объёме 0,5л\n🎁В подарок каждому покупателю рекомендации по уходу и посадке\nПопулярная вегетативная серия калибрахоа. В высоту достигает 25-35 см.",
+      "care": {},
+      "image": "/assets/products/p1289.jpg",
+      "images": [
+        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2025/07/91dc9b5c-75b0-40d6-b98a-a143c74ab65a.jpeg"
+      ],
+      "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/%d0%ba%d0%b0%d0%bb%d0%b8%d0%b1%d1%80%d0%b0%d1%85%d0%be%d0%b0-aloha-double-lavender/"
+    },
+    {
       "id": 1295,
       "name": "КАЛИБРАХОА ALOHA DOUBLE PINK BLUSH",
       "category": "Цветы однолетние",
       "categoryKey": "annuals",
       "price": 1200,
-      "stock": 1,
-      "status": "low",
+      "stock": 0,
+      "status": "out",
       "description": "🌱Кашпо 4л\n🎁В подарок каждому покупателю рекомендации по уходу и посадке\nПопулярная вегетативная серия калибрахоа. В высоту достигает 25-35 см.",
       "care": {},
       "image": "/assets/products/p1295.jpg",
@@ -631,11 +643,12 @@
       "price": 250,
       "stock": 12,
       "status": "ok",
-      "description": "🌱Рассада в объёме 0,2л\n🎁В подарок каждому покупателю рекомендации по уходу и посадке",
+      "description": "🌱Рассада в объёме 0,5л\n🎁В подарок каждому покупателю рекомендации по уходу и посадке",
       "care": {},
       "image": "/assets/products/p1901.jpg",
       "images": [
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2026/02/img_7168-1024x1014.jpeg"
+        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2026/02/img_7168-1024x1014.jpeg",
+        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2026/02/img_1197-1152x1536.jpeg"
       ],
       "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/%d0%ba%d0%b0%d0%bb%d0%b8%d0%b1%d1%80%d0%b0%d1%85%d0%be%d0%b0-aloha-double-sky-blue/"
     },
@@ -645,9 +658,9 @@
       "category": "Цветы однолетние",
       "categoryKey": "annuals",
       "price": 250,
-      "stock": 1,
-      "status": "low",
-      "description": "🌱Рассада в объёме 0,5л\n🎁В подарок каждому покупателю рекомендации по уходу и посадке",
+      "stock": 12,
+      "status": "ok",
+      "description": "🌱Кашпо 4л\n🎁В подарок каждому покупателю рекомендации по уходу и посадке",
       "care": {},
       "image": "/assets/products/p1894.png",
       "images": [
@@ -734,11 +747,12 @@
       "price": 250,
       "stock": 4,
       "status": "ok",
-      "description": "🌱Рассада в объёме 0,2л\n🎁В подарок каждому покупателю рекомендации по уходу и посадке\nПопулярная вегетативная серия калибрахоа. В высоту достигает 25-35 см.",
+      "description": "🌱Рассада в объёме 0,5л\n🎁В подарок каждому покупателю рекомендации по уходу и посадке\nПопулярная вегетативная серия калибрахоа. В высоту достигает 25-35 см.",
       "care": {},
       "image": "/assets/products/p1305.jpg",
       "images": [
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2025/07/11634326-105f-42b5-8067-699816551764.jpeg"
+        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2025/07/11634326-105f-42b5-8067-699816551764.jpeg",
+        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2025/07/img_1200-1152x1536.jpeg"
       ],
       "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/%d0%ba%d0%b0%d0%bb%d0%b8%d0%b1%d1%80%d0%b0%d1%85%d0%be%d0%b0-minifamous-neo-double-purple-ice/"
     },
@@ -758,7 +772,8 @@
       },
       "image": "/assets/products/p1931.jpg",
       "images": [
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2026/03/img_0223-1152x1536.jpeg"
+        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2026/03/img_0223-1152x1536.jpeg",
+        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2026/03/img_0940-1152x1536.jpeg"
       ],
       "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/%d0%ba%d0%b0%d0%bb%d0%b8%d0%b1%d1%80%d0%b0%d1%85%d0%be%d0%b0-minifamous-oro-double-blue/"
     },
@@ -770,15 +785,14 @@
       "price": 250,
       "stock": 12,
       "status": "ok",
-      "description": "🌱Рассада в объёме 0,5л\n🎁В подарок каждому покупателю рекомендации по уходу и посадке\nКалиброхоа серии MiniFamous – куст сильно ветвящийся, плети достигают 50-60 см. Цветение очень обильное. Цветки некрупные, диаметром 3-5 см. Обладают ранним, обильным и непрерывным цветением даже в условиях недостатка освещения. Однородные аккуратные растения, способны к самоочищению.",
+      "description": "🎁В подарок каждому покупателю рекомендации по уходу и посадке\nКалиброхоа серии MiniFamous – куст сильно ветвящийся, плети достигают 50-60 см. Цветение очень обильное. Цветки некрупные, диаметром 3-5 см. Обладают ранним, обильным и непрерывным цветением даже в условиях недостатка освещения. Однородные аккуратные растения, способны к самоочищению.",
       "care": {
         "bloom": "очень обильное",
         "light": "Однородные аккуратные растения, способны к самоочищению"
       },
       "image": "/assets/products/p1929.jpg",
       "images": [
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2026/03/img_0230-1152x1536.jpeg",
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2026/03/img_0108-1152x1536.jpeg"
+        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2026/03/img_0230-1152x1536.jpeg"
       ],
       "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/%d0%ba%d0%b0%d0%bb%d0%b8%d0%b1%d1%80%d0%b0%d1%85%d0%be%d0%b0-minifamous-oro-double-light/"
     },
@@ -988,13 +1002,32 @@
       "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/%d1%80%d0%b0%d1%81%d0%bf%d0%b1%d0%b5%d1%80%d1%80%d0%b8-%d0%bf%d0%b8%d0%bd%d0%ba-%d0%bc%d0%b5%d1%82%d0%b5%d0%bb%d1%8c%d1%87%d0%b0%d1%82%d0%b0%d1%8f-%d0%b3%d0%be%d1%80%d1%82%d0%b5%d0%bd%d0%b7%d0%b8/"
     },
     {
+      "id": 1705,
+      "name": "НЕМЕЗИЯ MENOR DUAL BORDEAUX",
+      "category": "Цветы однолетние",
+      "categoryKey": "annuals",
+      "price": 750,
+      "stock": 2,
+      "status": "low",
+      "description": "🌸Кашпо 3,3л\nСорт переносит первые осенние заморозки.\nВысота растениия 20-25 см.\nТип каскадный.",
+      "care": {
+        "height": "растениия 20-25 см"
+      },
+      "image": "/assets/products/p1705.jpg",
+      "images": [
+        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2025/11/img_1156-1152x1536.jpeg",
+        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2025/11/img_1159-1152x1536.jpeg"
+      ],
+      "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/%d0%bd%d0%b5%d0%bc%d0%b5%d0%b7%d0%b8%d1%8f-menor-dual-bordeaux/"
+    },
+    {
       "id": 1924,
       "name": "Остеоспермум 3D STEEL BLUE",
       "category": "Цветы однолетние",
       "categoryKey": "annuals",
       "price": 250,
-      "stock": 1,
-      "status": "low",
+      "stock": 0,
+      "status": "out",
       "description": "В объёме 0,5л\nКусты прямостоячие, ветвистые. Цветки до 6 см в диаметре, есть белые, розовые, желтые, пурпурные сорта, иногда с контрастным диском. Цветут с конца мая до сентября. Высота 25 – 35 см, ширина 35 – 50 см.",
       "care": {
         "height": "25 – 35 см"
@@ -1182,7 +1215,7 @@
       "category": "Без категории",
       "categoryKey": "other",
       "price": 350,
-      "stock": 30,
+      "stock": 27,
       "status": "ok",
       "description": "Собственное производство\n🌱 Объём контейнера 0,5л\nРазмеры взрослого растения: Высота 0,6-0,8 м, ширина 0,9 м.\nЦветёт растение малиновыми или рубиново-красными крупными соцветиями, которые появляются в верхней части побегов, выросших в текущем году. Характеризуется длительным периодом цветения (VI — VIII).\nМесто посадки: Солнце/Полутень",
       "care": {
@@ -1286,8 +1319,8 @@
       "category": "Цветы однолетние",
       "categoryKey": "annuals",
       "price": 450,
-      "stock": 1,
-      "status": "low",
+      "stock": 0,
+      "status": "out",
       "description": "Условия выращивания\n• Освещение: предпочитает яркий рассеянный свет, хорошо растет на солнечных участках\n• Полив: регулярный, умеренный, без переувлажнения и пересушивания\n• Грунт: рыхлый, питательный, с хорошим дренажом, нейтральной или слабокислой реакции\n• Температурный режим: теплолюбива в период активного роста, холодостойка осенью\nОбъём контейнера: 1л",
       "care": {
         "light": "предпочитает яркий рассеянный свет, хорошо растет на солнечн"
@@ -1326,8 +1359,8 @@
       "category": "Цветы однолетние",
       "categoryKey": "annuals",
       "price": 450,
-      "stock": 2,
-      "status": "low",
+      "stock": 0,
+      "status": "out",
       "description": "Условия выращивания\n• Освещение: солнечное местоположение, допустима легкая полутень\n• Почва: плодородная, хорошо дренированная, нейтральная или слабокислая\n• Полив: регулярный, умеренный, без переувлажнения\n• Зимостойкость: требует укрытия или выкапывания на зиму в большинстве регионов России\n• Место посадки: контейнеры, балконные ящики, открытый грунт\nОбъём контейнера: 1л",
       "care": {
         "light": "солнечное местоположение, допустима легкая полутень",
@@ -1404,8 +1437,8 @@
       "category": "Цветы однолетние",
       "categoryKey": "annuals",
       "price": 450,
-      "stock": 3,
-      "status": "ok",
+      "stock": 2,
+      "status": "low",
       "description": "Условия выращивания\n• Освещение: солнечное место, допустима легкая полутень\n• Почва: плодородная, рыхлая, хорошо дренированная\n• Полив: регулярный, умеренный, без переувлажнения\n• Температурный режим: теплолюбива, требует защиты от заморозков в период активной вегетации\n• Выращивание: в открытом грунте, контейнерах, горшках\nОбъём контейнера: 1л",
       "care": {
         "light": "солнечное место, допустима легкая полутень"
@@ -1458,42 +1491,6 @@
         "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2026/05/img_0075-1152x1536.jpeg"
       ],
       "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/%d1%85%d1%80%d0%b8%d0%b7%d0%b0%d0%bd%d1%82%d0%b5%d0%bc%d0%b0-%d0%bc%d1%83%d0%bb%d1%8c%d1%82%d0%b8%d1%84%d0%bb%d0%be%d1%80%d0%b0-sunbeam-lucky-purple/"
-    },
-    {
-      "id": 2253,
-      "name": "Шалфей дубравный New Dimension Blue",
-      "category": "Цветы многолетние",
-      "categoryKey": "perennials",
-      "price": 450,
-      "stock": 12,
-      "status": "ok",
-      "description": "Ширина: 30-40 см\nПериод цветения: июнь-июль, после обрезки зацветает повторно август-сентябрь\nЦветение: повторное после обрезки\nСоцветие: сине-фиолетовое\nЛист: узкий, зелёный\nФорма куста: компактная, округлая\nПолив: умеренный\nПочва: рыхлая, достаточно сухая, не любит переувлажнения\nМорозостойкость: 4 зона (-28/-34⁰C)\nПрименение: одиночные и групповые посадки, миксбордеры, рокарии, красиво сочетается с розами. Сады в природном стиле\nУпаковка корневой системы: 2л",
-      "care": {
-        "bloom": "июнь-июль, после обрезки зацветает повторно август-сентябрь"
-      },
-      "image": "/assets/products/p2253.jpg",
-      "images": [
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2026/05/img_0317.jpeg"
-      ],
-      "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/%d1%88%d0%b0%d0%bb%d1%84%d0%b5%d0%b9-%d0%b4%d1%83%d0%b1%d1%80%d0%b0%d0%b2%d0%bd%d1%8b%d0%b9-new-dimension-blue/"
-    },
-    {
-      "id": 2249,
-      "name": "Шалфей дубравный New Dimension Rose",
-      "category": "Цветы многолетние",
-      "categoryKey": "perennials",
-      "price": 450,
-      "stock": 12,
-      "status": "ok",
-      "description": "Ширина: 30-40 см\nПериод цветения: июнь-июль, после обрезки зацветает повторно август-сентябрь\nЦветение: повторное после обрезки\nСоцветие: розовое\nЛист: узкий, зелёный\nФорма куста: компактная, округлая\nПолив: умеренный\nПочва: рыхлая, достаточно сухая, не любит переувлажнения\nМорозостойкость: 4 зона (-28/-34⁰C)\nПрименение: одиночные и групповые посадки, миксбордеры, рокарии, красиво сочетается с розами. Сады в природном стиле\nУпаковка корневой системы: 2л",
-      "care": {
-        "bloom": "июнь-июль, после обрезки зацветает повторно август-сентябрь"
-      },
-      "image": "/assets/products/p2249.jpg",
-      "images": [
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2026/05/img_0318.jpeg"
-      ],
-      "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/%d1%88%d0%b0%d0%bb%d1%84%d0%b5%d0%b9-new-dimension-rose/"
     },
     {
       "id": 2286,
@@ -1561,7 +1558,7 @@
       "id": 23,
       "name": "Гортензии",
       "key": "hydrangea",
-      "count": 15,
+      "count": 14,
       "url": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product-category/gortenzii/"
     },
     {
@@ -1575,14 +1572,14 @@
       "id": 21,
       "name": "Цветы многолетние",
       "key": "perennials",
-      "count": 9,
+      "count": 7,
       "url": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product-category/mnogoletnie/"
     },
     {
       "id": 35,
       "name": "Цветы однолетние",
       "key": "annuals",
-      "count": 39,
+      "count": 42,
       "url": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product-category/%d1%86%d0%b2%d0%b5%d1%82%d1%8b-%d0%be%d0%b4%d0%bd%d0%be%d0%bb%d0%b5%d1%82%d0%bd%d0%b8%d0%b5/"
     }
   ],
@@ -1643,7 +1640,7 @@
     "/assets/products/p539.jpg",
     "/assets/products/p1082.jpg",
     "/assets/products/p2101.png",
-    "/assets/products/p1911.png",
-    "/assets/products/p1655.jpg"
+    "/assets/products/p1913.jpg",
+    "/assets/products/p1911.png"
   ]
 }
