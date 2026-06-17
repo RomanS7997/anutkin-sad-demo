@@ -83,8 +83,8 @@
       "category": "Цветы однолетние",
       "categoryKey": "annuals",
       "price": 600,
-      "stock": 3,
-      "status": "ok",
+      "stock": 2,
+      "status": "low",
       "description": "В подарок получаете рекомендации по уходу за бегонией.\nCерия Belleconia одна из новейших серий ампельной бегонии с крупными махровыми цветами.\nЭти растения отличаются высокой устойчивостью к болезням и вредителям.\nЦветут обильно, образуя длинные, свисающие побеги.\nВысота куста 20-25см\nФорма куста: ампельный\nОбильное цветение\nТень или полутень",
       "care": {
         "height": "куста 20-25см",
@@ -376,7 +376,8 @@
       },
       "image": "/assets/products/p733.jpg",
       "images": [
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2024/12/q-dUL7PS9005YFTWGFRXw81Ho0TftdeNUgw2ePRq8zd3Ip492J0vpbsh9SbRs2Utk_pKB98zFZ_t3WSRatq12KUE.jpg"
+        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2024/12/q-dUL7PS9005YFTWGFRXw81Ho0TftdeNUgw2ePRq8zd3Ip492J0vpbsh9SbRs2Utk_pKB98zFZ_t3WSRatq12KUE.jpg",
+        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2024/12/img_1253-1152x1536.jpeg"
       ],
       "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/%d0%b3%d0%be%d1%80%d1%82%d0%b5%d0%bd%d0%b7%d0%b8%d1%8f-%d1%81%d0%b0%d0%bd%d0%b4%d0%b5%d0%b9-%d1%84%d1%80%d0%b0%d0%b9%d0%b7/"
     },
@@ -1061,6 +1062,28 @@
       "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/%d0%be%d1%81%d1%82%d0%b5%d0%be%d1%81%d0%bf%d0%b5%d1%80%d0%bc%d1%83%d0%bc-margarita-double-white/"
     },
     {
+      "id": 762,
+      "name": "Очиток ложный Бронз Карпет",
+      "category": "Цветы многолетние",
+      "categoryKey": "perennials",
+      "price": 300,
+      "stock": 9,
+      "status": "ok",
+      "description": "🌱Собственное производство.\nКонтейнер 0,5л\nПериод цветения: Июль-август.\nОкраска цветка: Розовый.\nВысота: 15 см.\nЛистья бронзовые, мясистые, по краю зубчатые.\nЦветки мелкие, розовые с красноватым оттенком, собраны в зонтиковидные щитки.\nТребования к освещенности: Солнце.\nЗимостойкость: Зона 4.\nНорма посадки: 9-11 шт/кв.м.\nХарактеристика почвы: Любые.",
+      "care": {
+        "height": "15 см",
+        "bloom": "Июль-август",
+        "hardiness": "Зона 4"
+      },
+      "image": "/assets/products/p762.jpg",
+      "images": [
+        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2024/12/jfnRs1iADqQ0Z1ljThA9rwQU_BZejiXzZFHMyXhNh2MdrmaMR-WTXj6qo7G3mvtsv_aHzb9uj4YnFotraMVAPeU3.jpg",
+        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2024/12/img_1177-1152x1536.jpeg",
+        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2024/12/img_1176-1152x1536.jpeg"
+      ],
+      "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/%d0%be%d1%87%d0%b8%d1%82%d0%be%d0%ba-%d0%bb%d0%be%d0%b6%d0%bd%d1%8b%d0%b9-%d0%b1%d1%80%d0%be%d0%bd%d0%b7-%d0%ba%d0%b0%d1%80%d0%bf%d0%b5%d1%82/"
+    },
+    {
       "id": 653,
       "name": "Пузыреплодник калинолистный «Diable D’Or”",
       "category": "Без категории",
@@ -1572,7 +1595,7 @@
       "id": 21,
       "name": "Цветы многолетние",
       "key": "perennials",
-      "count": 7,
+      "count": 8,
       "url": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product-category/mnogoletnie/"
     },
     {
