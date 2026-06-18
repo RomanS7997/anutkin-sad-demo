@@ -1,9 +1,16 @@
 {
   "source": "avito",
   "rating": 5,
-  "reviewsCount": 123,
+  "reviewsCount": 124,
   "profileUrl": "https://www.avito.ru/brands/319c309577f67cb4522b1735089761fa/all/rasteniya?sellerId=047d5b824fe33abb9b2c479534b2262c",
   "reviews": [
+    {
+      "id": 448943522,
+      "author": "Алла",
+      "score": 5,
+      "date": "2026-06-14T13:12:43.000Z",
+      "text": "Всё прошло на высшем уровне!!! Цветок отличный! Очень довольна приобретением! Мои наилучшие пожелания и рекомендации!!!"
+    },
     {
       "id": 448101858,
       "author": "Александра",
