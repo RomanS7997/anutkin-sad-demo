@@ -1,9 +1,16 @@
 {
   "source": "avito",
   "rating": 5,
-  "reviewsCount": 126,
+  "reviewsCount": 127,
   "profileUrl": "https://www.avito.ru/brands/319c309577f67cb4522b1735089761fa/all/rasteniya?sellerId=047d5b824fe33abb9b2c479534b2262c",
   "reviews": [
+    {
+      "id": 451467970,
+      "author": "Ольга",
+      "score": 5,
+      "date": "2026-06-22T05:49:31.000Z",
+      "text": "Прекрасный продавец, замечательная девушка. Как в общении, так и в организации всего процесса : от цветов и покупки до информации по уходу."
+    },
     {
       "id": 450529026,
       "author": "Любовь",
