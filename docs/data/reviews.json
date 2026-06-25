@@ -1,9 +1,16 @@
 {
   "source": "avito",
   "rating": 5,
-  "reviewsCount": 130,
+  "reviewsCount": 131,
   "profileUrl": "https://www.avito.ru/brands/319c309577f67cb4522b1735089761fa/all/rasteniya?sellerId=047d5b824fe33abb9b2c479534b2262c",
   "reviews": [
+    {
+      "id": 452210242,
+      "author": "наталья",
+      "score": 5,
+      "date": "2026-06-24T08:15:31.000Z",
+      "text": "Все отлично, быстро договорились о времени и месте и я забрала два чудесных кустика, спасибо 👍"
+    },
     {
       "id": 451890530,
       "author": "Ксения",
