@@ -1,9 +1,16 @@
 {
   "source": "avito",
   "rating": 5,
-  "reviewsCount": 132,
+  "reviewsCount": 133,
   "profileUrl": "https://www.avito.ru/brands/319c309577f67cb4522b1735089761fa/all/rasteniya?sellerId=047d5b824fe33abb9b2c479534b2262c",
   "reviews": [
+    {
+      "id": 454457394,
+      "author": "Евгения",
+      "score": 5,
+      "date": "2026-07-01T06:41:51.000Z",
+      "text": "Заказывала спирея японские - приехали очень быстро, хорошо упакованы. Спасибо большое."
+    },
     {
       "id": 452899106,
       "author": "Алиса",
