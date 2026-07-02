@@ -1,9 +1,16 @@
 {
   "source": "avito",
   "rating": 5,
-  "reviewsCount": 133,
+  "reviewsCount": 134,
   "profileUrl": "https://www.avito.ru/brands/319c309577f67cb4522b1735089761fa/all/rasteniya?sellerId=047d5b824fe33abb9b2c479534b2262c",
   "reviews": [
+    {
+      "id": 454753490,
+      "author": "elizarowa",
+      "score": 5,
+      "date": "2026-07-02T02:59:31.000Z",
+      "text": "Растения пришли в отличном состоянии, спасибо вам за вашу красоту🌹"
+    },
     {
       "id": 454457394,
       "author": "Евгения",
