@@ -25,8 +25,8 @@
       "category": "Цветы многолетние",
       "categoryKey": "perennials",
       "price": 300,
-      "stock": 12,
-      "status": "ok",
+      "stock": 2,
+      "status": "low",
       "description": "Ширина: 30 см\nПериод цветения: май-июнь, после обрезки зацветает повторно\nЦветение: повторное\nЦветок: шаровидный, белый\nЛист: зелёный, узкий, линейной формы, собраны в прикорневую розетку, вечнозеленый\nФорма куста: компактная, подушковидная\nПолив: умеренный\nПочва: в меру удобренная, рыхлая, легкая, каменистая, дренированная\nНорма посадки: 11 шт/кв.м.\nМорозостойкость: 4 зона (-28/-34⁰C)\nПрименение: в каменистых горках, бордюрах, в миксбордерах, в контейнере\nУпаковка корневой системы: 0,5л",
       "care": {
         "bloom": "май-июнь, после обрезки зацветает повторно"
@@ -70,7 +70,8 @@
       "image": "/assets/products/p1080.jpg",
       "images": [
         "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2025/04/img_2804-1152x1536.jpeg",
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2025/04/20fa5e93-4e0f-471f-9bd6-927b78c799d2.jpeg"
+        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2025/04/20fa5e93-4e0f-471f-9bd6-927b78c799d2.jpeg",
+        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2025/04/img_1436-1152x1536.jpeg"
       ],
       "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/%d0%b1%d0%b5%d0%b3%d0%be%d0%bd%d0%b8%d1%8f-belleconia-hot-orange/"
     },
@@ -109,7 +110,8 @@
       },
       "image": "/assets/products/p1082.jpg",
       "images": [
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2025/04/xDQ3ubsgqu4-1152x1536.jpg"
+        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2025/04/xDQ3ubsgqu4-1152x1536.jpg",
+        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2025/04/img_1692-1152x1536.jpeg"
       ],
       "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/%d0%b1%d0%b5%d0%b3%d0%be%d0%bd%d0%b8%d1%8f-belleconia-salmon/"
     },
@@ -119,8 +121,8 @@
       "category": "Цветы однолетние",
       "categoryKey": "annuals",
       "price": 600,
-      "stock": 0,
-      "status": "out",
+      "stock": 2,
+      "status": "low",
       "description": "Бегония «Solenia» — великолепная сортосерия кустовой (мультицветковой) гибридной бегонии. Характерзуется кустовидной формой, мощными стеблями и крупными пышно-махровыми цветками. Мощные, но компактные кусты, сплошь покрытые множеством ярких крупных цветков. При правильном уходе образовывает огромный цветущий шар, приковывающий внимание своей красотой.Непревзойденная устойчивость к неблагоприятным погодным воздействиям и к ряду заболеваний и вредителей (например, к мучнистой росе). Цветение обильное, продолжительное, до заморозков.\nВысота куста: 20-25см.\nФорма куста: ампельный.",
       "care": {
         "height": "куста: 20-25см",
@@ -128,7 +130,8 @@
       },
       "image": "/assets/products/p1571.jpg",
       "images": [
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2025/09/img_2199-1152x1536.jpeg"
+        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2025/09/img_2199-1152x1536.jpeg",
+        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2025/09/img_1695-1152x1536.jpeg"
       ],
       "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/%d0%b1%d0%b5%d0%b3%d0%be%d0%bd%d0%b8%d1%8f-solenia-chocolate-orange/"
     },
@@ -185,7 +188,8 @@
       "care": {},
       "image": "/assets/products/p2101.png",
       "images": [
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2026/05/img_9568.png"
+        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2026/05/img_9568.png",
+        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2026/05/img_1693-1152x1536.jpeg"
       ],
       "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/%d0%b1%d0%b5%d0%b3%d0%be%d0%bd%d0%b8%d1%8f-waterfall-dreams-angel-soft-pink/"
     },
@@ -208,6 +212,26 @@
         "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2025/04/img_9339-1152x1536.jpeg"
       ],
       "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/%d0%b1%d0%b5%d0%b3%d0%be%d0%bd%d0%b8%d1%8f-waterfalls-encanto-pink/"
+    },
+    {
+      "id": 1506,
+      "name": "БЕГОНИЯ WATERFALLS INCANTO ORANGE",
+      "category": "Без категории",
+      "categoryKey": "other",
+      "price": 600,
+      "stock": 3,
+      "status": "ok",
+      "description": "🌱Рассада в объёме 0,5л\nВ подарок получаете рекомендации по уходу за бегонией.\nВысота куста: 20-25см.\nФорма куста: полуампельный.",
+      "care": {
+        "height": "куста: 20-25см"
+      },
+      "image": "/assets/products/p1506.jpg",
+      "images": [
+        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2025/09/img_2118-1152x1536.jpeg",
+        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2025/09/57fac0f9-f89c-4e0c-a8fe-d1b346a4fdd3.jpeg",
+        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2025/09/img_1694-1152x1536.jpeg"
+      ],
+      "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/%d0%b1%d0%b5%d0%b3%d0%be%d0%bd%d0%b8%d1%8f-waterfalls-incanto-orange/"
     },
     {
       "id": 1913,
@@ -235,14 +259,14 @@
       "category": "Цветы однолетние",
       "categoryKey": "annuals",
       "price": 250,
-      "stock": 0,
-      "status": "out",
-      "description": "🌱Рассада в объёме 1л\n🎁В подарок каждому покупателю рекомендации по уходу и посадке",
+      "stock": 5,
+      "status": "ok",
+      "description": "🌱Рассада в объёме 0,5л\n🎁В подарок каждому покупателю рекомендации по уходу и посадке",
       "care": {},
       "image": "/assets/products/p1911.png",
       "images": [
         "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2026/03/img_7642.png",
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2026/03/img_8693-1152x1536.jpeg"
+        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2026/03/img_0344-1152x1536.jpeg"
       ],
       "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/%d0%b2%d0%b5%d1%80%d0%b1%d0%b5%d0%bd%d0%b0-drums-white/"
     },
@@ -269,14 +293,16 @@
       "category": "Цветы однолетние",
       "categoryKey": "annuals",
       "price": 350,
-      "stock": 0,
-      "status": "out",
+      "stock": 3,
+      "status": "ok",
       "description": "🌱 Рассада в объёме 1л\nРекомендуемый объём грунта 3-4 л. на 1 растение.\nХорошо смотрится в композиции\nОтличное текстурное растение для цветочных композиций в контейнерах на открытом солнце. Серебристая, густая зелень гелихризума создает непревзойденный пейзажный акцент в смешанных посадках. Чем больше солнечного света, тем более серебристыми будут его бархатистые листья. При недостатке света листья теряют серебристый оттенок. не нуждается в обрезке и прищипывании побегов, так как образует аккуратную куртинку, медленно нарастающую все лето вплоть до заморозков. Взрослое растение достигает 15-20 см. в высоту, в ширину разрастается на 40-60 см.",
       "care": {
         "light": "а, тем более серебристыми будут его бархатистые листья"
       },
       "image": "/assets/products/p1674.jpg",
       "images": [
+        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2025/10/img_1455.jpeg",
+        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2025/10/img_1595-1152x1536.jpeg",
         "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2025/10/img_0412-1152x1536.jpeg"
       ],
       "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/%d0%b3%d0%b5%d0%bb%d0%b8%d1%85%d1%80%d0%b8%d0%b7%d1%83%d0%bc-silver/"
@@ -555,8 +581,8 @@
       "category": "Без категории",
       "categoryKey": "other",
       "price": 150,
-      "stock": 12,
-      "status": "ok",
+      "stock": 0,
+      "status": "out",
       "description": "",
       "care": {},
       "image": "/assets/products/p2200.jpg",
@@ -1087,7 +1113,7 @@
       "category": "Цветы многолетние",
       "categoryKey": "perennials",
       "price": 300,
-      "stock": 9,
+      "stock": 6,
       "status": "ok",
       "description": "🌱Собственное производство.\nКонтейнер 0,5л\nПериод цветения: Июль-август.\nОкраска цветка: Розовый.\nВысота: 15 см.\nЛистья бронзовые, мясистые, по краю зубчатые.\nЦветки мелкие, розовые с красноватым оттенком, собраны в зонтиковидные щитки.\nТребования к освещенности: Солнце.\nЗимостойкость: Зона 4.\nНорма посадки: 9-11 шт/кв.м.\nХарактеристика почвы: Любые.",
       "care": {
@@ -1132,8 +1158,8 @@
       "category": "Без категории",
       "categoryKey": "other",
       "price": 350,
-      "stock": 23,
-      "status": "ok",
+      "stock": 0,
+      "status": "out",
       "description": "🌱Собственное производство.\nКомпактный сорт с кроной вееровидной формы.\nПобеги жесткие, прямые, весной почти кораллового цвета, переходящего в ярко-вишневые тона к середине лета.\nВысота и ширина до 1,5м.\nСолнце/полутень.\nМорозостойкий.\nУстойчив к вредителям и болезням.\nХорошо отзывается на подкормки и поливы в засушливые периоды.",
       "care": {
         "height": "и ширина до 1,5м"
@@ -1459,7 +1485,7 @@
       "category": "Цветы однолетние",
       "categoryKey": "annuals",
       "price": 450,
-      "stock": 6,
+      "stock": 5,
       "status": "ok",
       "description": "Хризантема мультифлора BRANSOUND MAGENTA- Средне-ранний низкорослый сорт очень темного пурпурного цвета, зацветающий с конца августа, с цветками диаметром 4 см. Начало цветения: вторая половина августа. Куст компактный, шаровидный, высотой до 40-50 см.Срок цветения 36 неделя. Махровый, самостоятельно приобретающий полусферическую форму, благодаря генетике и большому количеству соцветий. Для поддержания декоративности и обильности цветения растениям необходим открытый солнечный участок с полноценным освещением в течение всего дня.\nОбъём контейнера: 1л",
       "care": {
@@ -1698,7 +1724,7 @@
       "id": 17,
       "name": "Кустарники",
       "key": "shrubs",
-      "count": 17,
+      "count": 18,
       "url": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product-category/kustarniki/"
     },
     {
@@ -1771,9 +1797,9 @@
     "/assets/products/p2236.png",
     "/assets/products/p1080.jpg",
     "/assets/products/p1082.jpg",
+    "/assets/products/p1571.jpg",
     "/assets/products/p1646.jpg",
     "/assets/products/p2101.png",
-    "/assets/products/p711.jpg",
-    "/assets/products/p726.jpg"
+    "/assets/products/p1506.jpg"
   ]
 }
