@@ -1,9 +1,16 @@
 {
   "source": "avito",
   "rating": 5,
-  "reviewsCount": 137,
+  "reviewsCount": 138,
   "profileUrl": "https://www.avito.ru/brands/319c309577f67cb4522b1735089761fa/all/rasteniya?sellerId=047d5b824fe33abb9b2c479534b2262c",
   "reviews": [
+    {
+      "id": 456092866,
+      "author": "Татьяна",
+      "score": 5,
+      "date": "2026-07-06T12:15:32.000Z",
+      "text": "Растения отличного качества 🔥, рекомендую продавца 👍💯"
+    },
     {
       "id": 455273858,
       "author": "Виктория Чалая",
