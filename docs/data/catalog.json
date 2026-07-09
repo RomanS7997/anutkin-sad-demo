@@ -38,6 +38,25 @@
       "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/%d0%b0%d1%80%d0%bc%d0%b5%d1%80%d0%b8%d1%8f-morning-star-white/"
     },
     {
+      "id": 2454,
+      "name": "Бадан толстолистный Shoeshine Appleblossom",
+      "category": "Цветы многолетние",
+      "categoryKey": "perennials",
+      "price": 300,
+      "stock": 12,
+      "status": "ok",
+      "description": "Высота взрослого растения — 20-30см\nШирина — 10-12см\nЦветки возвышаются над глянцевой тёмной листвой, создавая яркий контраст.\nИсключительно выносливый и крепкий многолетник, хорошо растёт в самых разных условиях.\nОбъём контейнера : 0,5л",
+      "care": {
+        "height": "взрослого растения — 20-30см"
+      },
+      "image": "/assets/products/p2454.jpg",
+      "images": [
+        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2026/07/img_1946.jpeg",
+        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2026/07/img_1928-1152x1536.jpeg"
+      ],
+      "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/%d0%b1%d0%b0%d0%b4%d0%b0%d0%bd-%d1%82%d0%be%d0%bb%d1%81%d1%82%d0%be%d0%bb%d0%b8%d1%81%d1%82%d0%bd%d1%8b%d0%b9-shoeshine-appleblossom/"
+    },
+    {
       "id": 2362,
       "name": "Бакопа Double Snowball",
       "category": "Цветы однолетние",
@@ -986,6 +1005,45 @@
       "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/%d0%ba%d0%b0%d0%bb%d0%b8%d0%b1%d1%80%d0%b0%d1%85%d0%be%d0%b0-tik-tok-grape/"
     },
     {
+      "id": 2458,
+      "name": "Камнеломка Лофти Pink Shades",
+      "category": "Цветы многолетние",
+      "categoryKey": "perennials",
+      "price": 300,
+      "stock": 12,
+      "status": "ok",
+      "description": "Высота: 15-20 см\nЛофти — новое поколение камнеломки. Цветки гораздо крупнее, растения более мощные, улучшена однородность. Растения быстро заполняют посадочную ёмкость, крупные цветки дают изумительный визуальный эффект.\nОбъем контейнера : 0,5л",
+      "care": {
+        "height": "15-20 см"
+      },
+      "image": "/assets/products/p2458.png",
+      "images": [
+        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2026/07/img_1947.png",
+        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2026/07/img_1923-1-1152x1536.jpeg"
+      ],
+      "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/%d0%ba%d0%b0%d0%bc%d0%bd%d0%b5%d0%bb%d0%be%d0%bc%d0%ba%d0%b0-%d0%bb%d0%be%d1%84%d1%82%d0%b8-pink-shades/"
+    },
+    {
+      "id": 2462,
+      "name": "Камнеломка Лофти White Blush",
+      "category": "Цветы многолетние",
+      "categoryKey": "perennials",
+      "price": 300,
+      "stock": 12,
+      "status": "ok",
+      "description": "Высота: 15-20 см\nЛофти — новое поколение камнеломки. Цветки гораздо крупнее, растения более мощные, улучшена однородность. Крупные цветки дают изумительный визуальный эффект.\nОбъём контейнера : 0,5л",
+      "care": {
+        "height": "15-20 см"
+      },
+      "image": "/assets/products/p2462.jpg",
+      "images": [
+        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2026/07/img_1948.jpeg",
+        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2026/07/img_1921-1152x1536.jpeg",
+        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2026/07/img_1922-1152x1536.jpeg"
+      ],
+      "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/%d0%ba%d0%b0%d0%bc%d0%bd%d0%b5%d0%bb%d0%be%d0%bc%d0%ba%d0%b0-%d0%bb%d0%be%d1%84%d1%82%d0%b8-white-blush/"
+    },
+    {
       "id": 756,
       "name": "Котовник Фассена",
       "category": "Цветы многолетние",
@@ -1028,7 +1086,7 @@
       "category": "Без категории",
       "categoryKey": "other",
       "price": 350,
-      "stock": 39,
+      "stock": 37,
       "status": "ok",
       "description": "Сорт «RED ACE”. Густой кустарник с нежными стелющимися побегами, подушковидной формы.\nВысота 0,4-0,6 м, шириной до 1,2 м.\nМесто посадки: солнце",
       "care": {
@@ -1251,6 +1309,25 @@
         "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2024/12/img_1190-1152x1536.jpeg"
       ],
       "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/%d0%bf%d1%83%d0%b7%d1%8b%d1%80%d0%b5%d0%bf%d0%bb%d0%be%d0%b4%d0%bd%d0%b8%d0%ba-%d0%bb%d1%8e%d1%82%d0%b5%d1%83%d1%81/"
+    },
+    {
+      "id": 2451,
+      "name": "Рудбекия блестящая Goldsturm",
+      "category": "Цветы многолетние",
+      "categoryKey": "perennials",
+      "price": 300,
+      "stock": 12,
+      "status": "ok",
+      "description": "Пышный кустистый многолетник, цветущий большими золотисто-жёлтыми цветами с черным центром.\nВысота растения — 60-70см.\nДиаметр куста — 40-45см.\nДиаметр цветка — 10-12см.\nОтлично смотрится в миксбордерах, групповых посадках, а также в срезке.\nОбъём контейнера : 0,5л",
+      "care": {
+        "height": "растения — 60-70см"
+      },
+      "image": "/assets/products/p2451.png",
+      "images": [
+        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2026/07/img_1945.png",
+        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2026/07/img_1895-1152x1536.jpeg"
+      ],
+      "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/%d1%80%d1%83%d0%b4%d0%b1%d0%b5%d0%ba%d0%b8%d1%8f-%d0%b1%d0%bb%d0%b5%d1%81%d1%82%d1%8f%d1%89%d0%b0%d1%8f-goldsturm/"
     },
     {
       "id": 1267,
@@ -1714,7 +1791,7 @@
       "category": "Цветы многолетние",
       "categoryKey": "perennials",
       "price": 300,
-      "stock": 2,
+      "stock": 1,
       "status": "low",
       "description": "Эхинацея пурпурная Mellow Yellow (Echinacea purpurea Mellow Yellow) — многолетнее травянистое растение с крупными жёлтыми цветками. Отличается неприхотливостью, длительным периодом цветения и декоративными качествами\nХарактеристики\n• Высота. 60–80 см.\n• Диаметр цветка. Около 15 см.\n• Цвет. Лепестки окрашены в тёплые, чуть приглушённые жёлтые тона: сливочный, лимонный, тёмно-жёлтый. Центр выпуклый, зеленовато-коричневый.\n• Период цветения. С июля по сентябрь.\n• Листья. Прикорневые — овальные, зазубренные, сужаются к корешку и образуют розетку; стеблевые — сидячие, ланцетные, шершавые.\n• Зимостойкость. Зона 4 (до −29 °C или −34 °C в зависимости от источника).\n• Местоположение. Солнечное\n• Расстояние между растениями — 30–40 см.",
       "care": {
@@ -1735,7 +1812,7 @@
       "category": "Цветы многолетние",
       "categoryKey": "perennials",
       "price": 300,
-      "stock": 4,
+      "stock": 3,
       "status": "ok",
       "description": "Эхинацея пурпурная Пау Вау Уайт (Echinacea purpurea Pow Wow White) — многолетнее травянистое растение с крупными белыми цветками. Подходит для декоративного озеленения, создания миксбордеров, групповых посадок и срезки.\nХарактеристики\n• Высота. 40–70 см.\n• Диаметр цветка. 8–10 см.\n• Цвет. Чисто-белый с контрастным центром зеленовато-жёлтого или зеленовато-коричневого цвета.\n• Период цветения. С июня по сентябрь около 60 дней.\n• Листья. Прикорневые — широкоовальные, зазубренные, на длинных черешках; стеблевые — сидячие, ланцетные, шершавые.\n• Почва. Питательная, хорошо обработанная и дренированная.\n• Местоположение. Солнце, полутень.\n• Климатическая зона. 4 (от −34,4 до −28,9 °C).\nРастение хорошо разветвляется, образуя больше цветков, чем любой другой компактный сорт с белыми цветками.",
       "care": {
@@ -1788,7 +1865,7 @@
       "id": 21,
       "name": "Цветы многолетние",
       "key": "perennials",
-      "count": 11,
+      "count": 15,
       "url": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product-category/mnogoletnie/"
     },
     {
@@ -1852,11 +1929,11 @@
   "heroImages": [
     "/assets/products/p2234.jpg",
     "/assets/products/p2236.png",
+    "/assets/products/p2454.jpg",
     "/assets/products/p2447.jpg",
     "/assets/products/p2444.jpg",
     "/assets/products/p1080.jpg",
     "/assets/products/p1082.jpg",
-    "/assets/products/p1571.jpg",
-    "/assets/products/p1646.jpg"
+    "/assets/products/p1571.jpg"
   ]
 }
