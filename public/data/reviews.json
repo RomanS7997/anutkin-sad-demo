@@ -1,9 +1,16 @@
 {
   "source": "avito",
   "rating": 5,
-  "reviewsCount": 139,
+  "reviewsCount": 140,
   "profileUrl": "https://www.avito.ru/brands/319c309577f67cb4522b1735089761fa/all/rasteniya?sellerId=047d5b824fe33abb9b2c479534b2262c",
   "reviews": [
+    {
+      "id": 456836978,
+      "author": "Maya",
+      "score": 5,
+      "date": "2026-07-08T14:18:41.000Z",
+      "text": "Мои самые наилучшие рекомендации 💯💯💯 \nПрекрасные здоровые растения. Кустики ооочень пышненькие. 🍀🍀🍀Упаковка отличная, доехали без проблем. Огромное спасибо ❤️"
+    },
     {
       "id": 456651394,
       "author": "Виктория",
