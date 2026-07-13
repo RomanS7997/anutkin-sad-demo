@@ -1,9 +1,16 @@
 {
   "source": "avito",
   "rating": 5,
-  "reviewsCount": 140,
+  "reviewsCount": 141,
   "profileUrl": "https://www.avito.ru/brands/319c309577f67cb4522b1735089761fa/all/rasteniya?sellerId=047d5b824fe33abb9b2c479534b2262c",
   "reviews": [
+    {
+      "id": 457134450,
+      "author": "Yana Etkina",
+      "score": 5,
+      "date": "2026-07-09T12:43:31.000Z",
+      "text": "очень хорошие цветочки!"
+    },
     {
       "id": 456836978,
       "author": "Maya",
