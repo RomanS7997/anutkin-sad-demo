@@ -1600,6 +1600,26 @@
       "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/%d1%82%d1%83%d1%8f-%d0%b7%d0%b0%d0%bf%d0%b0%d0%b4%d0%bd%d0%b0%d1%8f-%d1%81%d0%bc%d0%b0%d1%80%d0%b0%d0%b3%d0%b4/"
     },
     {
+      "id": 1666,
+      "name": "ХРИЗАНТЕМА МУЛЬТИФЛОРА BLISS WHITE",
+      "category": "Цветы однолетние",
+      "categoryKey": "annuals",
+      "price": 450,
+      "stock": 2,
+      "status": "low",
+      "description": "🌱Рассада в объёме 1л\nХризантема Мультифлора относится к сортам средне-раннего срока цветения, подойдет для посадки в открытый грунт, вазоны, контейнеры. Цветение — начало сентября, Цветок — 5 см, махровый\nВысота — 40-50 см, Форма куста — шаровидная.",
+      "care": {
+        "height": "— 40-50 см",
+        "bloom": ", подойдет для посадки в открытый грунт, вазоны, контейнеры"
+      },
+      "image": "/assets/products/p1666.jpg",
+      "images": [
+        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2025/10/img_3550-1152x1536.jpeg",
+        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2025/10/img_3551-1152x1536.jpeg"
+      ],
+      "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/%d1%85%d1%80%d0%b8%d0%b7%d0%b0%d0%bd%d1%82%d0%b5%d0%bc%d0%b0-%d0%bc%d1%83%d0%bb%d1%8c%d1%82%d0%b8%d1%84%d0%bb%d0%be%d1%80%d0%b0-bliss-white/"
+    },
+    {
       "id": 2150,
       "name": "Хризантема мультифлора Branfountain Pink",
       "category": "Цветы однолетние",
@@ -1739,18 +1759,17 @@
       "name": "ХРИЗАНТЕМА МУЛЬТИФЛОРА POWER RED",
       "category": "Цветы однолетние",
       "categoryKey": "annuals",
-      "price": 450,
+      "price": 900,
       "stock": 1,
       "status": "low",
-      "description": "Хризантема мультифлора Power Red – это отличный выбор для садоводов, которые хотят добавить красок своему участку.Высота: 40-50 см.Диаметр цветка: 4 см.Форма куста: шаровидная.Цвет: насыщенно-красный.Период цветения: август-октябрь.\nОбъём контейнера: 1л",
+      "description": "Хризантема мультифлора Power Red – это отличный выбор для садоводов, которые хотят добавить красок своему участку.Высота: 40-50 см.Диаметр цветка: 4 см.Форма куста: шаровидная.Цвет: насыщенно-красный.Период цветения: август-октябрь.\nОбъём контейнера: 3л",
       "care": {
         "height": "40-50 см",
         "bloom": "август-октябрь"
       },
       "image": "/assets/products/p1495.jpg",
       "images": [
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2025/09/img_2092.jpeg",
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2025/09/img_9723-1152x1536.jpeg"
+        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2025/09/img_2092.jpeg"
       ],
       "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/%d1%85%d1%80%d0%b8%d0%b7%d0%b0%d0%bd%d1%82%d0%b5%d0%bc%d0%b0-%d0%bc%d1%83%d0%bb%d1%8c%d1%82%d0%b8%d1%84%d0%bb%d0%be%d1%80%d0%b0-power-red/"
     },
@@ -1939,7 +1958,7 @@
       "id": 35,
       "name": "Цветы однолетние",
       "key": "annuals",
-      "count": 48,
+      "count": 49,
       "url": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product-category/%d1%86%d0%b2%d0%b5%d1%82%d1%8b-%d0%be%d0%b4%d0%bd%d0%be%d0%bb%d0%b5%d1%82%d0%bd%d0%b8%d0%b5/"
     }
   ],
