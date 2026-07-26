@@ -14,7 +14,8 @@
       },
       "image": "/assets/products/p2234.jpg",
       "images": [
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2026/05/img_0031.jpeg"
+        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2026/05/img_0031.jpeg",
+        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2026/05/img_2450-1-1152x1536.jpeg"
       ],
       "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/%d0%b0%d1%80%d0%bc%d0%b5%d1%80%d0%b8%d1%8f-morning-star-deep-rose/"
     },
@@ -51,64 +52,9 @@
       "image": "/assets/products/p2454.jpg",
       "images": [
         "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2026/07/img_1946.jpeg",
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2026/07/img_1928-1152x1536.jpeg"
+        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2026/07/img_2483-1152x1536.jpeg"
       ],
       "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/%d0%b1%d0%b0%d0%b4%d0%b0%d0%bd-%d1%82%d0%be%d0%bb%d1%81%d1%82%d0%be%d0%bb%d0%b8%d1%81%d1%82%d0%bd%d1%8b%d0%b9-shoeshine-appleblossom/"
-    },
-    {
-      "id": 2362,
-      "name": "Бакопа Double Snowball",
-      "category": "Цветы однолетние",
-      "categoryKey": "annuals",
-      "price": 350,
-      "stock": 0,
-      "status": "out",
-      "description": "🌿 Бакопа Double Snowball — воздушное белоснежное облако для вашего сада и кашпо\nНежная махровая бакопа Double Snowball с множеством белоснежных цветков станет настоящим украшением балкона, террасы или сада. Растение образует пышные каскады побегов и обильно цветёт с весны до самых заморозков.\n✨ Преимущества сорта:\n• красивые махровые белые цветки;\n• продолжительное и обильное цветение;\n• отлично подходит для подвесных кашпо и вазонов;\n• хорошо переносит дождливую погоду;\n• неприхотлива в уходе;\n• прекрасно сочетается с петуниями, калибрахоа и другими летниками.\n🌿 Идеально подходит для:\n• подвесных корзин и кашпо;\n• балконных ящиков;\n• вазонов и контейнеров;\n• оформления террас и зон отдыха;\n• создания нежных цветочных композиций.\n☀️ Предпочитает солнечные места или лёгкую полутень. При регулярном поливе и подкормках цветёт особенно пышно.\n🤍 Бакопа Double Snowball — настоящее белоснежное облако цветов, которое будет радовать вас всё лето!\nКонтейнер: 1л",
-      "care": {},
-      "image": "/assets/products/p2362.jpg",
-      "images": [
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2026/06/img_1051-1152x1536.jpeg",
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2026/06/img_1052-1152x1536.jpeg"
-      ],
-      "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/%d0%b1%d0%b0%d0%ba%d0%be%d0%bf%d0%b0-double-snowball/"
-    },
-    {
-      "id": 2447,
-      "name": "Бакопа Gulliver Dynamic White",
-      "category": "Цветы однолетние",
-      "categoryKey": "annuals",
-      "price": 250,
-      "stock": 0,
-      "status": "out",
-      "description": "Роскошная ампельная бакопа с крупными цветками и мощным каскадным ростом.\nСорт быстро разрастается, образуя пышный шар или длинные ниспадающие побеги. Идеально подходит для подвесных кашпо, вазонов, балконных ящиков и садовых композиций.\n🌿Преимущества сорта:\n• крупные цветки;\n• непрерывное цветение с весны до заморозков;\n• быстро наращивает объём;\n• устойчива к дождю и жаре;\nОбъём контейнера: 0,5л",
-      "care": {
-        "bloom": "с весны до заморозков"
-      },
-      "image": "/assets/products/p2447.jpg",
-      "images": [
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2026/07/img_1639-1152x1536.jpeg",
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2026/07/img_1635-1152x1536.jpeg"
-      ],
-      "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/%d0%b1%d0%b0%d0%ba%d0%be%d0%bf%d0%b0-gulliver-dynamic-white/"
-    },
-    {
-      "id": 2444,
-      "name": "Бакопа Gulliver Pink",
-      "category": "Цветы однолетние",
-      "categoryKey": "annuals",
-      "price": 250,
-      "stock": 0,
-      "status": "out",
-      "description": "Роскошная ампельная бакопа с крупными цветками и мощным каскадным ростом.\nСорт быстро разрастается, образуя пышный шар или длинные ниспадающие побеги. Идеально подходит для подвесных кашпо, вазонов, балконных ящиков и садовых композиций.\n🌿Преимущества сорта:\n• крупные цветки;\n• непрерывное цветение с весны до заморозков;\n• быстро наращивает объём;\n• устойчива к дождю и жаре;\nОбъём контейнера: 0,5л",
-      "care": {
-        "bloom": "с весны до заморозков"
-      },
-      "image": "/assets/products/p2444.jpg",
-      "images": [
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2026/07/img_1638-1152x1536.jpeg",
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2026/07/img_1637-1152x1536.jpeg"
-      ],
-      "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/%d0%b1%d0%b0%d0%ba%d0%be%d0%bf%d0%b0-gulliver-pink/"
     },
     {
       "id": 1080,
@@ -238,8 +184,8 @@
       "category": "Цветы однолетние",
       "categoryKey": "annuals",
       "price": 600,
-      "stock": 1,
-      "status": "low",
+      "stock": 0,
+      "status": "out",
       "description": "",
       "care": {},
       "image": "/assets/products/p2101.png",
@@ -290,67 +236,13 @@
       "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/%d0%b1%d0%b5%d0%b3%d0%be%d0%bd%d0%b8%d1%8f-waterfalls-incanto-orange/"
     },
     {
-      "id": 1913,
-      "name": "Вербена Drums Blue",
-      "category": "Цветы однолетние",
-      "categoryKey": "annuals",
-      "price": 950,
-      "stock": 0,
-      "status": "out",
-      "description": "🌱Кашпо 3,3л\n🎁В подарок каждому покупателю рекомендации по уходу и посадке\nВербена Drums Blue – эффектный сорт с насыщенными синими соцветиями. Отличается обильным и продолжительным цветением, компактной формой куста и неприхотливостью в уходе. Идеально подходит для выращивания в контейнерах, балконных ящиках, садовых клумбах и рабатках. Растение светолюбиво, засухоустойчиво, прекрасно переносит жаркое лето.",
-      "care": {
-        "bloom": "м, компактной формой куста и неприхотливостью в уходе",
-        "light": "олюбиво, засухоустойчиво, прекрасно переносит жаркое лето"
-      },
-      "image": "/assets/products/p1913.jpg",
-      "images": [
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2026/03/img_1057-1152x1536.jpeg",
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2026/03/img_1056-1152x1536.jpeg"
-      ],
-      "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/%d0%b2%d0%b5%d1%80%d0%b1%d0%b5%d0%bd%d0%b0-drums-blue/"
-    },
-    {
-      "id": 1911,
-      "name": "Вербена DRUMS WHITE",
-      "category": "Цветы однолетние",
-      "categoryKey": "annuals",
-      "price": 250,
-      "stock": 0,
-      "status": "out",
-      "description": "🌱Рассада в объёме 0,5л\n🎁В подарок каждому покупателю рекомендации по уходу и посадке",
-      "care": {},
-      "image": "/assets/products/p1911.png",
-      "images": [
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2026/03/img_7642.png",
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2026/03/img_0344-1152x1536.jpeg"
-      ],
-      "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/%d0%b2%d0%b5%d1%80%d0%b1%d0%b5%d0%bd%d0%b0-drums-white/"
-    },
-    {
-      "id": 1655,
-      "name": "ВЕРБЕНА VANESSA BIC. LIGHT PINK",
-      "category": "Цветы однолетние",
-      "categoryKey": "annuals",
-      "price": 250,
-      "stock": 0,
-      "status": "out",
-      "description": "🌱Рассада в объёме 0,2л\n🎁В подарок каждому покупателю рекомендации по уходу и посадке\nЭто потрясающие трехцветной окраской соцветия. И, как у всех вербен, изящная разрезная листва дает прекрасный фон для необычных цветов. Цветы среднего размера. Растение в высоту до 20-30 см, сильный энергичный рост, отличная устойчивость к жаре и заболеваниям.",
-      "care": {},
-      "image": "/assets/products/p1655.jpg",
-      "images": [
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2025/10/img_5213-1152x1536.jpeg",
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2025/10/img_8577-1152x1536.jpeg"
-      ],
-      "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/%d0%b2%d0%b5%d1%80%d0%b1%d0%b5%d0%bd%d0%b0-vanessa-bic-light-pink/"
-    },
-    {
       "id": 1674,
       "name": "ГЕЛИХРИЗУМ SILVER",
       "category": "Цветы однолетние",
       "categoryKey": "annuals",
       "price": 350,
-      "stock": 1,
-      "status": "low",
+      "stock": 0,
+      "status": "out",
       "description": "🌱 Рассада в объёме 1л\nРекомендуемый объём грунта 3-4 л. на 1 растение.\nХорошо смотрится в композиции\nОтличное текстурное растение для цветочных композиций в контейнерах на открытом солнце. Серебристая, густая зелень гелихризума создает непревзойденный пейзажный акцент в смешанных посадках. Чем больше солнечного света, тем более серебристыми будут его бархатистые листья. При недостатке света листья теряют серебристый оттенок. не нуждается в обрезке и прищипывании побегов, так как образует аккуратную куртинку, медленно нарастающую все лето вплоть до заморозков. Взрослое растение достигает 15-20 см. в высоту, в ширину разрастается на 40-60 см.",
       "care": {
         "light": "а, тем более серебристыми будут его бархатистые листья"
@@ -446,9 +338,7 @@
       "image": "/assets/products/p698.jpg",
       "images": [
         "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2024/12/hJ6-Ciwj0UXFflcPawdbM6gECQmIYydnUGxtvf04gDdHxW3gmSig2TImvmB7QKaFSmm9PZ8DK-JNgT7oJMoGNnNi.jpg",
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2024/12/aRY1sMpRYGnt3LxaJHZkSXbhyh77JrMQTRHDk5KTrTiLGSKAZ0BWkjNSGyQAplJfoHMz157YMpW0-APdO5O0KiBX.jpg",
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2024/12/b5c4e62c-0823-4b44-bbea-438f0d0f4aee.jpeg",
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2024/12/7d45c507-9976-4287-bad6-618a29f7d72d.jpeg"
+        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2024/12/aRY1sMpRYGnt3LxaJHZkSXbhyh77JrMQTRHDk5KTrTiLGSKAZ0BWkjNSGyQAplJfoHMz157YMpW0-APdO5O0KiBX.jpg"
       ],
       "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/%d0%b3%d0%be%d1%80%d1%82%d0%b5%d0%bd%d0%b7%d0%b8%d1%8f-%d0%bb%d0%b8%d1%82%d1%82%d0%bb-%d1%84%d1%80%d0%b5%d1%81%d0%ba%d0%be/"
     },
@@ -529,8 +419,8 @@
       "category": "Гортензии",
       "categoryKey": "hydrangea",
       "price": 350,
-      "stock": 0,
-      "status": "out",
+      "stock": 5,
+      "status": "ok",
       "description": "🌱Объём контейнера 0,5л\nСобственное производство.\nВысота взрослого растения: 100 см.\nЦвет соцветий: Белый, розовый.\nМесто посадки: Солнце/Полутень.\nПочва: Кислая.\nПолив: Обильный.\nЗона морозостойкости: 4.",
       "care": {
         "height": "взрослого растения: 100 см",
@@ -540,6 +430,7 @@
       "image": "/assets/products/p718.jpg",
       "images": [
         "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2024/12/4tJTRlWthHCux2ebSpM433yDZZZmVT8q3nOX49dygxCS5n990uKFxTqFGPFhGyrLdcBN87j5QjDDWBjNAQssHvFd.jpg",
+        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2024/12/img_2463-1152x1536.jpeg",
         "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2024/12/ZpXL-oQosXFCwzJw9XTtQ0GYhGk_EmvvJfz-cJQLW8ZvgGj1muovGrfhEYaPtg96gszYluAtjGC71_84UbI07NAK.jpg",
         "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2024/12/ulacRDhENvhgSSK_iRSTrc2HDQcbuEYYlWqvSogsnv1itPXLKeRmTKrbfeO6BUARKbKlOyiIIzap1sgf5QIEFZ9.jpg"
       ],
@@ -615,6 +506,29 @@
       "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/%d0%bc%d0%b5%d1%82%d0%b5%d0%bb%d1%8c%d1%87%d0%b0%d1%82%d0%b0%d1%8f-%d0%b3%d0%be%d1%80%d1%82%d0%b5%d0%bd%d0%b7%d0%b8%d1%8f-%d1%81%d1%82%d1%80%d0%be%d0%b1%d0%b5%d1%80%d1%80%d0%b8-%d0%b1%d0%bb%d0%be/"
     },
     {
+      "id": 2489,
+      "name": "Гортензия метельчатая «Геркулес»",
+      "category": "Гортензии",
+      "categoryKey": "hydrangea",
+      "price": 350,
+      "stock": 5,
+      "status": "ok",
+      "description": "Высота взрослого растения: 2 метра\nЦвет соцветий: Лаймовый, белый, розовый\nЦвет листьев: Зеленый\nПериод цветения: июль-сентябрь\nМесто посадки: Солнце/Полутень\nПочва: Плодородная, дренированная, кислая\nПолив: Обильный\nОбрезка: Формовочная, санитарная\nЗона морозостойкости: 4",
+      "care": {
+        "height": "взрослого растения: 2 м",
+        "bloom": "июль-сентябрь",
+        "light": "Солнце/Полутень",
+        "hardiness": "4"
+      },
+      "image": "/assets/products/p2489.jpg",
+      "images": [
+        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2026/07/a1311536-5469-4a99-a280-39bfb183655c.jpeg",
+        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2026/07/img_2462-1152x1536.jpeg",
+        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2026/07/affc2be5-26e7-48bb-97fb-f1daaff964be.jpeg"
+      ],
+      "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/%d0%b3%d0%be%d1%80%d1%82%d0%b5%d0%bd%d0%b7%d0%b8%d1%8f-%d0%bc%d0%b5%d1%82%d0%b5%d0%bb%d1%8c%d1%87%d0%b0%d1%82%d0%b0%d1%8f-%d0%b3%d0%b5%d1%80%d0%ba%d1%83%d0%bb%d0%b5%d1%81/"
+    },
+    {
       "id": 1336,
       "name": "Гортензия метельчатая «Скайфолл»",
       "category": "Гортензии",
@@ -673,7 +587,8 @@
       },
       "image": "/assets/products/p705.jpg",
       "images": [
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2024/12/img_2072-1152x1536.jpeg"
+        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2024/12/img_2072-1152x1536.jpeg",
+        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2024/12/img_1871-1152x1536.jpeg"
       ],
       "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/%d0%b3%d0%be%d1%80%d1%82%d0%b5%d0%bd%d0%b7%d0%b8%d1%8f-%d0%bc%d0%b5%d1%82%d0%b5%d0%bb%d1%8c%d1%87%d0%b0%d1%82%d0%b0%d1%8f-%d0%bf%d0%b5%d1%82%d0%b8%d1%82-%d1%87%d0%b5%d1%80%d1%80%d0%b8/"
     },
@@ -697,22 +612,6 @@
         "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2024/12/rOyNkH7scgFKJE0H5O4AJnOA892GzIVocL3AWcU5efmiX6VXo0llbsvQgErY7ARM_fJl1v7Y6OcU22ddLzxrORtl.jpg"
       ],
       "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/%d0%b3%d0%be%d1%80%d1%82%d0%b5%d0%bd%d0%b7%d0%b8%d1%8f-%d0%bc%d0%b5%d1%82%d0%b5%d0%bb%d1%8c%d1%87%d0%b0%d1%82%d0%b0%d1%8f-%d1%84%d0%b0%d0%bd%d1%82%d0%be%d0%bc/"
-    },
-    {
-      "id": 2200,
-      "name": "Жимолость",
-      "category": "Без категории",
-      "categoryKey": "other",
-      "price": 150,
-      "stock": 0,
-      "status": "out",
-      "description": "",
-      "care": {},
-      "image": "/assets/products/p2200.jpg",
-      "images": [
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2026/05/img_0099-1152x1536.jpeg"
-      ],
-      "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/%d0%b6%d0%b8%d0%bc%d0%be%d0%bb%d0%be%d1%81%d1%82%d1%8c/"
     },
     {
       "id": 1419,
@@ -785,22 +684,6 @@
         "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2025/11/b9b8ea92-51b1-4f23-8e00-b4a78e3ff62b.jpeg"
       ],
       "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/6-%d0%ba%d0%b0%d0%bb%d0%b8%d0%b1%d1%80%d0%b0%d1%85%d0%be%d0%b0-aloha-double-dark-pink/"
-    },
-    {
-      "id": 1289,
-      "name": "КАЛИБРАХОА ALOHA DOUBLE LAVENDER",
-      "category": "Цветы однолетние",
-      "categoryKey": "annuals",
-      "price": 250,
-      "stock": 3,
-      "status": "ok",
-      "description": "🌱Рассада в объёме 0,5л\n🎁В подарок каждому покупателю рекомендации по уходу и посадке\nПопулярная вегетативная серия калибрахоа. В высоту достигает 25-35 см.",
-      "care": {},
-      "image": "/assets/products/p1289.jpg",
-      "images": [
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2025/07/91dc9b5c-75b0-40d6-b98a-a143c74ab65a.jpeg"
-      ],
-      "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/%d0%ba%d0%b0%d0%bb%d0%b8%d0%b1%d1%80%d0%b0%d1%85%d0%be%d0%b0-aloha-double-lavender/"
     },
     {
       "id": 1295,
@@ -910,8 +793,8 @@
       "category": "Цветы однолетние",
       "categoryKey": "annuals",
       "price": 1200,
-      "stock": 2,
-      "status": "low",
+      "stock": 0,
+      "status": "out",
       "description": "🌱Кашпо 4л\n🎁В подарок каждому покупателю рекомендации по уходу и посадке\nНовая концепция в мире калибрахоа! Цветы-хамелеоны меняют свой цвет в течение сезона, в зависимости от уровня освещенности и продолжительности дня. Создается впечатление, что перед нами цветочный микс, а не одно растение!\nВысота куста: компакт средний\nФорма куста: ампельный\nОбильное цветение",
       "care": {
         "height": "куста: ком"
@@ -1085,7 +968,7 @@
       "image": "/assets/products/p2458.png",
       "images": [
         "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2026/07/img_1947.png",
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2026/07/img_1923-1-1152x1536.jpeg"
+        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2026/07/img_2482-1152x1536.jpeg"
       ],
       "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/%d0%ba%d0%b0%d0%bc%d0%bd%d0%b5%d0%bb%d0%be%d0%bc%d0%ba%d0%b0-%d0%bb%d0%be%d1%84%d1%82%d0%b8-pink-shades/"
     },
@@ -1172,16 +1055,16 @@
       "name": "Малина",
       "category": "Без категории",
       "categoryKey": "other",
-      "price": 450,
-      "stock": 0,
-      "status": "out",
+      "price": 350,
+      "stock": 20,
+      "status": "ok",
       "description": "Ремонтантная малина среднего срока созревания. Ягоды крупные, красно-рубинового цвета, сладкие, десертного вкуса. Урожайность стабильно высокая",
       "care": {},
       "image": "/assets/products/p1240.jpg",
       "images": [
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2025/07/img_0202-1152x1536.jpeg",
+        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2025/07/img_2579-1152x1536.jpeg",
         "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2025/07/61d9c2e5-df9f-429c-8c6a-892aab1042b5.jpeg",
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2025/07/img_0201-1152x1536.jpeg"
+        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2025/07/img_2580-1152x1536.jpeg"
       ],
       "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/%d0%bc%d0%b0%d0%bb%d0%b8%d0%bd%d0%b0/"
     },
@@ -1619,87 +1502,6 @@
       "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/%d1%85%d1%80%d0%b8%d0%b7%d0%b0%d0%bd%d1%82%d0%b5%d0%bc%d0%b0-%d0%bc%d1%83%d0%bb%d1%8c%d1%82%d0%b8%d1%84%d0%bb%d0%be%d1%80%d0%b0-bliss-white/"
     },
     {
-      "id": 2150,
-      "name": "Хризантема мультифлора Branfountain Pink",
-      "category": "Цветы однолетние",
-      "categoryKey": "annuals",
-      "price": 450,
-      "stock": 0,
-      "status": "out",
-      "description": "Условия выращивания\n• Освещение: предпочитает яркий рассеянный свет, хорошо растет на солнечных участках\n• Полив: регулярный, умеренный, без переувлажнения и пересушивания\n• Грунт: рыхлый, питательный, с хорошим дренажом, нейтральной или слабокислой реакции\n• Температурный режим: теплолюбива в период активного роста, холодостойка осенью\nОбъём контейнера: 1л",
-      "care": {
-        "light": "предпочитает яркий рассеянный свет, хорошо растет на солнечн"
-      },
-      "image": "/assets/products/p2150.jpg",
-      "images": [
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2026/05/img_8413.jpeg",
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2026/05/img_8412.jpeg",
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2026/05/img_9727-1152x1536.jpeg"
-      ],
-      "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/%d1%85%d1%80%d0%b8%d0%b7%d0%b0%d0%bd%d1%82%d0%b5%d0%bc%d0%b0-%d0%bc%d1%83%d0%bb%d1%8c%d1%82%d0%b8%d1%84%d0%bb%d0%be%d1%80%d0%b0-branfountain-pink/"
-    },
-    {
-      "id": 2127,
-      "name": "Хризантема мультифлора Branfountain Purple",
-      "category": "Цветы однолетние",
-      "categoryKey": "annuals",
-      "price": 450,
-      "stock": 0,
-      "status": "out",
-      "description": "Условия выращивания\n• Освещение: полное солнце, минимум 6 часов прямого света; в полутени куст вытягивается и хуже цветёт\n• Температура днём: комфортно 18–24°C, переносит 28°C при достаточном поливе\n• Температура ночью: 12–18°C ускоряет окрашивание бутонов\n• Минимум: взрослое растение выдерживает короткие заморозки до −3°C, длительный минус нежелателен\n• Почва: плодородная, влагоёмкая, хорошо дренированная\n• pH почвы: 6,0–6,8, слабокислая или нейтральная\n• Полив: умеренный и регулярный, без застоя; земля держится во влажном состоянии, верхний слой подсыхает между поливами\n• Влажность воздуха: средняя, обливать соцветия не нужно — провоцирует пятнистость лепестков\nГоршок: 1л",
-      "care": {
-        "light": "полное солнце, минимум 6 часов прямого света; в полутени кус"
-      },
-      "image": "/assets/products/p2127.jpg",
-      "images": [
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2026/05/img_8416.jpeg",
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2026/05/img_8417.jpeg",
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2026/05/img_9720-1152x1536.jpeg"
-      ],
-      "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/%d1%85%d1%80%d0%b8%d0%b7%d0%b0%d0%bd%d1%82%d0%b5%d0%bc%d0%b0-%d0%bc%d1%83%d0%bb%d1%8c%d1%82%d0%b8%d1%84%d0%bb%d0%be%d1%80%d0%b0-branfountain-purple/"
-    },
-    {
-      "id": 2142,
-      "name": "Хризантема мультифлора Branfountain Salmon",
-      "category": "Цветы однолетние",
-      "categoryKey": "annuals",
-      "price": 450,
-      "stock": 0,
-      "status": "out",
-      "description": "Условия выращивания\n• Освещение: солнечное местоположение, допустима легкая полутень\n• Почва: плодородная, хорошо дренированная, нейтральная или слабокислая\n• Полив: регулярный, умеренный, без переувлажнения\n• Зимостойкость: требует укрытия или выкапывания на зиму в большинстве регионов России\n• Место посадки: контейнеры, балконные ящики, открытый грунт\nОбъём контейнера: 1л",
-      "care": {
-        "light": "солнечное местоположение, допустима легкая полутень",
-        "hardiness": "требует укрытия или выкапывания на зиму в большинстве регион"
-      },
-      "image": "/assets/products/p2142.jpg",
-      "images": [
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2026/05/img_8423.jpeg",
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2026/05/img_8422.jpeg",
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2026/05/img_8421.jpeg",
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2026/05/img_8420.jpeg",
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2026/05/img_9724-1152x1536.jpeg"
-      ],
-      "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/%d1%85%d1%80%d0%b8%d0%b7%d0%b0%d0%bd%d1%82%d0%b5%d0%bc%d0%b0-%d0%bc%d1%83%d0%bb%d1%8c%d1%82%d0%b8%d1%84%d0%bb%d0%be%d1%80%d0%b0-branfountain-salmon/"
-    },
-    {
-      "id": 2223,
-      "name": "Хризантема мультифлора Bransound Lemon",
-      "category": "Цветы однолетние",
-      "categoryKey": "annuals",
-      "price": 450,
-      "stock": 4,
-      "status": "ok",
-      "description": "Условия выращивания\n• Освещение: полное солнце, минимум 5-6 часов прямого света в день\n• Температура днём: 18-24 °C — оптимум для роста и закладки бутонов\n• Температура ночью: 14-18 °C, прохладные ночи усиливают окраску цветка\n• Минимум: кратковременно переносит +2…+5 °C, длительный холод повреждает побеги\n• Почва и pH: рыхлая, хорошо дренированная, нейтральная или слабокислая, pH 6,5-7,0; при тяжёлых грунтах добавляйте органику\n• Полив: регулярный, у основания растения, утром; в жару — чаще, не допуская пересыхания кома\n• Влажность воздуха: умеренная, листву по верху не опрыскивайте — это провоцирует пятнистости\n• USDA-зона: 5-9 (общая для мультифлора хризантем)\nОбъём контейнера: 1л",
-      "care": {
-        "light": "полное солнце, минимум 5-6 часов прямого света в день"
-      },
-      "image": "/assets/products/p2223.jpg",
-      "images": [
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2026/05/img_8426.jpeg"
-      ],
-      "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/%d1%85%d1%80%d0%b8%d0%b7%d0%b0%d0%bd%d1%82%d0%b5%d0%bc%d0%b0-%d0%bc%d1%83%d0%bb%d1%8c%d1%82%d0%b8%d1%84%d0%bb%d0%be%d1%80%d0%b0-bransound-lemon/"
-    },
-    {
       "id": 1500,
       "name": "ХРИЗАНТЕМА МУЛЬТИФЛОРА BRANSOUND MAGENTA",
       "category": "Цветы однолетние",
@@ -1735,25 +1537,6 @@
       "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/%d1%85%d1%80%d0%b8%d0%b7%d0%b0%d0%bd%d1%82%d0%b5%d0%bc%d0%b0-%d0%bc%d1%83%d0%bb%d1%8c%d1%82%d0%b8%d1%84%d0%bb%d0%be%d1%80%d0%b0-gigi-dark-pink/"
     },
     {
-      "id": 2145,
-      "name": "Хризантема мультифлора Meridian Cherry Red",
-      "category": "Цветы однолетние",
-      "categoryKey": "annuals",
-      "price": 450,
-      "stock": 0,
-      "status": "out",
-      "description": "Условия выращивания\n• Освещение: солнечное место, допустима легкая полутень\n• Почва: плодородная, рыхлая, хорошо дренированная\n• Полив: регулярный, умеренный, без переувлажнения\n• Температурный режим: теплолюбива, требует защиты от заморозков в период активной вегетации\n• Выращивание: в открытом грунте, контейнерах, горшках\nОбъём контейнера: 1л",
-      "care": {
-        "light": "солнечное место, допустима легкая полутень"
-      },
-      "image": "/assets/products/p2145.jpg",
-      "images": [
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2026/05/img_8432.jpeg",
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2026/05/img_9725-1152x1536.jpeg"
-      ],
-      "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/%d1%85%d1%80%d0%b8%d0%b7%d0%b0%d0%bd%d1%82%d0%b5%d0%bc%d0%b0-%d0%bc%d1%83%d0%bb%d1%8c%d1%82%d0%b8%d1%84%d0%bb%d0%be%d1%80%d0%b0-meridian-cherry-red/"
-    },
-    {
       "id": 1495,
       "name": "ХРИЗАНТЕМА МУЛЬТИФЛОРА POWER RED",
       "category": "Цветы однолетние",
@@ -1773,35 +1556,13 @@
       "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/%d1%85%d1%80%d0%b8%d0%b7%d0%b0%d0%bd%d1%82%d0%b5%d0%bc%d0%b0-%d0%bc%d1%83%d0%bb%d1%8c%d1%82%d0%b8%d1%84%d0%bb%d0%be%d1%80%d0%b0-power-red/"
     },
     {
-      "id": 2189,
-      "name": "Хризантема мультифлора Sunbeam Lucky Purple",
-      "category": "Цветы однолетние",
-      "categoryKey": "annuals",
-      "price": 900,
-      "stock": 0,
-      "status": "out",
-      "description": "Условия выращивания\n• Освещение: полное солнце — не менее 6 часов прямого солнечного света в день; при недостатке света цветение слабеет, куст вытягивается\n• Температура днём: комфортный диапазон для активного роста — умеренное тепло без экстремальной жары\n• Температура ночью: прохладные ночи стимулируют закладку бутонов и насыщенность окраски\n• Минимальная температура: кратковременные слабые заморозки переносит, но цветки и листья страдают; устойчивых морозов не выдерживает\n• Почва: плодородная, рыхлая, хорошо дренированная, богатая органикой; pH слабокислый — нейтральный (6,0–7,0)\n• Полив: регулярный, поддерживать умеренно влажную почву; в жару и сухие периоды — обильнее; избегать переувлажнения и застоя воды у корней\n• Влажность воздуха: умеренная; в дождливое лето особенно важна циркуляция воздуха для профилактики мучнистой росы\n• USDA-зона: вид Chrysanthemum × morifolium ориентировочно зимует в зонах 5–9\nОбъём контейнера: 3л",
-      "care": {
-        "bloom": "слабеет, куст вытягивается",
-        "light": "полное солнце — не менее 6 часов прямого солнечного света в"
-      },
-      "image": "/assets/products/p2189.jpg",
-      "images": [
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2026/05/img_8444.jpeg",
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2026/05/img_8445.jpeg",
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2026/05/img_8446.jpeg",
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2026/05/img_0075-1152x1536.jpeg"
-      ],
-      "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/%d1%85%d1%80%d0%b8%d0%b7%d0%b0%d0%bd%d1%82%d0%b5%d0%bc%d0%b0-%d0%bc%d1%83%d0%bb%d1%8c%d1%82%d0%b8%d1%84%d0%bb%d0%be%d1%80%d0%b0-sunbeam-lucky-purple/"
-    },
-    {
       "id": 2368,
       "name": "Хризантема мультифлора Sweet Pink",
       "category": "Цветы однолетние",
       "categoryKey": "annuals",
       "price": 900,
-      "stock": 12,
-      "status": "ok",
+      "stock": 1,
+      "status": "low",
       "description": "Условия выращивания\n• Освещение: прямое солнце минимум 6 часов в день; в полутени растение вытягивается и хуже цветёт\n• Температура днём: комфорт 18–24 °C; кратковременно переносит до 30 °C при достаточном поливе\n• Температура ночью: 12–18 °C в активный период; перед цветением желательны прохладные ночи 8–14 °C\n• Минимальная температура: взрослое растение выдерживает −3…−5 °C под лёгкими утренниками\n• Почва: рыхлый, питательный, дренированный субстрат с pH 6,0–6,8\n• Полив: умеренный, регулярный, по подсыханию верхнего слоя; застой воды губителен\n• Влажность воздуха: ограничений нет, нормально переносит сухой и влажный воздух\n• USDA-зона: 5–9 при условии корректной зимовки укрытием или заносом\nУпаковка корневой системы: 3л",
       "care": {
         "bloom": "м желательны прохладные ночи 8–14 °C",
@@ -1820,8 +1581,8 @@
       "category": "Цветы многолетние",
       "categoryKey": "perennials",
       "price": 400,
-      "stock": 0,
-      "status": "out",
+      "stock": 10,
+      "status": "ok",
       "description": "Шалфей дубравный Карадонна — высокорослое многолетнее декоративное и лекарственное растение. Стебли прямостоячие, простые высотой густо усеяны темно – зелеными листочками. В народе ее еще называют сальвией дубравной. Один из самых ярких сортов среди шалфеев. Выделяется в цветнике яркими фиолетовыми соцветиями – свечками и почти черными стеблями. Цветение продолжительное на протяжении всего лета, начиная с июня.\nимеет награду «За садовые заслуги» от английского королевского садоводческого общества\nШирина: 30 см\nПериод цветения: июнь-июль, после обрезки зацветает повторно август-сентябрь\nЦветение: повторное после обрезки\nСоцветие: фиолетово-синее\nЛист: узкий, зелёный\nФорма куста: прямостоячая\nПолив: умеренный\nПочва: рыхлая, достаточно сухая, не любит переувлажнения\nМорозостойкость: 4 зона (-28/-34⁰C)\nПрименение: одиночные и групповые посадки, миксбордеры, рокарии, красиво сочетается с розами. Сады в природном стиле\nУпаковка корневой системы: 0,5л",
       "care": {
         "bloom": "продолжительное на протяжении всего лета, начиная с июня"
@@ -1938,14 +1699,14 @@
       "id": 23,
       "name": "Гортензии",
       "key": "hydrangea",
-      "count": 17,
+      "count": 18,
       "url": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product-category/gortenzii/"
     },
     {
       "id": 17,
       "name": "Кустарники",
       "key": "shrubs",
-      "count": 17,
+      "count": 16,
       "url": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product-category/kustarniki/"
     },
     {
@@ -1959,7 +1720,7 @@
       "id": 35,
       "name": "Цветы однолетние",
       "key": "annuals",
-      "count": 49,
+      "count": 36,
       "url": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product-category/%d1%86%d0%b2%d0%b5%d1%82%d1%8b-%d0%be%d0%b4%d0%bd%d0%be%d0%bb%d0%b5%d1%82%d0%bd%d0%b8%d0%b5/"
     }
   ],
@@ -2020,7 +1781,7 @@
     "/assets/products/p1082.jpg",
     "/assets/products/p1571.jpg",
     "/assets/products/p1646.jpg",
-    "/assets/products/p2101.png",
-    "/assets/products/p1078.jpg"
+    "/assets/products/p1078.jpg",
+    "/assets/products/p1506.jpg"
   ]
 }
