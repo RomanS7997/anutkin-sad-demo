@@ -103,8 +103,8 @@
       "category": "Цветы однолетние",
       "categoryKey": "annuals",
       "price": 600,
-      "stock": 2,
-      "status": "low",
+      "stock": 0,
+      "status": "out",
       "description": "В подарок получаете рекомендации по уходу за бегонией.\nCерия Belleconia одна из новейших серий ампельной бегонии с крупными махровыми цветами.\nЭти растения отличаются высокой устойчивостью к болезням и вредителям.\nЦветут обильно, образуя длинные, свисающие побеги.\nВысота куста 20-25см\nФорма куста: ампельный\nОбильное цветение\nТень или полутень",
       "care": {
         "height": "куста 20-25см",
@@ -347,9 +347,9 @@
       "name": "Гортензия метельчатая «Петит Лантерн»",
       "category": "Гортензии",
       "categoryKey": "hydrangea",
-      "price": 600,
-      "stock": 0,
-      "status": "out",
+      "price": 350,
+      "stock": 12,
+      "status": "ok",
       "description": "Собственное производство.\n🌿Объём контейнера 0,5л\nВысота взрослого растения: 80 см\nЦвет соцветий: Белый, розовый, малиновый\nПериод цветения: июль-октябрь.\nМесто посадки: Солнце/Полутень.\nПочва: Кислая.\nПолив: Регулярный.\nЗона морозостойкости: 4.\nПрименение: в качестве акцента в цветниках, живые изгороди, групповые посадки, миксбордеры в сочетании с травами, многолетними растениями и хвойными, кашпо, контейнеры",
       "care": {
         "height": "взрослого растения: 80 см",
@@ -393,8 +393,8 @@
       "category": "Гортензии",
       "categoryKey": "hydrangea",
       "price": 350,
-      "stock": 1,
-      "status": "low",
+      "stock": 9,
+      "status": "ok",
       "description": "Собственное производство.\nВысота взрослого растения: 120 см\nЦвет соцветий: Белый, розовый, бордовый\nПериод цветения: июль-сентябрь.\nМесто посадки: Солнце/Полутень.\nПочва: Кислая.\nПолив: Регулярный.\nЗона морозостойкости: 4.\nПрименение: в качестве акцента в цветниках, живые изгороди, групповые посадки, миксбордеры в сочетании с травами, многолетними растениями и хвойными, кашпо, контейнеры",
       "care": {
         "height": "взрослого растения: 120 см",
@@ -407,9 +407,7 @@
         "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2025/03/97b1db26-3aa3-4fc3-98ad-898e30a6e459.jpeg",
         "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2025/03/7393d284-edf7-480f-98ee-7e04da5a16cd.jpeg",
         "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2025/03/cfcb107f-f5db-4e47-875e-d1deebc49909.jpeg",
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2025/03/zOAB8nO4_dQ.jpg",
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2025/03/img_1070-1152x1536.jpeg",
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2025/03/img_1071-1152x1536.jpeg"
+        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2025/03/img_2472-1152x1536.jpeg"
       ],
       "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/%d0%b3%d0%be%d1%80%d1%82%d0%b5%d0%bd%d0%b7%d0%b8%d1%8f-%d0%bc%d0%b5%d1%82%d0%b5%d0%bb%d1%8c%d1%87%d0%b0%d1%82%d0%b0%d1%8f-%d1%81%d0%b0%d0%bc%d0%b0%d1%80%d1%81%d0%ba%d0%b0%d1%8f-%d0%bb%d0%b8%d0%b4/"
     },
@@ -442,7 +440,7 @@
       "category": "Гортензии",
       "categoryKey": "hydrangea",
       "price": 850,
-      "stock": 5,
+      "stock": 20,
       "status": "ok",
       "description": "🌱Собственное производство.\nВысота взрослого растения: 120 см.\nЦвет соцветий: Белый, розовый.\nПериод цветения: июль-сентябрь.\nМесто посадки: Солнце/Полутень.\nПочва: Плодородная, дренированная, кислая.\nПолив: Обильный.\nЗона морозостойкости: 4.",
       "care": {
@@ -453,8 +451,7 @@
       },
       "image": "/assets/products/p733.jpg",
       "images": [
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2024/12/q-dUL7PS9005YFTWGFRXw81Ho0TftdeNUgw2ePRq8zd3Ip492J0vpbsh9SbRs2Utk_pKB98zFZ_t3WSRatq12KUE.jpg",
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2024/12/img_1253-1152x1536.jpeg"
+        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2024/12/q-dUL7PS9005YFTWGFRXw81Ho0TftdeNUgw2ePRq8zd3Ip492J0vpbsh9SbRs2Utk_pKB98zFZ_t3WSRatq12KUE.jpg"
       ],
       "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/%d0%b3%d0%be%d1%80%d1%82%d0%b5%d0%bd%d0%b7%d0%b8%d1%8f-%d1%81%d0%b0%d0%bd%d0%b4%d0%b5%d0%b9-%d1%84%d1%80%d0%b0%d0%b9%d0%b7/"
     },
@@ -464,8 +461,8 @@
       "category": "Гортензии",
       "categoryKey": "hydrangea",
       "price": 1500,
-      "stock": 3,
-      "status": "ok",
+      "stock": 0,
+      "status": "out",
       "description": "Собственное производство.\nВысота взрослого растения: 250 см\nЦвет соцветий: Белый, розовый\nПериод цветения: июль-сентябрь.\nМесто посадки: Солнце/Полутень.\nПочва: Кислая.\nПолив: Обильный.\nЗона морозостойкости: 4.\nПрименение: в качестве акцента в цветниках, живые изгороди, групповые посадки, миксбордеры в сочетании с травами, многолетними растениями и хвойными, кашпо, контейнеры",
       "care": {
         "height": "взрослого растения: 250 см",
@@ -511,8 +508,8 @@
       "category": "Гортензии",
       "categoryKey": "hydrangea",
       "price": 350,
-      "stock": 5,
-      "status": "ok",
+      "stock": 2,
+      "status": "low",
       "description": "Высота взрослого растения: 2 метра\nЦвет соцветий: Лаймовый, белый, розовый\nЦвет листьев: Зеленый\nПериод цветения: июль-сентябрь\nМесто посадки: Солнце/Полутень\nПочва: Плодородная, дренированная, кислая\nПолив: Обильный\nОбрезка: Формовочная, санитарная\nЗона морозостойкости: 4",
       "care": {
         "height": "взрослого растения: 2 м",
@@ -1035,7 +1032,7 @@
       "category": "Без категории",
       "categoryKey": "other",
       "price": 350,
-      "stock": 36,
+      "stock": 33,
       "status": "ok",
       "description": "Сорт «RED ACE”. Густой кустарник с нежными стелющимися побегами, подушковидной формы.\nВысота 0,4-0,6 м, шириной до 1,2 м.\nМесто посадки: солнце",
       "care": {
@@ -1778,10 +1775,10 @@
     "/assets/products/p2234.jpg",
     "/assets/products/p2236.png",
     "/assets/products/p2454.jpg",
-    "/assets/products/p1082.jpg",
     "/assets/products/p1571.jpg",
     "/assets/products/p1646.jpg",
     "/assets/products/p1078.jpg",
-    "/assets/products/p1506.jpg"
+    "/assets/products/p1506.jpg",
+    "/assets/products/p1017.jpg"
   ]
 }
