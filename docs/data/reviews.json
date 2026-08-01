@@ -1,9 +1,16 @@
 {
   "source": "avito",
   "rating": 5,
-  "reviewsCount": 143,
+  "reviewsCount": 144,
   "profileUrl": "https://www.avito.ru/brands/319c309577f67cb4522b1735089761fa/all/rasteniya?sellerId=047d5b824fe33abb9b2c479534b2262c",
   "reviews": [
+    {
+      "id": 464511266,
+      "author": "Татьяна",
+      "score": 5,
+      "date": "2026-07-31T13:58:16.000Z",
+      "text": "Огромное спасибо за красоту! Я в восторге.Очень красивая хризантема,вся в бутонах.Огромная,живая,яркая! Спасибо вам большое."
+    },
     {
       "id": 464272882,
       "author": "Инна",
