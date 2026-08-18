@@ -1,9 +1,16 @@
 {
   "source": "avito",
   "rating": 5,
-  "reviewsCount": 154,
+  "reviewsCount": 155,
   "profileUrl": "https://www.avito.ru/brands/319c309577f67cb4522b1735089761fa/all/rasteniya?sellerId=047d5b824fe33abb9b2c479534b2262c",
   "reviews": [
+    {
+      "id": 469365314,
+      "author": "Марина",
+      "score": 5,
+      "date": "2026-08-14T13:54:10.000Z",
+      "text": "Анна очень быстро откликнулась на сообщение и я купила 2 чудесных гортензии. Везу красоту! Спасибо!"
+    },
     {
       "id": 469069010,
       "author": "София",
