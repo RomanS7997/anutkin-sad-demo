@@ -1,9 +1,16 @@
 {
   "source": "avito",
   "rating": 5,
-  "reviewsCount": 157,
+  "reviewsCount": 158,
   "profileUrl": "https://www.avito.ru/brands/319c309577f67cb4522b1735089761fa/all/rasteniya?sellerId=047d5b824fe33abb9b2c479534b2262c",
   "reviews": [
+    {
+      "id": 471424338,
+      "author": "Игорь",
+      "score": 5,
+      "date": "2026-08-20T07:07:36.000Z",
+      "text": "Замечательный продавец, как и растение, выращенное ею с душой и любовью,! Спасибо!"
+    },
     {
       "id": 471139186,
       "author": "Ольга",
