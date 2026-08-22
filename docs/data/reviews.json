@@ -1,9 +1,16 @@
 {
   "source": "avito",
   "rating": 5,
-  "reviewsCount": 158,
+  "reviewsCount": 159,
   "profileUrl": "https://www.avito.ru/brands/319c309577f67cb4522b1735089761fa/all/rasteniya?sellerId=047d5b824fe33abb9b2c479534b2262c",
   "reviews": [
+    {
+      "id": 471949970,
+      "author": "Ольга",
+      "score": 5,
+      "date": "2026-08-21T13:03:58.000Z",
+      "text": "Все привезли отлично упаковано, будем сажать. Продавец на все вопросы ответил, довоььна. Рекомендую!"
+    },
     {
       "id": 471424338,
       "author": "Игорь",
