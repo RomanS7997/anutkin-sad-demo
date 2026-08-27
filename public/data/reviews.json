@@ -1,9 +1,16 @@
 {
   "source": "avito",
   "rating": 5,
-  "reviewsCount": 160,
+  "reviewsCount": 161,
   "profileUrl": "https://www.avito.ru/brands/319c309577f67cb4522b1735089761fa/all/rasteniya?sellerId=047d5b824fe33abb9b2c479534b2262c",
   "reviews": [
+    {
+      "id": 473810834,
+      "author": "Елена",
+      "score": 5,
+      "date": "2026-08-26T11:52:39.000Z",
+      "text": "Спасибо Анюте за замечательную растишку. Быстро ответили,доставили. Кустик свежий. Пушистый. Очень довольна покупкой у Анны. Процветания вам!"
+    },
     {
       "id": 473315074,
       "author": "Татьяна",
