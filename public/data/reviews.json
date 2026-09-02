@@ -1,9 +1,16 @@
 {
   "source": "avito",
   "rating": 5,
-  "reviewsCount": 162,
+  "reviewsCount": 163,
   "profileUrl": "https://www.avito.ru/brands/319c309577f67cb4522b1735089761fa/all/rasteniya?sellerId=047d5b824fe33abb9b2c479534b2262c",
   "reviews": [
+    {
+      "id": 476055426,
+      "author": "Lyubov Maslennikova",
+      "score": 5,
+      "date": "2026-09-01T09:57:58.000Z",
+      "text": "Спасибо огромное за своевременную доставку. Спасибо за прекрасный экземпляр лапчатки, за отличную упаковку."
+    },
     {
       "id": 474305058,
       "author": "Ирина Пичугина",
