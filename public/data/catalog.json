@@ -272,7 +272,8 @@
       "image": "/assets/products/p1017.jpg",
       "images": [
         "https://annaflowerfarm.ru/wp-content/uploads/2025/03/40bdf4f3-7dde-4210-906f-910f39494b27.jpeg",
-        "https://annaflowerfarm.ru/wp-content/uploads/2025/03/z0msqKcXCWU.jpg"
+        "https://annaflowerfarm.ru/wp-content/uploads/2025/03/z0msqKcXCWU.jpg",
+        "https://annaflowerfarm.ru/wp-content/uploads/2025/03/img_4648-1152x1536.jpeg"
       ],
       "sourceUrl": "https://annaflowerfarm.ru/product/%d0%b3%d0%be%d1%80%d1%82%d0%b5%d0%bd%d0%b7%d0%b8%d1%8f-%d0%bc%d0%b5%d1%82%d0%b5%d0%bb%d1%8c%d1%87%d0%b0%d1%82%d0%b0%d1%8f-%d0%b2%d0%b0%d0%bd%d0%b8%d0%bb%d0%b0-%d1%84%d1%80%d0%b0%d0%b9%d0%b7/"
     },
@@ -293,7 +294,8 @@
       },
       "image": "/assets/products/p1005.jpg",
       "images": [
-        "https://annaflowerfarm.ru/wp-content/uploads/2025/03/img_1266-1152x1536.jpeg"
+        "https://annaflowerfarm.ru/wp-content/uploads/2025/03/img_1266-1152x1536.jpeg",
+        "https://annaflowerfarm.ru/wp-content/uploads/2025/03/img_4649-1152x1536.jpeg"
       ],
       "sourceUrl": "https://annaflowerfarm.ru/product/%d0%b3%d0%be%d1%80%d1%82%d0%b5%d0%bd%d0%b7%d0%b8%d1%8f-%d0%bc%d0%b5%d1%82%d0%b5%d0%bb%d1%8c%d1%87%d0%b0%d1%82%d0%b0%d1%8f-%d0%b4%d0%b0%d0%b9%d0%bc%d0%be%d0%bd%d0%b4-%d1%80%d1%83%d0%b6/"
     },
@@ -415,8 +417,8 @@
       "category": "Гортензии",
       "categoryKey": "hydrangea",
       "price": 350,
-      "stock": 0,
-      "status": "out",
+      "stock": 10,
+      "status": "ok",
       "description": "🌱Объём контейнера 0,5л\nСобственное производство.\nВысота взрослого растения: 100 см.\nЦвет соцветий: Белый, розовый.\nМесто посадки: Солнце/Полутень.\nПочва: Кислая.\nПолив: Обильный.\nЗона морозостойкости: 4.",
       "care": {
         "height": "взрослого растения: 100 см",
@@ -426,9 +428,9 @@
       "image": "/assets/products/p718.jpg",
       "images": [
         "https://annaflowerfarm.ru/wp-content/uploads/2024/12/4tJTRlWthHCux2ebSpM433yDZZZmVT8q3nOX49dygxCS5n990uKFxTqFGPFhGyrLdcBN87j5QjDDWBjNAQssHvFd.jpg",
-        "https://annaflowerfarm.ru/wp-content/uploads/2024/12/img_2463-1152x1536.jpeg",
         "https://annaflowerfarm.ru/wp-content/uploads/2024/12/ZpXL-oQosXFCwzJw9XTtQ0GYhGk_EmvvJfz-cJQLW8ZvgGj1muovGrfhEYaPtg96gszYluAtjGC71_84UbI07NAK.jpg",
-        "https://annaflowerfarm.ru/wp-content/uploads/2024/12/ulacRDhENvhgSSK_iRSTrc2HDQcbuEYYlWqvSogsnv1itPXLKeRmTKrbfeO6BUARKbKlOyiIIzap1sgf5QIEFZ9.jpg"
+        "https://annaflowerfarm.ru/wp-content/uploads/2024/12/ulacRDhENvhgSSK_iRSTrc2HDQcbuEYYlWqvSogsnv1itPXLKeRmTKrbfeO6BUARKbKlOyiIIzap1sgf5QIEFZ9.jpg",
+        "https://annaflowerfarm.ru/wp-content/uploads/2024/12/img_4647-1152x1536.jpeg"
       ],
       "sourceUrl": "https://annaflowerfarm.ru/product/%d0%b3%d0%be%d1%80%d1%82%d0%b5%d0%bd%d0%b7%d0%b8%d1%8f-%d0%bc%d0%b5%d1%82%d0%b5%d0%bb%d1%8c%d1%87%d0%b0%d1%82%d0%b0%d1%8f-%d1%81%d0%b0%d0%bc%d0%bc%d0%b5%d1%80-%d0%bb%d0%b0%d0%b2/"
     },
@@ -473,6 +475,29 @@
         "https://annaflowerfarm.ru/wp-content/uploads/2024/12/2d7afb1b-6771-44af-90a4-bf70a8626e5f.jpeg"
       ],
       "sourceUrl": "https://annaflowerfarm.ru/product/%d0%bc%d0%b5%d1%82%d0%b5%d0%bb%d1%8c%d1%87%d0%b0%d1%82%d0%b0%d1%8f-%d0%b3%d0%be%d1%80%d1%82%d0%b5%d0%bd%d0%b7%d0%b8%d1%8f-%d1%81%d1%82%d1%80%d0%be%d0%b1%d0%b5%d1%80%d1%80%d0%b8-%d0%b1%d0%bb%d0%be/"
+    },
+    {
+      "id": 2489,
+      "name": "Гортензия метельчатая «Геркулес»",
+      "category": "Гортензии",
+      "categoryKey": "hydrangea",
+      "price": 350,
+      "stock": 10,
+      "status": "ok",
+      "description": "Высота взрослого растения: 2 метра\nЦвет соцветий: Лаймовый, белый, розовый\nЦвет листьев: Зеленый\nПериод цветения: июль-сентябрь\nМесто посадки: Солнце/Полутень\nПочва: Плодородная, дренированная, кислая\nПолив: Обильный\nОбрезка: Формовочная, санитарная\nЗона морозостойкости: 4",
+      "care": {
+        "height": "взрослого растения: 2 м",
+        "bloom": "июль-сентябрь",
+        "light": "Солнце/Полутень",
+        "hardiness": "4"
+      },
+      "image": "/assets/products/p2489.jpg",
+      "images": [
+        "https://annaflowerfarm.ru/wp-content/uploads/2026/07/a1311536-5469-4a99-a280-39bfb183655c.jpeg",
+        "https://annaflowerfarm.ru/wp-content/uploads/2026/07/affc2be5-26e7-48bb-97fb-f1daaff964be.jpeg",
+        "https://annaflowerfarm.ru/wp-content/uploads/2026/07/img_4652-1152x1536.jpeg"
+      ],
+      "sourceUrl": "https://annaflowerfarm.ru/product/%d0%b3%d0%be%d1%80%d1%82%d0%b5%d0%bd%d0%b7%d0%b8%d1%8f-%d0%bc%d0%b5%d1%82%d0%b5%d0%bb%d1%8c%d1%87%d0%b0%d1%82%d0%b0%d1%8f-%d0%b3%d0%b5%d1%80%d0%ba%d1%83%d0%bb%d0%b5%d1%81/"
     },
     {
       "id": 683,
@@ -520,7 +545,7 @@
       "name": "Гортензия метельчатая Фантом",
       "category": "Гортензии",
       "categoryKey": "hydrangea",
-      "price": 600,
+      "price": 350,
       "stock": 12,
       "status": "ok",
       "description": "🌱Собственное производство.\nВысота взрослого растения: 2,2 м.\nЦвет соцветий: Белый, лаймовый, розовый.\nПериод цветения: июль-октябрь.\nМесто посадки: Солнце/Полутень.\nПочва: Кислая.\nПолив: Обильный.\nЗона морозостойкости: 4.\nПрименение: живые изгороди, групповые посадки, миксбордеры в сочетании с травами, многолетними растениями и хвойными",
@@ -1662,7 +1687,7 @@
       "name": "Эхинацея пурпурная «Бравадо»",
       "category": "Цветы многолетние",
       "categoryKey": "perennials",
-      "price": 300,
+      "price": 600,
       "stock": 0,
       "status": "out",
       "description": "Эхинацея пурпурная «Бравадо» (Echinacea purpurea «Bravado») — многолетнее травянистое растение с крупными тёмно-розовыми цветками. Отличается высокой декоративностью, устойчивостью к болезням и засухе, а также длительным периодом цветения.\nХарактеристики\n• Высота растения. До 100 см.\n• Диаметр соцветий. До 10–15 см.\n• Цветки. Тёмно-розовые с куполообразной сердцевиной коричневато-оранжевого оттенка. Лепестки расположены горизонтально.\n• Период цветения. С июля по сентябрь.\n• Листья. Прикорневые — овальные, зазубренные, сужаются к корешку и образуют розетку; стеблевые — сидячие, ланцетные, шершавые.\n• Морозостойкость. Выдерживает температуры до −35 °C.\n• Зона зимостойкости. 4 (подходит для Московской области и большей части России).\n• Местоположение. Солнечные участки или лёгкая полутень.",
@@ -1682,7 +1707,7 @@
       "id": 23,
       "name": "Гортензии",
       "key": "hydrangea",
-      "count": 15,
+      "count": 16,
       "url": "https://annaflowerfarm.ru/product-category/gortenzii/"
     },
     {
