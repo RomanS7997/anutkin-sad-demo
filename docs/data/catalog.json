@@ -294,7 +294,7 @@
       },
       "image": "/assets/products/p1005.jpg",
       "images": [
-        "https://annaflowerfarm.ru/wp-content/uploads/2025/03/img_1266-1152x1536.jpeg",
+        "https://annaflowerfarm.ru/wp-content/uploads/2025/03/img_4405-1152x1536.jpeg",
         "https://annaflowerfarm.ru/wp-content/uploads/2025/03/img_4649-1152x1536.jpeg"
       ],
       "sourceUrl": "https://annaflowerfarm.ru/product/%d0%b3%d0%be%d1%80%d1%82%d0%b5%d0%bd%d0%b7%d0%b8%d1%8f-%d0%bc%d0%b5%d1%82%d0%b5%d0%bb%d1%8c%d1%87%d0%b0%d1%82%d0%b0%d1%8f-%d0%b4%d0%b0%d0%b9%d0%bc%d0%be%d0%bd%d0%b4-%d1%80%d1%83%d0%b6/"
@@ -380,9 +380,9 @@
         "light": "Солнце/Полутень",
         "hardiness": "4"
       },
-      "image": "/assets/products/p726.jpg",
+      "image": "/assets/products/p726.png",
       "images": [
-        "https://annaflowerfarm.ru/wp-content/uploads/2024/12/bb8d2bbe-b143-45cf-8e8f-c83ff4c6906f.jpeg",
+        "https://annaflowerfarm.ru/wp-content/uploads/2024/12/img_4857.png",
         "https://annaflowerfarm.ru/wp-content/uploads/2024/12/685f1fb8-5cdd-4cd0-b74b-3afc90c6fe6b.jpeg",
         "https://annaflowerfarm.ru/wp-content/uploads/2024/12/hR37RhV97umzrR3uIBMYn2rDMXPB-6WTR3VqCUrFYcb-_zdbPwdGaH1qISyR8e-kYs7DOjQGa5CQ8hULI67Ksov1.jpg"
       ],
@@ -405,6 +405,8 @@
       },
       "image": "/assets/products/p1022.jpg",
       "images": [
+        "https://annaflowerfarm.ru/wp-content/uploads/2025/03/img_4783-1152x1536.jpeg",
+        "https://annaflowerfarm.ru/wp-content/uploads/2025/03/img_4776-1152x1536.jpeg",
         "https://annaflowerfarm.ru/wp-content/uploads/2025/03/97b1db26-3aa3-4fc3-98ad-898e30a6e459.jpeg",
         "https://annaflowerfarm.ru/wp-content/uploads/2025/03/7393d284-edf7-480f-98ee-7e04da5a16cd.jpeg",
         "https://annaflowerfarm.ru/wp-content/uploads/2025/03/cfcb107f-f5db-4e47-875e-d1deebc49909.jpeg"
@@ -417,7 +419,7 @@
       "category": "Гортензии",
       "categoryKey": "hydrangea",
       "price": 350,
-      "stock": 10,
+      "stock": 9,
       "status": "ok",
       "description": "🌱Объём контейнера 0,5л\nСобственное производство.\nВысота взрослого растения: 100 см.\nЦвет соцветий: Белый, розовый.\nМесто посадки: Солнце/Полутень.\nПочва: Кислая.\nПолив: Обильный.\nЗона морозостойкости: 4.",
       "care": {
@@ -440,7 +442,7 @@
       "category": "Гортензии",
       "categoryKey": "hydrangea",
       "price": 1000,
-      "stock": 12,
+      "stock": 11,
       "status": "ok",
       "description": "🌱Собственное производство.\nВысота взрослого растения: 120 см.\nЦвет соцветий: Белый, розовый.\nПериод цветения: июль-сентябрь.\nМесто посадки: Солнце/Полутень.\nПочва: Плодородная, дренированная, кислая.\nПолив: Обильный.\nЗона морозостойкости: 4.",
       "care": {
@@ -482,7 +484,7 @@
       "category": "Гортензии",
       "categoryKey": "hydrangea",
       "price": 350,
-      "stock": 10,
+      "stock": 9,
       "status": "ok",
       "description": "Высота взрослого растения: 2 метра\nЦвет соцветий: Лаймовый, белый, розовый\nЦвет листьев: Зеленый\nПериод цветения: июль-сентябрь\nМесто посадки: Солнце/Полутень\nПочва: Плодородная, дренированная, кислая\nПолив: Обильный\nОбрезка: Формовочная, санитарная\nЗона морозостойкости: 4",
       "care": {
@@ -498,6 +500,76 @@
         "https://annaflowerfarm.ru/wp-content/uploads/2026/07/img_4652-1152x1536.jpeg"
       ],
       "sourceUrl": "https://annaflowerfarm.ru/product/%d0%b3%d0%be%d1%80%d1%82%d0%b5%d0%bd%d0%b7%d0%b8%d1%8f-%d0%bc%d0%b5%d1%82%d0%b5%d0%bb%d1%8c%d1%87%d0%b0%d1%82%d0%b0%d1%8f-%d0%b3%d0%b5%d1%80%d0%ba%d1%83%d0%bb%d0%b5%d1%81/"
+    },
+    {
+      "id": 2641,
+      "name": "Гортензия метельчатая Бонфайер",
+      "category": "Гортензии",
+      "categoryKey": "hydrangea",
+      "price": 550,
+      "stock": 12,
+      "status": "ok",
+      "description": "Высота взрослого растения: 1,2 м\nЦвет соцветий: Белый, розовый, малиновый\nЦвет листьев: Зеленый\nПериод цветения: июль-октябрь\nМесто посадки: Солнце/Полутень\nПочва: Плодородная, дренированная, кислая\nПолив: Обильный\nОбрезка: Формовочная, санитарная\nЗона морозостойкости: 4\nУпаковка корневой системы: 0,5л",
+      "care": {
+        "height": "взрослого растения: 1,2 м",
+        "bloom": "июль-октябрь",
+        "light": "Солнце/Полутень",
+        "hardiness": "4"
+      },
+      "image": "/assets/products/p2641.jpg",
+      "images": [
+        "https://annaflowerfarm.ru/wp-content/uploads/2026/09/img_4689-1152x1536.jpeg",
+        "https://annaflowerfarm.ru/wp-content/uploads/2026/09/img_4686-1152x1536.jpeg",
+        "https://annaflowerfarm.ru/wp-content/uploads/2026/09/img_4654-1152x1536.jpeg"
+      ],
+      "sourceUrl": "https://annaflowerfarm.ru/product/%d0%b3%d0%be%d1%80%d1%82%d0%b5%d0%bd%d0%b7%d0%b8%d1%8f-%d0%bc%d0%b5%d1%82%d0%b5%d0%bb%d1%8c%d1%87%d0%b0%d1%82%d0%b0%d1%8f-%d0%b1%d0%be%d0%bd%d1%84%d0%b0%d0%b9%d0%b5%d1%80/"
+    },
+    {
+      "id": 662,
+      "name": "Гортензия метельчатая Вайтлайт",
+      "category": "Гортензии",
+      "categoryKey": "hydrangea",
+      "price": 350,
+      "stock": 12,
+      "status": "ok",
+      "description": "🌱Собственное производство.\nВысота взрослого растения: 100 см.\nЦвет соцветий: Нежно-розовый.\nПериод цветения: июль-сентябрь.\nМесто посадки: Солнце/Полутень.\nПочва: Кислая, влажная.\nПолив: Обильный.\nОбрезка: Формовочная, санитарная.\nЗона морозостойкости: 4.",
+      "care": {
+        "height": "взрослого растения: 100 см",
+        "bloom": "июль-сентябрь",
+        "light": "Солнце/Полутень",
+        "hardiness": "4"
+      },
+      "image": "/assets/products/p662.jpg",
+      "images": [
+        "https://annaflowerfarm.ru/wp-content/uploads/2024/12/GRd74Jqmj6who5FM8fI6Pwf42pxsOYeSdBrTyd4ZYSFpe3H1UtvGzptgv1qu5E0CzhpJDNAee2yMs_yTF3A92YGR.jpg",
+        "https://annaflowerfarm.ru/wp-content/uploads/2024/12/img_3230-1152x1536.jpeg",
+        "https://annaflowerfarm.ru/wp-content/uploads/2024/12/img_3232-1152x1536.jpeg"
+      ],
+      "sourceUrl": "https://annaflowerfarm.ru/product/%d0%b2%d0%b0%d0%b9%d1%82%d0%bb%d0%b0%d0%b9%d1%82-%d0%bc%d0%b5%d1%82%d0%b5%d0%bb%d1%8c%d1%87%d0%b0%d1%82%d0%b0%d1%8f-%d0%b3%d0%be%d1%80%d1%82%d0%b5%d0%bd%d0%b7%d0%b8%d1%8f/"
+    },
+    {
+      "id": 2646,
+      "name": "Гортензия метельчатая Литтл Рози",
+      "category": "Гортензии",
+      "categoryKey": "hydrangea",
+      "price": 550,
+      "stock": 12,
+      "status": "ok",
+      "description": "Высота взрослого растения: 60 см\nЦвет соцветий: Белый, розовый, красный\nЦвет листьев: Зеленый\nПериод цветения: июль-сентябрь\nМесто посадки: Солнце/Полутень\nПочва: Плодородная, дренированная, кислая\nПолив: Обильный\nОбрезка: Формовочная, санитарная\nЗона морозостойкости: 4\nУпаковка корневой системы: 0,5л",
+      "care": {
+        "height": "взрослого растения: 60 см",
+        "bloom": "июль-сентябрь",
+        "light": "Солнце/Полутень",
+        "hardiness": "4"
+      },
+      "image": "/assets/products/p2646.jpg",
+      "images": [
+        "https://annaflowerfarm.ru/wp-content/uploads/2026/09/img_4679-1152x1536.jpeg",
+        "https://annaflowerfarm.ru/wp-content/uploads/2026/09/img_4680-1152x1536.jpeg",
+        "https://annaflowerfarm.ru/wp-content/uploads/2026/09/img_4656-1152x1536.jpeg",
+        "https://annaflowerfarm.ru/wp-content/uploads/2026/09/img_4655-1152x1536.jpeg"
+      ],
+      "sourceUrl": "https://annaflowerfarm.ru/product/%d0%b3%d0%be%d1%80%d1%82%d0%b5%d0%bd%d0%b7%d0%b8%d1%8f-%d0%bc%d0%b5%d1%82%d0%b5%d0%bb%d1%8c%d1%87%d0%b0%d1%82%d0%b0%d1%8f-%d0%bb%d0%b8%d1%82%d1%82%d0%bb-%d1%80%d0%be%d0%b7%d0%b8/"
     },
     {
       "id": 683,
@@ -541,6 +613,72 @@
       "sourceUrl": "https://annaflowerfarm.ru/product/%d0%b3%d0%be%d1%80%d1%82%d0%b5%d0%bd%d0%b7%d0%b8%d1%8f-%d0%bc%d0%b5%d1%82%d0%b5%d0%bb%d1%8c%d1%87%d0%b0%d1%82%d0%b0%d1%8f-%d0%bf%d0%b5%d1%82%d0%b8%d1%82-%d1%87%d0%b5%d1%80%d1%80%d0%b8/"
     },
     {
+      "id": 2637,
+      "name": "Гортензия метельчатая Пинк энд Роуз",
+      "category": "Гортензии",
+      "categoryKey": "hydrangea",
+      "price": 550,
+      "stock": 12,
+      "status": "ok",
+      "description": "Высота взрослого растения: 130см\nЦвет соцветий: белый, розовый, малиновый\nПериод цветения: июль-сентябрь\nМесто посадки: солнце/полутень\nПолив: обильный\nЗона морозостойкости: 4\nУпаковка корневой системы: 0,5л",
+      "care": {
+        "height": "взрослого растения: 130см",
+        "bloom": "июль-сентябрь",
+        "light": "солнце/полутень",
+        "hardiness": "4"
+      },
+      "image": "/assets/products/p2637.jpg",
+      "images": [
+        "https://annaflowerfarm.ru/wp-content/uploads/2026/09/img_4650-1152x1536.jpeg"
+      ],
+      "sourceUrl": "https://annaflowerfarm.ru/product/%d0%bc%d0%b5%d1%82%d0%b5%d0%bb%d1%8c%d1%87%d0%b0%d1%82%d0%b0%d1%8f-%d0%b3%d0%be%d1%80%d1%82%d0%b5%d0%bd%d0%b7%d0%b8%d1%8f-%d0%bf%d0%b8%d0%bd%d0%ba-%d1%8d%d0%bd%d0%b4-%d1%80%d0%be%d1%83%d0%b7/"
+    },
+    {
+      "id": 667,
+      "name": "Гортензия метельчатая Распберри Пинк",
+      "category": "Гортензии",
+      "categoryKey": "hydrangea",
+      "price": 350,
+      "stock": 5,
+      "status": "ok",
+      "description": "🌱Собственное производство.\nВысота куста 100 см, ширина 90 см.\nЛистья зеленые, ветви красные, крепкие, прямостоящие.\nЦветение с июля по сентябрь.\nСоцветия пышные, 20-25см, состоят из стерильных цветков, меняют цвет от белого до насыщенно-розового.\nПочва должна быть кислая, влажная, но без застоя воды.\nНеобходимо солнечное место для посадки.\nЗимостойкость-30С.\nИспользуется для миксбордеров, живых изгородей контейнерное выращивание.",
+      "care": {
+        "height": "куста 100 см",
+        "bloom": "с июля по сентябрь",
+        "hardiness": "30С"
+      },
+      "image": "/assets/products/p667.jpg",
+      "images": [
+        "https://annaflowerfarm.ru/wp-content/uploads/2024/12/img_4400-1152x1536.jpeg",
+        "https://annaflowerfarm.ru/wp-content/uploads/2024/12/img_4402-1152x1536.jpeg"
+      ],
+      "sourceUrl": "https://annaflowerfarm.ru/product/%d1%80%d0%b0%d1%81%d0%bf%d0%b1%d0%b5%d1%80%d1%80%d0%b8-%d0%bf%d0%b8%d0%bd%d0%ba-%d0%bc%d0%b5%d1%82%d0%b5%d0%bb%d1%8c%d1%87%d0%b0%d1%82%d0%b0%d1%8f-%d0%b3%d0%be%d1%80%d1%82%d0%b5%d0%bd%d0%b7%d0%b8/"
+    },
+    {
+      "id": 2652,
+      "name": "Гортензия метельчатая Ред Лайт",
+      "category": "Гортензии",
+      "categoryKey": "hydrangea",
+      "price": 550,
+      "stock": 12,
+      "status": "ok",
+      "description": "Высота взрослого растения: 1 M\nЦвет соцветий: Лаймовый, розовый, красный\nЦвет листьев: Зеленый\nПериод цветения: июль-сентябрь\nМесто посадки: Солнце/Полутень\nПочва: Плодородная, дренированная, кислая\nПолив: Обильный\nОбрезка: Формовочная, санитарная\nЗона морозостойкости: 4\nУпаковка корневой системы: 0,5л",
+      "care": {
+        "bloom": "июль-сентябрь",
+        "light": "Солнце/Полутень",
+        "hardiness": "4"
+      },
+      "image": "/assets/products/p2652.jpg",
+      "images": [
+        "https://annaflowerfarm.ru/wp-content/uploads/2026/09/img_4690-1152x1536.jpeg",
+        "https://annaflowerfarm.ru/wp-content/uploads/2026/09/img_4691-1152x1536.jpeg",
+        "https://annaflowerfarm.ru/wp-content/uploads/2026/09/img_4657-1152x1536.jpeg",
+        "https://annaflowerfarm.ru/wp-content/uploads/2026/09/img_4658-1152x1536.jpeg",
+        "https://annaflowerfarm.ru/wp-content/uploads/2026/09/img_4659-1152x1536.jpeg"
+      ],
+      "sourceUrl": "https://annaflowerfarm.ru/product/%d0%b3%d0%be%d1%80%d1%82%d0%b5%d0%bd%d0%b7%d0%b8%d1%8f-%d0%bc%d0%b5%d1%82%d0%b5%d0%bb%d1%8c%d1%87%d0%b0%d1%82%d0%b0%d1%8f-%d1%80%d0%b5%d0%b4-%d0%bb%d0%b0%d0%b9%d1%82/"
+    },
+    {
       "id": 693,
       "name": "Гортензия метельчатая Фантом",
       "category": "Гортензии",
@@ -555,9 +693,10 @@
         "light": "Солнце/Полутень",
         "hardiness": "4"
       },
-      "image": "/assets/products/p693.jpg",
+      "image": "/assets/products/p693.png",
       "images": [
-        "https://annaflowerfarm.ru/wp-content/uploads/2024/12/rOyNkH7scgFKJE0H5O4AJnOA892GzIVocL3AWcU5efmiX6VXo0llbsvQgErY7ARM_fJl1v7Y6OcU22ddLzxrORtl.jpg"
+        "https://annaflowerfarm.ru/wp-content/uploads/2024/12/img_4858.png",
+        "https://annaflowerfarm.ru/wp-content/uploads/2024/12/img_3417-1152x1536.jpeg"
       ],
       "sourceUrl": "https://annaflowerfarm.ru/product/%d0%b3%d0%be%d1%80%d1%82%d0%b5%d0%bd%d0%b7%d0%b8%d1%8f-%d0%bc%d0%b5%d1%82%d0%b5%d0%bb%d1%8c%d1%87%d0%b0%d1%82%d0%b0%d1%8f-%d1%84%d0%b0%d0%bd%d1%82%d0%be%d0%bc/"
     },
@@ -587,7 +726,7 @@
       "category": "Без категории",
       "categoryKey": "other",
       "price": 350,
-      "stock": 119,
+      "stock": 116,
       "status": "ok",
       "description": "Компактный кустарник, достигающий высоты 1,5-2,5 метров, в ширину 3-4м. Отличается декоративными качествам и.\nИва нана используется в ландшафтном дизайне для создания живых изгородей и бордюров, формирования фигурных композиций, декоративного озеленения малых архитектурных форм, декорирования водоёмов и искусственных ручьёв, оформления входных групп и дорожек.",
       "care": {
@@ -984,7 +1123,7 @@
       "category": "Без категории",
       "categoryKey": "other",
       "price": 300,
-      "stock": 5,
+      "stock": 4,
       "status": "ok",
       "description": "🌱Собственное производство.\nОкруглый компактный кустик; крона подушковидная.\nВысота 0,6 — 0,8м.\nШирина 1 — 1,2м.\nЦветёт с июня по сентябрь крупными ярко-жёлтыми цветами.\nСолнце/полутень.\nЗимостойка; нетребовательна.",
       "care": {
@@ -1003,7 +1142,7 @@
       "category": "Без категории",
       "categoryKey": "other",
       "price": 350,
-      "stock": 15,
+      "stock": 12,
       "status": "ok",
       "description": "Сорт «RED ACE”. Густой кустарник с нежными стелющимися побегами, подушковидной формы.\nВысота 0,4-0,6 м, шириной до 1,2 м.\nМесто посадки: солнце",
       "care": {
@@ -1037,59 +1176,13 @@
       "sourceUrl": "https://annaflowerfarm.ru/product/%d0%bc%d0%b0%d0%bb%d0%b8%d0%bd%d0%b0/"
     },
     {
-      "id": 662,
-      "name": "Метельчатая гортензия Вайтлайт",
-      "category": "Гортензии",
-      "categoryKey": "hydrangea",
-      "price": 350,
-      "stock": 12,
-      "status": "ok",
-      "description": "🌱Собственное производство.\nВысота взрослого растения: 100 см.\nЦвет соцветий: Нежно-розовый.\nПериод цветения: июль-сентябрь.\nМесто посадки: Солнце/Полутень.\nПочва: Кислая, влажная.\nПолив: Обильный.\nОбрезка: Формовочная, санитарная.\nЗона морозостойкости: 4.",
-      "care": {
-        "height": "взрослого растения: 100 см",
-        "bloom": "июль-сентябрь",
-        "light": "Солнце/Полутень",
-        "hardiness": "4"
-      },
-      "image": "/assets/products/p662.jpg",
-      "images": [
-        "https://annaflowerfarm.ru/wp-content/uploads/2024/12/GRd74Jqmj6who5FM8fI6Pwf42pxsOYeSdBrTyd4ZYSFpe3H1UtvGzptgv1qu5E0CzhpJDNAee2yMs_yTF3A92YGR.jpg",
-        "https://annaflowerfarm.ru/wp-content/uploads/2024/12/img_3230-1152x1536.jpeg",
-        "https://annaflowerfarm.ru/wp-content/uploads/2024/12/img_3232-1152x1536.jpeg"
-      ],
-      "sourceUrl": "https://annaflowerfarm.ru/product/%d0%b2%d0%b0%d0%b9%d1%82%d0%bb%d0%b0%d0%b9%d1%82-%d0%bc%d0%b5%d1%82%d0%b5%d0%bb%d1%8c%d1%87%d0%b0%d1%82%d0%b0%d1%8f-%d0%b3%d0%be%d1%80%d1%82%d0%b5%d0%bd%d0%b7%d0%b8%d1%8f/"
-    },
-    {
-      "id": 667,
-      "name": "Метельчатая гортензия Распберри Пинк",
-      "category": "Гортензии",
-      "categoryKey": "hydrangea",
-      "price": 350,
-      "stock": 5,
-      "status": "ok",
-      "description": "🌱Собственное производство.\nВысота куста 100 см, ширина 90 см.\nЛистья зеленые, ветви красные, крепкие, прямостоящие.\nЦветение с июля по сентябрь.\nСоцветия пышные, 20-25см, состоят из стерильных цветков, меняют цвет от белого до насыщенно-розового.\nПочва должна быть кислая, влажная, но без застоя воды.\nНеобходимо солнечное место для посадки.\nЗимостойкость-30С.\nИспользуется для миксбордеров, живых изгородей контейнерное выращивание.",
-      "care": {
-        "height": "куста 100 см",
-        "bloom": "с июля по сентябрь",
-        "hardiness": "30С"
-      },
-      "image": "/assets/products/p667.jpg",
-      "images": [
-        "https://annaflowerfarm.ru/wp-content/uploads/2024/12/ZqtWcfZ668FoF4OJfSa8IDGM8X4qByC5A6KW9_z7oKs4HP5QTI8jISNl3pVPO7LU9K0VIeL9HgsZaHdPB66sqbYN.jpg",
-        "https://annaflowerfarm.ru/wp-content/uploads/2024/12/mzvvJoEh5tnY9FNFKuuMJ8PhN8AMXbDlDzOLrJ1yvl1solLl9E1sOtp6QLPRNLXCaKych0WqFrTP0iUlH25cTqRM.jpg",
-        "https://annaflowerfarm.ru/wp-content/uploads/2024/12/PChjavi6x2VfvMmN4myJoSLp1_iyk94TzIlnrHoldsU781p7yw_UsA19Jd-T0HKuAbZtrABFDADls90RqHxfcRYq.jpg",
-        "https://annaflowerfarm.ru/wp-content/uploads/2024/12/SCRwhc3FLG8DT4WMWeiBskQwQqAyerVYfILQqK86BaUC0ui5PIRei9Xo6rHjxa7DKjv-KGGZ6R5afc9AyKcWpg3r.jpg"
-      ],
-      "sourceUrl": "https://annaflowerfarm.ru/product/%d1%80%d0%b0%d1%81%d0%bf%d0%b1%d0%b5%d1%80%d1%80%d0%b8-%d0%bf%d0%b8%d0%bd%d0%ba-%d0%bc%d0%b5%d1%82%d0%b5%d0%bb%d1%8c%d1%87%d0%b0%d1%82%d0%b0%d1%8f-%d0%b3%d0%be%d1%80%d1%82%d0%b5%d0%bd%d0%b7%d0%b8/"
-    },
-    {
       "id": 1705,
       "name": "НЕМЕЗИЯ MENOR DUAL BORDEAUX",
       "category": "Цветы однолетние",
       "categoryKey": "annuals",
       "price": 750,
-      "stock": 2,
-      "status": "low",
+      "stock": 0,
+      "status": "out",
       "description": "🌸Кашпо 3,3л\nСорт переносит первые осенние заморозки.\nВысота растениия 20-25 см.\nТип каскадный.",
       "care": {
         "height": "растениия 20-25 см"
@@ -1147,7 +1240,7 @@
       "category": "Цветы многолетние",
       "categoryKey": "perennials",
       "price": 300,
-      "stock": 4,
+      "stock": 10,
       "status": "ok",
       "description": "🌱Собственное производство.\nКонтейнер 0,5л\nПериод цветения: Июль-август.\nОкраска цветка: Розовый.\nВысота: 15 см.\nЛистья бронзовые, мясистые, по краю зубчатые.\nЦветки мелкие, розовые с красноватым оттенком, собраны в зонтиковидные щитки.\nТребования к освещенности: Солнце.\nЗимостойкость: Зона 4.\nНорма посадки: 9-11 шт/кв.м.\nХарактеристика почвы: Любые.",
       "care": {
@@ -1211,7 +1304,7 @@
       "category": "Без категории",
       "categoryKey": "other",
       "price": 350,
-      "stock": 4,
+      "stock": 50,
       "status": "ok",
       "description": "🌱Собственное производство.\nПузыреплодник Лютеус. Быстрорастущий, широкий, округлый кустарник со слегка поникающими ветвями.\nВысота взрослого растения до 3 м, ширина до 2,5 м.\nЦветение в июне-июле.\nСолнце/полутень.\nМорозостойкий.\nУстойчив к вредителям и болезням.\nХорошо отзывается на подкормки и поливы в засушливые периоды. Хорошо подходит для создания живой изгороди",
       "care": {
@@ -1240,6 +1333,7 @@
       },
       "image": "/assets/products/p2451.png",
       "images": [
+        "https://annaflowerfarm.ru/wp-content/uploads/2026/07/img_3877.png",
         "https://annaflowerfarm.ru/wp-content/uploads/2026/07/img_1945.png",
         "https://annaflowerfarm.ru/wp-content/uploads/2026/07/img_3589-1152x1536.jpeg"
       ],
@@ -1261,7 +1355,7 @@
       "image": "/assets/products/p2585.jpg",
       "images": [
         "https://annaflowerfarm.ru/wp-content/uploads/2026/08/img_0363-1152x1536.jpeg",
-        "https://annaflowerfarm.ru/wp-content/uploads/2026/08/img_3461-1152x1536.jpeg"
+        "https://annaflowerfarm.ru/wp-content/uploads/2026/08/img_4643-1152x1536.jpeg"
       ],
       "sourceUrl": "https://annaflowerfarm.ru/product/%d1%80%d1%8f%d0%b1%d0%b8%d0%bd%d0%bd%d0%b8%d0%ba-%d1%80%d1%8f%d0%b1%d0%b8%d0%bd%d0%be%d0%bb%d0%b8%d1%81%d1%82%d0%bd%d1%8b%d0%b9-%d1%81%d1%8d%d0%bc/"
     },
@@ -1282,6 +1376,28 @@
         "https://annaflowerfarm.ru/wp-content/uploads/2025/07/img_0434-1152x1536.jpeg"
       ],
       "sourceUrl": "https://annaflowerfarm.ru/product/%d1%81%d0%b0%d0%b6%d0%b5%d0%bd%d1%86%d1%8b-%d0%ba%d0%bb%d1%83%d0%b1%d0%bd%d0%b8%d0%ba%d0%b8/"
+    },
+    {
+      "id": 2053,
+      "name": "Саженцы туи Смарагд",
+      "category": "Хвойные",
+      "categoryKey": "other",
+      "price": 350,
+      "stock": 12,
+      "status": "ok",
+      "description": "Саженцы туи В объёме 0,5л\nКрона туи «Смарагд» строго вертикальная, узкоконическая с равномерной густотой ветвей по всей высоте. Форма сохраняется естественным образом без частой корректирующей обрезки.\n• В условиях культурного выращивания в России средняя высота взрослого дерева — 3–4 м, в благоприятных условиях может достигать 5–6 м.\n• Диаметр кроны взрослого растения в основании обычно — 1–1,5 м .\n• Годовой прирост — в среднем около 20 см по высоте.",
+      "care": {
+        "height": "взрослого дерева — 3–4 м"
+      },
+      "image": "/assets/products/p2053.jpg",
+      "images": [
+        "https://annaflowerfarm.ru/wp-content/uploads/2026/04/img_4102-1152x1536.jpeg",
+        "https://annaflowerfarm.ru/wp-content/uploads/2026/04/img_4103-1152x1536.jpeg",
+        "https://annaflowerfarm.ru/wp-content/uploads/2026/04/img_4104-1152x1536.jpeg",
+        "https://annaflowerfarm.ru/wp-content/uploads/2026/04/a1aadf56-95df-421b-af6f-5871b87f8dce.jpeg",
+        "https://annaflowerfarm.ru/wp-content/uploads/2026/04/43a39d1b-3b93-4eb1-8e44-84e171ae16c9-1024x576.jpeg"
+      ],
+      "sourceUrl": "https://annaflowerfarm.ru/product/%d1%87%d0%b5%d1%80%d0%b5%d0%bd%d0%ba%d0%b8-%d1%82%d1%83%d0%b8-%d1%81%d0%bc%d0%b0%d1%80%d0%b0%d0%b3%d0%b4/"
     },
     {
       "id": 2272,
@@ -1349,7 +1465,7 @@
       "category": "Без категории",
       "categoryKey": "other",
       "price": 250,
-      "stock": 148,
+      "stock": 143,
       "status": "ok",
       "description": "Красивоцветущий кустарник с аркообразными поникающими ветвями, с ажурной кроной.\nВысота и ширина взрослого растения до 2м.\nЦветёт в мае-июне.\nСолнце/полутень.\nЗимостойкость: зона 4\nУстойчива к болезням и вредителям\nОбъём контейнера: 0,5л. 2х летний саженец\nВысота саженца: до 15см",
       "care": {
@@ -1512,8 +1628,8 @@
       "category": "Цветы однолетние",
       "categoryKey": "annuals",
       "price": 900,
-      "stock": 4,
-      "status": "ok",
+      "stock": 0,
+      "status": "out",
       "description": "Объём контейнера: 3л",
       "care": {},
       "image": "/assets/products/p1464.jpg",
@@ -1562,28 +1678,6 @@
       "sourceUrl": "https://annaflowerfarm.ru/product/%d1%85%d1%80%d0%b8%d0%b7%d0%b0%d0%bd%d1%82%d0%b5%d0%bc%d0%b0-%d0%bc%d1%83%d0%bb%d1%8c%d1%82%d0%b8%d1%84%d0%bb%d0%be%d1%80%d0%b0-sweet-pink/"
     },
     {
-      "id": 2053,
-      "name": "Черенки туи Смарагд",
-      "category": "Хвойные",
-      "categoryKey": "other",
-      "price": 350,
-      "stock": 12,
-      "status": "ok",
-      "description": "Саженцы туи В объёме 0,5л\nКрона туи «Смарагд» строго вертикальная, узкоконическая с равномерной густотой ветвей по всей высоте. Форма сохраняется естественным образом без частой корректирующей обрезки.\n• В условиях культурного выращивания в России средняя высота взрослого дерева — 3–4 м, в благоприятных условиях может достигать 5–6 м.\n• Диаметр кроны взрослого растения в основании обычно — 1–1,5 м .\n• Годовой прирост — в среднем около 20 см по высоте.",
-      "care": {
-        "height": "взрослого дерева — 3–4 м"
-      },
-      "image": "/assets/products/p2053.jpg",
-      "images": [
-        "https://annaflowerfarm.ru/wp-content/uploads/2026/04/img_4102-1152x1536.jpeg",
-        "https://annaflowerfarm.ru/wp-content/uploads/2026/04/img_4103-1152x1536.jpeg",
-        "https://annaflowerfarm.ru/wp-content/uploads/2026/04/img_4104-1152x1536.jpeg",
-        "https://annaflowerfarm.ru/wp-content/uploads/2026/04/a1aadf56-95df-421b-af6f-5871b87f8dce.jpeg",
-        "https://annaflowerfarm.ru/wp-content/uploads/2026/04/43a39d1b-3b93-4eb1-8e44-84e171ae16c9-1024x576.jpeg"
-      ],
-      "sourceUrl": "https://annaflowerfarm.ru/product/%d1%87%d0%b5%d1%80%d0%b5%d0%bd%d0%ba%d0%b8-%d1%82%d1%83%d0%b8-%d1%81%d0%bc%d0%b0%d1%80%d0%b0%d0%b3%d0%b4/"
-    },
-    {
       "id": 2358,
       "name": "Шалфей дубравный «Caradonna»",
       "category": "Цветы многолетние",
@@ -1607,8 +1701,8 @@
       "category": "Цветы многолетние",
       "categoryKey": "perennials",
       "price": 550,
-      "stock": 12,
-      "status": "ok",
+      "stock": 0,
+      "status": "out",
       "description": "Ширина: 30-40 см\nПериод цветения: июнь-июль, после обрезки зацветает повторно август-сентябрь\nЦветение: повторное после обрезки\nСоцветие: сине-фиолетовое\nЛист: узкий, зелёный\nФорма куста: компактная, округлая\nПолив: умеренный\nПочва: рыхлая, достаточно сухая, не любит переувлажнения\nМорозостойкость: 4 зона (-28/-34⁰C)\nПрименение: одиночные и групповые посадки, миксбордеры, рокарии, красиво сочетается с розами. Сады в природном стиле\nУпаковка корневой системы: 2л",
       "care": {
         "bloom": "июнь-июль, после обрезки зацветает повторно август-сентябрь"
@@ -1626,8 +1720,8 @@
       "category": "Цветы многолетние",
       "categoryKey": "perennials",
       "price": 550,
-      "stock": 12,
-      "status": "ok",
+      "stock": 0,
+      "status": "out",
       "description": "Ширина: 30-40 см\nПериод цветения: июнь-июль, после обрезки зацветает повторно август-сентябрь\nЦветение: повторное после обрезки\nСоцветие: розовое\nЛист: узкий, зелёный\nФорма куста: компактная, округлая\nПолив: умеренный\nПочва: рыхлая, достаточно сухая, не любит переувлажнения\nМорозостойкость: 4 зона (-28/-34⁰C)\nПрименение: одиночные и групповые посадки, миксбордеры, рокарии, красиво сочетается с розами. Сады в природном стиле\nУпаковка корневой системы: 2л",
       "care": {
         "bloom": "июнь-июль, после обрезки зацветает повторно август-сентябрь"
@@ -1645,7 +1739,7 @@
       "category": "Цветы многолетние",
       "categoryKey": "perennials",
       "price": 600,
-      "stock": 4,
+      "stock": 3,
       "status": "ok",
       "description": "Эхинацея пурпурная Mellow Yellow (Echinacea purpurea Mellow Yellow) — многолетнее травянистое растение с крупными жёлтыми цветками. Отличается неприхотливостью, длительным периодом цветения и декоративными качествами\nХарактеристики\n• Высота. 60–80 см.\n• Диаметр цветка. Около 15 см.\n• Цвет. Лепестки окрашены в тёплые, чуть приглушённые жёлтые тона: сливочный, лимонный, тёмно-жёлтый. Центр выпуклый, зеленовато-коричневый.\n• Период цветения. С июля по сентябрь.\n• Листья. Прикорневые — овальные, зазубренные, сужаются к корешку и образуют розетку; стеблевые — сидячие, ланцетные, шершавые.\n• Зимостойкость. Зона 4 (до −29 °C или −34 °C в зависимости от источника).\n• Местоположение. Солнечное\n• Расстояние между растениями — 30–40 см.",
       "care": {
@@ -1667,8 +1761,8 @@
       "category": "Цветы многолетние",
       "categoryKey": "perennials",
       "price": 600,
-      "stock": 6,
-      "status": "ok",
+      "stock": 1,
+      "status": "low",
       "description": "Эхинацея пурпурная Пау Вау Уайт (Echinacea purpurea Pow Wow White) — многолетнее травянистое растение с крупными белыми цветками. Подходит для декоративного озеленения, создания миксбордеров, групповых посадок и срезки.\nХарактеристики\n• Высота. 40–70 см.\n• Диаметр цветка. 8–10 см.\n• Цвет. Чисто-белый с контрастным центром зеленовато-жёлтого или зеленовато-коричневого цвета.\n• Период цветения. С июня по сентябрь около 60 дней.\n• Листья. Прикорневые — широкоовальные, зазубренные, на длинных черешках; стеблевые — сидячие, ланцетные, шершавые.\n• Почва. Питательная, хорошо обработанная и дренированная.\n• Местоположение. Солнце, полутень.\n• Климатическая зона. 4 (от −34,4 до −28,9 °C).\nРастение хорошо разветвляется, образуя больше цветков, чем любой другой компактный сорт с белыми цветками.",
       "care": {
         "height": "40–70 см",
@@ -1688,9 +1782,9 @@
       "category": "Цветы многолетние",
       "categoryKey": "perennials",
       "price": 600,
-      "stock": 0,
-      "status": "out",
-      "description": "Эхинацея пурпурная «Бравадо» (Echinacea purpurea «Bravado») — многолетнее травянистое растение с крупными тёмно-розовыми цветками. Отличается высокой декоративностью, устойчивостью к болезням и засухе, а также длительным периодом цветения.\nХарактеристики\n• Высота растения. До 100 см.\n• Диаметр соцветий. До 10–15 см.\n• Цветки. Тёмно-розовые с куполообразной сердцевиной коричневато-оранжевого оттенка. Лепестки расположены горизонтально.\n• Период цветения. С июля по сентябрь.\n• Листья. Прикорневые — овальные, зазубренные, сужаются к корешку и образуют розетку; стеблевые — сидячие, ланцетные, шершавые.\n• Морозостойкость. Выдерживает температуры до −35 °C.\n• Зона зимостойкости. 4 (подходит для Московской области и большей части России).\n• Местоположение. Солнечные участки или лёгкая полутень.",
+      "stock": 5,
+      "status": "ok",
+      "description": "Эхинацея пурпурная «Бравадо» (Echinacea purpurea «Bravado») — многолетнее травянистое растение с крупными тёмно-розовыми цветками. Отличается высокой декоративностью, устойчивостью к болезням и засухе, а также длительным периодом цветения.\nХарактеристики\n• Высота растения. До 100 см.\n• Диаметр соцветий. До 10–15 см.\n• Цветки. Тёмно-розовые с куполообразной сердцевиной коричневато-оранжевого оттенка. Лепестки расположены горизонтально.\n• Период цветения. С июля по сентябрь.\n• Листья. Прикорневые — овальные, зазубренные, сужаются к корешку и образуют розетку; стеблевые — сидячие, ланцетные, шершавые.\n• Морозостойкость. Выдерживает температуры до −35 °C.\n• Зона зимостойкости. 4 (подходит для Московской области и большей части России).\n• Местоположение. Солнечные участки или лёгкая полутень.\nУпаковка корневой системы: 1,5л",
       "care": {
         "bloom": "Характеристики",
         "hardiness": "4 (подходит для Московской области и большей части России)"
@@ -1707,7 +1801,7 @@
       "id": 23,
       "name": "Гортензии",
       "key": "hydrangea",
-      "count": 16,
+      "count": 20,
       "url": "https://annaflowerfarm.ru/product-category/gortenzii/"
     },
     {
