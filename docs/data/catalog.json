@@ -51,7 +51,9 @@
       },
       "image": "/assets/products/p2454.jpg",
       "images": [
-        "https://annaflowerfarm.ru/wp-content/uploads/2026/07/img_1946.jpeg"
+        "https://annaflowerfarm.ru/wp-content/uploads/2026/07/img_1946.jpeg",
+        "https://annaflowerfarm.ru/wp-content/uploads/2026/07/img_5025-1152x1536.jpeg",
+        "https://annaflowerfarm.ru/wp-content/uploads/2026/07/img_5024-1152x1536.jpeg"
       ],
       "sourceUrl": "https://annaflowerfarm.ru/product/%d0%b1%d0%b0%d0%b4%d0%b0%d0%bd-%d1%82%d0%be%d0%bb%d1%81%d1%82%d0%be%d0%bb%d0%b8%d1%81%d1%82%d0%bd%d1%8b%d0%b9-shoeshine-appleblossom/"
     },
@@ -271,8 +273,9 @@
       },
       "image": "/assets/products/p1017.jpg",
       "images": [
-        "https://annaflowerfarm.ru/wp-content/uploads/2025/03/40bdf4f3-7dde-4210-906f-910f39494b27.jpeg",
-        "https://annaflowerfarm.ru/wp-content/uploads/2025/03/z0msqKcXCWU.jpg",
+        "https://annaflowerfarm.ru/wp-content/uploads/2025/03/img_5114-1152x1536.jpeg",
+        "https://annaflowerfarm.ru/wp-content/uploads/2025/03/img_5119-1152x1536.jpeg",
+        "https://annaflowerfarm.ru/wp-content/uploads/2025/03/img_5118-1152x1536.jpeg",
         "https://annaflowerfarm.ru/wp-content/uploads/2025/03/img_4648-1152x1536.jpeg"
       ],
       "sourceUrl": "https://annaflowerfarm.ru/product/%d0%b3%d0%be%d1%80%d1%82%d0%b5%d0%bd%d0%b7%d0%b8%d1%8f-%d0%bc%d0%b5%d1%82%d0%b5%d0%bb%d1%8c%d1%87%d0%b0%d1%82%d0%b0%d1%8f-%d0%b2%d0%b0%d0%bd%d0%b8%d0%bb%d0%b0-%d1%84%d1%80%d0%b0%d0%b9%d0%b7/"
@@ -419,8 +422,8 @@
       "category": "Гортензии",
       "categoryKey": "hydrangea",
       "price": 350,
-      "stock": 10,
-      "status": "ok",
+      "stock": 0,
+      "status": "out",
       "description": "🌱Объём контейнера 0,5л\nСобственное производство.\nВысота взрослого растения: 100 см.\nЦвет соцветий: Белый, розовый.\nМесто посадки: Солнце/Полутень.\nПочва: Кислая.\nПолив: Обильный.\nЗона морозостойкости: 4.",
       "care": {
         "height": "взрослого растения: 100 см",
@@ -442,7 +445,7 @@
       "category": "Гортензии",
       "categoryKey": "hydrangea",
       "price": 1000,
-      "stock": 12,
+      "stock": 11,
       "status": "ok",
       "description": "🌱Собственное производство.\nВысота взрослого растения: 120 см.\nЦвет соцветий: Белый, розовый.\nПериод цветения: июль-сентябрь.\nМесто посадки: Солнце/Полутень.\nПочва: Плодородная, дренированная, кислая.\nПолив: Обильный.\nЗона морозостойкости: 4.",
       "care": {
@@ -484,7 +487,7 @@
       "category": "Гортензии",
       "categoryKey": "hydrangea",
       "price": 350,
-      "stock": 10,
+      "stock": 9,
       "status": "ok",
       "description": "Высота взрослого растения: 2 метра\nЦвет соцветий: Лаймовый, белый, розовый\nЦвет листьев: Зеленый\nПериод цветения: июль-сентябрь\nМесто посадки: Солнце/Полутень\nПочва: Плодородная, дренированная, кислая\nПолив: Обильный\nОбрезка: Формовочная, санитарная\nЗона морозостойкости: 4",
       "care": {
@@ -629,6 +632,9 @@
       },
       "image": "/assets/products/p2637.jpg",
       "images": [
+        "https://annaflowerfarm.ru/wp-content/uploads/2026/09/img_4985-1152x1536.jpeg",
+        "https://annaflowerfarm.ru/wp-content/uploads/2026/09/img_4986-1152x1536.jpeg",
+        "https://annaflowerfarm.ru/wp-content/uploads/2026/09/img_4988-1152x1536.jpeg",
         "https://annaflowerfarm.ru/wp-content/uploads/2026/09/img_4650-1152x1536.jpeg"
       ],
       "sourceUrl": "https://annaflowerfarm.ru/product/%d0%bc%d0%b5%d1%82%d0%b5%d0%bb%d1%8c%d1%87%d0%b0%d1%82%d0%b0%d1%8f-%d0%b3%d0%be%d1%80%d1%82%d0%b5%d0%bd%d0%b7%d0%b8%d1%8f-%d0%bf%d0%b8%d0%bd%d0%ba-%d1%8d%d0%bd%d0%b4-%d1%80%d0%be%d1%83%d0%b7/"
@@ -851,8 +857,8 @@
       "category": "Цветы однолетние",
       "categoryKey": "annuals",
       "price": 1200,
-      "stock": 12,
-      "status": "ok",
+      "stock": 0,
+      "status": "out",
       "description": "🌱Кашпо 4л\n🎁В подарок каждому покупателю рекомендации по уходу и посадке",
       "care": {},
       "image": "/assets/products/p1894.jpg",
@@ -884,8 +890,8 @@
       "category": "Цветы однолетние",
       "categoryKey": "annuals",
       "price": 1200,
-      "stock": 1,
-      "status": "low",
+      "stock": 0,
+      "status": "out",
       "description": "🌱Кашпо в объёме 4л\n🎁В подарок каждому покупателю рекомендации по уходу и посадке\nПопулярная вегетативная серия калибрахоа. В высоту достигает 25-35 см.",
       "care": {},
       "image": "/assets/products/p1301.jpg",
@@ -960,8 +966,8 @@
       "category": "Цветы однолетние",
       "categoryKey": "annuals",
       "price": 250,
-      "stock": 12,
-      "status": "ok",
+      "stock": 0,
+      "status": "out",
       "description": "🎁В подарок каждому покупателю рекомендации по уходу и посадке\nКалиброхоа серии MiniFamous – куст сильно ветвящийся, плети достигают 50-60 см. Цветение очень обильное. Цветки некрупные, диаметром 3-5 см. Обладают ранним, обильным и непрерывным цветением даже в условиях недостатка освещения. Однородные аккуратные растения, способны к самоочищению.",
       "care": {
         "bloom": "очень обильное",
@@ -999,8 +1005,8 @@
       "category": "Цветы однолетние",
       "categoryKey": "annuals",
       "price": 1200,
-      "stock": 2,
-      "status": "low",
+      "stock": 0,
+      "status": "out",
       "description": "🌱Кашпо 4л\n🎁В подарок каждому покупателю рекомендации по уходу и посадке\nПопулярная вегетативная серия калибрахоа. В высоту достигает 25-35 см.",
       "care": {},
       "image": "/assets/products/p1762.jpg",
@@ -1142,7 +1148,7 @@
       "category": "Без категории",
       "categoryKey": "other",
       "price": 350,
-      "stock": 13,
+      "stock": 12,
       "status": "ok",
       "description": "Сорт «RED ACE”. Густой кустарник с нежными стелющимися побегами, подушковидной формы.\nВысота 0,4-0,6 м, шириной до 1,2 м.\nМесто посадки: солнце",
       "care": {
@@ -1250,9 +1256,7 @@
       },
       "image": "/assets/products/p762.jpg",
       "images": [
-        "https://annaflowerfarm.ru/wp-content/uploads/2024/12/jfnRs1iADqQ0Z1ljThA9rwQU_BZejiXzZFHMyXhNh2MdrmaMR-WTXj6qo7G3mvtsv_aHzb9uj4YnFotraMVAPeU3.jpg",
-        "https://annaflowerfarm.ru/wp-content/uploads/2024/12/img_1177-1152x1536.jpeg",
-        "https://annaflowerfarm.ru/wp-content/uploads/2024/12/img_1176-1152x1536.jpeg"
+        "https://annaflowerfarm.ru/wp-content/uploads/2024/12/img_5041-1152x1536.jpeg"
       ],
       "sourceUrl": "https://annaflowerfarm.ru/product/%d0%be%d1%87%d0%b8%d1%82%d0%be%d0%ba-%d0%bb%d0%be%d0%b6%d0%bd%d1%8b%d0%b9-%d0%b1%d1%80%d0%be%d0%bd%d0%b7-%d0%ba%d0%b0%d1%80%d0%bf%d0%b5%d1%82/"
     },
@@ -1465,7 +1469,7 @@
       "category": "Без категории",
       "categoryKey": "other",
       "price": 250,
-      "stock": 143,
+      "stock": 142,
       "status": "ok",
       "description": "Красивоцветущий кустарник с аркообразными поникающими ветвями, с ажурной кроной.\nВысота и ширина взрослого растения до 2м.\nЦветёт в мае-июне.\nСолнце/полутень.\nЗимостойкость: зона 4\nУстойчива к болезням и вредителям\nОбъём контейнера: 0,5л. 2х летний саженец\nВысота саженца: до 15см",
       "care": {
