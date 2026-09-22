@@ -1,9 +1,16 @@
 {
   "source": "avito",
   "rating": 5,
-  "reviewsCount": 170,
+  "reviewsCount": 171,
   "profileUrl": "https://www.avito.ru/brands/319c309577f67cb4522b1735089761fa/all/rasteniya?sellerId=047d5b824fe33abb9b2c479534b2262c",
   "reviews": [
+    {
+      "id": 483968786,
+      "author": "Любовь Майорова",
+      "score": 5,
+      "date": "2026-09-21T17:54:45.000Z",
+      "text": "Сделка состоялась, товар в отличном состоянии, большое спасибо."
+    },
     {
       "id": 483539090,
       "author": "Екатерина",
