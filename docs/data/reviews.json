@@ -1,9 +1,16 @@
 {
   "source": "avito",
   "rating": 5,
-  "reviewsCount": 171,
+  "reviewsCount": 172,
   "profileUrl": "https://www.avito.ru/brands/319c309577f67cb4522b1735089761fa/all/rasteniya?sellerId=047d5b824fe33abb9b2c479534b2262c",
   "reviews": [
+    {
+      "id": 484869362,
+      "author": "Ирина",
+      "score": 5,
+      "date": "2026-09-24T06:35:04.000Z",
+      "text": "Спасибо продавцу:\nЯ получила растения через СДЭК вовремя и хорошо упаковаными с закрытой корневой системой, живыми и цветущими. \nПродавца рекомендую"
+    },
     {
       "id": 483968786,
       "author": "Любовь Майорова",
