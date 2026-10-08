@@ -1,9 +1,16 @@
 {
   "source": "avito",
   "rating": 5,
-  "reviewsCount": 182,
+  "reviewsCount": 183,
   "profileUrl": "https://www.avito.ru/brands/319c309577f67cb4522b1735089761fa/all/rasteniya?sellerId=047d5b824fe33abb9b2c479534b2262c",
   "reviews": [
+    {
+      "id": 489969282,
+      "author": "Irina",
+      "score": 5,
+      "date": "2026-10-07T12:23:03.000Z",
+      "text": "Вежливый продавец, быстро отвечает на сообщения,  заказ отправлен в день оплаты. Растения пришли живыми, в хорошем состоянии, готовыми к посадке.  Рекомендую ."
+    },
     {
       "id": 489507026,
       "author": "Оксана",
