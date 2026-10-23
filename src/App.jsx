@@ -60,10 +60,6 @@ function plural(n, one, few, many) {
 
 function stockLabel(product) {
   if (product.kind === "guide") return `PDF · ${product.guide?.pages || ""} стр.`;
-  if (product.kind === "composition") {
-    const n = product.composition?.count || 0;
-    return `набор · ${n} ${plural(n, "растение", "растения", "растений")}`;
-  }
   if (product.stock === 0) return "нет в наличии";
   if (product.stock <= 3) return `${product.stock} шт. осталось`;
   return `${product.stock} шт.`;
@@ -353,15 +349,6 @@ function StorefrontAppV2({ data, route, go, scrollMem }) {
       {routeName === "product" &&
         (selectedProduct.kind === "guide" ? (
           <GuideExperience key={selectedProduct.id} product={selectedProduct} data={data} go={go} addToCart={addToCart} />
-        ) : selectedProduct.kind === "composition" ? (
-          <CompositionExperience
-            key={selectedProduct.id}
-            product={selectedProduct}
-            data={data}
-            go={go}
-            addToCart={addToCart}
-            openLightbox={openLightbox}
-          />
         ) : (
           <ProductExperience product={selectedProduct} products={featured} go={go} addToCart={addToCart} openLightbox={openLightbox} />
         ))}
@@ -673,7 +660,6 @@ function HomeExperience({ data, featured, galleryProducts, go, addToCart, openLi
   ];
 
   const plants = galleryProducts.filter((product) => !product.kind);
-  const compositions = data.products.filter((product) => product.kind === "composition");
   const guides = data.products.filter((product) => product.kind === "guide");
 
   return (
@@ -716,8 +702,6 @@ function HomeExperience({ data, featured, galleryProducts, go, addToCart, openLi
           ))}
         </div>
       </section>
-
-      <CompositionsShowcase products={compositions} go={go} />
 
       <SeasonalPromo
         product={
@@ -2038,147 +2022,6 @@ function GuideExperience({ product, data, go, addToCart }) {
   );
 }
 
-function CompositionsShowcase({ products, go }) {
-  if (!products.length) return null;
-  return (
-    <section className="comps-band reveal" aria-label="Готовые композиции">
-      <div className="section-head center">
-        <p className="eyebrow">Готовые решения</p>
-        <h2 className="section-title">Готовые композиции для сада</h2>
-        <p>Клумбы из растений нашего питомника — со схемой посадки и ценой за весь набор.</p>
-      </div>
-      <div className="comps-row">
-        {products.map((product, index) => (
-          <button className="comp-tile elev reveal" style={{ "--i": index % 5 }} key={product.id} type="button" onClick={() => go(`product/${product.id}`)}>
-            <img src={assetUrl(product.image)} alt={product.name} />
-            <span className="comp-tile__meta">
-              <strong>{product.name}</strong>
-              <small>
-                {product.composition?.size} · {stockLabel(product).replace("набор · ", "")}
-              </small>
-              <em>{formatRub(product.price)}</em>
-            </span>
-          </button>
-        ))}
-      </div>
-    </section>
-  );
-}
-
-const COMP_SLIDE_NAMES = ["Композиция", "Схема посадки", "Растения"];
-
-function CompositionExperience({ product, data, go, addToCart, openLightbox }) {
-  const comp = product.composition || {};
-  const images = product.images?.length ? product.images : [product.image];
-  const [slide, setSlide] = useState(0);
-  const others = data.products.filter((item) => item.kind === "composition" && item.id !== product.id);
-  const inCatalog = new Set(data.products.map((item) => item.id));
-  return (
-    <>
-      <section className="comp-page">
-        <div className="comp-gallery">
-          <button className="comp-main" type="button" onClick={() => openLightbox(product)}>
-            <img src={assetUrl(images[slide])} alt={`${product.name} — ${COMP_SLIDE_NAMES[slide] || ""}`} />
-            <span className="comp-zoom">
-              <MagnifyingGlass size={16} weight="bold" />
-              На весь экран
-            </span>
-          </button>
-          <div className="comp-thumbs" role="tablist" aria-label="Слайды композиции">
-            {images.map((src, index) => (
-              <button
-                key={src}
-                type="button"
-                role="tab"
-                aria-selected={index === slide}
-                className={index === slide ? "is-active" : ""}
-                onClick={() => setSlide(index)}
-              >
-                <img src={assetUrl(src)} alt="" />
-                <span>{COMP_SLIDE_NAMES[index] || `Слайд ${index + 1}`}</span>
-              </button>
-            ))}
-          </div>
-        </div>
-        <div className="comp-copy">
-          <button className="back-link" type="button" onClick={() => go("catalog")}>
-            Каталог
-          </button>
-          <p className="eyebrow">Готовая композиция</p>
-          <h1>{product.name}</h1>
-          <p className="guide-lead">{product.description}</p>
-          <div className="guide-facts">
-            <article>
-              <span>Размер клумбы</span>
-              <strong>{comp.size}</strong>
-            </article>
-            <article>
-              <span>Растений</span>
-              <strong>{comp.count}</strong>
-            </article>
-            <article>
-              <span>Место</span>
-              <strong>{comp.light}</strong>
-            </article>
-            <article>
-              <span>Цветение</span>
-              <strong>{comp.bloom}</strong>
-            </article>
-          </div>
-          <div className="detail-price">
-            <strong>{formatRub(product.price)}</strong>
-            {product.oldPrice > product.price && <s className="old-price">{formatRub(product.oldPrice)}</s>}
-            <span>за весь набор</span>
-          </div>
-          <div className="hero-actions">
-            <button className="primary-button" type="button" onClick={() => addToCart(product)} disabled={product.stock <= 0}>
-              {product.stock > 0 ? "Купить набор" : "Нет в наличии"}
-              <Plus size={18} weight="bold" />
-            </button>
-            <button className="round-link" type="button" onClick={() => setSlide(1)}>
-              Схема посадки
-              <ArrowRight size={18} weight="bold" />
-            </button>
-          </div>
-          <div className="comp-list">
-            <p className="eyebrow">Состав набора</p>
-            <ul>
-              {(comp.items || []).map((item) => (
-                <li key={item.id}>
-                  <span className="comp-dot" style={{ background: item.color }} />
-                  {inCatalog.has(item.id) ? (
-                    <button className="text-link" type="button" onClick={() => go(`product/${item.id}`)}>
-                      {item.name}
-                    </button>
-                  ) : (
-                    <span>{item.name}</span>
-                  )}
-                  <em>× {item.qty}</em>
-                  <small>{item.h}</small>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      {others.length > 0 && (
-        <>
-          <section className="section-head">
-            <p className="eyebrow">Ещё композиции</p>
-            <h2>Другие готовые решения</h2>
-          </section>
-          <section className="editorial-grid compact-grid">
-            {others.slice(0, 4).map((item) => (
-              <LuxuryProductCard key={item.id} product={item} go={go} addToCart={addToCart} openLightbox={openLightbox} />
-            ))}
-          </section>
-        </>
-      )}
-    </>
-  );
-}
-
 function LuxuryProductCard({ product, go, addToCart, openLightbox, index = 0, feature = false }) {
   const isVariable = !!product.variants?.length;
   const isGuide = product.kind === "guide";
@@ -2193,7 +2036,7 @@ function LuxuryProductCard({ product, go, addToCart, openLightbox, index = 0, fe
         <span>{product.category}</span>
         <em>
           <MagnifyingGlass size={15} weight="duotone" />
-          {isGuide ? "листать" : product.kind === "composition" ? "слайды" : "фото"}
+          {isGuide ? "листать" : "фото"}
         </em>
       </button>
       <div className="luxury-body">
