@@ -15,6 +15,7 @@ import {
   House,
   Leaf,
   MagnifyingGlass,
+  MagnifyingGlassPlus,
   MapPin,
   Package,
   Plant,
@@ -1816,7 +1817,7 @@ function PhotoLightbox({ product, onClose, addToCart, go }) {
 // поэтому React им не управляет (иначе конфликт при размонтировании).
 // Закрытая книга стоит по центру, с корешком и стопкой страниц. Уголок обложки подсвечен
 // и «дышит», а время от времени обложка сама чуть приоткрывается — понятно, что книгу листают.
-function Flipbook({ pages, total, onBuy }) {
+function Flipbook({ pages, total, onBuy, onRead }) {
   const hostRef = useRef(null);
   const rootRef = useRef(null);
   const bookRef = useRef(null);
@@ -1862,9 +1863,7 @@ function Flipbook({ pages, total, onBuy }) {
         hint.className = "flip-corner";
         hint.setAttribute("aria-hidden", "true");
         hint.innerHTML =
-          '<span class="flip-corner__glow"></span>' +
-          '<span class="flip-corner__label">Листать<svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 15c-1.6-4.6-5.6-7-10.5-6.2L6 9.6"/><path d="M9 5.5 5.5 9.6 9.4 13"/></svg></span>' +
-          '<span class="flip-corner__curl"></span>';
+'<span class="flip-corner__glow"></span><span class="flip-corner__curl"></span>';
         el.appendChild(hint);
       }
       root.appendChild(el);
@@ -2023,6 +2022,12 @@ function Flipbook({ pages, total, onBuy }) {
         <button type="button" onClick={openBook} aria-label="Вперёд" disabled={page >= count - 1}>
           <CaretRight size={20} weight="bold" />
         </button>
+        {onRead && (
+          <button className="flipbook-read" type="button" onClick={() => onRead(Math.min(page, pages.length - 1))}>
+            <MagnifyingGlassPlus size={18} weight="bold" />
+            Читать крупно
+          </button>
+        )}
       </div>
       <p className="flipbook-hint">
         {closed ? "Нажмите на обложку или потяните за уголок — книга откроется" : "Потяните за уголок страницы или нажмите на стрелки"}
@@ -2070,22 +2075,116 @@ function GuidesShowcase({ products, go }) {
   );
 }
 
+// Режим «Читать крупно»: превью-страницы в высоком разрешении одна под другой, как в PDF.
+// В книжке на странице A4 видна целиком, но текст мелкий — здесь страница шириной до 860 px.
+function GuideReader({ product, start = 0, onClose, onBuy }) {
+  const guide = product.guide || {};
+  const pages = guide.previewHd?.length ? guide.previewHd : guide.preview || [];
+  const rest = Math.max(0, (guide.pages || 0) - pages.length);
+  const scrollRef = useRef(null);
+  const closeBtnRef = useRef(null);
+  const closeRef = useRef(onClose);
+  closeRef.current = onClose;
+
+  useEffect(() => {
+    const prevOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    const onKey = (event) => {
+      if (event.key === "Escape") closeRef.current?.();
+    };
+    window.addEventListener("keydown", onKey);
+    closeBtnRef.current?.focus({ preventScroll: true });
+    return () => {
+      document.body.style.overflow = prevOverflow;
+      window.removeEventListener("keydown", onKey);
+    };
+  }, []);
+
+  // открываем на той странице, где читатель был в книжке
+  useEffect(() => {
+    const box = scrollRef.current;
+    const el = box?.querySelector(`[data-page="${start}"]`);
+    if (box && el && start > 0) box.scrollTop += el.getBoundingClientRect().top - box.getBoundingClientRect().top - 12;
+  }, [start]);
+
+  const closeOnBackdrop = (event) => {
+    if (event.target === event.currentTarget) onClose();
+  };
+
+  return (
+    <div className="guide-reader" role="dialog" aria-modal="true" aria-label={`${product.name} — превью`}>
+      <div className="guide-reader__bar">
+        <div className="guide-reader__title">
+          <strong>{product.name}</strong>
+          <span>
+            Превью: {pages.length} из {guide.pages} стр.
+          </span>
+        </div>
+        <button className="primary-button" type="button" onClick={onBuy}>
+          Купить · {formatRub(product.price)}
+        </button>
+        <button className="guide-reader__close" ref={closeBtnRef} type="button" onClick={onClose} aria-label="Закрыть">
+          <X size={22} weight="bold" />
+        </button>
+      </div>
+      <div className="guide-reader__scroll" ref={scrollRef} onClick={closeOnBackdrop}>
+        {pages.map((src, index) => (
+          <img key={src} data-page={index} src={assetUrl(src)} alt={`Страница ${index + 1}`} loading={Math.abs(index - start) < 2 ? "eager" : "lazy"} />
+        ))}
+        <div className="guide-reader__end">
+          <span>Это превью</span>
+          <strong>
+            Дальше ещё {rest} {plural(rest, "страница", "страницы", "страниц")}
+          </strong>
+          <p>Полная версия в PDF придёт на почту после оплаты.</p>
+          <button type="button" onClick={onBuy}>
+            Купить пособие
+          </button>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 function GuideExperience({ product, data, go, addToCart }) {
   const guide = product.guide || {};
   const others = data.products.filter((item) => item.kind === "guide" && item.id !== product.id);
+  const [reading, setReading] = useState(null); // индекс страницы или null
+  useEffect(() => setReading(null), [product.id]);
+  const buy = () => {
+    setReading(null);
+    addToCart(product);
+  };
+
   return (
     <>
       <section className="guide-page">
+        <header className="guide-head">
+          <div className="guide-copy">
+            <button className="back-link" type="button" onClick={() => go("catalog")}>
+              Каталог
+            </button>
+            <p className="eyebrow">Электронное пособие · PDF</p>
+            <h1>{product.name}</h1>
+            <p className="guide-lead">{product.description}</p>
+          </div>
+          <div className="guide-buy">
+            <div className="detail-price">
+              <strong>{formatRub(product.price)}</strong>
+              <span>оплата после подтверждения заказа</span>
+            </div>
+            <button className="primary-button" type="button" onClick={buy}>
+              Купить пособие
+              <Plus size={18} weight="bold" />
+            </button>
+          </div>
+        </header>
+
         <div className="guide-book">
-          <Flipbook pages={guide.preview || [product.image]} total={guide.pages} onBuy={() => addToCart(product)} />
+          <Flipbook pages={guide.preview || [product.image]} total={guide.pages} onBuy={buy} onRead={guide.preview?.length ? setReading : undefined} />
         </div>
-        <div className="guide-copy">
-          <button className="back-link" type="button" onClick={() => go("catalog")}>
-            Каталог
-          </button>
-          <p className="eyebrow">Электронное пособие · PDF</p>
-          <h1>{product.name}</h1>
-          <p className="guide-lead">{product.description}</p>
+
+        <div className="guide-info">
           <div className="guide-facts">
             <article>
               <span>Страниц</span>
@@ -2103,16 +2202,6 @@ function GuideExperience({ product, data, go, addToCart }) {
               <span>Фото</span>
               <strong>растения нашего питомника</strong>
             </article>
-          </div>
-          <div className="detail-price">
-            <strong>{formatRub(product.price)}</strong>
-            <span>оплата после подтверждения заказа</span>
-          </div>
-          <div className="hero-actions">
-            <button className="primary-button" type="button" onClick={() => addToCart(product)}>
-              Купить пособие
-              <Plus size={18} weight="bold" />
-            </button>
           </div>
           {guide.chapters?.length > 0 && (
             <div className="guide-toc">
@@ -2143,6 +2232,8 @@ function GuideExperience({ product, data, go, addToCart }) {
           </section>
         </>
       )}
+
+      {reading !== null && <GuideReader product={product} start={reading} onClose={() => setReading(null)} onBuy={buy} />}
     </>
   );
 }
