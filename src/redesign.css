@@ -1205,8 +1205,38 @@ body { background: var(--grad-page); color: var(--ink); font-family: var(--font-
 .redesign .guide-page { width: var(--container); margin: var(--sp-7) auto var(--sp-8); display: grid; grid-template-columns: minmax(0, 1.45fr) minmax(0, 1fr); gap: var(--sp-8); align-items: start; }
 .redesign .guide-book { position: sticky; top: 104px; padding: var(--sp-6) var(--sp-5) var(--sp-5); border-radius: var(--r-xl); background: radial-gradient(120% 90% at 50% 0%, #f5f3de 0%, #e2e6bc 100%); }
 .redesign .flipbook-host { width: 100%; min-height: 200px; }
-.redesign .flipbook-root { margin: 0 auto; }
+.redesign .flipbook-root { margin: 0 auto; transition: transform .8s cubic-bezier(.22, .8, .24, 1); }
+.redesign .flipbook-host { opacity: 0; transition: opacity .5s ease; }
+.redesign .flipbook.is-ready .flipbook-host { opacity: 1; }
 .redesign .flip-page { background: #faf9ec; overflow: hidden; }
+/* Закрытая книга: корешок, стопка страниц по обрезу, тень на «столе» */
+.redesign .flip-page.is-cover { transition: box-shadow .45s ease; }
+.redesign .flipbook.is-closed .flip-page.is-cover {
+  box-shadow:
+    2px 2px 0 -1px #fdfcf4, 3px 3px 0 -1px rgba(74, 80, 26, .3),
+    5px 5px 0 -2px #f6f3e3, 6px 6px 0 -2px rgba(74, 80, 26, .26),
+    8px 8px 0 -3px #efecd7, 9px 9px 0 -3px rgba(74, 80, 26, .22),
+    0 38px 48px -24px rgba(46, 52, 12, .62);
+}
+.redesign .flip-page.is-cover::before { content: ""; position: absolute; inset: 0 auto 0 0; width: 6.5%; z-index: 1; pointer-events: none; background: linear-gradient(90deg, rgba(20, 24, 4, .34), rgba(255, 255, 255, .22) 34%, rgba(20, 24, 4, .1) 58%, transparent); opacity: 0; transition: opacity .4s ease; }
+.redesign .flipbook.is-closed .flip-page.is-cover::before { opacity: 1; }
+/* Подсказка в уголке обложки: тёплое свечение, «дышащий» загиб и ярлык «Листать» */
+.redesign .flip-corner { position: absolute; inset: 0; z-index: 2; pointer-events: none; opacity: 0; transition: opacity .35s ease; }
+.redesign .flipbook.is-closed:not(.is-touched):not(.is-folding) .flip-corner { opacity: 1; }
+.redesign .flipbook.is-folding .flip-corner { transition-duration: .15s; }
+.redesign .flip-corner__glow { position: absolute; right: -30%; bottom: -30%; width: 75%; aspect-ratio: 1; border-radius: 50%; background: radial-gradient(circle, rgba(255, 236, 160, .78) 0%, rgba(232, 214, 120, .38) 34%, rgba(232, 214, 120, 0) 66%); mix-blend-mode: screen; animation: flip-glow 2.6s ease-in-out infinite; }
+.redesign .flip-corner__curl { position: absolute; right: 0; bottom: 0; width: 15%; aspect-ratio: 1; transform-origin: 100% 100%; filter: drop-shadow(-3px -3px 4px rgba(34, 38, 8, .35)); animation: flip-curl 2.6s ease-in-out infinite; }
+.redesign .flip-corner__curl::before { content: ""; position: absolute; inset: 0; clip-path: polygon(100% 0, 100% 100%, 0 100%); background: linear-gradient(315deg, #f1eedb, #fbfaf1 70%); }
+.redesign .flip-corner__curl::after { content: ""; position: absolute; inset: 0; clip-path: polygon(0 0, 100% 0, 0 100%); background: linear-gradient(135deg, #fffef8 0%, #f2efdc 52%, #d6d1ad 100%); }
+.redesign .flip-corner__label { position: absolute; right: 17%; bottom: 6.5%; display: inline-flex; align-items: center; gap: 6px; padding: 7px 12px 7px 14px; border-radius: var(--r-pill); background: rgba(255, 255, 255, .94); color: var(--berry-deep); font: 700 .74rem/1 var(--font-body); letter-spacing: .08em; text-transform: uppercase; box-shadow: 0 6px 18px -6px rgba(40, 46, 10, .45); animation: flip-label 2.6s ease-in-out infinite; }
+.redesign .flip-corner__label svg { flex: none; }
+@keyframes flip-glow { 0%, 100% { opacity: .55; transform: scale(.88); } 50% { opacity: 1; transform: scale(1.08); } }
+@keyframes flip-curl { 0%, 100% { transform: scale(.72); } 50% { transform: scale(1.12); } }
+@keyframes flip-label { 0%, 100% { transform: translateX(0); } 50% { transform: translateX(-6px); } }
+@media (prefers-reduced-motion: reduce) {
+  .redesign .flip-corner__glow, .redesign .flip-corner__curl, .redesign .flip-corner__label { animation: none; }
+  .redesign .flipbook-root { transition: none; }
+}
 .redesign .flip-page img { width: 100%; height: 100%; object-fit: cover; display: block; user-select: none; pointer-events: none; }
 .redesign .flip-end { background: linear-gradient(160deg, #6b7426, #4c5418); color: #fff; }
 .redesign .flip-end__in { height: 100%; display: flex; flex-direction: column; justify-content: center; gap: 12px; padding: 12% 11%; }
@@ -1263,4 +1293,6 @@ body { background: var(--grad-page); color: var(--ink); font-family: var(--font-
   .redesign .guides-row { gap: var(--sp-4); }
   .redesign .guide-book { padding: var(--sp-4) var(--sp-3); border-radius: var(--r-lg); }
   .redesign .flip-end__in strong { font-size: 1.2rem; }
+  .redesign .flip-corner__label { right: 19%; bottom: 5.5%; padding: 6px 10px 6px 11px; font-size: .64rem; gap: 4px; }
+  .redesign .flip-corner__curl { width: 17%; }
 }

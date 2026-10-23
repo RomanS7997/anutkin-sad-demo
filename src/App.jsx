@@ -1814,13 +1814,21 @@ function PhotoLightbox({ product, onClose, addToCart, go }) {
 // Книжка-превью: страницы — картинки первых страниц PDF, последняя — призыв купить.
 // DOM книги собирается вручную: page-flip сам переставляет узлы и удаляет корень при destroy,
 // поэтому React им не управляет (иначе конфликт при размонтировании).
+// Закрытая книга стоит по центру, с корешком и стопкой страниц. Уголок обложки подсвечен
+// и «дышит», а время от времени обложка сама чуть приоткрывается — понятно, что книгу листают.
 function Flipbook({ pages, total, onBuy }) {
   const hostRef = useRef(null);
+  const rootRef = useRef(null);
   const bookRef = useRef(null);
+  const placed = useRef(false);
   const buyRef = useRef(onBuy);
   buyRef.current = onBuy;
   const [page, setPage] = useState(0);
   const [count, setCount] = useState(pages.length + 1);
+  const [geom, setGeom] = useState(null);
+  const [leaving, setLeaving] = useState(false);
+  const [touched, setTouched] = useState(false);
+  const [folding, setFolding] = useState(false);
   const pagesKey = pages.join("|");
 
   useEffect(() => {
@@ -1828,18 +1836,37 @@ function Flipbook({ pages, total, onBuy }) {
     if (!host) return undefined;
     let flip = null;
     let cancelled = false;
+    let raf = 0;
+    let hovering = false;
+    let interacted = false;
+    const timers = [];
     const root = document.createElement("div");
     root.className = "flipbook-root";
     host.appendChild(root);
+    rootRef.current = root;
+    placed.current = false;
+    setPage(0);
+    setLeaving(false);
+    setTouched(false);
+
     pages.forEach((src, i) => {
       const el = document.createElement("div");
-      el.className = "flip-page";
-      if (i === 0) el.dataset.density = "hard";
+      el.className = i === 0 ? "flip-page is-cover" : "flip-page";
       const img = document.createElement("img");
       img.src = assetUrl(src);
       img.alt = "";
       img.draggable = false;
       el.appendChild(img);
+      if (i === 0) {
+        const hint = document.createElement("div");
+        hint.className = "flip-corner";
+        hint.setAttribute("aria-hidden", "true");
+        hint.innerHTML =
+          '<span class="flip-corner__glow"></span>' +
+          '<span class="flip-corner__label">Листать<svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 15c-1.6-4.6-5.6-7-10.5-6.2L6 9.6"/><path d="M9 5.5 5.5 9.6 9.4 13"/></svg></span>' +
+          '<span class="flip-corner__curl"></span>';
+        el.appendChild(hint);
+      }
       root.appendChild(el);
     });
     const rest = Math.max(0, (total || 0) - pages.length);
@@ -1852,6 +1879,52 @@ function Flipbook({ pages, total, onBuy }) {
       buyRef.current?.();
     });
     root.appendChild(end);
+
+    const measure = () => {
+      if (!flip) return;
+      const r = flip.getBoundsRect();
+      if (!r || !r.pageWidth) return;
+      setGeom({ pw: r.pageWidth, landscape: flip.getOrientation() === "landscape" });
+    };
+    const onResize = () => requestAnimationFrame(measure);
+    const onEnter = () => {
+      hovering = true;
+    };
+    const onLeave = () => {
+      hovering = false;
+    };
+    host.addEventListener("pointerenter", onEnter);
+    host.addEventListener("pointerleave", onLeave);
+
+    // Обложка сама чуть приоткрывается и закрывается — родной загиб уголка page-flip.
+    const peek = () => {
+      if (!flip || hovering || interacted || flip.getCurrentPageIndex() !== 0 || flip.getState() !== "read") return;
+      const fc = flip.getFlipController();
+      const r = flip.getBoundsRect();
+      const cx = r.left + r.width - 1;
+      const cy = r.top + r.height - 1;
+      const zone = Math.sqrt(r.pageWidth ** 2 + r.height ** 2) / 5;
+      const depth = Math.min(zone * 0.8, r.pageWidth * 0.3);
+      fc.showCorner({ x: cx, y: cy });
+      const t0 = performance.now() + 80;
+      const grow = 700;
+      const step = (now) => {
+        if (!flip || flip.getState() !== "fold_corner") return; // человек вмешался — не мешаем
+        const k = Math.max(0, Math.min(1, (now - t0) / grow));
+        const d = 50 + (depth - 50) * (1 - (1 - k) ** 3);
+        fc.showCorner({ x: cx - d, y: cy - d * 0.55 });
+        if (k < 1) {
+          raf = requestAnimationFrame(step);
+          return;
+        }
+        timers.push(
+          setTimeout(() => {
+            if (flip && flip.getState() === "fold_corner") fc.showCorner({ x: r.left + r.width * 0.75, y: r.top + r.height / 2 });
+          }, 650),
+        );
+      };
+      raf = requestAnimationFrame(step);
+    };
 
     import("page-flip").then(({ PageFlip }) => {
       if (cancelled) return;
@@ -1870,25 +1943,75 @@ function Flipbook({ pages, total, onBuy }) {
         flippingTime: 750,
       });
       flip.loadFromHTML(root.querySelectorAll(".flip-page"));
+      // showCover делает обложку жёсткой (картон) — нам нужна бумажная: уголок загибается
+      flip.getPage(0)?.setDensity("soft");
       setCount(flip.getPageCount());
-      flip.on("flip", (event) => setPage(event.data));
+      flip.on("flip", (event) => {
+        interacted = true;
+        setPage(event.data);
+        setLeaving(false);
+        setTouched(true);
+      });
+      flip.on("changeState", (event) => {
+        const idx = flip.getCurrentPageIndex();
+        // обложку открывают — книга одновременно съезжает в разворот
+        if (event.data === "flipping" && idx === 0) setLeaving(true);
+        if (event.data === "read" && idx === 0) setLeaving(false);
+        setFolding(event.data === "fold_corner" || event.data === "user_fold");
+      });
+      flip.on("changeOrientation", () => requestAnimationFrame(measure));
       bookRef.current = flip;
+      requestAnimationFrame(measure);
+      if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+        [1200, 6200, 12200].forEach((ms) => timers.push(setTimeout(peek, ms)));
+      }
     });
+    window.addEventListener("resize", onResize);
 
     return () => {
       cancelled = true;
+      timers.forEach(clearTimeout);
+      cancelAnimationFrame(raf);
+      window.removeEventListener("resize", onResize);
+      host.removeEventListener("pointerenter", onEnter);
+      host.removeEventListener("pointerleave", onLeave);
       try {
         flip?.destroy();
       } catch {
         /* уже удалено */
       }
       if (root.parentNode) root.parentNode.removeChild(root);
+      rootRef.current = null;
       bookRef.current = null;
     };
   }, [pagesKey, total]);
 
+  // Закрытая книга в развороте занимает только правую половину — сдвигаем её к центру.
+  const closed = page === 0 && !leaving;
+  useEffect(() => {
+    const root = rootRef.current;
+    if (!root || !geom) return;
+    const shift = geom.landscape && closed ? -geom.pw / 2 : 0;
+    const value = shift ? `translateX(${shift}px)` : "";
+    if (!placed.current) {
+      // первое положение — без анимации, чтобы книга не «приезжала» при открытии страницы
+      root.style.transition = "none";
+      root.style.transform = value;
+      void root.offsetWidth;
+      root.style.transition = "";
+      placed.current = true;
+    } else {
+      root.style.transform = value;
+    }
+  }, [geom, closed]);
+
+  const openBook = () => {
+    if (closed) setLeaving(true);
+    bookRef.current?.flipNext();
+  };
+
   return (
-    <div className="flipbook">
+    <div className={`flipbook${closed ? " is-closed" : ""}${touched ? " is-touched" : ""}${folding ? " is-folding" : ""}${geom ? " is-ready" : ""}`}>
       <div className="flipbook-host" ref={hostRef} />
       <div className="flipbook-nav">
         <button type="button" onClick={() => bookRef.current?.flipPrev()} aria-label="Назад" disabled={page === 0}>
@@ -1897,11 +2020,13 @@ function Flipbook({ pages, total, onBuy }) {
         <span>
           {page + 1} / {count}
         </span>
-        <button type="button" onClick={() => bookRef.current?.flipNext()} aria-label="Вперёд" disabled={page >= count - 1}>
+        <button type="button" onClick={openBook} aria-label="Вперёд" disabled={page >= count - 1}>
           <CaretRight size={20} weight="bold" />
         </button>
       </div>
-      <p className="flipbook-hint">Потяните за уголок страницы или нажмите на стрелки</p>
+      <p className="flipbook-hint">
+        {closed ? "Нажмите на обложку или потяните за уголок — книга откроется" : "Потяните за уголок страницы или нажмите на стрелки"}
+      </p>
     </div>
   );
 }
