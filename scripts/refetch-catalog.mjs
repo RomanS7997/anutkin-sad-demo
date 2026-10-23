@@ -30,6 +30,14 @@ function decodeEntities(s) {
     .replace(/&#(\d+);/g, (_, n) => String.fromCodePoint(+n))
     .replace(/&#x([0-9a-f]+);/gi, (_, n) => String.fromCodePoint(parseInt(n, 16)));
 }
+// Убираем мусорные эмодзи/пиктограммы (🎁🌱✔☀❄🌸 и т.п.), приходящие из карточек Woo.
+function stripEmoji(s) {
+  if (!s) return s;
+  return String(s).replace(
+    /[\u{1F000}-\u{1FAFF}\u{2600}-\u{27BF}\u{2B00}-\u{2BFF}\u{2190}-\u{21FF}\u{2300}-\u{23FF}\u{2460}-\u{24FF}\u{25A0}-\u{25FF}\u{FE00}-\u{FE0F}\u{200D}\u{20E3}]/gu,
+    ""
+  );
+}
 function htmlToText(html) {
   if (!html) return "";
   let t = html
@@ -37,6 +45,7 @@ function htmlToText(html) {
     .replace(/<li[^>]*>/gi, "• ")
     .replace(/<[^>]+>/g, " ");
   t = decodeEntities(t);
+  t = stripEmoji(t);
   return t.replace(/[ \t\f\v]+/g, " ").replace(/\s*\n\s*/g, "\n").replace(/\n{3,}/g, "\n\n").trim();
 }
 function pickImage(img) {
@@ -117,8 +126,8 @@ const products = raw.map((p) => {
     _imgUrl: imgUrls[0] || null,
     _allImgs: imgUrls,
     id: p.id,
-    name: decodeEntities(p.name).replace(/\s+/g, " ").trim(),
-    category: decodeEntities(catName),
+    name: stripEmoji(decodeEntities(p.name)).replace(/\s+/g, " ").trim(),
+    category: stripEmoji(decodeEntities(catName)).trim(),
     categoryKey: map.prodKey,
     price,
     stock,

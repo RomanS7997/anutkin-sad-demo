@@ -5,78 +5,62 @@
       "name": "Армерия «Morning Star Deep Rose»",
       "category": "Цветы многолетние",
       "categoryKey": "perennials",
-      "price": 300,
-      "stock": 12,
+      "price": 490,
+      "stock": 6,
       "status": "ok",
-      "description": "Ширина: 30 см\nПериод цветения: май-июнь, после обрезки зацветает повторно\nЦветение: повторное после обрезки\nЦветок: малиновый\nСоцветие: плотные округлые головки на длинных жестких стеблях\nЛист: зелёный, узкий, линейной формы, собраны в прикорневую розетку, вечнозеленый\nФорма куста: подушковидная, компактная\nПолив: умеренный\nПочва: в меру удобренная, рыхлая, легкая, каменистая, дренированная\nНорма посадки: 11 шт/кв.м.\nМорозостойкость: 4 зона (-28/-34⁰C)\nПрименение: в каменистых горках, бордюрах, в миксбордерах, в контейнере\nУпаковка корневой системы: 0,5л",
+      "description": "Ширина: 30 см\nПериод цветения: май-июнь, после обрезки зацветает повторно\nЦветение: повторное после обрезки\nЦветок: малиновый\nСоцветие: плотные округлые головки на длинных жестких стеблях\nЛист: зелёный, узкий, линейной формы, собраны в прикорневую розетку, вечнозеленый\nФорма куста: подушковидная, компактная\nПолив: умеренный\nПочва: в меру удобренная, рыхлая, легкая, каменистая, дренированная\nНорма посадки: 11 шт/кв.м.\nМорозостойкость: 4 зона (-28/-34⁰C)\nПрименение: в каменистых горках, бордюрах, в миксбордерах, в контейнере\nУпаковка корневой системы: 2л",
       "care": {
-        "bloom": "май-июнь, после обрезки зацветает повторно",
-        "hardiness": "4 зона (-28/-34⁰C)"
+        "bloom": "май-июнь, после обрезки зацветает повторно"
       },
-      "image": "/assets/products/p2234.jpg",
+      "image": "https://annaflowerfarm.ru/wp-content/uploads/2026/05/img_0031.jpeg",
       "images": [
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2026/05/img_0031.jpeg",
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2026/05/img_0030.jpeg"
+        "https://annaflowerfarm.ru/wp-content/uploads/2026/05/img_0031.jpeg",
+        "https://annaflowerfarm.ru/wp-content/uploads/2026/05/img_5368-1152x1536.jpeg",
+        "https://annaflowerfarm.ru/wp-content/uploads/2026/05/img_5369-1152x1536.jpeg",
+        "https://annaflowerfarm.ru/wp-content/uploads/2026/05/img_5370-1152x1536.jpeg"
       ],
-      "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/%d0%b0%d1%80%d0%bc%d0%b5%d1%80%d0%b8%d1%8f-morning-star-deep-rose/"
+      "sourceUrl": "https://annaflowerfarm.ru/product/%d0%b0%d1%80%d0%bc%d0%b5%d1%80%d0%b8%d1%8f-morning-star-deep-rose/"
     },
     {
       "id": 2236,
       "name": "Армерия «Morning Star White»",
       "category": "Цветы многолетние",
       "categoryKey": "perennials",
-      "price": 300,
+      "price": 490,
+      "stock": 1,
+      "status": "low",
+      "description": "Ширина: 30 см\nПериод цветения: май-июнь, после обрезки зацветает повторно\nЦветение: повторное\nЦветок: шаровидный, белый\nЛист: зелёный, узкий, линейной формы, собраны в прикорневую розетку, вечнозеленый\nФорма куста: компактная, подушковидная\nПолив: умеренный\nПочва: в меру удобренная, рыхлая, легкая, каменистая, дренированная\nНорма посадки: 11 шт/кв.м.\nМорозостойкость: 4 зона (-28/-34⁰C)\nПрименение: в каменистых горках, бордюрах, в миксбордерах, в контейнере\nУпаковка корневой системы: 2л",
+      "care": {
+        "bloom": "май-июнь, после обрезки зацветает повторно"
+      },
+      "image": "https://annaflowerfarm.ru/wp-content/uploads/2026/05/img_6847.png",
+      "images": [
+        "https://annaflowerfarm.ru/wp-content/uploads/2026/05/img_6847.png",
+        "https://annaflowerfarm.ru/wp-content/uploads/2026/05/img_5371-1152x1536.jpeg",
+        "https://annaflowerfarm.ru/wp-content/uploads/2026/05/img_5372-1152x1536.jpeg",
+        "https://annaflowerfarm.ru/wp-content/uploads/2026/05/img_5373-1152x1536.jpeg"
+      ],
+      "sourceUrl": "https://annaflowerfarm.ru/product/%d0%b0%d1%80%d0%bc%d0%b5%d1%80%d0%b8%d1%8f-morning-star-white/"
+    },
+    {
+      "id": 2454,
+      "name": "Бадан толстолистный Shoeshine Appleblossom",
+      "category": "Цветы многолетние",
+      "categoryKey": "perennials",
+      "price": 550,
       "stock": 12,
       "status": "ok",
-      "description": "Ширина: 30 см\nПериод цветения: май-июнь, после обрезки зацветает повторно\nЦветение: повторное\nЦветок: шаровидный, белый\nЛист: зелёный, узкий, линейной формы, собраны в прикорневую розетку, вечнозеленый\nФорма куста: компактная, подушковидная\nПолив: умеренный\nПочва: в меру удобренная, рыхлая, легкая, каменистая, дренированная\nНорма посадки: 11 шт/кв.м.\nМорозостойкость: 4 зона (-28/-34⁰C)\nПрименение: в каменистых горках, бордюрах, в миксбордерах, в контейнере\nУпаковка корневой системы: 0,5л",
+      "description": "Высота взрослого растения — 20-30см\nШирина — 10-12см\nЦветки возвышаются над глянцевой тёмной листвой, создавая яркий контраст.\nИсключительно выносливый и крепкий многолетник, хорошо растёт в самых разных условиях.\nОбъём контейнера : 2л",
       "care": {
-        "bloom": "май-июнь, после обрезки зацветает повторно",
-        "hardiness": "4 зона (-28/-34⁰C)"
+        "height": "взрослого растения — 20-30см"
       },
-      "image": "/assets/products/p2236.png",
+      "image": "https://annaflowerfarm.ru/wp-content/uploads/2026/07/img_1946.jpeg",
       "images": [
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2026/05/img_6847.png"
+        "https://annaflowerfarm.ru/wp-content/uploads/2026/07/img_1946.jpeg",
+        "https://annaflowerfarm.ru/wp-content/uploads/2026/07/img_5025-1152x1536.jpeg",
+        "https://annaflowerfarm.ru/wp-content/uploads/2026/07/img_5024-1152x1536.jpeg"
       ],
-      "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/%d0%b0%d1%80%d0%bc%d0%b5%d1%80%d0%b8%d1%8f-morning-star-white/"
-    },
-    {
-      "id": 523,
-      "name": "БЕГОНИЯ BELINA PEACH",
-      "category": "Цветы однолетние",
-      "categoryKey": "annuals",
-      "price": 600,
-      "stock": 0,
-      "status": "out",
-      "description": "🌱Объём контейнера 0,5л\n🎁В подарок получаете рекомендации по уходу за бегонией.\nБегония Belina — ампельный сорт с крупными, махровыми цветками с многообразием цветов.\n•Цветение непрерывное, в течение всего сезона, до первых заморозков.\n•Длина побегов 25-30 см.\n•Высота взрослого растения 30 см.",
-      "care": {
-        "height": "взрослого растения 30 см",
-        "bloom": "непрерывное, в течение всего сезона, до первых заморозков"
-      },
-      "image": "/assets/products/p523.jpg",
-      "images": [
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2024/12/jMHxViF0IOg-1024x1024.jpg"
-      ],
-      "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/belina-peach/"
-    },
-    {
-      "id": 1097,
-      "name": "БЕГОНИЯ BELINA VANILLA",
-      "category": "Цветы однолетние",
-      "categoryKey": "annuals",
-      "price": 600,
-      "stock": 0,
-      "status": "out",
-      "description": "🌱Рассада в объёме 0,5л\nВ подарок получаете рекомендации по уходу за бегонией.\nБегония Belina — ампельный сорт с крупными, махровыми цветками с многообразием цветов.\nЦветение непрерывное, в течение всего сезона, до первых заморозков.\nДлина побегов 25-30 см.\nВысота взрослого растения 30 см.",
-      "care": {
-        "height": "взрослого растения 30 см",
-        "bloom": "непрерывное, в течение всего сезона, до первых заморозков"
-      },
-      "image": "/assets/products/p1097.jpg",
-      "images": [
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2025/05/img_2612-1152x1536.jpeg",
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2025/05/img_2610-1152x1536.jpeg"
-      ],
-      "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/%d0%b1%d0%b5%d0%b3%d0%be%d0%bd%d0%b8%d1%8f-belina-vanilla/"
+      "sourceUrl": "https://annaflowerfarm.ru/product/%d0%b1%d0%b0%d0%b4%d0%b0%d0%bd-%d1%82%d0%be%d0%bb%d1%81%d1%82%d0%be%d0%bb%d0%b8%d1%81%d1%82%d0%bd%d1%8b%d0%b9-shoeshine-appleblossom/"
     },
     {
       "id": 1080,
@@ -84,181 +68,20 @@
       "category": "Цветы однолетние",
       "categoryKey": "annuals",
       "price": 600,
-      "stock": 1,
-      "status": "low",
+      "stock": 0,
+      "status": "out",
       "description": "В подарок получаете рекомендации по уходу за бегонией.\nCерия Belleconia одна из новейших серий ампельной бегонии с крупными махровыми цветами. Эти растения отличаются высокой устойчивостью к болезням и вредителям. Цветут обильно, образуя длинные, свисающие побеги. Высота куста 20-25см Форма куста: ампельный Обильное цветение Тень или полутень",
       "care": {
-        "height": "куста 20-25см Форма куста: ампельный Обильное"
+        "height": "куста 20-25см",
+        "bloom": "Тень или полутень"
       },
-      "image": "/assets/products/p1080.jpg",
+      "image": "https://annaflowerfarm.ru/wp-content/uploads/2025/04/img_2804-1152x1536.jpeg",
       "images": [
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2025/04/img_2804-1152x1536.jpeg",
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2025/04/20fa5e93-4e0f-471f-9bd6-927b78c799d2.jpeg"
+        "https://annaflowerfarm.ru/wp-content/uploads/2025/04/img_2804-1152x1536.jpeg",
+        "https://annaflowerfarm.ru/wp-content/uploads/2025/04/20fa5e93-4e0f-471f-9bd6-927b78c799d2.jpeg",
+        "https://annaflowerfarm.ru/wp-content/uploads/2025/04/img_1436-1152x1536.jpeg"
       ],
-      "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/%d0%b1%d0%b5%d0%b3%d0%be%d0%bd%d0%b8%d1%8f-belleconia-hot-orange/"
-    },
-    {
-      "id": 539,
-      "name": "БЕГОНИЯ BELLECONIA ROSE",
-      "category": "Цветы однолетние",
-      "categoryKey": "annuals",
-      "price": 600,
-      "stock": 4,
-      "status": "ok",
-      "description": "🎁В подарок получаете рекомендации по уходу за бегонией.\nCерия Belleconia одна из новейших серий ампельной бегонии с крупными махровыми цветами. Эти растения отличаются высокой устойчивостью к болезням и вредителям. Цветут обильно, образуя длинные, свисающие побеги.\nВысота куста 20-25см\nФорма куста: ампельный\nОбильное цветение\nТень или полутень",
-      "care": {
-        "height": "куста 20-25см"
-      },
-      "image": "/assets/products/p539.jpg",
-      "images": [
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2024/12/pel_NMEBVpA-1013x1536.jpg",
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2024/12/ofZzgeFiHAo.jpg"
-      ],
-      "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/%d0%b1%d0%b5%d0%b3%d0%be%d0%bd%d0%b8%d1%8f-belleconia-rose/"
-    },
-    {
-      "id": 1082,
-      "name": "БЕГОНИЯ BELLECONIA SALMON",
-      "category": "Цветы однолетние",
-      "categoryKey": "annuals",
-      "price": 600,
-      "stock": 3,
-      "status": "ok",
-      "description": "В подарок получаете рекомендации по уходу за бегонией.\nCерия Belleconia одна из новейших серий ампельной бегонии с крупными махровыми цветами.\nЭти растения отличаются высокой устойчивостью к болезням и вредителям.\nЦветут обильно, образуя длинные, свисающие побеги.\nВысота куста 20-25см\nФорма куста: ампельный\nОбильное цветение\nТень или полутень",
-      "care": {
-        "height": "куста 20-25см"
-      },
-      "image": "/assets/products/p1082.jpg",
-      "images": [
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2025/04/xDQ3ubsgqu4-1152x1536.jpg"
-      ],
-      "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/%d0%b1%d0%b5%d0%b3%d0%be%d0%bd%d0%b8%d1%8f-belleconia-salmon/"
-    },
-    {
-      "id": 1571,
-      "name": "БЕГОНИЯ SOLENIA CHOCOLATE ORANGE",
-      "category": "Цветы однолетние",
-      "categoryKey": "annuals",
-      "price": 600,
-      "stock": 0,
-      "status": "out",
-      "description": "Бегония «Solenia» — великолепная сортосерия кустовой (мультицветковой) гибридной бегонии. Характерзуется кустовидной формой, мощными стеблями и крупными пышно-махровыми цветками. Мощные, но компактные кусты, сплошь покрытые множеством ярких крупных цветков. При правильном уходе образовывает огромный цветущий шар, приковывающий внимание своей красотой.Непревзойденная устойчивость к неблагоприятным погодным воздействиям и к ряду заболеваний и вредителей (например, к мучнистой росе). Цветение обильное, продолжительное, до заморозков.\nВысота куста: 20-25см.\nФорма куста: ампельный.",
-      "care": {
-        "height": "куста: 20-25см",
-        "bloom": "обильное, продолжительное, до заморозков"
-      },
-      "image": "/assets/products/p1571.jpg",
-      "images": [
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2025/09/img_2199-1152x1536.jpeg"
-      ],
-      "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/%d0%b1%d0%b5%d0%b3%d0%be%d0%bd%d0%b8%d1%8f-solenia-chocolate-orange/"
-    },
-    {
-      "id": 534,
-      "name": "БЕГОНИЯ SUMMERWINGS DOUBLE CREAM",
-      "category": "Цветы однолетние",
-      "categoryKey": "annuals",
-      "price": 600,
-      "stock": 0,
-      "status": "out",
-      "description": "🎁В подарок получаете рекомендации по уходу за бегонией.\nВысота куста 20-25см\nФорма куста: ампельный\nОбильное цветение\nУстойчива к солнечным лучам",
-      "care": {
-        "height": "куста 20-25см"
-      },
-      "image": "/assets/products/p534.jpg",
-      "images": [
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2024/12/X2EhtHGW3CJ4yLBblAetI8J1sJZnuOL7he8UUjFh5RWspseOw7FJ1vkoU0xSATlbi8lwPtElbCWcrU3aHmPpA6FJ.jpg",
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2025/01/IMG_2666.jpg",
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2025/01/IMG_5722-1152x1536.jpg"
-      ],
-      "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/%d0%b1%d0%b5%d0%b3%d0%be%d0%bd%d0%b8%d1%8f-summerwings-double-cream/"
-    },
-    {
-      "id": 2101,
-      "name": "Бегония Waterfall Dreams Angel Soft Pink",
-      "category": "Цветы однолетние",
-      "categoryKey": "annuals",
-      "price": 600,
-      "stock": 1,
-      "status": "low",
-      "description": "",
-      "care": {},
-      "image": "/assets/products/p2101.png",
-      "images": [
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2026/05/img_9568.png"
-      ],
-      "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/%d0%b1%d0%b5%d0%b3%d0%be%d0%bd%d0%b8%d1%8f-waterfall-dreams-angel-soft-pink/"
-    },
-    {
-      "id": 1078,
-      "name": "БЕГОНИЯ WATERFALLS ENCANTO PINK",
-      "category": "Цветы однолетние",
-      "categoryKey": "annuals",
-      "price": 600,
-      "stock": 0,
-      "status": "out",
-      "description": "В подарок получаете рекомендации по уходу за бегонией.\nВысота куста: 20-25см.\nФорма куста: полуампельный.",
-      "care": {
-        "height": "куста: 20-25см"
-      },
-      "image": "/assets/products/p1078.jpg",
-      "images": [
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2025/04/img_2117-1152x1536.jpeg",
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2025/04/93d3df32-9d0c-46a2-9a41-a47a7dce6146.jpeg",
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2025/04/img_9339-1152x1536.jpeg"
-      ],
-      "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/%d0%b1%d0%b5%d0%b3%d0%be%d0%bd%d0%b8%d1%8f-waterfalls-encanto-pink/"
-    },
-    {
-      "id": 1911,
-      "name": "Вербена DRUMS WHITE",
-      "category": "Цветы однолетние",
-      "categoryKey": "annuals",
-      "price": 250,
-      "stock": 1,
-      "status": "low",
-      "description": "🌱Рассада в объёме 0,2л\n🎁В подарок каждому покупателю рекомендации по уходу и посадке",
-      "care": {},
-      "image": "/assets/products/p1911.png",
-      "images": [
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2026/03/img_7642.png",
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2026/03/img_8692-1152x1536.jpeg",
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2026/03/img_8693-1152x1536.jpeg"
-      ],
-      "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/%d0%b2%d0%b5%d1%80%d0%b1%d0%b5%d0%bd%d0%b0-drums-white/"
-    },
-    {
-      "id": 1655,
-      "name": "ВЕРБЕНА VANESSA BIC. LIGHT PINK",
-      "category": "Цветы однолетние",
-      "categoryKey": "annuals",
-      "price": 250,
-      "stock": 6,
-      "status": "ok",
-      "description": "🌱Рассада в объёме 0,2л\n🎁В подарок каждому покупателю рекомендации по уходу и посадке\nЭто потрясающие трехцветной окраской соцветия. И, как у всех вербен, изящная разрезная листва дает прекрасный фон для необычных цветов. Цветы среднего размера. Растение в высоту до 20-30 см, сильный энергичный рост, отличная устойчивость к жаре и заболеваниям.",
-      "care": {},
-      "image": "/assets/products/p1655.jpg",
-      "images": [
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2025/10/img_5213-1152x1536.jpeg",
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2025/10/img_8577-1152x1536.jpeg"
-      ],
-      "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/%d0%b2%d0%b5%d1%80%d0%b1%d0%b5%d0%bd%d0%b0-vanessa-bic-light-pink/"
-    },
-    {
-      "id": 1949,
-      "name": "Вискария глазковая",
-      "category": "Цветы однолетние",
-      "categoryKey": "annuals",
-      "price": 150,
-      "stock": 12,
-      "status": "ok",
-      "description": "🌱Рассада в объёме 0,1л\nОднолетнее растение высотой до 50 см. На вершинах побегов находятся пятилепестковые цветки диаметром 2-2,5 см, белой, розовой, красной, сиреневой и голубой окраски. Цветет с начала июля и до заморозков. Используют для цветников, бордюров, мавританского газона\nМесто должно быть хорошо освещённым. Цветки выглядят ярко, благородно, прекрасно сочетаются с другими растениями",
-      "care": {},
-      "image": "/assets/products/p1949.png",
-      "images": [
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2026/03/img_8299.png"
-      ],
-      "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/%d0%b2%d0%b8%d1%81%d0%ba%d0%b0%d1%80%d0%b8%d1%8f-%d0%b3%d0%bb%d0%b0%d0%b7%d0%ba%d0%be%d0%b2%d0%b0%d1%8f/"
+      "sourceUrl": "https://annaflowerfarm.ru/product/%d0%b1%d0%b5%d0%b3%d0%be%d0%bd%d0%b8%d1%8f-belleconia-hot-orange/"
     },
     {
       "id": 1674,
@@ -266,319 +89,697 @@
       "category": "Цветы однолетние",
       "categoryKey": "annuals",
       "price": 350,
-      "stock": 2,
-      "status": "low",
-      "description": "🌱 Рассада в объёме 1л\nРекомендуемый объём грунта 3-4 л. на 1 растение.\nХорошо смотрится в композиции\nОтличное текстурное растение для цветочных композиций в контейнерах на открытом солнце. Серебристая, густая зелень гелихризума создает непревзойденный пейзажный акцент в смешанных посадках. Чем больше солнечного света, тем более серебристыми будут его бархатистые листья. При недостатке света листья теряют серебристый оттенок. не нуждается в обрезке и прищипывании побегов, так как образует аккуратную куртинку, медленно нарастающую все лето вплоть до заморозков. Взрослое растение достигает 15-20 см. в высоту, в ширину разрастается на 40-60 см.",
-      "care": {},
-      "image": "/assets/products/p1674.jpg",
+      "stock": 0,
+      "status": "out",
+      "description": "Рассада в объёме 1л\nРекомендуемый объём грунта 3-4 л. на 1 растение.\nХорошо смотрится в композиции\nОтличное текстурное растение для цветочных композиций в контейнерах на открытом солнце. Серебристая, густая зелень гелихризума создает непревзойденный пейзажный акцент в смешанных посадках. Чем больше солнечного света, тем более серебристыми будут его бархатистые листья. При недостатке света листья теряют серебристый оттенок. не нуждается в обрезке и прищипывании побегов, так как образует аккуратную куртинку, медленно нарастающую все лето вплоть до заморозков. Взрослое растение достигает 15-20 см. в высоту, в ширину разрастается на 40-60 см.",
+      "care": {
+        "light": "а, тем более серебристыми будут его бархатистые листья"
+      },
+      "image": "https://annaflowerfarm.ru/wp-content/uploads/2025/10/img_1455.jpeg",
       "images": [
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2025/10/img_0412-1152x1536.jpeg"
+        "https://annaflowerfarm.ru/wp-content/uploads/2025/10/img_1455.jpeg",
+        "https://annaflowerfarm.ru/wp-content/uploads/2025/10/img_1595-1152x1536.jpeg",
+        "https://annaflowerfarm.ru/wp-content/uploads/2025/10/img_0412-1152x1536.jpeg"
       ],
-      "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/%d0%b3%d0%b5%d0%bb%d0%b8%d1%85%d1%80%d0%b8%d0%b7%d1%83%d0%bc-silver/"
+      "sourceUrl": "https://annaflowerfarm.ru/product/%d0%b3%d0%b5%d0%bb%d0%b8%d1%85%d1%80%d0%b8%d0%b7%d1%83%d0%bc-silver/"
+    },
+    {
+      "id": 1017,
+      "name": "Гортензия метельчатая «Ванила Фрайз»",
+      "category": "Гортензии",
+      "categoryKey": "hydrangea",
+      "price": 550,
+      "stock": 12,
+      "status": "ok",
+      "description": "Собственное производство.\nОбъём 0,5л\nВысота взрослого растения: 1,8 м.\nЦвет соцветий: Белый, розовый, малиновый\nМесто посадки: Солнце/Полутень.\nПериод цветения: июль-сентябрь.\nПочва: Кислая, влажная.\nПолив: Обильный.\nЗона морозостойкости: 4.",
+      "care": {
+        "height": "взрослого растения: 1,8 м",
+        "bloom": "июль-сентябрь",
+        "light": "Солнце/Полутень",
+        "hardiness": "4"
+      },
+      "image": "https://annaflowerfarm.ru/wp-content/uploads/2025/03/img_5114-1152x1536.jpeg",
+      "images": [
+        "https://annaflowerfarm.ru/wp-content/uploads/2025/03/img_5114-1152x1536.jpeg",
+        "https://annaflowerfarm.ru/wp-content/uploads/2025/03/img_5119-1152x1536.jpeg",
+        "https://annaflowerfarm.ru/wp-content/uploads/2025/03/img_5118-1152x1536.jpeg",
+        "https://annaflowerfarm.ru/wp-content/uploads/2025/03/img_4648-1152x1536.jpeg"
+      ],
+      "sourceUrl": "https://annaflowerfarm.ru/product/%d0%b3%d0%be%d1%80%d1%82%d0%b5%d0%bd%d0%b7%d0%b8%d1%8f-%d0%bc%d0%b5%d1%82%d0%b5%d0%bb%d1%8c%d1%87%d0%b0%d1%82%d0%b0%d1%8f-%d0%b2%d0%b0%d0%bd%d0%b8%d0%bb%d0%b0-%d1%84%d1%80%d0%b0%d0%b9%d0%b7/"
+    },
+    {
+      "id": 1005,
+      "name": "Гортензия метельчатая «Даймонд Руж»",
+      "category": "Гортензии",
+      "categoryKey": "hydrangea",
+      "price": 550,
+      "stock": 12,
+      "status": "ok",
+      "description": "Объём контейнера 0,5л\nСобственное производство.\nВысота взрослого растения: 150 см\nЦвет соцветий: розовый.\nПериод цветения: июль-сентябрь.\nМесто посадки: Солнце/Полутень.\nПочва: Кислая.\nПолив: Обильный.\nЗона морозостойкости: 4.\nПрименение: живые изгороди, групповые посадки, миксбордеры в сочетании с травами, многолетними растениями и хвойными",
+      "care": {
+        "height": "взрослого растения: 150 см",
+        "bloom": "июль-сентябрь",
+        "light": "Солнце/Полутень",
+        "hardiness": "4"
+      },
+      "image": "https://annaflowerfarm.ru/wp-content/uploads/2025/03/img_4405-1152x1536.jpeg",
+      "images": [
+        "https://annaflowerfarm.ru/wp-content/uploads/2025/03/img_4405-1152x1536.jpeg",
+        "https://annaflowerfarm.ru/wp-content/uploads/2025/03/img_4649-1152x1536.jpeg"
+      ],
+      "sourceUrl": "https://annaflowerfarm.ru/product/%d0%b3%d0%be%d1%80%d1%82%d0%b5%d0%bd%d0%b7%d0%b8%d1%8f-%d0%bc%d0%b5%d1%82%d0%b5%d0%bb%d1%8c%d1%87%d0%b0%d1%82%d0%b0%d1%8f-%d0%b4%d0%b0%d0%b9%d0%bc%d0%be%d0%bd%d0%b4-%d1%80%d1%83%d0%b6/"
     },
     {
       "id": 711,
       "name": "Гортензия метельчатая «Лаймлайт»",
       "category": "Гортензии",
       "categoryKey": "hydrangea",
-      "price": 950,
-      "stock": 12,
+      "price": 1000,
+      "stock": 13,
       "status": "ok",
-      "description": "🌱Собственное производство.\nВысота взрослого растения: 240 см.\nЦвет соцветий: Зеленый, белый, розовый.\nПериод цветения: июль-сентябрь.\nМесто посадки: Солнце/Полутень.\nПочва: Кислая.\nПолив: Обильный.\nЗона морозостойкости: 4.\nПрименение: в качестве акцента в цветниках, живые изгороди, групповые посадки, миксбордеры в сочетании с травами, многолетними растениями и хвойными, кашпо, контейнеры",
+      "description": "Собственное производство.\nВысота взрослого растения: 240 см.\nЦвет соцветий: Зеленый, белый, розовый.\nПериод цветения: июль-сентябрь.\nМесто посадки: Солнце/Полутень.\nПочва: Кислая.\nПолив: Обильный.\nЗона морозостойкости: 4.\nПрименение: в качестве акцента в цветниках, живые изгороди, групповые посадки, миксбордеры в сочетании с травами, многолетними растениями и хвойными, кашпо, контейнеры",
       "care": {
         "height": "взрослого растения: 240 см",
         "bloom": "июль-сентябрь",
         "light": "Солнце/Полутень",
         "hardiness": "4"
       },
-      "image": "/assets/products/p711.jpg",
+      "image": "https://annaflowerfarm.ru/wp-content/uploads/2024/12/3088bbd0-a30a-4fc4-ab94-99b668f7af40-1.jpeg",
       "images": [
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2024/12/3088bbd0-a30a-4fc4-ab94-99b668f7af40-1.jpeg",
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2024/12/Rp-Da3oIuoQ.jpg"
+        "https://annaflowerfarm.ru/wp-content/uploads/2024/12/3088bbd0-a30a-4fc4-ab94-99b668f7af40-1.jpeg",
+        "https://annaflowerfarm.ru/wp-content/uploads/2024/12/Rp-Da3oIuoQ.jpg"
       ],
-      "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/%d0%b3%d0%be%d1%80%d1%82%d0%b5%d0%bd%d0%b7%d0%b8%d1%8f-%d0%bb%d0%b0%d0%b9%d0%bc%d0%bb%d0%b0%d0%b9%d1%82/"
+      "sourceUrl": "https://annaflowerfarm.ru/product/%d0%b3%d0%be%d1%80%d1%82%d0%b5%d0%bd%d0%b7%d0%b8%d1%8f-%d0%bb%d0%b0%d0%b9%d0%bc%d0%bb%d0%b0%d0%b9%d1%82/",
+      "variants": [
+        {
+          "id": 1156,
+          "label": "3л",
+          "price": 1000,
+          "inStock": true,
+          "stock": 10
+        },
+        {
+          "id": 1313,
+          "label": "5л",
+          "price": 1500,
+          "inStock": false,
+          "stock": 0
+        },
+        {
+          "id": 1155,
+          "label": "10л",
+          "price": 2500,
+          "inStock": true,
+          "stock": 3
+        }
+      ],
+      "variantAttr": "Объем контейнера",
+      "priceFrom": true
     },
     {
       "id": 698,
       "name": "Гортензия метельчатая «Литтл Фреско»",
       "category": "Гортензии",
       "categoryKey": "hydrangea",
-      "price": 600,
-      "stock": 0,
-      "status": "out",
-      "description": "🌱Собственное производство. Объём контейнера 0,5л\nВысота взрослого растения: 70 см.\nЦвет соцветий: Белый, лаймовый, розовый.\nПериод цветения: июль-сентябрь.\nМесто посадки: Солнце.\nПочва: Кислая, влажная.\nПолив: Регулярный.\nЗона морозостойкости: 4.\nПрименение: живые изгороди, групповые посадки, миксбордеры в сочетании с травами, многолетними растениями и хвойными, кашпо, контейнеры",
+      "price": 1500,
+      "stock": 3,
+      "status": "ok",
+      "description": "Собственное производство.\nВысота взрослого растения: 70 см.\nЦвет соцветий: Белый, лаймовый, розовый.\nПериод цветения: июль-сентябрь.\nМесто посадки: Солнце.\nПочва: Кислая, влажная.\nПолив: Регулярный.\nЗона морозостойкости: 4.\nПрименение: живые изгороди, групповые посадки, миксбордеры в сочетании с травами, многолетними растениями и хвойными, кашпо, контейнеры",
       "care": {
         "height": "взрослого растения: 70 см",
         "bloom": "июль-сентябрь",
         "light": "Солнце",
         "hardiness": "4"
       },
-      "image": "/assets/products/p698.jpg",
+      "image": "https://annaflowerfarm.ru/wp-content/uploads/2024/12/hJ6-Ciwj0UXFflcPawdbM6gECQmIYydnUGxtvf04gDdHxW3gmSig2TImvmB7QKaFSmm9PZ8DK-JNgT7oJMoGNnNi.jpg",
       "images": [
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2024/12/hJ6-Ciwj0UXFflcPawdbM6gECQmIYydnUGxtvf04gDdHxW3gmSig2TImvmB7QKaFSmm9PZ8DK-JNgT7oJMoGNnNi.jpg",
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2024/12/aRY1sMpRYGnt3LxaJHZkSXbhyh77JrMQTRHDk5KTrTiLGSKAZ0BWkjNSGyQAplJfoHMz157YMpW0-APdO5O0KiBX.jpg",
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2024/12/b5c4e62c-0823-4b44-bbea-438f0d0f4aee.jpeg",
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2024/12/7d45c507-9976-4287-bad6-618a29f7d72d.jpeg"
+        "https://annaflowerfarm.ru/wp-content/uploads/2024/12/hJ6-Ciwj0UXFflcPawdbM6gECQmIYydnUGxtvf04gDdHxW3gmSig2TImvmB7QKaFSmm9PZ8DK-JNgT7oJMoGNnNi.jpg",
+        "https://annaflowerfarm.ru/wp-content/uploads/2024/12/aRY1sMpRYGnt3LxaJHZkSXbhyh77JrMQTRHDk5KTrTiLGSKAZ0BWkjNSGyQAplJfoHMz157YMpW0-APdO5O0KiBX.jpg"
       ],
-      "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/%d0%b3%d0%be%d1%80%d1%82%d0%b5%d0%bd%d0%b7%d0%b8%d1%8f-%d0%bb%d0%b8%d1%82%d1%82%d0%bb-%d1%84%d1%80%d0%b5%d1%81%d0%ba%d0%be/"
+      "sourceUrl": "https://annaflowerfarm.ru/product/%d0%b3%d0%be%d1%80%d1%82%d0%b5%d0%bd%d0%b7%d0%b8%d1%8f-%d0%bb%d0%b8%d1%82%d1%82%d0%bb-%d1%84%d1%80%d0%b5%d1%81%d0%ba%d0%be/"
     },
     {
       "id": 1010,
       "name": "Гортензия метельчатая «Петит Лантерн»",
       "category": "Гортензии",
       "categoryKey": "hydrangea",
-      "price": 600,
+      "price": 350,
       "stock": 0,
       "status": "out",
-      "description": "Собственное производство.\n🌿Объём контейнера 0,5л\nВысота взрослого растения: 80 см\nЦвет соцветий: Белый, розовый, малиновый\nПериод цветения: июль-октябрь.\nМесто посадки: Солнце/Полутень.\nПочва: Кислая.\nПолив: Регулярный.\nЗона морозостойкости: 4.\nПрименение: в качестве акцента в цветниках, живые изгороди, групповые посадки, миксбордеры в сочетании с травами, многолетними растениями и хвойными, кашпо, контейнеры",
+      "description": "Собственное производство.\nОбъём контейнера 0,5л\nВысота взрослого растения: 80 см\nЦвет соцветий: Белый, розовый, малиновый\nПериод цветения: июль-октябрь.\nМесто посадки: Солнце/Полутень.\nПочва: Кислая.\nПолив: Регулярный.\nЗона морозостойкости: 4.\nПрименение: в качестве акцента в цветниках, живые изгороди, групповые посадки, миксбордеры в сочетании с травами, многолетними растениями и хвойными, кашпо, контейнеры",
       "care": {
         "height": "взрослого растения: 80 см",
         "bloom": "июль-октябрь",
         "light": "Солнце/Полутень",
         "hardiness": "4"
       },
-      "image": "/assets/products/p1010.jpg",
+      "image": "https://annaflowerfarm.ru/wp-content/uploads/2025/03/0kZfJqL9EwA.jpg",
       "images": [
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2025/03/0kZfJqL9EwA.jpg",
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2025/03/6aRyojSP9tA.jpg",
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2025/03/e77bd307-a5c5-4c74-9cd0-e740d400c54a.jpeg"
+        "https://annaflowerfarm.ru/wp-content/uploads/2025/03/0kZfJqL9EwA.jpg",
+        "https://annaflowerfarm.ru/wp-content/uploads/2025/03/6aRyojSP9tA.jpg",
+        "https://annaflowerfarm.ru/wp-content/uploads/2025/03/e77bd307-a5c5-4c74-9cd0-e740d400c54a.jpeg"
       ],
-      "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/%d0%b3%d0%be%d1%80%d1%82%d0%b5%d0%bd%d0%b7%d0%b8%d1%8f-%d0%bc%d0%b5%d1%82%d0%b5%d0%bb%d1%8c%d1%87%d0%b0%d1%82%d0%b0%d1%8f-%d0%bf%d0%b5%d1%82%d0%b8%d1%82-%d0%bb%d0%b0%d0%bd%d1%82%d0%b5%d1%80%d0%bd/"
+      "sourceUrl": "https://annaflowerfarm.ru/product/%d0%b3%d0%be%d1%80%d1%82%d0%b5%d0%bd%d0%b7%d0%b8%d1%8f-%d0%bc%d0%b5%d1%82%d0%b5%d0%bb%d1%8c%d1%87%d0%b0%d1%82%d0%b0%d1%8f-%d0%bf%d0%b5%d1%82%d0%b8%d1%82-%d0%bb%d0%b0%d0%bd%d1%82%d0%b5%d1%80%d0%bd/",
+      "variants": [
+        {
+          "id": 2086,
+          "label": "0.5л",
+          "price": 350,
+          "inStock": false,
+          "stock": 0
+        },
+        {
+          "id": 2087,
+          "label": "3л",
+          "price": 950,
+          "inStock": false,
+          "stock": 0
+        }
+      ],
+      "variantAttr": "Объем контейнера",
+      "priceFrom": true
     },
     {
       "id": 726,
       "name": "Гортензия метельчатая «Полар Бир»",
       "category": "Гортензии",
       "categoryKey": "hydrangea",
-      "price": 850,
-      "stock": 5,
-      "status": "ok",
-      "description": "🌱Собственное производство.\nВысота взрослого растения: 1,8 м.\nЦвет соцветий: Белый, лаймовый, розовый.\nМесто посадки: Солнце/Полутень.\nПочва: Кислая, влажная.\nПолив: Обильный.\nЗона морозостойкости: 4.",
+      "price": 1000,
+      "stock": 1,
+      "status": "low",
+      "description": "Собственное производство.\nВысота взрослого растения: 1,8 м.\nЦвет соцветий: Белый, лаймовый, розовый.\nМесто посадки: Солнце/Полутень.\nПочва: Кислая, влажная.\nПолив: Обильный.\nЗона морозостойкости: 4.",
       "care": {
         "height": "взрослого растения: 1,8 м",
         "light": "Солнце/Полутень",
         "hardiness": "4"
       },
-      "image": "/assets/products/p726.jpg",
+      "image": "https://annaflowerfarm.ru/wp-content/uploads/2024/12/img_4857.png",
       "images": [
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2024/12/bb8d2bbe-b143-45cf-8e8f-c83ff4c6906f.jpeg",
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2024/12/685f1fb8-5cdd-4cd0-b74b-3afc90c6fe6b.jpeg",
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2024/12/hR37RhV97umzrR3uIBMYn2rDMXPB-6WTR3VqCUrFYcb-_zdbPwdGaH1qISyR8e-kYs7DOjQGa5CQ8hULI67Ksov1.jpg"
+        "https://annaflowerfarm.ru/wp-content/uploads/2024/12/img_4857.png",
+        "https://annaflowerfarm.ru/wp-content/uploads/2024/12/685f1fb8-5cdd-4cd0-b74b-3afc90c6fe6b.jpeg",
+        "https://annaflowerfarm.ru/wp-content/uploads/2024/12/hR37RhV97umzrR3uIBMYn2rDMXPB-6WTR3VqCUrFYcb-_zdbPwdGaH1qISyR8e-kYs7DOjQGa5CQ8hULI67Ksov1.jpg"
       ],
-      "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/%d0%b3%d0%be%d1%80%d1%82%d0%b5%d0%bd%d0%b7%d0%b8%d1%8f-%d0%bc%d0%b5%d1%82%d0%b5%d0%bb%d1%8c%d1%87%d0%b0%d1%82%d0%b0%d1%8f-%d0%bf%d0%be%d0%bb%d0%b0%d1%80-%d0%b1%d0%b8%d1%80/"
+      "sourceUrl": "https://annaflowerfarm.ru/product/%d0%b3%d0%be%d1%80%d1%82%d0%b5%d0%bd%d0%b7%d0%b8%d1%8f-%d0%bc%d0%b5%d1%82%d0%b5%d0%bb%d1%8c%d1%87%d0%b0%d1%82%d0%b0%d1%8f-%d0%bf%d0%be%d0%bb%d0%b0%d1%80-%d0%b1%d0%b8%d1%80/",
+      "variants": [
+        {
+          "id": 2061,
+          "label": "2л",
+          "price": 1000,
+          "inStock": true,
+          "stock": 1
+        },
+        {
+          "id": 1220,
+          "label": "5л",
+          "price": 1500,
+          "inStock": false,
+          "stock": 0
+        }
+      ],
+      "variantAttr": "Объем контейнера",
+      "priceFrom": true
     },
     {
       "id": 1022,
       "name": "Гортензия метельчатая «Самарская Лидия»",
       "category": "Гортензии",
       "categoryKey": "hydrangea",
-      "price": 600,
-      "stock": 0,
-      "status": "out",
-      "description": "Собственное производство.\nВысота взрослого растения: 120 см\nЦвет соцветий: Белый, розовый, бордовый\nПериод цветения: июль-сентябрь.\nМесто посадки: Солнце/Полутень.\nПочва: Кислая.\nПолив: Регулярный.\nЗона морозостойкости: 4.\nПрименение: в качестве акцента в цветниках, живые изгороди, групповые посадки, миксбордеры в сочетании с травами, многолетними растениями и хвойными, кашпо, контейнеры",
+      "price": 1000,
+      "stock": 5,
+      "status": "ok",
+      "description": "Собственное производство.\nОбъём корневой системы: 0,5л\nВысота взрослого растения: 120 см\nЦвет соцветий: Белый, розовый, бордовый\nПериод цветения: июль-сентябрь.\nМесто посадки: Солнце/Полутень.\nПочва: Кислая.\nПолив: Регулярный.\nЗона морозостойкости: 4.\nПрименение: в качестве акцента в цветниках, живые изгороди, групповые посадки, миксбордеры в сочетании с травами, многолетними растениями и хвойными, кашпо, контейнеры\nУпаковка корневой системы: 2л",
       "care": {
         "height": "взрослого растения: 120 см",
         "bloom": "июль-сентябрь",
         "light": "Солнце/Полутень",
         "hardiness": "4"
       },
-      "image": "/assets/products/p1022.jpg",
+      "image": "https://annaflowerfarm.ru/wp-content/uploads/2025/03/img_4783-1152x1536.jpeg",
       "images": [
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2025/03/97b1db26-3aa3-4fc3-98ad-898e30a6e459.jpeg",
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2025/03/7393d284-edf7-480f-98ee-7e04da5a16cd.jpeg",
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2025/03/cfcb107f-f5db-4e47-875e-d1deebc49909.jpeg",
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2025/03/zOAB8nO4_dQ.jpg",
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2025/03/img_1070-1152x1536.jpeg",
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2025/03/img_1071-1152x1536.jpeg"
+        "https://annaflowerfarm.ru/wp-content/uploads/2025/03/img_4783-1152x1536.jpeg",
+        "https://annaflowerfarm.ru/wp-content/uploads/2025/03/img_4776-1152x1536.jpeg",
+        "https://annaflowerfarm.ru/wp-content/uploads/2025/03/97b1db26-3aa3-4fc3-98ad-898e30a6e459.jpeg",
+        "https://annaflowerfarm.ru/wp-content/uploads/2025/03/7393d284-edf7-480f-98ee-7e04da5a16cd.jpeg",
+        "https://annaflowerfarm.ru/wp-content/uploads/2025/03/cfcb107f-f5db-4e47-875e-d1deebc49909.jpeg"
       ],
-      "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/%d0%b3%d0%be%d1%80%d1%82%d0%b5%d0%bd%d0%b7%d0%b8%d1%8f-%d0%bc%d0%b5%d1%82%d0%b5%d0%bb%d1%8c%d1%87%d0%b0%d1%82%d0%b0%d1%8f-%d1%81%d0%b0%d0%bc%d0%b0%d1%80%d1%81%d0%ba%d0%b0%d1%8f-%d0%bb%d0%b8%d0%b4/"
+      "sourceUrl": "https://annaflowerfarm.ru/product/%d0%b3%d0%be%d1%80%d1%82%d0%b5%d0%bd%d0%b7%d0%b8%d1%8f-%d0%bc%d0%b5%d1%82%d0%b5%d0%bb%d1%8c%d1%87%d0%b0%d1%82%d0%b0%d1%8f-%d1%81%d0%b0%d0%bc%d0%b0%d1%80%d1%81%d0%ba%d0%b0%d1%8f-%d0%bb%d0%b8%d0%b4/"
     },
     {
       "id": 718,
       "name": "Гортензия метельчатая «Саммер Лав»",
       "category": "Гортензии",
       "categoryKey": "hydrangea",
-      "price": 600,
+      "price": 550,
       "stock": 0,
       "status": "out",
-      "description": "🌱Объём контейнера 0,5л\nСобственное производство.\nВысота взрослого растения: 100 см.\nЦвет соцветий: Белый, розовый.\nМесто посадки: Солнце/Полутень.\nПочва: Кислая.\nПолив: Обильный.\nЗона морозостойкости: 4.",
+      "description": "Объём контейнера 0,5л\nСобственное производство.\nВысота взрослого растения: 100 см.\nЦвет соцветий: Белый, розовый.\nМесто посадки: Солнце/Полутень.\nПочва: Кислая.\nПолив: Обильный.\nЗона морозостойкости: 4.",
       "care": {
         "height": "взрослого растения: 100 см",
         "light": "Солнце/Полутень",
         "hardiness": "4"
       },
-      "image": "/assets/products/p718.jpg",
+      "image": "https://annaflowerfarm.ru/wp-content/uploads/2024/12/4tJTRlWthHCux2ebSpM433yDZZZmVT8q3nOX49dygxCS5n990uKFxTqFGPFhGyrLdcBN87j5QjDDWBjNAQssHvFd.jpg",
       "images": [
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2024/12/4tJTRlWthHCux2ebSpM433yDZZZmVT8q3nOX49dygxCS5n990uKFxTqFGPFhGyrLdcBN87j5QjDDWBjNAQssHvFd.jpg",
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2024/12/ZpXL-oQosXFCwzJw9XTtQ0GYhGk_EmvvJfz-cJQLW8ZvgGj1muovGrfhEYaPtg96gszYluAtjGC71_84UbI07NAK.jpg",
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2024/12/ulacRDhENvhgSSK_iRSTrc2HDQcbuEYYlWqvSogsnv1itPXLKeRmTKrbfeO6BUARKbKlOyiIIzap1sgf5QIEFZ9.jpg"
+        "https://annaflowerfarm.ru/wp-content/uploads/2024/12/4tJTRlWthHCux2ebSpM433yDZZZmVT8q3nOX49dygxCS5n990uKFxTqFGPFhGyrLdcBN87j5QjDDWBjNAQssHvFd.jpg",
+        "https://annaflowerfarm.ru/wp-content/uploads/2024/12/ZpXL-oQosXFCwzJw9XTtQ0GYhGk_EmvvJfz-cJQLW8ZvgGj1muovGrfhEYaPtg96gszYluAtjGC71_84UbI07NAK.jpg",
+        "https://annaflowerfarm.ru/wp-content/uploads/2024/12/ulacRDhENvhgSSK_iRSTrc2HDQcbuEYYlWqvSogsnv1itPXLKeRmTKrbfeO6BUARKbKlOyiIIzap1sgf5QIEFZ9.jpg",
+        "https://annaflowerfarm.ru/wp-content/uploads/2024/12/img_4647-1152x1536.jpeg"
       ],
-      "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/%d0%b3%d0%be%d1%80%d1%82%d0%b5%d0%bd%d0%b7%d0%b8%d1%8f-%d0%bc%d0%b5%d1%82%d0%b5%d0%bb%d1%8c%d1%87%d0%b0%d1%82%d0%b0%d1%8f-%d1%81%d0%b0%d0%bc%d0%bc%d0%b5%d1%80-%d0%bb%d0%b0%d0%b2/"
+      "sourceUrl": "https://annaflowerfarm.ru/product/%d0%b3%d0%be%d1%80%d1%82%d0%b5%d0%bd%d0%b7%d0%b8%d1%8f-%d0%bc%d0%b5%d1%82%d0%b5%d0%bb%d1%8c%d1%87%d0%b0%d1%82%d0%b0%d1%8f-%d1%81%d0%b0%d0%bc%d0%bc%d0%b5%d1%80-%d0%bb%d0%b0%d0%b2/"
     },
     {
       "id": 733,
       "name": "Гортензия метельчатая «Сандей Фрайз»",
       "category": "Гортензии",
       "categoryKey": "hydrangea",
-      "price": 850,
+      "price": 1000,
       "stock": 0,
       "status": "out",
-      "description": "🌱Собственное производство.\nВысота взрослого растения: 120 см.\nЦвет соцветий: Белый, розовый.\nПериод цветения: июль-сентябрь.\nМесто посадки: Солнце/Полутень.\nПочва: Плодородная, дренированная, кислая.\nПолив: Обильный.\nЗона морозостойкости: 4.",
+      "description": "Собственное производство.\nВысота взрослого растения: 120 см.\nЦвет соцветий: Белый, розовый.\nПериод цветения: июль-сентябрь.\nМесто посадки: Солнце/Полутень.\nПочва: Плодородная, дренированная, кислая.\nПолив: Обильный.\nЗона морозостойкости: 4.",
       "care": {
         "height": "взрослого растения: 120 см",
         "bloom": "июль-сентябрь",
         "light": "Солнце/Полутень",
         "hardiness": "4"
       },
-      "image": "/assets/products/p733.jpg",
+      "image": "https://annaflowerfarm.ru/wp-content/uploads/2024/12/q-dUL7PS9005YFTWGFRXw81Ho0TftdeNUgw2ePRq8zd3Ip492J0vpbsh9SbRs2Utk_pKB98zFZ_t3WSRatq12KUE.jpg",
       "images": [
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2024/12/q-dUL7PS9005YFTWGFRXw81Ho0TftdeNUgw2ePRq8zd3Ip492J0vpbsh9SbRs2Utk_pKB98zFZ_t3WSRatq12KUE.jpg"
+        "https://annaflowerfarm.ru/wp-content/uploads/2024/12/q-dUL7PS9005YFTWGFRXw81Ho0TftdeNUgw2ePRq8zd3Ip492J0vpbsh9SbRs2Utk_pKB98zFZ_t3WSRatq12KUE.jpg"
       ],
-      "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/%d0%b3%d0%be%d1%80%d1%82%d0%b5%d0%bd%d0%b7%d0%b8%d1%8f-%d1%81%d0%b0%d0%bd%d0%b4%d0%b5%d0%b9-%d1%84%d1%80%d0%b0%d0%b9%d0%b7/"
-    },
-    {
-      "id": 1029,
-      "name": "Гортензия метельчатая «Сильвер Доллар»",
-      "category": "Гортензии",
-      "categoryKey": "hydrangea",
-      "price": 1500,
-      "stock": 4,
-      "status": "ok",
-      "description": "Собственное производство.\nВысота взрослого растения: 250 см\nЦвет соцветий: Белый, розовый\nПериод цветения: июль-сентябрь.\nМесто посадки: Солнце/Полутень.\nПочва: Кислая.\nПолив: Обильный.\nЗона морозостойкости: 4.\nПрименение: в качестве акцента в цветниках, живые изгороди, групповые посадки, миксбордеры в сочетании с травами, многолетними растениями и хвойными, кашпо, контейнеры",
-      "care": {
-        "height": "взрослого растения: 250 см",
-        "bloom": "июль-сентябрь",
-        "light": "Солнце/Полутень",
-        "hardiness": "4"
-      },
-      "image": "/assets/products/p1029.jpg",
-      "images": [
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2025/03/img_1231.jpeg",
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2025/03/4a785d0b-c66a-4300-a51c-0e0fa04c07db.jpeg",
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2025/03/ecb2e2fd-238b-4199-80f5-73df106bb434.jpeg",
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2025/03/O3cfzO7AQEU.jpg",
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2025/03/278b592f-29c7-45e6-8e3c-f96e2e54cc9d.jpeg",
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2025/03/96d7457a-0830-4e85-a8c8-f5c02cf440cf.jpeg"
+      "sourceUrl": "https://annaflowerfarm.ru/product/%d0%b3%d0%be%d1%80%d1%82%d0%b5%d0%bd%d0%b7%d0%b8%d1%8f-%d1%81%d0%b0%d0%bd%d0%b4%d0%b5%d0%b9-%d1%84%d1%80%d0%b0%d0%b9%d0%b7/",
+      "variants": [
+        {
+          "id": 2515,
+          "label": "2л",
+          "price": 1000,
+          "inStock": false,
+          "stock": 0
+        },
+        {
+          "id": 2516,
+          "label": "5л",
+          "price": 1500,
+          "inStock": false,
+          "stock": 0
+        }
       ],
-      "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/%d0%b3%d0%be%d1%80%d1%82%d0%b5%d0%bd%d0%b7%d0%b8%d1%8f-%d0%bc%d0%b5%d1%82%d0%b5%d0%bb%d1%8c%d1%87%d0%b0%d1%82%d0%b0%d1%8f-%d1%81%d0%b8%d0%bb%d1%8c%d0%b2%d0%b5%d1%80-%d0%b4%d0%be%d0%bb%d0%bb%d0%b0/"
+      "variantAttr": "Объем контейнера",
+      "priceFrom": true
     },
     {
       "id": 677,
       "name": "Гортензия метельчатая «Строберри Блоссом»",
       "category": "Гортензии",
       "categoryKey": "hydrangea",
-      "price": 600,
-      "stock": 0,
-      "status": "out",
-      "description": "🌱Собственное производство.\nStrawberry Blossom — удивительная гортензия, напоминающая нежную клубнику в сливках.\n«Клубничное цветение» — так переводится название этого сорта дословно. Пройти мимо такой гортензии сложно.\nВысота — 120 см. Ширина — 120 см.\nЦветы распускаются белыми и впоследствии розовеют. К концу лета они становятся насыщенного розового цвета. Они собраны в крупные, плотные соцветия конической формы.\nТакие соцветия достигают 35 см в длину.\nНасыщенность цветов зависит от кислотности почвы, а величина соцветий от качества весенней обрезки.\nЭтот сорт совершенно точно может стать украшением любого сада!",
+      "price": 550,
+      "stock": 20,
+      "status": "ok",
+      "description": "Собственное производство.\nStrawberry Blossom — удивительная гортензия, напоминающая нежную клубнику в сливках.\n«Клубничное цветение» — так переводится название этого сорта дословно. Пройти мимо такой гортензии сложно.\nВысота — 120 см. Ширина — 120 см.\nЦветы распускаются белыми и впоследствии розовеют. К концу лета они становятся насыщенного розового цвета. Они собраны в крупные, плотные соцветия конической формы.\nТакие соцветия достигают 35 см в длину.\nНасыщенность цветов зависит от кислотности почвы, а величина соцветий от качества весенней обрезки.\nЭтот сорт совершенно точно может стать украшением любого сада!",
       "care": {
-        "height": "— 120 см"
+        "height": "— 120 см",
+        "bloom": "» — так переводится название этого сорта дословно"
       },
-      "image": "/assets/products/p677.jpg",
+      "image": "https://annaflowerfarm.ru/wp-content/uploads/2024/12/img_9421.jpeg",
       "images": [
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2024/12/img_9421.jpeg",
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2024/12/img_2396-1152x1536.jpeg",
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2024/12/2d7afb1b-6771-44af-90a4-bf70a8626e5f.jpeg"
+        "https://annaflowerfarm.ru/wp-content/uploads/2024/12/img_9421.jpeg",
+        "https://annaflowerfarm.ru/wp-content/uploads/2024/12/img_2396-1152x1536.jpeg",
+        "https://annaflowerfarm.ru/wp-content/uploads/2024/12/2d7afb1b-6771-44af-90a4-bf70a8626e5f.jpeg"
       ],
-      "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/%d0%bc%d0%b5%d1%82%d0%b5%d0%bb%d1%8c%d1%87%d0%b0%d1%82%d0%b0%d1%8f-%d0%b3%d0%be%d1%80%d1%82%d0%b5%d0%bd%d0%b7%d0%b8%d1%8f-%d1%81%d1%82%d1%80%d0%be%d0%b1%d0%b5%d1%80%d1%80%d0%b8-%d0%b1%d0%bb%d0%be/"
+      "sourceUrl": "https://annaflowerfarm.ru/product/%d0%bc%d0%b5%d1%82%d0%b5%d0%bb%d1%8c%d1%87%d0%b0%d1%82%d0%b0%d1%8f-%d0%b3%d0%be%d1%80%d1%82%d0%b5%d0%bd%d0%b7%d0%b8%d1%8f-%d1%81%d1%82%d1%80%d0%be%d0%b1%d0%b5%d1%80%d1%80%d0%b8-%d0%b1%d0%bb%d0%be/",
+      "variants": [
+        {
+          "id": 1342,
+          "label": "0-5л",
+          "price": 550,
+          "inStock": false,
+          "stock": 0
+        },
+        {
+          "id": 1221,
+          "label": "3л",
+          "price": 1000,
+          "inStock": true,
+          "stock": 10
+        },
+        {
+          "id": 2518,
+          "label": "5л",
+          "price": 1500,
+          "inStock": true,
+          "stock": 10
+        }
+      ],
+      "variantAttr": "Объем контейнера",
+      "priceFrom": true
     },
     {
-      "id": 1336,
-      "name": "Гортензия метельчатая «Скайфолл»",
+      "id": 2489,
+      "name": "Гортензия метельчатая «Геркулес»",
       "category": "Гортензии",
       "categoryKey": "hydrangea",
-      "price": 600,
-      "stock": 0,
-      "status": "out",
-      "description": "Высота взрослого растения: 1,2м\nЦвет соцветий: белый, розовый\nПериод цветения: июль-сентябрь\nМесто посадки: солнце/полутень\nПочва: кислая\nЗона зимостойкости: 4\nПри покупке наших саженцев вы получаете рекомендацию по посадке и уходу🎁",
+      "price": 550,
+      "stock": 12,
+      "status": "ok",
+      "description": "Высота взрослого растения: 2 метра\nЦвет соцветий: Лаймовый, белый, розовый\nЦвет листьев: Зеленый\nПериод цветения: июль-сентябрь\nМесто посадки: Солнце/Полутень\nПочва: Плодородная, дренированная, кислая\nПолив: Обильный\nОбрезка: Формовочная, санитарная\nЗона морозостойкости: 4",
       "care": {
+        "height": "взрослого растения: 2 м",
         "bloom": "июль-сентябрь",
-        "light": "солнце/полутень",
+        "light": "Солнце/Полутень",
         "hardiness": "4"
       },
-      "image": "/assets/products/p1336.jpg",
+      "image": "https://annaflowerfarm.ru/wp-content/uploads/2026/07/a1311536-5469-4a99-a280-39bfb183655c.jpeg",
       "images": [
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2025/08/img_1264-1152x1536.jpeg",
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2025/08/69724e90-b87e-484f-b80a-f17e533a4c22.jpeg",
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2025/08/6056d923-101f-44a0-86cb-1b4ed72b485e.jpeg"
+        "https://annaflowerfarm.ru/wp-content/uploads/2026/07/a1311536-5469-4a99-a280-39bfb183655c.jpeg",
+        "https://annaflowerfarm.ru/wp-content/uploads/2026/07/affc2be5-26e7-48bb-97fb-f1daaff964be.jpeg",
+        "https://annaflowerfarm.ru/wp-content/uploads/2026/07/img_4652-1152x1536.jpeg"
       ],
-      "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/%d0%b3%d0%be%d1%80%d1%82%d0%b5%d0%bd%d0%b7%d0%b8%d1%8f-%d0%bc%d0%b5%d1%82%d0%b5%d0%bb%d1%8c%d1%87%d0%b0%d1%82%d0%b0%d1%8f-%d1%81%d0%ba%d0%b0%d0%b9%d1%84%d0%be%d0%bb%d0%bb/"
+      "sourceUrl": "https://annaflowerfarm.ru/product/%d0%b3%d0%be%d1%80%d1%82%d0%b5%d0%bd%d0%b7%d0%b8%d1%8f-%d0%bc%d0%b5%d1%82%d0%b5%d0%bb%d1%8c%d1%87%d0%b0%d1%82%d0%b0%d1%8f-%d0%b3%d0%b5%d1%80%d0%ba%d1%83%d0%bb%d0%b5%d1%81/"
+    },
+    {
+      "id": 2641,
+      "name": "Гортензия метельчатая Бонфайер",
+      "category": "Гортензии",
+      "categoryKey": "hydrangea",
+      "price": 550,
+      "stock": 12,
+      "status": "ok",
+      "description": "Высота взрослого растения: 1,2 м\nЦвет соцветий: Белый, розовый, малиновый\nЦвет листьев: Зеленый\nПериод цветения: июль-октябрь\nМесто посадки: Солнце/Полутень\nПочва: Плодородная, дренированная, кислая\nПолив: Обильный\nОбрезка: Формовочная, санитарная\nЗона морозостойкости: 4\nУпаковка корневой системы: 0,5л",
+      "care": {
+        "height": "взрослого растения: 1,2 м",
+        "bloom": "июль-октябрь",
+        "light": "Солнце/Полутень",
+        "hardiness": "4"
+      },
+      "image": "https://annaflowerfarm.ru/wp-content/uploads/2026/09/img_4689-1152x1536.jpeg",
+      "images": [
+        "https://annaflowerfarm.ru/wp-content/uploads/2026/09/img_4689-1152x1536.jpeg",
+        "https://annaflowerfarm.ru/wp-content/uploads/2026/09/img_4686-1152x1536.jpeg",
+        "https://annaflowerfarm.ru/wp-content/uploads/2026/09/img_4654-1152x1536.jpeg"
+      ],
+      "sourceUrl": "https://annaflowerfarm.ru/product/%d0%b3%d0%be%d1%80%d1%82%d0%b5%d0%bd%d0%b7%d0%b8%d1%8f-%d0%bc%d0%b5%d1%82%d0%b5%d0%bb%d1%8c%d1%87%d0%b0%d1%82%d0%b0%d1%8f-%d0%b1%d0%be%d0%bd%d1%84%d0%b0%d0%b9%d0%b5%d1%80/"
+    },
+    {
+      "id": 662,
+      "name": "Гортензия метельчатая Вайтлайт",
+      "category": "Гортензии",
+      "categoryKey": "hydrangea",
+      "price": 550,
+      "stock": 5,
+      "status": "low",
+      "description": "Собственное производство.\nВысота взрослого растения: 100 см.\nЦвет соцветий: Нежно-розовый.\nПериод цветения: июль-сентябрь.\nМесто посадки: Солнце/Полутень.\nПочва: Кислая, влажная.\nПолив: Обильный.\nОбрезка: Формовочная, санитарная.\nЗона морозостойкости: 4.",
+      "care": {
+        "height": "взрослого растения: 100 см",
+        "bloom": "июль-сентябрь",
+        "light": "Солнце/Полутень",
+        "hardiness": "4"
+      },
+      "image": "https://annaflowerfarm.ru/wp-content/uploads/2024/12/GRd74Jqmj6who5FM8fI6Pwf42pxsOYeSdBrTyd4ZYSFpe3H1UtvGzptgv1qu5E0CzhpJDNAee2yMs_yTF3A92YGR.jpg",
+      "images": [
+        "https://annaflowerfarm.ru/wp-content/uploads/2024/12/GRd74Jqmj6who5FM8fI6Pwf42pxsOYeSdBrTyd4ZYSFpe3H1UtvGzptgv1qu5E0CzhpJDNAee2yMs_yTF3A92YGR.jpg",
+        "https://annaflowerfarm.ru/wp-content/uploads/2024/12/img_3230-1152x1536.jpeg",
+        "https://annaflowerfarm.ru/wp-content/uploads/2024/12/img_3232-1152x1536.jpeg"
+      ],
+      "sourceUrl": "https://annaflowerfarm.ru/product/%d0%b2%d0%b0%d0%b9%d1%82%d0%bb%d0%b0%d0%b9%d1%82-%d0%bc%d0%b5%d1%82%d0%b5%d0%bb%d1%8c%d1%87%d0%b0%d1%82%d0%b0%d1%8f-%d0%b3%d0%be%d1%80%d1%82%d0%b5%d0%bd%d0%b7%d0%b8%d1%8f/",
+      "variants": [
+        {
+          "id": 2083,
+          "label": "0-5л",
+          "price": 550,
+          "inStock": false,
+          "stock": 0
+        },
+        {
+          "id": 2082,
+          "label": "3л",
+          "price": 950,
+          "inStock": true,
+          "stock": 5
+        }
+      ],
+      "variantAttr": "Объем контейнера",
+      "priceFrom": true
+    },
+    {
+      "id": 2646,
+      "name": "Гортензия метельчатая Литтл Рози",
+      "category": "Гортензии",
+      "categoryKey": "hydrangea",
+      "price": 550,
+      "stock": 12,
+      "status": "ok",
+      "description": "Высота взрослого растения: 60 см\nЦвет соцветий: Белый, розовый, красный\nЦвет листьев: Зеленый\nПериод цветения: июль-сентябрь\nМесто посадки: Солнце/Полутень\nПочва: Плодородная, дренированная, кислая\nПолив: Обильный\nОбрезка: Формовочная, санитарная\nЗона морозостойкости: 4\nУпаковка корневой системы: 0,5л",
+      "care": {
+        "height": "взрослого растения: 60 см",
+        "bloom": "июль-сентябрь",
+        "light": "Солнце/Полутень",
+        "hardiness": "4"
+      },
+      "image": "https://annaflowerfarm.ru/wp-content/uploads/2026/09/img_4679-1152x1536.jpeg",
+      "images": [
+        "https://annaflowerfarm.ru/wp-content/uploads/2026/09/img_4679-1152x1536.jpeg",
+        "https://annaflowerfarm.ru/wp-content/uploads/2026/09/img_4680-1152x1536.jpeg",
+        "https://annaflowerfarm.ru/wp-content/uploads/2026/09/img_4656-1152x1536.jpeg",
+        "https://annaflowerfarm.ru/wp-content/uploads/2026/09/img_4655-1152x1536.jpeg"
+      ],
+      "sourceUrl": "https://annaflowerfarm.ru/product/%d0%b3%d0%be%d1%80%d1%82%d0%b5%d0%bd%d0%b7%d0%b8%d1%8f-%d0%bc%d0%b5%d1%82%d0%b5%d0%bb%d1%8c%d1%87%d0%b0%d1%82%d0%b0%d1%8f-%d0%bb%d0%b8%d1%82%d1%82%d0%bb-%d1%80%d0%be%d0%b7%d0%b8/"
     },
     {
       "id": 683,
       "name": "Гортензия метельчатая Меджикал Килиманджаро",
       "category": "Гортензии",
       "categoryKey": "hydrangea",
-      "price": 600,
+      "price": 550,
       "stock": 0,
       "status": "out",
-      "description": "🌱Собственное производство.\nВысота взрослого растения: 120 см.\nЦвет соцветий: Белый.\nПериод цветения: июль-сентябрь.\nМесто посадки: Солнце/Полутень.\nПочва: Плодородная, дренированная, кислая.\nПолив: Обильный.\nЗона морозостойкости: 4.",
+      "description": "Собственное производство.\nВысота взрослого растения: 120 см.\nЦвет соцветий: Белый.\nПериод цветения: июль-сентябрь.\nМесто посадки: Солнце/Полутень.\nПочва: Плодородная, дренированная, кислая.\nПолив: Обильный.\nЗона морозостойкости: 4.",
       "care": {
         "height": "взрослого растения: 120 см",
         "bloom": "июль-сентябрь",
         "light": "Солнце/Полутень",
         "hardiness": "4"
       },
-      "image": "/assets/products/p683.jpg",
+      "image": "https://annaflowerfarm.ru/wp-content/uploads/2024/12/UrphojZY5UrwPV7PwEP_em-XgIRV7HSXU56-U_MdZ3KcuB53aBaDX6Z3VhaOdTizICGCCT_qZBfwIaZvkC1pNXTd.jpg",
       "images": [
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2024/12/UrphojZY5UrwPV7PwEP_em-XgIRV7HSXU56-U_MdZ3KcuB53aBaDX6Z3VhaOdTizICGCCT_qZBfwIaZvkC1pNXTd.jpg"
+        "https://annaflowerfarm.ru/wp-content/uploads/2024/12/UrphojZY5UrwPV7PwEP_em-XgIRV7HSXU56-U_MdZ3KcuB53aBaDX6Z3VhaOdTizICGCCT_qZBfwIaZvkC1pNXTd.jpg"
       ],
-      "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/%d0%b3%d0%be%d1%80%d1%82%d0%b5%d0%bd%d0%b7%d0%b8%d1%8f-%d0%bc%d0%b5%d1%82%d0%b5%d0%bb%d1%8c%d1%87%d0%b0%d1%82%d0%b0%d1%8f-%d0%bc%d0%b5%d0%b4%d0%b6%d0%b8%d0%ba%d0%b0%d0%bb-%d0%ba%d0%b8%d0%bb%d0%b8/"
+      "sourceUrl": "https://annaflowerfarm.ru/product/%d0%b3%d0%be%d1%80%d1%82%d0%b5%d0%bd%d0%b7%d0%b8%d1%8f-%d0%bc%d0%b5%d1%82%d0%b5%d0%bb%d1%8c%d1%87%d0%b0%d1%82%d0%b0%d1%8f-%d0%bc%d0%b5%d0%b4%d0%b6%d0%b8%d0%ba%d0%b0%d0%bb-%d0%ba%d0%b8%d0%bb%d0%b8/",
+      "variants": [
+        {
+          "id": 1203,
+          "label": "0.5л",
+          "price": 550,
+          "inStock": false,
+          "stock": 0
+        },
+        {
+          "id": 1348,
+          "label": "3л",
+          "price": 1000,
+          "inStock": false,
+          "stock": 0
+        },
+        {
+          "id": 1204,
+          "label": "5л",
+          "price": 1500,
+          "inStock": false,
+          "stock": 0
+        }
+      ],
+      "variantAttr": "Объем контейнера",
+      "priceFrom": true
     },
     {
       "id": 705,
       "name": "Гортензия метельчатая Петит Черри",
       "category": "Гортензии",
       "categoryKey": "hydrangea",
-      "price": 950,
+      "price": 1000,
+      "stock": 4,
+      "status": "low",
+      "description": "Собственное производство.\nПереводится как «Маленькая вишня»\nЗацветает рано в июне белыми цветами, но уже в июле меняет свою окраску на розовый, в конце цветения соцветия становятся темно-красными.\nВысота — 50 см.\nШирина- 40 см.",
+      "care": {
+        "height": "— 50 см",
+        "bloom": "соцветия становятся темно-красными"
+      },
+      "image": "https://annaflowerfarm.ru/wp-content/uploads/2024/12/img_2072-1152x1536.jpeg",
+      "images": [
+        "https://annaflowerfarm.ru/wp-content/uploads/2024/12/img_2072-1152x1536.jpeg",
+        "https://annaflowerfarm.ru/wp-content/uploads/2024/12/img_1871-1152x1536.jpeg"
+      ],
+      "sourceUrl": "https://annaflowerfarm.ru/product/%d0%b3%d0%be%d1%80%d1%82%d0%b5%d0%bd%d0%b7%d0%b8%d1%8f-%d0%bc%d0%b5%d1%82%d0%b5%d0%bb%d1%8c%d1%87%d0%b0%d1%82%d0%b0%d1%8f-%d0%bf%d0%b5%d1%82%d0%b8%d1%82-%d1%87%d0%b5%d1%80%d1%80%d0%b8/",
+      "variants": [
+        {
+          "id": 709,
+          "label": "2л",
+          "price": 1000,
+          "inStock": true,
+          "stock": 4
+        },
+        {
+          "id": 1037,
+          "label": "5л",
+          "price": 1500,
+          "inStock": false,
+          "stock": 0
+        }
+      ],
+      "variantAttr": "Объем контейнера",
+      "priceFrom": true
+    },
+    {
+      "id": 2637,
+      "name": "Гортензия метельчатая Пинк энд Роуз",
+      "category": "Гортензии",
+      "categoryKey": "hydrangea",
+      "price": 550,
       "stock": 12,
       "status": "ok",
-      "description": "🌱Собственное производство.\nПереводится как «Маленькая вишня»\nЗацветает рано в июне белыми цветами, но уже в июле меняет свою окраску на розовый, в конце цветения соцветия становятся темно-красными.\nВысота — 50 см.\nШирина- 40 см.",
+      "description": "Высота взрослого растения: 130см\nЦвет соцветий: белый, розовый, малиновый\nПериод цветения: июль-сентябрь\nМесто посадки: солнце/полутень\nПолив: обильный\nЗона морозостойкости: 4\nУпаковка корневой системы: 0,5л",
       "care": {
-        "height": "— 50 см"
+        "height": "взрослого растения: 130см",
+        "bloom": "июль-сентябрь",
+        "light": "солнце/полутень",
+        "hardiness": "4"
       },
-      "image": "/assets/products/p705.jpg",
+      "image": "https://annaflowerfarm.ru/wp-content/uploads/2026/09/img_4985-1152x1536.jpeg",
       "images": [
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2024/12/img_2072-1152x1536.jpeg"
+        "https://annaflowerfarm.ru/wp-content/uploads/2026/09/img_4985-1152x1536.jpeg",
+        "https://annaflowerfarm.ru/wp-content/uploads/2026/09/img_4986-1152x1536.jpeg",
+        "https://annaflowerfarm.ru/wp-content/uploads/2026/09/img_4988-1152x1536.jpeg",
+        "https://annaflowerfarm.ru/wp-content/uploads/2026/09/img_4650-1152x1536.jpeg"
       ],
-      "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/%d0%b3%d0%be%d1%80%d1%82%d0%b5%d0%bd%d0%b7%d0%b8%d1%8f-%d0%bc%d0%b5%d1%82%d0%b5%d0%bb%d1%8c%d1%87%d0%b0%d1%82%d0%b0%d1%8f-%d0%bf%d0%b5%d1%82%d0%b8%d1%82-%d1%87%d0%b5%d1%80%d1%80%d0%b8/"
+      "sourceUrl": "https://annaflowerfarm.ru/product/%d0%bc%d0%b5%d1%82%d0%b5%d0%bb%d1%8c%d1%87%d0%b0%d1%82%d0%b0%d1%8f-%d0%b3%d0%be%d1%80%d1%82%d0%b5%d0%bd%d0%b7%d0%b8%d1%8f-%d0%bf%d0%b8%d0%bd%d0%ba-%d1%8d%d0%bd%d0%b4-%d1%80%d0%be%d1%83%d0%b7/"
+    },
+    {
+      "id": 667,
+      "name": "Гортензия метельчатая Распберри Пинк",
+      "category": "Гортензии",
+      "categoryKey": "hydrangea",
+      "price": 1800,
+      "stock": 5,
+      "status": "low",
+      "description": "Собственное производство.\nВысота куста 100 см, ширина 90 см.\nЛистья зеленые, ветви красные, крепкие, прямостоящие.\nЦветение с июля по сентябрь.\nСоцветия пышные, 20-25см, состоят из стерильных цветков, меняют цвет от белого до насыщенно-розового.\nПочва должна быть кислая, влажная, но без застоя воды.\nНеобходимо солнечное место для посадки.\nЗимостойкость-30С.\nИспользуется для миксбордеров, живых изгородей контейнерное выращивание.",
+      "care": {
+        "height": "куста 100 см",
+        "bloom": "с июля по сентябрь",
+        "hardiness": "30С"
+      },
+      "image": "https://annaflowerfarm.ru/wp-content/uploads/2024/12/img_4400-1152x1536.jpeg",
+      "images": [
+        "https://annaflowerfarm.ru/wp-content/uploads/2024/12/img_4400-1152x1536.jpeg",
+        "https://annaflowerfarm.ru/wp-content/uploads/2024/12/img_4402-1152x1536.jpeg"
+      ],
+      "sourceUrl": "https://annaflowerfarm.ru/product/%d1%80%d0%b0%d1%81%d0%bf%d0%b1%d0%b5%d1%80%d1%80%d0%b8-%d0%bf%d0%b8%d0%bd%d0%ba-%d0%bc%d0%b5%d1%82%d0%b5%d0%bb%d1%8c%d1%87%d0%b0%d1%82%d0%b0%d1%8f-%d0%b3%d0%be%d1%80%d1%82%d0%b5%d0%bd%d0%b7%d0%b8/",
+      "variants": [
+        {
+          "id": 2704,
+          "label": "5л",
+          "price": 1800,
+          "inStock": true,
+          "stock": 5
+        }
+      ],
+      "variantAttr": "Объем контейнера",
+      "priceFrom": true
+    },
+    {
+      "id": 2652,
+      "name": "Гортензия метельчатая Ред Лайт",
+      "category": "Гортензии",
+      "categoryKey": "hydrangea",
+      "price": 550,
+      "stock": 12,
+      "status": "ok",
+      "description": "Высота взрослого растения: 1 M\nЦвет соцветий: Лаймовый, розовый, красный\nЦвет листьев: Зеленый\nПериод цветения: июль-сентябрь\nМесто посадки: Солнце/Полутень\nПочва: Плодородная, дренированная, кислая\nПолив: Обильный\nОбрезка: Формовочная, санитарная\nЗона морозостойкости: 4\nУпаковка корневой системы: 0,5л",
+      "care": {
+        "bloom": "июль-сентябрь",
+        "light": "Солнце/Полутень",
+        "hardiness": "4"
+      },
+      "image": "https://annaflowerfarm.ru/wp-content/uploads/2026/09/img_4690-1152x1536.jpeg",
+      "images": [
+        "https://annaflowerfarm.ru/wp-content/uploads/2026/09/img_4690-1152x1536.jpeg",
+        "https://annaflowerfarm.ru/wp-content/uploads/2026/09/img_4691-1152x1536.jpeg",
+        "https://annaflowerfarm.ru/wp-content/uploads/2026/09/img_4657-1152x1536.jpeg",
+        "https://annaflowerfarm.ru/wp-content/uploads/2026/09/img_4658-1152x1536.jpeg",
+        "https://annaflowerfarm.ru/wp-content/uploads/2026/09/img_4659-1152x1536.jpeg"
+      ],
+      "sourceUrl": "https://annaflowerfarm.ru/product/%d0%b3%d0%be%d1%80%d1%82%d0%b5%d0%bd%d0%b7%d0%b8%d1%8f-%d0%bc%d0%b5%d1%82%d0%b5%d0%bb%d1%8c%d1%87%d0%b0%d1%82%d0%b0%d1%8f-%d1%80%d0%b5%d0%b4-%d0%bb%d0%b0%d0%b9%d1%82/"
     },
     {
       "id": 693,
       "name": "Гортензия метельчатая Фантом",
       "category": "Гортензии",
       "categoryKey": "hydrangea",
-      "price": 600,
-      "stock": 2,
-      "status": "low",
-      "description": "🌱Собственное производство.\nВысота взрослого растения: 2,2 м.\nЦвет соцветий: Белый, лаймовый, розовый.\nПериод цветения: июль-октябрь.\nМесто посадки: Солнце/Полутень.\nПочва: Кислая.\nПолив: Обильный.\nЗона морозостойкости: 4.\nПрименение: живые изгороди, групповые посадки, миксбордеры в сочетании с травами, многолетними растениями и хвойными",
+      "price": 550,
+      "stock": 13,
+      "status": "ok",
+      "description": "Собственное производство.\nВысота взрослого растения: 2,2 м.\nЦвет соцветий: Белый, лаймовый, розовый.\nПериод цветения: июль-октябрь.\nМесто посадки: Солнце/Полутень.\nПочва: Кислая.\nПолив: Обильный.\nЗона морозостойкости: 4.\nПрименение: живые изгороди, групповые посадки, миксбордеры в сочетании с травами, многолетними растениями и хвойными",
       "care": {
         "height": "взрослого растения: 2,2 м",
         "bloom": "июль-октябрь",
         "light": "Солнце/Полутень",
         "hardiness": "4"
       },
-      "image": "/assets/products/p693.jpg",
+      "image": "https://annaflowerfarm.ru/wp-content/uploads/2024/12/img_4858.png",
       "images": [
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2024/12/rOyNkH7scgFKJE0H5O4AJnOA892GzIVocL3AWcU5efmiX6VXo0llbsvQgErY7ARM_fJl1v7Y6OcU22ddLzxrORtl.jpg"
+        "https://annaflowerfarm.ru/wp-content/uploads/2024/12/img_4858.png",
+        "https://annaflowerfarm.ru/wp-content/uploads/2024/12/img_3417-1152x1536.jpeg"
       ],
-      "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/%d0%b3%d0%be%d1%80%d1%82%d0%b5%d0%bd%d0%b7%d0%b8%d1%8f-%d0%bc%d0%b5%d1%82%d0%b5%d0%bb%d1%8c%d1%87%d0%b0%d1%82%d0%b0%d1%8f-%d1%84%d0%b0%d0%bd%d1%82%d0%be%d0%bc/"
+      "sourceUrl": "https://annaflowerfarm.ru/product/%d0%b3%d0%be%d1%80%d1%82%d0%b5%d0%bd%d0%b7%d0%b8%d1%8f-%d0%bc%d0%b5%d1%82%d0%b5%d0%bb%d1%8c%d1%87%d0%b0%d1%82%d0%b0%d1%8f-%d1%84%d0%b0%d0%bd%d1%82%d0%be%d0%bc/",
+      "variants": [
+        {
+          "id": 2077,
+          "label": "0.5л",
+          "price": 550,
+          "inStock": true,
+          "stock": 10
+        },
+        {
+          "id": 2078,
+          "label": "2л",
+          "price": 1000,
+          "inStock": true,
+          "stock": 3
+        },
+        {
+          "id": 2079,
+          "label": "5л",
+          "price": 1500,
+          "inStock": false,
+          "stock": 0
+        },
+        {
+          "id": 2540,
+          "label": "10л",
+          "price": 2500,
+          "inStock": false,
+          "stock": 0
+        }
+      ],
+      "variantAttr": "Объем контейнера",
+      "priceFrom": true
     },
     {
-      "id": 2200,
-      "name": "Жимолость",
+      "id": 2546,
+      "name": "Дерен белоокаймлённый»Элегантиссима»",
       "category": "Без категории",
       "categoryKey": "other",
-      "price": 150,
-      "stock": 12,
-      "status": "ok",
-      "description": "",
-      "care": {},
-      "image": "/assets/products/p2200.jpg",
+      "price": 250,
+      "stock": 0,
+      "status": "out",
+      "description": "Основные характеристики\n• Высота взрослого растения: 2–3 м\n• Ширина кроны: до 3 м\n• Цветение: май – июнь\n• Цветки: мелкие, кремово-белые, собраны в щитковидные соцветия\n• Листва: зелёная с широкой кремово-белой каймой\n• Побеги: ярко-красные, особенно декоративны зимой\n• Морозостойкость: до -40 °C\n• Продолжительность жизни: более 30 лет\nКонтейнер: 0,5л",
+      "care": {
+        "height": "взрослого растения: 2–3 м",
+        "bloom": "май – июнь"
+      },
+      "image": "https://annaflowerfarm.ru/wp-content/uploads/2026/08/img_0935-1152x1536.jpeg",
       "images": [
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2026/05/img_0099-1152x1536.jpeg"
+        "https://annaflowerfarm.ru/wp-content/uploads/2026/08/img_0935-1152x1536.jpeg",
+        "https://annaflowerfarm.ru/wp-content/uploads/2026/08/img_2452-1152x1536.jpeg"
       ],
-      "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/%d0%b6%d0%b8%d0%bc%d0%be%d0%bb%d0%be%d1%81%d1%82%d1%8c/"
+      "sourceUrl": "https://annaflowerfarm.ru/product/%d0%b4%d0%b5%d1%80%d0%b5%d0%bd-%d0%b1%d0%b5%d0%bb%d1%8b%d0%b9-%d1%8d%d0%bb%d0%b5%d0%b3%d0%b0%d0%bd%d1%82%d0%b8%d1%81%d1%81%d0%b8%d0%bc%d0%b0/"
     },
     {
       "id": 1419,
@@ -586,17 +787,19 @@
       "category": "Без категории",
       "categoryKey": "other",
       "price": 350,
-      "stock": 128,
+      "stock": 116,
       "status": "ok",
       "description": "Компактный кустарник, достигающий высоты 1,5-2,5 метров, в ширину 3-4м. Отличается декоративными качествам и.\nИва нана используется в ландшафтном дизайне для создания живых изгородей и бордюров, формирования фигурных композиций, декоративного озеленения малых архитектурных форм, декорирования водоёмов и искусственных ручьёв, оформления входных групп и дорожек.",
-      "care": {},
-      "image": "/assets/products/p1419.jpg",
+      "care": {
+        "height": "1,5-2,5 м"
+      },
+      "image": "https://annaflowerfarm.ru/wp-content/uploads/2025/08/img_1423-1152x1536.jpeg",
       "images": [
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2025/08/img_1423-1152x1536.jpeg",
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2025/08/img_0294-1152x1536.jpeg",
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2025/08/img_0295-1152x1536.jpeg"
+        "https://annaflowerfarm.ru/wp-content/uploads/2025/08/img_1423-1152x1536.jpeg",
+        "https://annaflowerfarm.ru/wp-content/uploads/2025/08/img_0294-1152x1536.jpeg",
+        "https://annaflowerfarm.ru/wp-content/uploads/2025/08/img_0295-1152x1536.jpeg"
       ],
-      "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/%d0%b8%d0%b2%d0%b0-%d0%bf%d1%83%d1%80%d0%bf%d1%83%d1%80%d0%bd%d0%b0%d1%8f-%d0%bd%d0%b0%d0%bd%d0%b0/"
+      "sourceUrl": "https://annaflowerfarm.ru/product/%d0%b8%d0%b2%d0%b0-%d0%bf%d1%83%d1%80%d0%bf%d1%83%d1%80%d0%bd%d0%b0%d1%8f-%d0%bd%d0%b0%d0%bd%d0%b0/"
     },
     {
       "id": 1779,
@@ -604,15 +807,33 @@
       "category": "Цветы однолетние",
       "categoryKey": "annuals",
       "price": 250,
-      "stock": 12,
-      "status": "ok",
-      "description": "🌱Рассада в объёме 0,2л\n🎁В подарок каждому покупателю рекомендации по уходу и посадке\nПопулярная вегетативная серия калибрахоа. В высоту достигает 25-35 см.",
+      "stock": 2,
+      "status": "low",
+      "description": "В подарок каждому покупателю рекомендации по уходу и посадке\nПопулярная вегетативная серия калибрахоа. В высоту достигает 25-35 см.",
       "care": {},
-      "image": "/assets/products/p1779.png",
+      "image": "https://annaflowerfarm.ru/wp-content/uploads/2025/12/img_5715.png",
       "images": [
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2025/12/img_5715.png"
+        "https://annaflowerfarm.ru/wp-content/uploads/2025/12/img_5715.png"
       ],
-      "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/21-%d0%ba%d0%b0%d0%bb%d0%b8%d0%b1%d1%80%d0%b0%d1%85%d0%be%d0%b0-tiki-dark-blue/"
+      "sourceUrl": "https://annaflowerfarm.ru/product/21-%d0%ba%d0%b0%d0%bb%d0%b8%d0%b1%d1%80%d0%b0%d1%85%d0%be%d0%b0-tiki-dark-blue/",
+      "variants": [
+        {
+          "id": 2197,
+          "label": "0,2л",
+          "price": 250,
+          "inStock": false,
+          "stock": 0
+        },
+        {
+          "id": 2196,
+          "label": "кашпо 4л",
+          "price": 1200,
+          "inStock": true,
+          "stock": 2
+        }
+      ],
+      "variantAttr": "Объем контейнера",
+      "priceFrom": true
     },
     {
       "id": 1878,
@@ -620,18 +841,35 @@
       "category": "Цветы однолетние",
       "categoryKey": "annuals",
       "price": 1200,
+      "stock": 0,
+      "status": "out",
+      "description": "Кашпо 4л\nВ подарок каждому покупателю рекомендации по уходу и посадке\nВеликолепные шапки, усыпанные множеством очаровательных цветков. Высота 25-35 см, ширина 30-45 см. Среднего размера махровые цветки. Сильное боковое ветвление. Обильное и продолжительное цветение. Легкость в выращивании. Идеально подходит для подвесных корзин. Новинка!\nПолуампельная среднекомпактная серия, махровый цветок. Отлично смотрится в корзинах и кашпо.Менее чувствительна к калебаниям кислотности по сравнению с другими сортосериями.",
+      "care": {
+        "height": "25-35 см",
+        "bloom": "Легкость в выращивании"
+      },
+      "image": "https://annaflowerfarm.ru/wp-content/uploads/2026/02/img_1401-1152x1536.jpeg",
+      "images": [
+        "https://annaflowerfarm.ru/wp-content/uploads/2026/02/img_1401-1152x1536.jpeg",
+        "https://annaflowerfarm.ru/wp-content/uploads/2026/02/img_1396-1152x1536.jpeg"
+      ],
+      "sourceUrl": "https://annaflowerfarm.ru/product/%d0%ba%d0%b0%d0%bb%d0%b8%d0%b1%d1%80%d0%b0%d1%85%d0%be%d0%b0-aloha-double-apricot/"
+    },
+    {
+      "id": 1719,
+      "name": "КАЛИБРАХОА ALOHA DOUBLE DARK PINK",
+      "category": "Цветы однолетние",
+      "categoryKey": "annuals",
+      "price": 1200,
       "stock": 1,
       "status": "low",
-      "description": "🌱Кашпо 4л\n🎁В подарок каждому покупателю рекомендации по уходу и посадке\nВеликолепные шапки, усыпанные множеством очаровательных цветков. Высота 25-35 см, ширина 30-45 см. Среднего размера махровые цветки. Сильное боковое ветвление. Обильное и продолжительное цветение. Легкость в выращивании. Идеально подходит для подвесных корзин. Новинка!",
-      "care": {
-        "height": "25-35 см, ширина 30-45 см"
-      },
-      "image": "/assets/products/p1878.png",
+      "description": "Кашпо 4л\nВ подарок каждому покупателю рекомендации по уходу и посадке\nПопулярная вегетативная серия калибрахоа. В высоту достигает 25-35 см.",
+      "care": {},
+      "image": "https://annaflowerfarm.ru/wp-content/uploads/2025/11/b9b8ea92-51b1-4f23-8e00-b4a78e3ff62b.jpeg",
       "images": [
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2026/02/img_7394.png",
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2026/02/img_0113-1152x1536.jpeg"
+        "https://annaflowerfarm.ru/wp-content/uploads/2025/11/b9b8ea92-51b1-4f23-8e00-b4a78e3ff62b.jpeg"
       ],
-      "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/%d0%ba%d0%b0%d0%bb%d0%b8%d0%b1%d1%80%d0%b0%d1%85%d0%be%d0%b0-aloha-double-apricot/"
+      "sourceUrl": "https://annaflowerfarm.ru/product/6-%d0%ba%d0%b0%d0%bb%d0%b8%d0%b1%d1%80%d0%b0%d1%85%d0%be%d0%b0-aloha-double-dark-pink/"
     },
     {
       "id": 1295,
@@ -639,15 +877,15 @@
       "category": "Цветы однолетние",
       "categoryKey": "annuals",
       "price": 1200,
-      "stock": 5,
-      "status": "ok",
-      "description": "🌱Кашпо 4л\n🎁В подарок каждому покупателю рекомендации по уходу и посадке\nПопулярная вегетативная серия калибрахоа. В высоту достигает 25-35 см.",
+      "stock": 0,
+      "status": "out",
+      "description": "Кашпо 4л\nВ подарок каждому покупателю рекомендации по уходу и посадке\nПопулярная вегетативная серия калибрахоа. В высоту достигает 25-35 см.\nПолуампельная среднекомпактная серия, махровый цветок. Отлично смотрится в корзинах и кашпо.Менее чувствительна к калебаниям кислотности по сравнению с другими сортосериями.",
       "care": {},
-      "image": "/assets/products/p1295.jpg",
+      "image": "https://annaflowerfarm.ru/wp-content/uploads/2025/07/2ac47924-d427-4866-8f66-c9e60ffe2a16.jpeg",
       "images": [
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2025/07/2ac47924-d427-4866-8f66-c9e60ffe2a16.jpeg"
+        "https://annaflowerfarm.ru/wp-content/uploads/2025/07/2ac47924-d427-4866-8f66-c9e60ffe2a16.jpeg"
       ],
-      "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/%d0%ba%d0%b0%d0%bb%d0%b8%d0%b1%d1%80%d0%b0%d1%85%d0%be%d0%b0-aloha-double-pink-blush/"
+      "sourceUrl": "https://annaflowerfarm.ru/product/%d0%ba%d0%b0%d0%bb%d0%b8%d0%b1%d1%80%d0%b0%d1%85%d0%be%d0%b0-aloha-double-pink-blush/"
     },
     {
       "id": 1048,
@@ -657,15 +895,35 @@
       "price": 250,
       "stock": 0,
       "status": "out",
-      "description": "Объём контейнера 0,2л\nПопулярная вегетативная серия калибрахоа. Куст шарообразной формы. В высоту достигает 25-35 см. Обильное боковое ветвление и продолжительное цветение непременно является преимуществом этого сорта. Сорт легок в выращивании, подойдет даже для неопытного начинающего садовода.",
-      "care": {},
-      "image": "/assets/products/p1048.jpg",
+      "description": "Объём контейнера 0,2л\nПопулярная вегетативная серия калибрахоа. Куст шарообразной формы. В высоту достигает 25-35 см. Обильное боковое ветвление и продолжительное цветение непременно является преимуществом этого сорта. Сорт легок в выращивании, подойдет даже для неопытного начинающего садовода\nПолуампельная среднекомпактная серия, махровый цветок. Отлично смотрится в корзинах и кашпо.Менее чувствительна к калебаниям кислотности по сравнению с другими сортосериями.",
+      "care": {
+        "bloom": "непременно является преимуществом этого сорта"
+      },
+      "image": "https://annaflowerfarm.ru/wp-content/uploads/2025/04/Q9Quw7Pyhkk.jpg",
       "images": [
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2025/04/Q9Quw7Pyhkk.jpg",
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2025/04/img_7690.png",
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2025/04/img_9243-1152x1536.jpeg"
+        "https://annaflowerfarm.ru/wp-content/uploads/2025/04/Q9Quw7Pyhkk.jpg",
+        "https://annaflowerfarm.ru/wp-content/uploads/2025/04/img_7690.png",
+        "https://annaflowerfarm.ru/wp-content/uploads/2025/04/img_9243-1152x1536.jpeg"
       ],
-      "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/%d0%ba%d0%b0%d0%bb%d0%b8%d0%b1%d1%80%d0%b0%d1%85%d0%be%d0%b0-aloha-double-purple/"
+      "sourceUrl": "https://annaflowerfarm.ru/product/%d0%ba%d0%b0%d0%bb%d0%b8%d0%b1%d1%80%d0%b0%d1%85%d0%be%d0%b0-aloha-double-purple/",
+      "variants": [
+        {
+          "id": 2190,
+          "label": "0,2л",
+          "price": 250,
+          "inStock": false,
+          "stock": 0
+        },
+        {
+          "id": 2191,
+          "label": "кашпо 4л",
+          "price": 1200,
+          "inStock": false,
+          "stock": 0
+        }
+      ],
+      "variantAttr": "Объем контейнера",
+      "priceFrom": true
     },
     {
       "id": 1901,
@@ -673,31 +931,33 @@
       "category": "Цветы однолетние",
       "categoryKey": "annuals",
       "price": 250,
-      "stock": 12,
-      "status": "ok",
-      "description": "🌱Рассада в объёме 0,2л\n🎁В подарок каждому покупателю рекомендации по уходу и посадке",
+      "stock": 0,
+      "status": "out",
+      "description": "Рассада в объёме 0,5л\nВ подарок каждому покупателю рекомендации по уходу и посадке",
       "care": {},
-      "image": "/assets/products/p1901.jpg",
+      "image": "https://annaflowerfarm.ru/wp-content/uploads/2026/02/img_7168-1024x1014.jpeg",
       "images": [
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2026/02/img_7168-1024x1014.jpeg"
+        "https://annaflowerfarm.ru/wp-content/uploads/2026/02/img_7168-1024x1014.jpeg",
+        "https://annaflowerfarm.ru/wp-content/uploads/2026/02/img_1197-1152x1536.jpeg"
       ],
-      "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/%d0%ba%d0%b0%d0%bb%d0%b8%d0%b1%d1%80%d0%b0%d1%85%d0%be%d0%b0-aloha-double-sky-blue/"
+      "sourceUrl": "https://annaflowerfarm.ru/product/%d0%ba%d0%b0%d0%bb%d0%b8%d0%b1%d1%80%d0%b0%d1%85%d0%be%d0%b0-aloha-double-sky-blue/"
     },
     {
       "id": 1894,
       "name": "Калибрахоа ALOHA Double Soft Pink",
       "category": "Цветы однолетние",
       "categoryKey": "annuals",
-      "price": 250,
-      "stock": 1,
-      "status": "low",
-      "description": "🌱Рассада в объёме 0,5л\n🎁В подарок каждому покупателю рекомендации по уходу и посадке",
+      "price": 1200,
+      "stock": 0,
+      "status": "out",
+      "description": "Кашпо 4л\nВ подарок каждому покупателю рекомендации по уходу и посадке",
       "care": {},
-      "image": "/assets/products/p1894.png",
+      "image": "https://annaflowerfarm.ru/wp-content/uploads/2026/02/img_1405-1152x1536.jpeg",
       "images": [
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2026/02/img_7692.png"
+        "https://annaflowerfarm.ru/wp-content/uploads/2026/02/img_1405-1152x1536.jpeg",
+        "https://annaflowerfarm.ru/wp-content/uploads/2026/02/img_1403-1152x1536.jpeg"
       ],
-      "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/%d0%ba%d0%b0%d0%bb%d0%b8%d0%b1%d1%80%d0%b0%d1%85%d0%be%d0%b0-aloha-double-soft-pink/"
+      "sourceUrl": "https://annaflowerfarm.ru/product/%d0%ba%d0%b0%d0%bb%d0%b8%d0%b1%d1%80%d0%b0%d1%85%d0%be%d0%b0-aloha-double-soft-pink/"
     },
     {
       "id": 1897,
@@ -705,31 +965,49 @@
       "category": "Цветы однолетние",
       "categoryKey": "annuals",
       "price": 250,
-      "stock": 12,
-      "status": "ok",
-      "description": "🌱Рассада в объёме 0,2л\n🎁В подарок каждому покупателю рекомендации по уходу и посадке",
+      "stock": 0,
+      "status": "out",
+      "description": "Рассада в объёме 0,2л\nВ подарок каждому покупателю рекомендации по уходу и посадке",
       "care": {},
-      "image": "/assets/products/p1897.png",
+      "image": "https://annaflowerfarm.ru/wp-content/uploads/2026/02/img_7694.png",
       "images": [
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2026/02/img_7694.png"
+        "https://annaflowerfarm.ru/wp-content/uploads/2026/02/img_7694.png"
       ],
-      "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/%d0%ba%d0%b0%d0%bb%d0%b8%d0%b1%d1%80%d0%b0%d1%85%d0%be%d0%b0-aloha-double-white/"
+      "sourceUrl": "https://annaflowerfarm.ru/product/%d0%ba%d0%b0%d0%bb%d0%b8%d0%b1%d1%80%d0%b0%d1%85%d0%be%d0%b0-aloha-double-white/",
+      "variants": [
+        {
+          "id": 2193,
+          "label": "0,2л",
+          "price": 250,
+          "inStock": false,
+          "stock": 0
+        },
+        {
+          "id": 2192,
+          "label": "кашпо 4л",
+          "price": 1200,
+          "inStock": false,
+          "stock": 0
+        }
+      ],
+      "variantAttr": "Объем контейнера",
+      "priceFrom": true
     },
     {
       "id": 1301,
       "name": "КАЛИБРАХОА CALITA DOUBLE PINK",
       "category": "Цветы однолетние",
       "categoryKey": "annuals",
-      "price": 250,
-      "stock": 7,
-      "status": "ok",
-      "description": "🌱Рассада в объёме 0,2л\n🎁В подарок каждому покупателю рекомендации по уходу и посадке\nПопулярная вегетативная серия калибрахоа. В высоту достигает 25-35 см.",
+      "price": 1200,
+      "stock": 0,
+      "status": "out",
+      "description": "Кашпо в объёме 4л\nВ подарок каждому покупателю рекомендации по уходу и посадке\nПопулярная вегетативная серия калибрахоа. В высоту достигает 25-35 см.",
       "care": {},
-      "image": "/assets/products/p1301.jpg",
+      "image": "https://annaflowerfarm.ru/wp-content/uploads/2025/07/c0721f93-f58b-431d-afe0-f729093d1d29.jpeg",
       "images": [
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2025/07/c0721f93-f58b-431d-afe0-f729093d1d29.jpeg"
+        "https://annaflowerfarm.ru/wp-content/uploads/2025/07/c0721f93-f58b-431d-afe0-f729093d1d29.jpeg"
       ],
-      "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/%d0%ba%d0%b0%d0%bb%d0%b8%d0%b1%d1%80%d0%b0%d1%85%d0%be%d0%b0-calita-double-pink/"
+      "sourceUrl": "https://annaflowerfarm.ru/product/%d0%ba%d0%b0%d0%bb%d0%b8%d0%b1%d1%80%d0%b0%d1%85%d0%be%d0%b0-calita-double-pink/"
     },
     {
       "id": 1049,
@@ -737,18 +1015,18 @@
       "category": "Цветы однолетние",
       "categoryKey": "annuals",
       "price": 1200,
-      "stock": 2,
-      "status": "low",
-      "description": "🌱Кашпо 4л\n🎁В подарок каждому покупателю рекомендации по уходу и посадке\nНовая концепция в мире калибрахоа! Цветы-хамелеоны меняют свой цвет в течение сезона, в зависимости от уровня освещенности и продолжительности дня. Создается впечатление, что перед нами цветочный микс, а не одно растение!\nВысота куста: компакт средний\nФорма куста: ампельный\nОбильное цветение",
+      "stock": 0,
+      "status": "out",
+      "description": "Кашпо 4л\nВ подарок каждому покупателю рекомендации по уходу и посадке\nНовая концепция в мире калибрахоа! Цветы-хамелеоны меняют свой цвет в течение сезона, в зависимости от уровня освещенности и продолжительности дня. Создается впечатление, что перед нами цветочный микс, а не одно растение!\nВысота куста: компакт средний\nФорма куста: ампельный\nОбильное цветение",
       "care": {
-        "height": "куста: компакт средний"
+        "height": "куста: ком"
       },
-      "image": "/assets/products/p1049.jpg",
+      "image": "https://annaflowerfarm.ru/wp-content/uploads/2025/04/yw9pQsgm7Sk.jpg",
       "images": [
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2025/04/yw9pQsgm7Sk.jpg",
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2025/04/img_0147-1152x1536.jpeg"
+        "https://annaflowerfarm.ru/wp-content/uploads/2025/04/yw9pQsgm7Sk.jpg",
+        "https://annaflowerfarm.ru/wp-content/uploads/2025/04/img_0147-1152x1536.jpeg"
       ],
-      "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/%d0%ba%d0%b0%d0%bb%d0%b8%d0%b1%d1%80%d0%b0%d1%85%d0%be%d0%b0-chameleon-milky-pink/"
+      "sourceUrl": "https://annaflowerfarm.ru/product/%d0%ba%d0%b0%d0%bb%d0%b8%d0%b1%d1%80%d0%b0%d1%85%d0%be%d0%b0-chameleon-milky-pink/"
     },
     {
       "id": 1643,
@@ -756,31 +1034,19 @@
       "category": "Цветы однолетние",
       "categoryKey": "annuals",
       "price": 1200,
-      "stock": 3,
-      "status": "ok",
-      "description": "🌱Кашпо 4л\n🎁В подарок каждому покупателю рекомендации по уходу и посадке\nкуст сильно ветвящийся, высота 15-25 см, ширина 30-40 см, плети достигают 50-60 см. Цветки некрупные, в форме розочек. Обладают ранним, обильным и непрерывным цветением даже в условиях недостатка освещения, не теряют своей красоты после дождя.\nВ течение всего сезона формируют прекрасную шарообразную форму. Плотные, однородные аккуратные растения, способны к самоочищению",
-      "care": {},
-      "image": "/assets/products/p1643.png",
+      "stock": 0,
+      "status": "out",
+      "description": "Кашпо 4л\nВ подарок каждому покупателю рекомендации по уходу и посадке\nкуст сильно ветвящийся, высота 15-25 см, ширина 30-40 см, плети достигают 50-60 см. Цветки некрупные, в форме розочек. Обладают ранним, обильным и непрерывным цветением даже в условиях недостатка освещения, не теряют своей красоты после дождя.\nВ течение всего сезона формируют прекрасную шарообразную форму. Плотные, однородные аккуратные растения, способны к самоочищению",
+      "care": {
+        "height": "15-25 см",
+        "bloom": "м даже в условиях недостатка освещения, не теряют своей крас",
+        "light": ", не теряют своей красоты после дождя"
+      },
+      "image": "https://annaflowerfarm.ru/wp-content/uploads/2025/10/img_7393.png",
       "images": [
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2025/10/img_7393.png"
+        "https://annaflowerfarm.ru/wp-content/uploads/2025/10/img_7393.png"
       ],
-      "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/%d0%ba%d0%b0%d0%bb%d0%b8%d0%b1%d1%80%d0%b0%d1%85%d0%be%d0%b0-minifamous-double-loopy-lavender/"
-    },
-    {
-      "id": 1305,
-      "name": "КАЛИБРАХОА MINIFAMOUS NEO DOUBLE PURPLE ICE",
-      "category": "Цветы однолетние",
-      "categoryKey": "annuals",
-      "price": 250,
-      "stock": 2,
-      "status": "low",
-      "description": "🌱Рассада в объёме 0,2л\n🎁В подарок каждому покупателю рекомендации по уходу и посадке\nПопулярная вегетативная серия калибрахоа. В высоту достигает 25-35 см.",
-      "care": {},
-      "image": "/assets/products/p1305.jpg",
-      "images": [
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2025/07/11634326-105f-42b5-8067-699816551764.jpeg"
-      ],
-      "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/%d0%ba%d0%b0%d0%bb%d0%b8%d0%b1%d1%80%d0%b0%d1%85%d0%be%d0%b0-minifamous-neo-double-purple-ice/"
+      "sourceUrl": "https://annaflowerfarm.ru/product/%d0%ba%d0%b0%d0%bb%d0%b8%d0%b1%d1%80%d0%b0%d1%85%d0%be%d0%b0-minifamous-double-loopy-lavender/"
     },
     {
       "id": 1931,
@@ -788,15 +1054,20 @@
       "category": "Цветы однолетние",
       "categoryKey": "annuals",
       "price": 250,
-      "stock": 12,
-      "status": "ok",
-      "description": "🌱Рассада в объёме 0,5л\n🎁В подарок каждому покупателю рекомендации по уходу и посадке\nКалибрахоа серии MiniFamous с махровыми цветками – куст сильно ветвящийся, высота 15-25 см, ширина 30-40 см, плети достигают 50-60 см. Цветки некрупные, диаметром 3-5 см, в форме розочек. Обладают ранним, обильным и непрерывным цветением даже в условиях недостатка освещения, не теряют своей красоты после дождя. В течение всего сезона формируют прекрасную шарообразную форму. Плотные, однородные аккуратные растения, способны к самоочищению.",
-      "care": {},
-      "image": "/assets/products/p1931.jpg",
+      "stock": 0,
+      "status": "out",
+      "description": "Рассада в объёме 0,5л\nВ подарок каждому покупателю рекомендации по уходу и посадке\nКалибрахоа серии MiniFamous с махровыми цветками – куст сильно ветвящийся, высота 15-25 см, ширина 30-40 см, плети достигают 50-60 см. Цветки некрупные, диаметром 3-5 см, в форме розочек. Обладают ранним, обильным и непрерывным цветением даже в условиях недостатка освещения, не теряют своей красоты после дождя. В течение всего сезона формируют прекрасную шарообразную форму. Плотные, однородные аккуратные растения, способны к самоочищению.",
+      "care": {
+        "height": "15-25 см",
+        "bloom": "м даже в условиях недостатка освещения, не теряют своей крас",
+        "light": ", не теряют своей красоты после дождя"
+      },
+      "image": "https://annaflowerfarm.ru/wp-content/uploads/2026/03/img_0223-1152x1536.jpeg",
       "images": [
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2026/03/img_0223-1152x1536.jpeg"
+        "https://annaflowerfarm.ru/wp-content/uploads/2026/03/img_0223-1152x1536.jpeg",
+        "https://annaflowerfarm.ru/wp-content/uploads/2026/03/img_0940-1152x1536.jpeg"
       ],
-      "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/%d0%ba%d0%b0%d0%bb%d0%b8%d0%b1%d1%80%d0%b0%d1%85%d0%be%d0%b0-minifamous-oro-double-blue/"
+      "sourceUrl": "https://annaflowerfarm.ru/product/%d0%ba%d0%b0%d0%bb%d0%b8%d0%b1%d1%80%d0%b0%d1%85%d0%be%d0%b0-minifamous-oro-double-blue/"
     },
     {
       "id": 1929,
@@ -804,18 +1075,37 @@
       "category": "Цветы однолетние",
       "categoryKey": "annuals",
       "price": 250,
-      "stock": 12,
-      "status": "ok",
-      "description": "🌱Рассада в объёме 0,5л\n🎁В подарок каждому покупателю рекомендации по уходу и посадке\nКалиброхоа серии MiniFamous – куст сильно ветвящийся, плети достигают 50-60 см. Цветение очень обильное. Цветки некрупные, диаметром 3-5 см. Обладают ранним, обильным и непрерывным цветением даже в условиях недостатка освещения. Однородные аккуратные растения, способны к самоочищению.",
+      "stock": 0,
+      "status": "out",
+      "description": "В подарок каждому покупателю рекомендации по уходу и посадке\nКалиброхоа серии MiniFamous – куст сильно ветвящийся, плети достигают 50-60 см. Цветение очень обильное. Цветки некрупные, диаметром 3-5 см. Обладают ранним, обильным и непрерывным цветением даже в условиях недостатка освещения. Однородные аккуратные растения, способны к самоочищению.",
       "care": {
-        "bloom": "очень обильное"
+        "bloom": "очень обильное",
+        "light": "Однородные аккуратные растения, способны к самоочищению"
       },
-      "image": "/assets/products/p1929.jpg",
+      "image": "https://annaflowerfarm.ru/wp-content/uploads/2026/03/img_0984-1152x1536.jpeg",
       "images": [
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2026/03/img_0230-1152x1536.jpeg",
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2026/03/img_0108-1152x1536.jpeg"
+        "https://annaflowerfarm.ru/wp-content/uploads/2026/03/img_0984-1152x1536.jpeg",
+        "https://annaflowerfarm.ru/wp-content/uploads/2026/03/img_0230-1152x1536.jpeg"
       ],
-      "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/%d0%ba%d0%b0%d0%bb%d0%b8%d0%b1%d1%80%d0%b0%d1%85%d0%be%d0%b0-minifamous-oro-double-light/"
+      "sourceUrl": "https://annaflowerfarm.ru/product/%d0%ba%d0%b0%d0%bb%d0%b8%d0%b1%d1%80%d0%b0%d1%85%d0%be%d0%b0-minifamous-oro-double-light/",
+      "variants": [
+        {
+          "id": 2335,
+          "label": "0.5л",
+          "price": 250,
+          "inStock": false,
+          "stock": 0
+        },
+        {
+          "id": 2336,
+          "label": "кашпо 4л",
+          "price": 1200,
+          "inStock": false,
+          "stock": 0
+        }
+      ],
+      "variantAttr": "Объем контейнера",
+      "priceFrom": true
     },
     {
       "id": 1309,
@@ -823,16 +1113,18 @@
       "category": "Цветы однолетние",
       "categoryKey": "annuals",
       "price": 1200,
-      "stock": 2,
-      "status": "low",
-      "description": "🌱Кашпо 4л\n🎁В подарок каждому покупателю рекомендации по уходу и посадке\nПопулярная вегетативная серия калибрахоа. В высоту достигает 25-35 см.",
+      "stock": 0,
+      "status": "out",
+      "description": "Кашпо 4л\nВ подарок каждому покупателю рекомендации по уходу и посадке\nПопулярная вегетативная серия калибрахоа. В высоту достигает 25-35 см.",
       "care": {},
-      "image": "/assets/products/p1309.jpg",
+      "image": "https://annaflowerfarm.ru/wp-content/uploads/2025/07/img_0980-1152x1536.jpeg",
       "images": [
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2025/07/81d3f5cc-6223-4393-b28a-8fa175a72f62.jpeg",
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2025/07/img_0086-1152x1536.jpeg"
+        "https://annaflowerfarm.ru/wp-content/uploads/2025/07/img_0980-1152x1536.jpeg",
+        "https://annaflowerfarm.ru/wp-content/uploads/2025/07/img_0976-1152x1536.jpeg",
+        "https://annaflowerfarm.ru/wp-content/uploads/2025/07/img_0977-1152x1536.jpeg",
+        "https://annaflowerfarm.ru/wp-content/uploads/2025/07/81d3f5cc-6223-4393-b28a-8fa175a72f62.jpeg"
       ],
-      "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/%d0%ba%d0%b0%d0%bb%d0%b8%d0%b1%d1%80%d0%b0%d1%85%d0%be%d0%b0-minifamous-oro-double-magenta/"
+      "sourceUrl": "https://annaflowerfarm.ru/product/%d0%ba%d0%b0%d0%bb%d0%b8%d0%b1%d1%80%d0%b0%d1%85%d0%be%d0%b0-minifamous-oro-double-magenta/"
     },
     {
       "id": 1762,
@@ -840,15 +1132,16 @@
       "category": "Цветы однолетние",
       "categoryKey": "annuals",
       "price": 1200,
-      "stock": 4,
-      "status": "ok",
-      "description": "🌱Кашпо 4л\n🎁В подарок каждому покупателю рекомендации по уходу и посадке\nПопулярная вегетативная серия калибрахоа. В высоту достигает 25-35 см.",
+      "stock": 0,
+      "status": "out",
+      "description": "Кашпо 4л\nВ подарок каждому покупателю рекомендации по уходу и посадке\nПопулярная вегетативная серия калибрахоа. В высоту достигает 25-35 см.",
       "care": {},
-      "image": "/assets/products/p1762.jpg",
+      "image": "https://annaflowerfarm.ru/wp-content/uploads/2025/12/img_1042-1152x1536.jpeg",
       "images": [
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2025/12/57ae3391-16c1-4e66-a253-81a4cdc19d76.jpeg"
+        "https://annaflowerfarm.ru/wp-content/uploads/2025/12/img_1042-1152x1536.jpeg",
+        "https://annaflowerfarm.ru/wp-content/uploads/2025/12/img_1043-1152x1536.jpeg"
       ],
-      "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/4-%d0%ba%d0%b0%d0%bb%d0%b8%d0%b1%d1%80%d0%b0%d1%85%d0%be%d0%b0-minifamous-oro-double-white/"
+      "sourceUrl": "https://annaflowerfarm.ru/product/4-%d0%ba%d0%b0%d0%bb%d0%b8%d0%b1%d1%80%d0%b0%d1%85%d0%be%d0%b0-minifamous-oro-double-white/"
     },
     {
       "id": 1906,
@@ -856,16 +1149,16 @@
       "category": "Цветы однолетние",
       "categoryKey": "annuals",
       "price": 250,
-      "stock": 12,
-      "status": "ok",
-      "description": "🌱Рассада в объёме 0,2л",
+      "stock": 0,
+      "status": "out",
+      "description": "Рассада в объёме 0,2л",
       "care": {},
-      "image": "/assets/products/p1906.jpg",
+      "image": "https://annaflowerfarm.ru/wp-content/uploads/2026/02/img_0226-1152x1536.jpeg",
       "images": [
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2026/02/img_0226-1152x1536.jpeg",
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2026/02/img_0104-1152x1536.jpeg"
+        "https://annaflowerfarm.ru/wp-content/uploads/2026/02/img_0226-1152x1536.jpeg",
+        "https://annaflowerfarm.ru/wp-content/uploads/2026/02/img_0104-1152x1536.jpeg"
       ],
-      "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/%d0%ba%d0%b0%d0%bb%d0%b8%d0%b1%d1%80%d0%b0%d1%85%d0%be%d0%b0-minifamous-uno-double-blue/"
+      "sourceUrl": "https://annaflowerfarm.ru/product/%d0%ba%d0%b0%d0%bb%d0%b8%d0%b1%d1%80%d0%b0%d1%85%d0%be%d0%b0-minifamous-uno-double-blue/"
     },
     {
       "id": 1303,
@@ -873,153 +1166,247 @@
       "category": "Цветы однолетние",
       "categoryKey": "annuals",
       "price": 250,
-      "stock": 2,
-      "status": "low",
-      "description": "🌱Рассада в объёме 0,5л\nПопулярная вегетативная серия калибрахоа. В высоту достигает 25-35 см.",
+      "stock": 0,
+      "status": "out",
+      "description": "Рассада в объёме 0,5л\nПопулярная вегетативная серия калибрахоа. В высоту достигает 25-35 см.",
       "care": {},
-      "image": "/assets/products/p1303.jpg",
+      "image": "https://annaflowerfarm.ru/wp-content/uploads/2025/07/9c3357da-d5a6-47cd-a956-831c5cd61d1c.jpeg",
       "images": [
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2025/07/9c3357da-d5a6-47cd-a956-831c5cd61d1c.jpeg"
+        "https://annaflowerfarm.ru/wp-content/uploads/2025/07/9c3357da-d5a6-47cd-a956-831c5cd61d1c.jpeg"
       ],
-      "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/%d0%ba%d0%b0%d0%bb%d0%b8%d0%b1%d1%80%d0%b0%d1%85%d0%be%d0%b0-minifamous-uno-double-pinkmania/"
+      "sourceUrl": "https://annaflowerfarm.ru/product/%d0%ba%d0%b0%d0%bb%d0%b8%d0%b1%d1%80%d0%b0%d1%85%d0%be%d0%b0-minifamous-uno-double-pinkmania/"
     },
     {
       "id": 1053,
       "name": "КАЛИБРАХОА TIK TOK GRAPE",
       "category": "Цветы однолетние",
       "categoryKey": "annuals",
-      "price": 250,
-      "stock": 3,
-      "status": "ok",
-      "description": "Укоренённый черенок в объёме 0.2л",
+      "price": 1200,
+      "stock": 2,
+      "status": "low",
+      "description": "Кашпо в объёме 4л",
       "care": {},
-      "image": "/assets/products/p1053.jpg",
+      "image": "https://annaflowerfarm.ru/wp-content/uploads/2025/04/img_1809-1152x1536.jpeg",
       "images": [
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2025/04/img_0225-1152x1536.jpeg"
+        "https://annaflowerfarm.ru/wp-content/uploads/2025/04/img_1809-1152x1536.jpeg",
+        "https://annaflowerfarm.ru/wp-content/uploads/2025/04/img_1808-1152x1536.jpeg"
       ],
-      "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/%d0%ba%d0%b0%d0%bb%d0%b8%d0%b1%d1%80%d0%b0%d1%85%d0%be%d0%b0-tik-tok-grape/"
+      "sourceUrl": "https://annaflowerfarm.ru/product/%d0%ba%d0%b0%d0%bb%d0%b8%d0%b1%d1%80%d0%b0%d1%85%d0%be%d0%b0-tik-tok-grape/"
+    },
+    {
+      "id": 2458,
+      "name": "Камнеломка Лофти Pink Shades",
+      "category": "Цветы многолетние",
+      "categoryKey": "perennials",
+      "price": 300,
+      "stock": 12,
+      "status": "ok",
+      "description": "Высота: 15-20 см\nЛофти — новое поколение камнеломки. Цветки гораздо крупнее, растения более мощные, улучшена однородность. Растения быстро заполняют посадочную ёмкость, крупные цветки дают изумительный визуальный эффект.\nОбъем контейнера : 0,5л",
+      "care": {
+        "height": "15-20 см"
+      },
+      "image": "https://annaflowerfarm.ru/wp-content/uploads/2026/07/img_1947.png",
+      "images": [
+        "https://annaflowerfarm.ru/wp-content/uploads/2026/07/img_1947.png",
+        "https://annaflowerfarm.ru/wp-content/uploads/2026/07/img_2482-1152x1536.jpeg"
+      ],
+      "sourceUrl": "https://annaflowerfarm.ru/product/%d0%ba%d0%b0%d0%bc%d0%bd%d0%b5%d0%bb%d0%be%d0%bc%d0%ba%d0%b0-%d0%bb%d0%be%d1%84%d1%82%d0%b8-pink-shades/"
+    },
+    {
+      "id": 2462,
+      "name": "Камнеломка Лофти White Blush",
+      "category": "Цветы многолетние",
+      "categoryKey": "perennials",
+      "price": 300,
+      "stock": 12,
+      "status": "ok",
+      "description": "Высота: 15-20 см\nЛофти — новое поколение камнеломки. Цветки гораздо крупнее, растения более мощные, улучшена однородность. Крупные цветки дают изумительный визуальный эффект.\nОбъём контейнера : 0,5л",
+      "care": {
+        "height": "15-20 см"
+      },
+      "image": "https://annaflowerfarm.ru/wp-content/uploads/2026/07/img_1948.jpeg",
+      "images": [
+        "https://annaflowerfarm.ru/wp-content/uploads/2026/07/img_1948.jpeg",
+        "https://annaflowerfarm.ru/wp-content/uploads/2026/07/img_1921-1152x1536.jpeg",
+        "https://annaflowerfarm.ru/wp-content/uploads/2026/07/img_1922-1152x1536.jpeg"
+      ],
+      "sourceUrl": "https://annaflowerfarm.ru/product/%d0%ba%d0%b0%d0%bc%d0%bd%d0%b5%d0%bb%d0%be%d0%bc%d0%ba%d0%b0-%d0%bb%d0%be%d1%84%d1%82%d0%b8-white-blush/"
     },
     {
       "id": 756,
       "name": "Котовник Фассена",
       "category": "Цветы многолетние",
       "categoryKey": "perennials",
-      "price": 300,
-      "stock": 3,
+      "price": 250,
+      "stock": 59,
       "status": "ok",
-      "description": "🌱Собственное производство.\nКотовник Фассена: растение до 30 см высотой с узкими листьями.\nДолго цветет с июня по сентябрь. Неприхотливый, засухоустойчивый. Привлекает в сад полезных насекомых. Все его части ароматны.\nСикс Хиллз Жиант: цветы сине-голубые, листья серо-зеленые.\nВысота растения 30 — 40 см.\nРастение имеет приятный запах, напоминающий запах лимонной мяты — мелиссы.\nМесторасположение: хорошо растет в солнечном, теплом месте.\nПочва: не переносит тяжелых почв.\nИспользование: подходит для выращивания в горшках и других емкостях, озеленения крыш.\nПревосходное растение для клумб, бордюров, рокариев.",
+      "description": "Собственное производство. Объём контейнера 1л\nКотовник Фассена: растение до 30 см высотой с узкими листьями.\nДолго цветет с июня по сентябрь. Неприхотливый, засухоустойчивый. Привлекает в сад полезных насекомых. Все его части ароматны.\nСикс Хиллз Жиант: цветы сине-голубые, листья серо-зеленые.\nВысота растения 30 — 40 см.\nРастение имеет приятный запах, напоминающий запах лимонной мяты — мелиссы.\nМесторасположение: хорошо растет в солнечном, теплом месте.\nПочва: не переносит тяжелых почв.\nИспользование: подходит для выращивания в горшках и других емкостях, озеленения крыш.\nПревосходное растение для клумб, бордюров, рокариев.",
       "care": {
         "height": "растения 30 — 40 см"
       },
-      "image": "/assets/products/p756.png",
+      "image": "https://annaflowerfarm.ru/wp-content/uploads/2024/12/img_9676.png",
       "images": [
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2024/12/img_9676.png",
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2024/12/img_9710-1152x1536.jpeg",
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2024/12/4032ebf4-2403-460b-b3fe-9545eab3c3c1.jpeg"
+        "https://annaflowerfarm.ru/wp-content/uploads/2024/12/img_9676.png"
       ],
-      "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/%d0%ba%d0%be%d1%82%d0%be%d0%b2%d0%bd%d0%b8%d0%ba-%d1%84%d0%b0%d1%81%d1%81%d0%b5%d0%bd%d0%b0/"
+      "sourceUrl": "https://annaflowerfarm.ru/product/%d0%ba%d0%be%d1%82%d0%be%d0%b2%d0%bd%d0%b8%d0%ba-%d1%84%d0%b0%d1%81%d1%81%d0%b5%d0%bd%d0%b0/",
+      "variants": [
+        {
+          "id": 2385,
+          "label": "0.5л",
+          "price": 250,
+          "inStock": true,
+          "stock": 59
+        },
+        {
+          "id": 2386,
+          "label": "1л",
+          "price": 350,
+          "inStock": false,
+          "stock": 0
+        }
+      ],
+      "variantAttr": "Объем контейнера",
+      "priceFrom": true
+    },
+    {
+      "id": 2727,
+      "name": "Лапчатка кустарниковая «Абботсвуд»",
+      "category": "Без категории",
+      "categoryKey": "other",
+      "price": 550,
+      "stock": 12,
+      "status": "ok",
+      "description": "Размер взрослого растения : Высота 0,8-1 м, ширина 1-1,3 м\nЦветки белые, до 3 см в диаметре, одиночные или собранные в небольшие кисти. Цветет с июня по конец сентября.\nЗона зимостойкости: 3\nМесто посадки: солнце\nЗимостойка; чувствительна к засухе и высоким температурам; любая садовая почва; на щелочных почвах листья желтеют; чувствительна к засолению; раз в несколько лет необходима обрезка.\nУпаковка корневой системы: 2л",
+      "care": {
+        "height": "0,8-1 м",
+        "light": "солнце",
+        "hardiness": "3"
+      },
+      "image": "https://annaflowerfarm.ru/wp-content/uploads/2026/10/img_5899-1152x1536.jpeg",
+      "images": [
+        "https://annaflowerfarm.ru/wp-content/uploads/2026/10/img_5899-1152x1536.jpeg"
+      ],
+      "sourceUrl": "https://annaflowerfarm.ru/product/%d0%bb%d0%b0%d0%bf%d1%87%d0%b0%d1%82%d0%ba%d0%b0-%d0%ba%d1%83%d1%81%d1%82%d0%b0%d1%80%d0%bd%d0%b8%d0%ba%d0%be%d0%b2%d0%b0%d1%8f-%d0%b0%d0%b1%d0%b1%d0%be%d1%82%d1%81%d0%b2%d1%83%d0%b4/"
     },
     {
       "id": 640,
       "name": "Лапчатка кустарниковая «Кобольд»",
       "category": "Без категории",
       "categoryKey": "other",
-      "price": 250,
-      "stock": 9,
+      "price": 300,
+      "stock": 7,
       "status": "ok",
-      "description": "🌱Собственное производство.\nОкруглый компактный кустик; крона подушковидная.\nВысота 0,6 — 0,8м.\nШирина 1 — 1,2м.\nЦветёт с июня по сентябрь крупными ярко-жёлтыми цветами.\nСолнце/полутень.\nЗимостойка; нетребовательна.",
+      "description": "Собственное производство.\nОкруглый компактный кустик; крона подушковидная.\nВысота 0,6 — 0,8м.\nШирина 1 — 1,2м.\nЦветёт с июня по сентябрь крупными ярко-жёлтыми цветами.\nСолнце/полутень.\nЗимостойка; нетребовательна.",
       "care": {
         "height": "0,6 — 0,8м"
       },
-      "image": "/assets/products/p640.jpg",
+      "image": "https://annaflowerfarm.ru/wp-content/uploads/2024/12/NqarWZTrUCYZVX185a21FfBEedWhpgJXWePLF-I1exSO_UQ9vr56ybcTSibPYTaCGoc4EppkGQ25Q-vg7JAVEo8r.jpg",
       "images": [
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2024/12/NqarWZTrUCYZVX185a21FfBEedWhpgJXWePLF-I1exSO_UQ9vr56ybcTSibPYTaCGoc4EppkGQ25Q-vg7JAVEo8r.jpg",
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2024/12/WcCzF-DGYU.jpg"
+        "https://annaflowerfarm.ru/wp-content/uploads/2024/12/NqarWZTrUCYZVX185a21FfBEedWhpgJXWePLF-I1exSO_UQ9vr56ybcTSibPYTaCGoc4EppkGQ25Q-vg7JAVEo8r.jpg",
+        "https://annaflowerfarm.ru/wp-content/uploads/2024/12/WcCzF-DGYU.jpg"
       ],
-      "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/%d0%bb%d0%b0%d0%bf%d1%87%d0%b0%d1%82%d0%ba%d0%b0-%d0%ba%d1%83%d1%81%d1%82%d0%b0%d1%80%d0%bd%d0%b8%d0%ba%d0%be%d0%b2%d0%b0%d1%8f-%d0%ba%d0%be%d0%b1%d0%be%d0%bb%d1%8c%d0%b4/"
+      "sourceUrl": "https://annaflowerfarm.ru/product/%d0%bb%d0%b0%d0%bf%d1%87%d0%b0%d1%82%d0%ba%d0%b0-%d0%ba%d1%83%d1%81%d1%82%d0%b0%d1%80%d0%bd%d0%b8%d0%ba%d0%be%d0%b2%d0%b0%d1%8f-%d0%ba%d0%be%d0%b1%d0%be%d0%bb%d1%8c%d0%b4/",
+      "variants": [
+        {
+          "id": 1227,
+          "label": "0.5л",
+          "price": 300,
+          "inStock": true,
+          "stock": 3
+        },
+        {
+          "id": 1228,
+          "label": "2л",
+          "price": 550,
+          "inStock": true,
+          "stock": 1
+        },
+        {
+          "id": 2532,
+          "label": "5л",
+          "price": 950,
+          "inStock": true,
+          "stock": 3
+        }
+      ],
+      "variantAttr": "Объем контейнера",
+      "priceFrom": true
     },
     {
       "id": 1514,
       "name": "Лапчатка кустарниковая «Ред Айс»",
       "category": "Без категории",
       "categoryKey": "other",
-      "price": 250,
-      "stock": 48,
+      "price": 350,
+      "stock": 18,
       "status": "ok",
       "description": "Сорт «RED ACE”. Густой кустарник с нежными стелющимися побегами, подушковидной формы.\nВысота 0,4-0,6 м, шириной до 1,2 м.\nМесто посадки: солнце",
       "care": {
-        "height": "0,4-0,6 м, шириной до 1,2 м",
+        "height": "0,4-0,6 м",
         "light": "солнце"
       },
-      "image": "/assets/products/p1514.jpg",
+      "image": "https://annaflowerfarm.ru/wp-content/uploads/2025/09/08304066-1b12-4d91-aaa2-395294125993-1.jpeg",
       "images": [
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2025/09/08304066-1b12-4d91-aaa2-395294125993.jpeg",
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2025/09/dea4ba4d-642e-4ff7-9aa5-644887e7ab5c.jpeg",
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2025/09/img_0323-1152x1536.jpeg"
+        "https://annaflowerfarm.ru/wp-content/uploads/2025/09/08304066-1b12-4d91-aaa2-395294125993-1.jpeg",
+        "https://annaflowerfarm.ru/wp-content/uploads/2025/09/dea4ba4d-642e-4ff7-9aa5-644887e7ab5c-1.jpeg",
+        "https://annaflowerfarm.ru/wp-content/uploads/2025/09/img_0323-1152x1536.jpeg"
       ],
-      "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/%d0%bb%d0%b0%d0%bf%d1%87%d0%b0%d1%82%d0%ba%d0%b0-%d0%ba%d1%83%d1%81%d1%82%d0%b0%d1%80%d0%bd%d0%b8%d0%ba%d0%be%d0%b2%d0%b0%d1%8f-%d1%80%d0%b5%d0%b4-%d0%b0%d0%b9%d1%81/"
+      "sourceUrl": "https://annaflowerfarm.ru/product/%d0%bb%d0%b0%d0%bf%d1%87%d0%b0%d1%82%d0%ba%d0%b0-%d0%ba%d1%83%d1%81%d1%82%d0%b0%d1%80%d0%bd%d0%b8%d0%ba%d0%be%d0%b2%d0%b0%d1%8f-%d1%80%d0%b5%d0%b4-%d0%b0%d0%b9%d1%81/",
+      "variants": [
+        {
+          "id": 2415,
+          "label": "0.5л",
+          "price": 350,
+          "inStock": true,
+          "stock": 9
+        },
+        {
+          "id": 2416,
+          "label": "2л",
+          "price": 550,
+          "inStock": true,
+          "stock": 9
+        }
+      ],
+      "variantAttr": "Объем контейнера",
+      "priceFrom": true
     },
     {
       "id": 1240,
       "name": "Малина",
       "category": "Без категории",
       "categoryKey": "other",
-      "price": 450,
-      "stock": 0,
-      "status": "out",
+      "price": 350,
+      "stock": 12,
+      "status": "ok",
       "description": "Ремонтантная малина среднего срока созревания. Ягоды крупные, красно-рубинового цвета, сладкие, десертного вкуса. Урожайность стабильно высокая",
       "care": {},
-      "image": "/assets/products/p1240.jpg",
+      "image": "https://annaflowerfarm.ru/wp-content/uploads/2025/07/img_2579-1152x1536.jpeg",
       "images": [
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2025/07/img_0202-1152x1536.jpeg",
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2025/07/61d9c2e5-df9f-429c-8c6a-892aab1042b5.jpeg",
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2025/07/img_0201-1152x1536.jpeg"
+        "https://annaflowerfarm.ru/wp-content/uploads/2025/07/img_2579-1152x1536.jpeg",
+        "https://annaflowerfarm.ru/wp-content/uploads/2025/07/61d9c2e5-df9f-429c-8c6a-892aab1042b5.jpeg",
+        "https://annaflowerfarm.ru/wp-content/uploads/2025/07/img_2580-1152x1536.jpeg"
       ],
-      "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/%d0%bc%d0%b0%d0%bb%d0%b8%d0%bd%d0%b0/"
+      "sourceUrl": "https://annaflowerfarm.ru/product/%d0%bc%d0%b0%d0%bb%d0%b8%d0%bd%d0%b0/"
     },
     {
-      "id": 662,
-      "name": "Метельчатая гортензия Вайтлайт",
-      "category": "Гортензии",
-      "categoryKey": "hydrangea",
-      "price": 600,
-      "stock": 32,
-      "status": "ok",
-      "description": "🌱Собственное производство.\nВысота взрослого растения: 100 см.\nЦвет соцветий: Нежно-розовый.\nПериод цветения: июль-сентябрь.\nМесто посадки: Солнце/Полутень.\nПочва: Кислая, влажная.\nПолив: Обильный.\nОбрезка: Формовочная, санитарная.\nЗона морозостойкости: 4.",
+      "id": 1705,
+      "name": "НЕМЕЗИЯ MENOR DUAL BORDEAUX",
+      "category": "Цветы однолетние",
+      "categoryKey": "annuals",
+      "price": 750,
+      "stock": 0,
+      "status": "out",
+      "description": "Кашпо 3,3л\nСорт переносит первые осенние заморозки.\nВысота растениия 20-25 см.\nТип каскадный.",
       "care": {
-        "height": "взрослого растения: 100 см",
-        "bloom": "июль-сентябрь",
-        "light": "Солнце/Полутень",
-        "hardiness": "4"
+        "height": "растениия 20-25 см"
       },
-      "image": "/assets/products/p662.jpg",
+      "image": "https://annaflowerfarm.ru/wp-content/uploads/2025/11/img_1156-1152x1536.jpeg",
       "images": [
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2024/12/GRd74Jqmj6who5FM8fI6Pwf42pxsOYeSdBrTyd4ZYSFpe3H1UtvGzptgv1qu5E0CzhpJDNAee2yMs_yTF3A92YGR.jpg"
+        "https://annaflowerfarm.ru/wp-content/uploads/2025/11/img_1156-1152x1536.jpeg",
+        "https://annaflowerfarm.ru/wp-content/uploads/2025/11/img_1159-1152x1536.jpeg"
       ],
-      "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/%d0%b2%d0%b0%d0%b9%d1%82%d0%bb%d0%b0%d0%b9%d1%82-%d0%bc%d0%b5%d1%82%d0%b5%d0%bb%d1%8c%d1%87%d0%b0%d1%82%d0%b0%d1%8f-%d0%b3%d0%be%d1%80%d1%82%d0%b5%d0%bd%d0%b7%d0%b8%d1%8f/"
-    },
-    {
-      "id": 667,
-      "name": "Метельчатая гортензия Распберри Пинк",
-      "category": "Гортензии",
-      "categoryKey": "hydrangea",
-      "price": 600,
-      "stock": 5,
-      "status": "ok",
-      "description": "🌱Собственное производство.\nВысота куста 100 см, ширина 90 см.\nЛистья зеленые, ветви красные, крепкие, прямостоящие.\nЦветение с июля по сентябрь.\nСоцветия пышные, 20-25см, состоят из стерильных цветков, меняют цвет от белого до насыщенно-розового.\nПочва должна быть кислая, влажная, но без застоя воды.\nНеобходимо солнечное место для посадки.\nЗимостойкость-30С.\nИспользуется для миксбордеров, живых изгородей контейнерное выращивание.",
-      "care": {
-        "height": "куста 100 см, ширина 90 см",
-        "bloom": "с июля по сентябрь",
-        "hardiness": "30С"
-      },
-      "image": "/assets/products/p667.jpg",
-      "images": [
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2024/12/ZqtWcfZ668FoF4OJfSa8IDGM8X4qByC5A6KW9_z7oKs4HP5QTI8jISNl3pVPO7LU9K0VIeL9HgsZaHdPB66sqbYN.jpg",
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2024/12/mzvvJoEh5tnY9FNFKuuMJ8PhN8AMXbDlDzOLrJ1yvl1solLl9E1sOtp6QLPRNLXCaKych0WqFrTP0iUlH25cTqRM.jpg",
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2024/12/PChjavi6x2VfvMmN4myJoSLp1_iyk94TzIlnrHoldsU781p7yw_UsA19Jd-T0HKuAbZtrABFDADls90RqHxfcRYq.jpg",
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2024/12/SCRwhc3FLG8DT4WMWeiBskQwQqAyerVYfILQqK86BaUC0ui5PIRei9Xo6rHjxa7DKjv-KGGZ6R5afc9AyKcWpg3r.jpg"
-      ],
-      "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/%d1%80%d0%b0%d1%81%d0%bf%d0%b1%d0%b5%d1%80%d1%80%d0%b8-%d0%bf%d0%b8%d0%bd%d0%ba-%d0%bc%d0%b5%d1%82%d0%b5%d0%bb%d1%8c%d1%87%d0%b0%d1%82%d0%b0%d1%8f-%d0%b3%d0%be%d1%80%d1%82%d0%b5%d0%bd%d0%b7%d0%b8/"
+      "sourceUrl": "https://annaflowerfarm.ru/product/%d0%bd%d0%b5%d0%bc%d0%b5%d0%b7%d0%b8%d1%8f-menor-dual-bordeaux/"
     },
     {
       "id": 1924,
@@ -1027,20 +1414,20 @@
       "category": "Цветы однолетние",
       "categoryKey": "annuals",
       "price": 250,
-      "stock": 1,
-      "status": "low",
+      "stock": 0,
+      "status": "out",
       "description": "В объёме 0,5л\nКусты прямостоячие, ветвистые. Цветки до 6 см в диаметре, есть белые, розовые, желтые, пурпурные сорта, иногда с контрастным диском. Цветут с конца мая до сентября. Высота 25 – 35 см, ширина 35 – 50 см.",
       "care": {
-        "height": "25 – 35 см, ширина 35 – 50 см"
+        "height": "25 – 35 см"
       },
-      "image": "/assets/products/p1924.jpg",
+      "image": "https://annaflowerfarm.ru/wp-content/uploads/2026/03/img_7626-1024x799.jpeg",
       "images": [
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2026/03/img_7626-1024x799.jpeg",
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2026/03/img_9199-1152x1536.jpeg",
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2026/03/img_9200-1152x1536.jpeg",
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2026/03/img_9198-1152x1536.jpeg"
+        "https://annaflowerfarm.ru/wp-content/uploads/2026/03/img_7626-1024x799.jpeg",
+        "https://annaflowerfarm.ru/wp-content/uploads/2026/03/img_9199-1152x1536.jpeg",
+        "https://annaflowerfarm.ru/wp-content/uploads/2026/03/img_9200-1152x1536.jpeg",
+        "https://annaflowerfarm.ru/wp-content/uploads/2026/03/img_9198-1152x1536.jpeg"
       ],
-      "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/%d0%be%d1%81%d1%82%d0%b5%d0%be%d1%81%d0%bf%d0%b5%d1%80%d0%bc%d1%83%d0%bc-3d-steel-blue/"
+      "sourceUrl": "https://annaflowerfarm.ru/product/%d0%be%d1%81%d1%82%d0%b5%d0%be%d1%81%d0%bf%d0%b5%d1%80%d0%bc%d1%83%d0%bc-3d-steel-blue/"
     },
     {
       "id": 1479,
@@ -1052,13 +1439,34 @@
       "status": "out",
       "description": "В объёме 1л\nОчень яркий обильноцветущий остеоспермум c махровыми цветками. Неприхотлив в уходе, засухоустойчив, хорошо переносит как жару, так и холод. Кусты хорошо разветвленные, плотные, высотой до 50 см. В наших широтах в открытом грунте выращивается как однолетник. Хорошо зимует в светлом и прохладном помещении, минимальная температура +6…+8 °С, оптимальная +18 °С. Прекрасно черенкуется, укоренение в течении месяца. На начальной стадии роста требуется обязательная прищипка. Цветение раннее, продолжительное, в течение всего лета до глубокой осени. Не смотря на то, что остеоспермум теплолюбив, взрослые сильные растения легко переносят осенние заморозки и даже слабые морозы.",
       "care": {
-        "bloom": "раннее, продолжительное, в течение всего лета до глубокой осени"
+        "bloom": "раннее, продолжительное, в течение всего лета до глубокой ос",
+        "light": "лом и прохладном помещении, минимальная температура +6…+8 °С"
       },
-      "image": "/assets/products/p1479.jpg",
+      "image": "https://annaflowerfarm.ru/wp-content/uploads/2025/08/img_1659-1152x1536.jpeg",
       "images": [
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2025/08/img_1659-1152x1536.jpeg"
+        "https://annaflowerfarm.ru/wp-content/uploads/2025/08/img_1659-1152x1536.jpeg"
       ],
-      "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/%d0%be%d1%81%d1%82%d0%b5%d0%be%d1%81%d0%bf%d0%b5%d1%80%d0%bc%d1%83%d0%bc-margarita-double-white/"
+      "sourceUrl": "https://annaflowerfarm.ru/product/%d0%be%d1%81%d1%82%d0%b5%d0%be%d1%81%d0%bf%d0%b5%d1%80%d0%bc%d1%83%d0%bc-margarita-double-white/"
+    },
+    {
+      "id": 762,
+      "name": "Очиток ложный Бронз Карпет",
+      "category": "Цветы многолетние",
+      "categoryKey": "perennials",
+      "price": 300,
+      "stock": 4,
+      "status": "ok",
+      "description": "Собственное производство.\nКонтейнер 0,5л\nПериод цветения: Июль-август.\nОкраска цветка: Розовый.\nВысота: 15 см.\nЛистья бронзовые, мясистые, по краю зубчатые.\nЦветки мелкие, розовые с красноватым оттенком, собраны в зонтиковидные щитки.\nТребования к освещенности: Солнце.\nЗимостойкость: Зона 4.\nНорма посадки: 9-11 шт/кв.м.\nХарактеристика почвы: Любые.",
+      "care": {
+        "height": "15 см",
+        "bloom": "Июль-август",
+        "hardiness": "Зона 4"
+      },
+      "image": "https://annaflowerfarm.ru/wp-content/uploads/2024/12/img_5041-1152x1536.jpeg",
+      "images": [
+        "https://annaflowerfarm.ru/wp-content/uploads/2024/12/img_5041-1152x1536.jpeg"
+      ],
+      "sourceUrl": "https://annaflowerfarm.ru/product/%d0%be%d1%87%d0%b8%d1%82%d0%be%d0%ba-%d0%bb%d0%be%d0%b6%d0%bd%d1%8b%d0%b9-%d0%b1%d1%80%d0%be%d0%bd%d0%b7-%d0%ba%d0%b0%d1%80%d0%bf%d0%b5%d1%82/"
     },
     {
       "id": 653,
@@ -1066,22 +1474,38 @@
       "category": "Без категории",
       "categoryKey": "other",
       "price": 350,
-      "stock": 50,
+      "stock": 130,
       "status": "ok",
-      "description": "🌱Собственное производство.\nСредне- или быстрорастущий густой кустарник с полушаровидной формой кроны.\nВысота до 2,5 м, ширина до 1,5-2 м.\nЦветки бело-розовые, собраны в щитковидные соцветия.\nЦветение в июне-июле.\nЛистья 3-5-лопастные, округло-эллиптические, до 7-10 см, при распускании розово-красные, летом бронзово-коричневые, к осени бронзово-красные.\nСолнце/Полутень.\nЗимостойкость: Зона 3.\nМорозостойкий, устойчив в городской среде, ветроустойчив. Выращивать пузыреплодник калинолистный лучше на солнце, потому что в тени окрас его листьев не будет таким насыщенным. К почве у растения только два требования: наличие дренажа и отсутствие извести. Конечно, в плодородном рыхлом грунте растение будет выглядеть пышнее и наряднее, однако и при выращивании в бедной почве пузыреплодник тоже будет красив. Предпочитает почвы любые садовые, плохо переносит избыточное увлажнение. По необходимости проводится формирующая стрижка. Кусты старше 5 лет нуждаются в омолаживающей обрезке, которую проводят осенью или ранней весной, и заключается она в удалении старых побегов до основания и обрезке остальных до того места, где отходит боковая ветка. Устойчив к вредителям и болезням. Хорошо отзывается на подкормки и поливы в засушливые периоды. Подходит для создания живой изгороди.",
+      "description": "Собственное производство.\nСредне- или быстрорастущий густой кустарник с полушаровидной формой кроны.\nВысота до 2,5 м, ширина до 1,5-2 м.\nЦветки бело-розовые, собраны в щитковидные соцветия.\nЦветение в июне-июле.\nЛистья 3-5-лопастные, округло-эллиптические, до 7-10 см, при распускании розово-красные, летом бронзово-коричневые, к осени бронзово-красные.\nСолнце/Полутень.\nЗимостойкость: Зона 3.\nМорозостойкий, устойчив в городской среде, ветроустойчив. Выращивать пузыреплодник калинолистный лучше на солнце, потому что в тени окрас его листьев не будет таким насыщенным. К почве у растения только два требования: наличие дренажа и отсутствие извести. Конечно, в плодородном рыхлом грунте растение будет выглядеть пышнее и наряднее, однако и при выращивании в бедной почве пузыреплодник тоже будет красив. Предпочитает почвы любые садовые, плохо переносит избыточное увлажнение. По необходимости проводится формирующая стрижка. Кусты старше 5 лет нуждаются в омолаживающей обрезке, которую проводят осенью или ранней весной, и заключается она в удалении старых побегов до основания и обрезке остальных до того места, где отходит боковая ветка. Устойчив к вредителям и болезням. Хорошо отзывается на подкормки и поливы в засушливые периоды. Подходит для создания живой изгороди.",
       "care": {
-        "height": "до 2,5 м, ширина до 1,5-2 м",
+        "height": "до 2,5 м",
         "bloom": "в июне-июле",
         "hardiness": "Зона 3"
       },
-      "image": "/assets/products/p653.jpg",
+      "image": "https://annaflowerfarm.ru/wp-content/uploads/2024/12/0b2b7521-82b7-4b7b-a281-f718fff891f2.jpeg",
       "images": [
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2024/12/0b2b7521-82b7-4b7b-a281-f718fff891f2.jpeg",
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2024/12/c5c0c96a-dc51-4bb7-a286-5054d7840e7c.jpeg",
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2024/12/e663fc81-9e36-4830-9ac4-de370542f225.jpeg",
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2024/12/de4f35bd-cd3e-495b-805b-af1551406bdc.jpeg"
+        "https://annaflowerfarm.ru/wp-content/uploads/2024/12/0b2b7521-82b7-4b7b-a281-f718fff891f2.jpeg",
+        "https://annaflowerfarm.ru/wp-content/uploads/2024/12/c5c0c96a-dc51-4bb7-a286-5054d7840e7c.jpeg"
       ],
-      "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/%d0%bf%d1%83%d0%b7%d1%8b%d1%80%d0%b5%d0%bf%d0%bb%d0%be%d0%b4%d0%bd%d0%b8%d0%ba-%d0%ba%d0%b0%d0%bb%d0%b8%d0%bd%d0%be%d0%bb%d0%b8%d1%81%d1%82%d0%bd%d1%8b%d0%b9-%d0%b0%d0%bd%d0%b4%d1%80%d0%b5/"
+      "sourceUrl": "https://annaflowerfarm.ru/product/%d0%bf%d1%83%d0%b7%d1%8b%d1%80%d0%b5%d0%bf%d0%bb%d0%be%d0%b4%d0%bd%d0%b8%d0%ba-%d0%ba%d0%b0%d0%bb%d0%b8%d0%bd%d0%be%d0%bb%d0%b8%d1%81%d1%82%d0%bd%d1%8b%d0%b9-%d0%b0%d0%bd%d0%b4%d1%80%d0%b5/",
+      "variants": [
+        {
+          "id": 1224,
+          "label": "0.5л",
+          "price": 350,
+          "inStock": true,
+          "stock": 86
+        },
+        {
+          "id": 1223,
+          "label": "3л",
+          "price": 600,
+          "inStock": true,
+          "stock": 44
+        }
+      ],
+      "variantAttr": "Объем контейнера",
+      "priceFrom": true
     },
     {
       "id": 633,
@@ -1089,20 +1513,20 @@
       "category": "Без категории",
       "categoryKey": "other",
       "price": 350,
-      "stock": 26,
+      "stock": 18,
       "status": "ok",
-      "description": "🌱Собственное производство.\nКомпактный сорт с кроной вееровидной формы.\nПобеги жесткие, прямые, весной почти кораллового цвета, переходящего в ярко-вишневые тона к середине лета.\nВысота и ширина до 1,5м.\nСолнце/полутень.\nМорозостойкий.\nУстойчив к вредителям и болезням.\nХорошо отзывается на подкормки и поливы в засушливые периоды.",
+      "description": "Собственное производство.\nКомпактный сорт с кроной вееровидной формы.\nПобеги жесткие, прямые, весной почти кораллового цвета, переходящего в ярко-вишневые тона к середине лета.\nВысота и ширина до 1,5м.\nСолнце/полутень.\nМорозостойкий.\nУстойчив к вредителям и болезням.\nХорошо отзывается на подкормки и поливы в засушливые периоды.",
       "care": {
         "height": "и ширина до 1,5м"
       },
-      "image": "/assets/products/p633.jpg",
+      "image": "https://annaflowerfarm.ru/wp-content/uploads/2024/12/img_0788-1152x1536.jpeg",
       "images": [
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2024/12/aKp57VqUCgMncXXLh6w3TPObfTfsTP2ALV8fm7pW9l0mMmXKsW8ZABh78DcNNKp3JXt2AVosaXP86mH7h5rpT5mX.jpg",
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2024/12/img_1186-1152x1536.jpeg",
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2024/12/img_1185-1152x1536.jpeg",
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2024/12/img_1184-1152x1536.jpeg"
+        "https://annaflowerfarm.ru/wp-content/uploads/2024/12/img_0788-1152x1536.jpeg",
+        "https://annaflowerfarm.ru/wp-content/uploads/2024/12/img_1860-1152x1536.jpeg",
+        "https://annaflowerfarm.ru/wp-content/uploads/2024/12/img_1861-1152x1536.jpeg",
+        "https://annaflowerfarm.ru/wp-content/uploads/2024/12/img_1186-1152x1536.jpeg"
       ],
-      "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/%d0%bf%d1%83%d0%b7%d1%8b%d1%80%d0%b5%d0%bf%d0%bb%d0%be%d0%b4%d0%bd%d0%b8%d0%ba-%d0%ba%d0%b0%d0%bb%d0%b8%d0%bd%d0%be%d0%bb%d0%b8%d1%81%d1%82%d0%bd%d1%8b%d0%b9-%d0%b0%d0%bc%d0%b1%d0%b5%d1%80/"
+      "sourceUrl": "https://annaflowerfarm.ru/product/%d0%bf%d1%83%d0%b7%d1%8b%d1%80%d0%b5%d0%bf%d0%bb%d0%be%d0%b4%d0%bd%d0%b8%d0%ba-%d0%ba%d0%b0%d0%bb%d0%b8%d0%bd%d0%be%d0%bb%d0%b8%d1%81%d1%82%d0%bd%d1%8b%d0%b9-%d0%b0%d0%bc%d0%b1%d0%b5%d1%80/"
     },
     {
       "id": 598,
@@ -1110,116 +1534,162 @@
       "category": "Без категории",
       "categoryKey": "other",
       "price": 350,
-      "stock": 4,
+      "stock": 48,
       "status": "ok",
-      "description": "🌱Собственное производство.\nПузыреплодник Лютеус. Быстрорастущий, широкий, округлый кустарник со слегка поникающими ветвями.\nВысота взрослого растения до 3 м, ширина до 2,5 м.\nЦветение в июне-июле.\nСолнце/полутень.\nМорозостойкий.\nУстойчив к вредителям и болезням.\nХорошо отзывается на подкормки и поливы в засушливые периоды. Хорошо подходит для создания живой изгороди",
+      "description": "Собственное производство.\nПузыреплодник Лютеус. Быстрорастущий, широкий, округлый кустарник со слегка поникающими ветвями.\nВысота взрослого растения до 3 м, ширина до 2,5 м.\nЦветение в июне-июле.\nСолнце/полутень.\nМорозостойкий.\nУстойчив к вредителям и болезням.\nХорошо отзывается на подкормки и поливы в засушливые периоды. Хорошо подходит для создания живой изгороди",
       "care": {
-        "height": "взрослого растения до 3 м, ширина до 2,5 м",
+        "height": "взрослого растения до 3 м",
         "bloom": "в июне-июле"
       },
-      "image": "/assets/products/p598.jpg",
+      "image": "https://annaflowerfarm.ru/wp-content/uploads/2024/12/img_0790-1152x1536.jpeg",
       "images": [
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2024/12/684beb66-fb89-442b-bb78-ddeecc353ab2-1.jpeg",
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2024/12/img_1192-1152x1536.jpeg",
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2024/12/img_1191-1152x1536.jpeg",
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2024/12/img_1190-1152x1536.jpeg"
+        "https://annaflowerfarm.ru/wp-content/uploads/2024/12/img_0790-1152x1536.jpeg",
+        "https://annaflowerfarm.ru/wp-content/uploads/2024/12/img_2441-1152x1536.jpeg",
+        "https://annaflowerfarm.ru/wp-content/uploads/2024/12/img_0791-1152x1536.jpeg"
       ],
-      "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/%d0%bf%d1%83%d0%b7%d1%8b%d1%80%d0%b5%d0%bf%d0%bb%d0%be%d0%b4%d0%bd%d0%b8%d0%ba-%d0%bb%d1%8e%d1%82%d0%b5%d1%83%d1%81/"
+      "sourceUrl": "https://annaflowerfarm.ru/product/%d0%bf%d1%83%d0%b7%d1%8b%d1%80%d0%b5%d0%bf%d0%bb%d0%be%d0%b4%d0%bd%d0%b8%d0%ba-%d0%bb%d1%8e%d1%82%d0%b5%d1%83%d1%81/"
     },
     {
-      "id": 2038,
-      "name": "Рассада огурца в ассортименте",
-      "category": "Овощная рассада",
-      "categoryKey": "vegetables",
-      "price": 85,
-      "stock": 18,
+      "id": 2451,
+      "name": "Рудбекия блестящая Goldsturm",
+      "category": "Цветы многолетние",
+      "categoryKey": "perennials",
+      "price": 500,
+      "stock": 12,
       "status": "ok",
-      "description": "",
-      "care": {},
-      "image": "/assets/products/p2038.jpg",
+      "description": "Пышный кустистый многолетник, цветущий большими золотисто-жёлтыми цветами с черным центром.\nВысота растения — 60-70см.\nДиаметр куста — 40-45см.\nДиаметр цветка — 10-12см.\nОтлично смотрится в миксбордерах, групповых посадках, а также в срезке.\nОбъём контейнера : 2л",
+      "care": {
+        "height": "растения — 60-70см"
+      },
+      "image": "https://annaflowerfarm.ru/wp-content/uploads/2026/07/img_3877.png",
       "images": [
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2026/04/img_9196-1152x1536.jpeg"
+        "https://annaflowerfarm.ru/wp-content/uploads/2026/07/img_3877.png",
+        "https://annaflowerfarm.ru/wp-content/uploads/2026/07/img_1945.png",
+        "https://annaflowerfarm.ru/wp-content/uploads/2026/07/img_3589-1152x1536.jpeg"
       ],
-      "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/%d1%80%d0%b0%d1%81%d1%81%d0%b0%d0%b4%d0%b0-%d0%be%d0%b3%d1%83%d1%80%d1%86%d0%b0-%d0%b2-%d0%b0%d1%81%d1%81%d0%be%d1%80%d1%82%d0%b8%d0%bc%d0%b5%d0%bd%d1%82%d0%b5/"
+      "sourceUrl": "https://annaflowerfarm.ru/product/%d1%80%d1%83%d0%b4%d0%b1%d0%b5%d0%ba%d0%b8%d1%8f-%d0%b1%d0%bb%d0%b5%d1%81%d1%82%d1%8f%d1%89%d0%b0%d1%8f-goldsturm/"
     },
     {
-      "id": 1267,
-      "name": "Саженцы клубники",
+      "id": 2585,
+      "name": "Рябинник рябинолистный «Сэм»",
       "category": "Без категории",
       "categoryKey": "other",
-      "price": 600,
-      "stock": 0,
-      "status": "out",
-      "description": "Сорт Соловушка.\nСреднего срока созревания\nКассета 6шт",
-      "care": {},
-      "image": "/assets/products/p1267.jpg",
+      "price": 250,
+      "stock": 12,
+      "status": "ok",
+      "description": "Быстрорастущий, декоративный кустарник с округлой кроной.\nВысота и ширина взрослого растения до 1 м.\nСолнце/полутень\nЗимостойкость: зона 3\nЛегко выдерживает пересадку, стрижку, условия города и некоторое затенение.\nУпаковка корневой системы: контейнер 0,5л",
+      "care": {
+        "height": "и ширина взрослого растения до 1 м",
+        "hardiness": "зона 3"
+      },
+      "image": "https://annaflowerfarm.ru/wp-content/uploads/2026/08/img_0363-1152x1536.jpeg",
       "images": [
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2025/07/1b5a4b98-c344-483b-8a89-32a328f63237.jpeg",
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2025/07/img_0433-1152x1536.jpeg",
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2025/07/img_0434-1152x1536.jpeg"
+        "https://annaflowerfarm.ru/wp-content/uploads/2026/08/img_0363-1152x1536.jpeg",
+        "https://annaflowerfarm.ru/wp-content/uploads/2026/08/img_4643-1152x1536.jpeg"
       ],
-      "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/%d1%81%d0%b0%d0%b6%d0%b5%d0%bd%d1%86%d1%8b-%d0%ba%d0%bb%d1%83%d0%b1%d0%bd%d0%b8%d0%ba%d0%b8/"
+      "sourceUrl": "https://annaflowerfarm.ru/product/%d1%80%d1%8f%d0%b1%d0%b8%d0%bd%d0%bd%d0%b8%d0%ba-%d1%80%d1%8f%d0%b1%d0%b8%d0%bd%d0%be%d0%bb%d0%b8%d1%81%d1%82%d0%bd%d1%8b%d0%b9-%d1%81%d1%8d%d0%bc/"
+    },
+    {
+      "id": 2053,
+      "name": "Саженцы туи Смарагд",
+      "category": "Хвойные",
+      "categoryKey": "other",
+      "price": 350,
+      "stock": 12,
+      "status": "ok",
+      "description": "Саженцы туи В объёме 0,5л\nКрона туи «Смарагд» строго вертикальная, узкоконическая с равномерной густотой ветвей по всей высоте. Форма сохраняется естественным образом без частой корректирующей обрезки.\n• В условиях культурного выращивания в России средняя высота взрослого дерева — 3–4 м, в благоприятных условиях может достигать 5–6 м.\n• Диаметр кроны взрослого растения в основании обычно — 1–1,5 м .\n• Годовой прирост — в среднем около 20 см по высоте.",
+      "care": {
+        "height": "взрослого дерева — 3–4 м"
+      },
+      "image": "https://annaflowerfarm.ru/wp-content/uploads/2026/04/img_4102-1152x1536.jpeg",
+      "images": [
+        "https://annaflowerfarm.ru/wp-content/uploads/2026/04/img_4102-1152x1536.jpeg",
+        "https://annaflowerfarm.ru/wp-content/uploads/2026/04/img_4103-1152x1536.jpeg",
+        "https://annaflowerfarm.ru/wp-content/uploads/2026/04/img_4104-1152x1536.jpeg",
+        "https://annaflowerfarm.ru/wp-content/uploads/2026/04/a1aadf56-95df-421b-af6f-5871b87f8dce.jpeg",
+        "https://annaflowerfarm.ru/wp-content/uploads/2026/04/43a39d1b-3b93-4eb1-8e44-84e171ae16c9-1024x576.jpeg"
+      ],
+      "sourceUrl": "https://annaflowerfarm.ru/product/%d1%87%d0%b5%d1%80%d0%b5%d0%bd%d0%ba%d0%b8-%d1%82%d1%83%d0%b8-%d1%81%d0%bc%d0%b0%d1%80%d0%b0%d0%b3%d0%b4/"
     },
     {
       "id": 2272,
       "name": "Сальвия (Шалфей) дубравная «Блю Куин»",
       "category": "Цветы многолетние",
       "categoryKey": "perennials",
-      "price": 300,
+      "price": 550,
+      "stock": 10,
+      "status": "ok",
+      "description": "Шалфей дубравный Blue Queen — один из самых популярных сортов для солнечных цветников, бордюров и природных композиций. Отличается длительным цветением, неприхотливостью и выразительным цветом.\nОсобенности сорта:\nнасыщенные сине-фиолетовые соцветия\nкомпактный плотный куст\nдлительное и обильное цветение\nпривлекает пчёл и бабочек\nподходит для миксбордеров, клумб и кашпо\nХарактеристики:\nВысота: 30–50 см\nШирина: 30–40 см\nЦветение: июнь–сентябрь\nМестоположение: солнце\nЗимостойкость: высокая\nШалфей отлично переносит жару, устойчив к засухе и сохраняет декоративность весь сезон. После первой волны цветения рекомендуется лёгкая обрезка — это стимулирует повторное цветение.\nИдеальный вариант для создания ярких цветовых акцентов в саду без сложного ухода\nУпаковка корневой системы: 2л",
+      "care": {
+        "height": "30–50 см",
+        "bloom": "м, неприхотливостью и выразительным цветом",
+        "hardiness": "высокая"
+      },
+      "image": "https://annaflowerfarm.ru/wp-content/uploads/2026/05/img_0403.jpeg",
+      "images": [
+        "https://annaflowerfarm.ru/wp-content/uploads/2026/05/img_0403.jpeg",
+        "https://annaflowerfarm.ru/wp-content/uploads/2026/05/img_5167-1152x1536.jpeg",
+        "https://annaflowerfarm.ru/wp-content/uploads/2026/05/img_5169-1152x1536.jpeg",
+        "https://annaflowerfarm.ru/wp-content/uploads/2026/05/img_5170-1152x1536.jpeg"
+      ],
+      "sourceUrl": "https://annaflowerfarm.ru/product/%d1%81%d0%b0%d0%bb%d1%8c%d0%b2%d0%b8%d1%8f-%d1%88%d0%b0%d0%bb%d1%84%d0%b5%d0%b9-%d0%b4%d1%83%d0%b1%d1%80%d0%b0%d0%b2%d0%bd%d0%b0%d1%8f-%d0%b1%d0%bb%d1%8e-%d0%ba%d1%83%d0%b8%d0%bd/"
+    },
+    {
+      "id": 2373,
+      "name": "Смородина Белорусская сладкая чёрная",
+      "category": "Без категории",
+      "categoryKey": "other",
+      "price": 650,
       "stock": 12,
       "status": "ok",
-      "description": "Шалфей дубравный Blue Queen — один из самых популярных сортов для солнечных цветников, бордюров и природных композиций. Отличается длительным цветением, неприхотливостью и выразительным цветом.\nОсобенности сорта:\n✔ насыщенные сине-фиолетовые соцветия\n✔ компактный плотный куст\n✔ длительное и обильное цветение\n✔ привлекает пчёл и бабочек\n✔ подходит для миксбордеров, клумб и кашпо\nХарактеристики:\n🌿 Высота: 30–50 см\n🌿 Ширина: 30–40 см\n🌸 Цветение: июнь–сентябрь\n☀ Местоположение: солнце\n❄ Зимостойкость: высокая\nШалфей отлично переносит жару, устойчив к засухе и сохраняет декоративность весь сезон. После первой волны цветения рекомендуется лёгкая обрезка — это стимулирует повторное цветение.\nИдеальный вариант для создания ярких цветовых акцентов в саду без сложного ухода 🌸",
+      "description": "Упаковка корневой системы: 3л",
       "care": {},
-      "image": "/assets/products/p2272.jpg",
+      "image": "https://annaflowerfarm.ru/wp-content/uploads/2026/06/img_5410-1152x1536.jpeg",
       "images": [
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2026/05/img_0403.jpeg",
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2026/05/img_0401-1152x1536.jpeg"
+        "https://annaflowerfarm.ru/wp-content/uploads/2026/06/img_5410-1152x1536.jpeg"
       ],
-      "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/%d1%81%d0%b0%d0%bb%d1%8c%d0%b2%d0%b8%d1%8f-%d1%88%d0%b0%d0%bb%d1%84%d0%b5%d0%b9-%d0%b4%d1%83%d0%b1%d1%80%d0%b0%d0%b2%d0%bd%d0%b0%d1%8f-%d0%b1%d0%bb%d1%8e-%d0%ba%d1%83%d0%b8%d0%bd/"
+      "sourceUrl": "https://annaflowerfarm.ru/product/%d1%81%d0%bc%d0%be%d1%80%d0%be%d0%b4%d0%b8%d0%bd%d0%b0-%d0%b1%d0%b5%d0%bb%d0%be%d1%80%d1%83%d1%81%d1%81%d0%ba%d0%b0%d1%8f-%d1%81%d0%bb%d0%b0%d0%b4%d0%ba%d0%b0%d1%8f-%d1%87%d1%91%d1%80%d0%bd%d0%b0/"
     },
     {
       "id": 606,
       "name": "Спирея Берёзолистная Тор",
       "category": "Без категории",
       "categoryKey": "other",
-      "price": 350,
-      "stock": 0,
-      "status": "out",
-      "description": "🌱Собственное производство. Объём контейнера 0,5л. 2х летний саженец\nКомпактный невысокий кустарник с многочисленными жесткими и ребристыми побегами коричневого цвета.\nКрона шаровидная.\nВысота и ширина 0,7-0,9 м.\nЦветение начинается в конце мая и продолжается до конца июня на побегах текущего года.\nМесто: солнце/полутень\nЗимостойкость: зона 4",
+      "price": 700,
+      "stock": 22,
+      "status": "ok",
+      "description": "Собственное производство.\nОбъём контейнера 2л\nКомпактный невысокий кустарник с многочисленными жесткими и ребристыми побегами коричневого цвета.\nКрона шаровидная.\nВысота и ширина 0,7-0,9 м.\nЦветение начинается в конце мая и продолжается до конца июня на побегах текущего года.\nМесто: солнце/полутень\nЗимостойкость: зона 4",
       "care": {
         "height": "и ширина 0,7-0,9 м",
-        "bloom": "начинается в конце мая и продолжается до конца июня на побегах текущег",
+        "bloom": "начинается в конце мая и продолжается до конца июня на побег",
         "hardiness": "зона 4"
       },
-      "image": "/assets/products/p606.jpg",
+      "image": "https://annaflowerfarm.ru/wp-content/uploads/2024/12/img_9004-1152x1536.jpeg",
       "images": [
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2024/12/img_9004-1152x1536.jpeg",
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2024/12/EO7AQkAFeys.jpg",
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2024/12/img_0289-1152x1536.jpeg",
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2024/12/img_0290-1152x1536.jpeg"
+        "https://annaflowerfarm.ru/wp-content/uploads/2024/12/img_9004-1152x1536.jpeg",
+        "https://annaflowerfarm.ru/wp-content/uploads/2024/12/EO7AQkAFeys.jpg"
       ],
-      "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/%d1%81%d0%bf%d0%b8%d1%80%d0%b5%d1%8f-%d0%b1%d0%b5%d1%80%d1%91%d0%b7%d0%be%d0%bb%d0%b8%d1%81%d1%82%d0%bd%d0%b0%d1%8f-%d1%82%d0%be%d1%80/"
+      "sourceUrl": "https://annaflowerfarm.ru/product/%d1%81%d0%bf%d0%b8%d1%80%d0%b5%d1%8f-%d0%b1%d0%b5%d1%80%d1%91%d0%b7%d0%be%d0%bb%d0%b8%d1%81%d1%82%d0%bd%d0%b0%d1%8f-%d1%82%d0%be%d1%80/"
     },
     {
       "id": 1318,
       "name": "Спирея серая «Грефшайм»",
       "category": "Без категории",
       "categoryKey": "other",
-      "price": 350,
-      "stock": 0,
-      "status": "out",
+      "price": 250,
+      "stock": 140,
+      "status": "ok",
       "description": "Красивоцветущий кустарник с аркообразными поникающими ветвями, с ажурной кроной.\nВысота и ширина взрослого растения до 2м.\nЦветёт в мае-июне.\nСолнце/полутень.\nЗимостойкость: зона 4\nУстойчива к болезням и вредителям\nОбъём контейнера: 0,5л. 2х летний саженец\nВысота саженца: до 15см",
       "care": {
         "height": "и ширина взрослого растения до 2м",
         "hardiness": "зона 4"
       },
-      "image": "/assets/products/p1318.jpg",
+      "image": "https://annaflowerfarm.ru/wp-content/uploads/2025/08/img_0950-1024x768.jpeg",
       "images": [
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2025/08/img_0950-1024x768.jpeg",
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2025/08/img_8773-1152x1536.jpeg",
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2025/08/img_8772-1152x1536.jpeg"
+        "https://annaflowerfarm.ru/wp-content/uploads/2025/08/img_0950-1024x768.jpeg",
+        "https://annaflowerfarm.ru/wp-content/uploads/2025/08/img_3228-1152x1536.jpeg"
       ],
-      "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/%d1%81%d0%bf%d0%b8%d1%80%d0%b5%d1%8f-%d1%81%d0%b5%d1%80%d0%b0%d1%8f-%d0%b3%d1%80%d0%b5%d1%84%d1%88%d0%b0%d0%b9%d0%bc/"
+      "sourceUrl": "https://annaflowerfarm.ru/product/%d1%81%d0%bf%d0%b8%d1%80%d0%b5%d1%8f-%d1%81%d0%b5%d1%80%d0%b0%d1%8f-%d0%b3%d1%80%d0%b5%d1%84%d1%88%d0%b0%d0%b9%d0%bc/"
     },
     {
       "id": 1618,
@@ -1227,19 +1697,22 @@
       "category": "Без категории",
       "categoryKey": "other",
       "price": 350,
-      "stock": 8,
-      "status": "ok",
-      "description": "Собственное производство\n🌱 Объём контейнера 0,5л\nРазмеры взрослого растения: Высота 0,6-0,8 м, ширина 0,9 м.\nЦветёт растение малиновыми или рубиново-красными крупными соцветиями, которые появляются в верхней части побегов, выросших в текущем году. Характеризуется длительным периодом цветения (VI — VIII).\nМесто посадки: Солнце/Полутень",
+      "stock": 2,
+      "status": "low",
+      "description": "Собственное производство\nОбъём контейнера 0,5л\nРазмеры взрослого растения: Высота 0,6-0,8 м, ширина 0,9 м.\nЦветёт растение малиновыми или рубиново-красными крупными соцветиями, которые появляются в верхней части побегов, выросших в текущем году. Характеризуется длительным периодом цветения (VI — VIII).\nМесто посадки: Солнце/Полутень",
       "care": {
+        "height": "0,6-0,8 м",
+        "bloom": "(VI — VIII)",
         "light": "Солнце/Полутень"
       },
-      "image": "/assets/products/p1618.jpg",
+      "image": "https://annaflowerfarm.ru/wp-content/uploads/2025/10/img_3159-1152x1536.jpeg",
       "images": [
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2025/10/img_3159-1152x1536.jpeg",
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2025/10/img_0297-1152x1536.jpeg",
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2025/10/img_0298-1152x1536.jpeg"
+        "https://annaflowerfarm.ru/wp-content/uploads/2025/10/img_3159-1152x1536.jpeg",
+        "https://annaflowerfarm.ru/wp-content/uploads/2025/10/img_1131-1152x1536.jpeg",
+        "https://annaflowerfarm.ru/wp-content/uploads/2025/10/img_1133-1152x1536.jpeg",
+        "https://annaflowerfarm.ru/wp-content/uploads/2025/10/img_1135-1152x1536.jpeg"
       ],
-      "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/%d1%81%d0%bf%d0%b8%d1%80%d0%b5%d1%8f-%d1%8f%d0%bf%d0%be%d0%bd%d1%81%d0%ba%d0%b0%d1%8f-%d0%b4%d0%b0%d1%80%d1%82%d1%81-%d1%80%d0%b5%d0%b4/"
+      "sourceUrl": "https://annaflowerfarm.ru/product/%d1%81%d0%bf%d0%b8%d1%80%d0%b5%d1%8f-%d1%8f%d0%bf%d0%be%d0%bd%d1%81%d0%ba%d0%b0%d1%8f-%d0%b4%d0%b0%d1%80%d1%82%d1%81-%d1%80%d0%b5%d0%b4/"
     },
     {
       "id": 614,
@@ -1247,18 +1720,38 @@
       "category": "Без категории",
       "categoryKey": "other",
       "price": 350,
-      "stock": 36,
+      "stock": 19,
       "status": "ok",
-      "description": "🌱Собственное производство.\nКомпактный, плоский шаровидный кустарник, медленнорастущий.\nВысотой до 0,6 м, ширина 0,3-0,8 м.\nЦветет в июне — июле; средняя продолжительность цветения 45 дней.\nЛистья простые, очередные, яйцевидные, зубчатые по краю, ранней весной красновато-оранжевые, затем ярко-желтые, но мягкого оттенка, летом светло-желтые, холодного оттенка, осенью — оранжево-желтые.\nМесто: солнце.\nЗимостойкость: зона 4.",
+      "description": "Собственное производство.\nКомпактный, плоский шаровидный кустарник, медленнорастущий.\nВысотой до 0,6 м, ширина 0,3-0,8 м.\nЦветет в июне — июле; средняя продолжительность цветения 45 дней.\nЛистья простые, очередные, яйцевидные, зубчатые по краю, ранней весной красновато-оранжевые, затем ярко-желтые, но мягкого оттенка, летом светло-желтые, холодного оттенка, осенью — оранжево-желтые.\nМесто: солнце.\nЗимостойкость: зона 4.\nУпаковка корневой системы: 1л",
       "care": {
+        "bloom": "45 дней",
+        "light": "ло-желтые, холодного оттенка, осенью — оранжево-желтые",
         "hardiness": "зона 4"
       },
-      "image": "/assets/products/p614.jpg",
+      "image": "https://annaflowerfarm.ru/wp-content/uploads/2024/12/779fcec0-de8a-4216-b36a-ca41c2a7253a-1.jpeg",
       "images": [
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2024/12/f901ad34-e885-4129-9433-4b084937385c.jpeg",
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2024/12/779fcec0-de8a-4216-b36a-ca41c2a7253a-1.jpeg"
+        "https://annaflowerfarm.ru/wp-content/uploads/2024/12/779fcec0-de8a-4216-b36a-ca41c2a7253a-1.jpeg",
+        "https://annaflowerfarm.ru/wp-content/uploads/2024/12/f901ad34-e885-4129-9433-4b084937385c.jpeg"
       ],
-      "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/%d1%81%d0%bf%d0%b8%d1%80%d0%b5%d1%8f-%d1%8f%d0%bf%d0%be%d0%bd%d1%81%d0%ba%d0%b0%d1%8f-%d0%b3%d0%be%d0%bb%d0%b4%d0%b5%d0%bd-%d0%bf%d1%80%d0%b8%d0%bd%d1%86%d0%b5%d1%81%d1%81/"
+      "sourceUrl": "https://annaflowerfarm.ru/product/%d1%81%d0%bf%d0%b8%d1%80%d0%b5%d1%8f-%d1%8f%d0%bf%d0%be%d0%bd%d1%81%d0%ba%d0%b0%d1%8f-%d0%b3%d0%be%d0%bb%d0%b4%d0%b5%d0%bd-%d0%bf%d1%80%d0%b8%d0%bd%d1%86%d0%b5%d1%81%d1%81/",
+      "variants": [
+        {
+          "id": 1366,
+          "label": "0.5л",
+          "price": 350,
+          "inStock": true,
+          "stock": 18
+        },
+        {
+          "id": 1367,
+          "label": "3л",
+          "price": 700,
+          "inStock": true,
+          "stock": 1
+        }
+      ],
+      "variantAttr": "Объем контейнера",
+      "priceFrom": true
     },
     {
       "id": 647,
@@ -1266,21 +1759,22 @@
       "category": "Без категории",
       "categoryKey": "other",
       "price": 350,
-      "stock": 195,
+      "stock": 50,
       "status": "ok",
-      "description": "🌱Собственное производство.\nМесто посадки: солнце/полутень.\nВысота: 50 см.\nШирина: 50 см.\nПериод цветения: май-июнь.\nЦветение: однократное.\nЦветок: розовый.\nЛист: тёмно-зелёный, мелкий.\nФорма куста: округлая, компактная.\nПолив: регулярный Почва: свежая, легкая, рыхлая, влажная, хорошо дренированная.\nМорозостойкость: 4 зона (-28/-34⁰C) .\nПрименение: очень популярный сорт спиреи. Незаменимый кустарник для создания невысоких бордюров. Часто используется в одиночных и смешанных посадках с другими растениями Упаковка корневой системы: С3",
+      "description": "Собственное производство.\nМесто посадки: солнце/полутень.\nВысота: 0,3-0,6м\nШирина: до 0,9м\nПериод цветения: май-июнь.\nЦветение: однократное.\nЦветок: розовый.\nЛист: тёмно-зелёный, мелкий.\nФорма куста: округлая, компактная.\nПолив: регулярный Почва: свежая, легкая, рыхлая, влажная, хорошо дренированная.\nМорозостойкость: 4 зона (-28/-34⁰C) .\nПрименение: очень популярный сорт спиреи. Незаменимый кустарник для создания невысоких бордюров. Часто используется в одиночных и смешанных посадках с другими растениями Упаковка корневой системы: 1л",
       "care": {
-        "height": "50 см",
+        "height": "0,3-0,6м",
         "bloom": "май-июнь",
-        "light": "солнце/полутень",
-        "hardiness": "4 зона (-28/-34⁰C)"
+        "light": "солнце/полутень"
       },
-      "image": "/assets/products/p647.jpg",
+      "image": "https://annaflowerfarm.ru/wp-content/uploads/2024/12/CRuEnKXdy6ZAQZZB62ERg-P7UeaEKp6OKL8UQBg1wvVAIigjqULvvfNOC1ASAw2-WPIZy0TCLx2XETDyx_mH3CDF.jpg",
       "images": [
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2024/12/CRuEnKXdy6ZAQZZB62ERg-P7UeaEKp6OKL8UQBg1wvVAIigjqULvvfNOC1ASAw2-WPIZy0TCLx2XETDyx_mH3CDF.jpg",
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2024/12/img_0285-1152x1536.jpeg"
+        "https://annaflowerfarm.ru/wp-content/uploads/2024/12/CRuEnKXdy6ZAQZZB62ERg-P7UeaEKp6OKL8UQBg1wvVAIigjqULvvfNOC1ASAw2-WPIZy0TCLx2XETDyx_mH3CDF.jpg",
+        "https://annaflowerfarm.ru/wp-content/uploads/2024/12/img_5378-1152x1536.jpeg",
+        "https://annaflowerfarm.ru/wp-content/uploads/2024/12/img_5379-1152x1536.jpeg",
+        "https://annaflowerfarm.ru/wp-content/uploads/2024/12/img_5382-1152x1536.jpeg"
       ],
-      "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/%d1%81%d0%bf%d0%b8%d1%80%d0%b5%d1%8f-%d1%8f%d0%bf%d0%be%d0%bd%d1%81%d0%ba%d0%b0%d1%8f-%d0%bb%d0%b8%d1%82%d0%bb-%d0%bf%d1%80%d0%b8%d0%bd%d1%86%d0%b5%d1%81%d1%81/"
+      "sourceUrl": "https://annaflowerfarm.ru/product/%d1%81%d0%bf%d0%b8%d1%80%d0%b5%d1%8f-%d1%8f%d0%bf%d0%be%d0%bd%d1%81%d0%ba%d0%b0%d1%8f-%d0%bb%d0%b8%d1%82%d0%bb-%d0%bf%d1%80%d0%b8%d0%bd%d1%86%d0%b5%d1%81%d1%81/"
     },
     {
       "id": 624,
@@ -1288,432 +1782,195 @@
       "category": "Без категории",
       "categoryKey": "other",
       "price": 350,
-      "stock": 49,
+      "stock": 46,
       "status": "ok",
-      "description": "🌱Собственное производство.\n🌿2х летний саженец\nКрасивый, небольшой, густой, куполовидный кустарник.\nВысота до 0,6 м — 0,8 м, диаметр до 1 м.\nЦветёт в июне — июле. Молодые листочки оранжево-красные, летом становятся оранжево-желтыми и лимонно-зелеными. Осенняя окраска пламенно-красная. Сорт не образует побеги с зеленой окраской листьев.\nМесто: солнце.\nЗимостойкость: зона 4.",
+      "description": "Собственное производство.\n2х летний саженец\nКрасивый, небольшой, густой, куполовидный кустарник.\nВысота до 0,6 м — 0,8 м, диаметр до 1 м.\nЦветёт в июне — июле. Молодые листочки оранжево-красные, летом становятся оранжево-желтыми и лимонно-зелеными. Осенняя окраска пламенно-красная. Сорт не образует побеги с зеленой окраской листьев.\nМесто: солнце.\nЗимостойкость: зона 4.\nУпаковка корневой системы: 1л",
       "care": {
-        "height": "до 0,6 м — 0,8 м, диаметр до 1 м",
+        "height": "до 0,6 м",
         "hardiness": "зона 4"
       },
-      "image": "/assets/products/p624.jpg",
+      "image": "https://annaflowerfarm.ru/wp-content/uploads/2024/12/YUxJW6SDaNAdziGiPcVyRKcUH7ufF9lxdlYvTfSFfreRpQG_NNe_TbWS3CpybJF8QRxv_owxtxY5gp_VHDnCUVUf.jpg",
       "images": [
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2024/12/YUxJW6SDaNAdziGiPcVyRKcUH7ufF9lxdlYvTfSFfreRpQG_NNe_TbWS3CpybJF8QRxv_owxtxY5gp_VHDnCUVUf.jpg",
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2024/12/img_0283-1152x1536.jpeg",
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2024/12/img_0282-1152x1536.jpeg"
+        "https://annaflowerfarm.ru/wp-content/uploads/2024/12/YUxJW6SDaNAdziGiPcVyRKcUH7ufF9lxdlYvTfSFfreRpQG_NNe_TbWS3CpybJF8QRxv_owxtxY5gp_VHDnCUVUf.jpg",
+        "https://annaflowerfarm.ru/wp-content/uploads/2024/12/img_5383-1152x1536.jpeg",
+        "https://annaflowerfarm.ru/wp-content/uploads/2024/12/img_5384-1152x1536.jpeg",
+        "https://annaflowerfarm.ru/wp-content/uploads/2024/12/img_5385-1152x1536.jpeg"
       ],
-      "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/%d1%81%d0%bf%d0%b8%d1%80%d0%b5%d1%8f-%d1%8f%d0%bf%d0%be%d0%bd%d1%81%d0%ba%d0%b0%d1%8f-%d1%84%d0%b0%d0%b9%d0%b5%d1%80%d0%bb%d0%b0%d0%b9%d1%82/"
-    },
-    {
-      "id": 1384,
-      "name": "Туя западная Смарагд",
-      "category": "Без категории",
-      "categoryKey": "other",
-      "price": 400,
-      "stock": 0,
-      "status": "out",
-      "description": "",
-      "care": {},
-      "image": "/assets/products/p1384.jpg",
-      "images": [
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2025/08/ad4886aa-3b6f-451d-84a4-e952a4782bd3-1.jpeg",
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2025/08/a8a77b87-baa2-4076-ad07-f10f89a5e2a4-1.jpeg",
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2025/08/85b44428-4573-4132-9745-aa9de4ee2f7d-1.jpeg"
-      ],
-      "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/%d1%82%d1%83%d1%8f-%d0%b7%d0%b0%d0%bf%d0%b0%d0%b4%d0%bd%d0%b0%d1%8f-%d1%81%d0%bc%d0%b0%d1%80%d0%b0%d0%b3%d0%b4/"
-    },
-    {
-      "id": 2167,
-      "name": "Хризантема мультифлора Branbeach Orange",
-      "category": "Цветы однолетние",
-      "categoryKey": "annuals",
-      "price": 450,
-      "stock": 0,
-      "status": "out",
-      "description": "Хризантема мультифлора Branbeach Orange — эффектный сорт с яркими оранжевыми соцветиями\nМультифлора формирует компактные шаровидные кусты, усыпанные многочисленными соцветиями\nнасыщенного оранжевого оттенка.\nОтносится к семейству Asteraceae. Этот сорт отличается обильным цветением и\nнеприхотливостью в уходе. Идеально подходит для выращивания в открытом грунте, контейнерах и горшках.\nКонтейнер 1л",
-      "care": {},
-      "image": "/assets/products/p2167.jpg",
-      "images": [
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2026/05/img_8401.jpeg"
-      ],
-      "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/%d1%85%d1%80%d0%b8%d0%b7%d0%b0%d0%bd%d1%82%d0%b5%d0%bc%d0%b0-%d0%bc%d1%83%d0%bb%d1%8c%d1%82%d0%b8%d1%84%d0%bb%d0%be%d1%80%d0%b0branbeach-orange/"
-    },
-    {
-      "id": 1666,
-      "name": "ХРИЗАНТЕМА МУЛЬТИФЛОРА BLISS WHITE",
-      "category": "Цветы однолетние",
-      "categoryKey": "annuals",
-      "price": 450,
-      "stock": 0,
-      "status": "out",
-      "description": "🌱Рассада в объёме 1л\nХризантема Мультифлора относится к сортам средне-раннего срока цветения, подойдет для посадки в открытый грунт, вазоны, контейнеры. Цветение — начало сентября, Цветок — 5 см, махровый\nВысота — 40-50 см, Форма куста — шаровидная.",
-      "care": {
-        "height": "— 40-50 см, Форма куста — шаровидная",
-        "bloom": "— начало сентября, Цветок — 5 см, махровый"
-      },
-      "image": "/assets/products/p1666.jpg",
-      "images": [
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2025/10/img_3550-1152x1536.jpeg",
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2025/10/img_3551-1152x1536.jpeg"
-      ],
-      "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/%d1%85%d1%80%d0%b8%d0%b7%d0%b0%d0%bd%d1%82%d0%b5%d0%bc%d0%b0-%d0%bc%d1%83%d0%bb%d1%8c%d1%82%d0%b8%d1%84%d0%bb%d0%be%d1%80%d0%b0-bliss-white/"
-    },
-    {
-      "id": 2156,
-      "name": "Хризантема мультифлора Branfountain Apricot",
-      "category": "Цветы однолетние",
-      "categoryKey": "annuals",
-      "price": 450,
-      "stock": 3,
-      "status": "ok",
-      "description": "Условия выращивания\n• Освещение: прямое солнце не менее 6 часов в день; в полутени куст вытягивается и теряет шаровидную форму\n• Температура днём: 18–24 °C в активной фазе роста\n• Температура ночью: 14–18 °C, для закладки бутонов желателен прохладный ночной режим\n• Минимальная температура без укрытия: ориентир по виду — USDA-зона 5 (около −29 °C)\n• Почва: плодородная, рыхлая, с высоким содержанием органики, обязательно дренированная\n• Кислотность (pH): 6,0–8,0 (нейтральная и слабощелочная)\n• Полив: регулярный, по подсыханию верхнего слоя; почва влажная, но без застоя воды\n• Влажность воздуха: умеренная, во время укоренения — 90–95 % под плёнкой\nОбъём контейнера: 1л",
-      "care": {
-        "light": "прямое солнце не менее 6 часов в день; в полутени куст вытягивается и"
-      },
-      "image": "/assets/products/p2156.jpg",
-      "images": [
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2026/05/img_8404.jpeg",
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2026/05/img_8405.jpeg",
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2026/05/img_9729-1152x1536.jpeg"
-      ],
-      "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/%d1%85%d1%80%d0%b8%d0%b7%d0%b0%d0%bd%d1%82%d0%b5%d0%bc%d0%b0-%d0%bc%d1%83%d0%bb%d1%8c%d1%82%d0%b8%d1%84%d0%bb%d0%be%d1%80%d0%b0-branfountain-apricot/"
-    },
-    {
-      "id": 2131,
-      "name": "Хризантема мультифлора Branfountain Lemon",
-      "category": "Цветы однолетние",
-      "categoryKey": "annuals",
-      "price": 450,
-      "stock": 0,
-      "status": "out",
-      "description": "Условия выращивания\n• Освещение: полное солнце, минимум 5–6 часов прямого света в день\n• Температура днём: комфортная для садовой хризантемы — 18–24 °C\n• Температура ночью: 12–16 °C, не ниже 10 °C для активного роста\n• Минимум: укоренять при температуре от 10 °C, желательно с нижним подогревом субстрата\n• Почва: рыхлая, плодородная, хорошо дренированная; pH слабокислая до нейтральной (около 6,0–7,0)\n• Полив: регулярный, почва постоянно влажная, но не переувлажнённая; полив снизу предпочтительнее\n• Влажность воздуха: умеренная, для укоренения — повышенная под укрытием\nОбъём контейнера: 1л",
-      "care": {
-        "light": "полное солнце, минимум 5–6 часов прямого света в день"
-      },
-      "image": "/assets/products/p2131.jpg",
-      "images": [
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2026/05/img_8408.jpeg",
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2026/05/img_8409.jpeg",
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2026/05/img_9721-1152x1536.jpeg"
-      ],
-      "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/%d1%85%d1%80%d0%b8%d0%b7%d0%b0%d0%bd%d1%82%d0%b5%d0%bc%d0%b0-%d0%bc%d1%83%d0%bb%d1%8c%d1%82%d0%b8%d1%84%d0%bb%d0%be%d1%80%d0%b0-branfountain-lemon/"
-    },
-    {
-      "id": 2150,
-      "name": "Хризантема мультифлора Branfountain Pink",
-      "category": "Цветы однолетние",
-      "categoryKey": "annuals",
-      "price": 450,
-      "stock": 2,
-      "status": "low",
-      "description": "Условия выращивания\n• Освещение: предпочитает яркий рассеянный свет, хорошо растет на солнечных участках\n• Полив: регулярный, умеренный, без переувлажнения и пересушивания\n• Грунт: рыхлый, питательный, с хорошим дренажом, нейтральной или слабокислой реакции\n• Температурный режим: теплолюбива в период активного роста, холодостойка осенью\nОбъём контейнера: 1л",
-      "care": {
-        "light": "предпочитает яркий рассеянный свет, хорошо растет на солнечных участка"
-      },
-      "image": "/assets/products/p2150.jpg",
-      "images": [
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2026/05/img_8413.jpeg",
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2026/05/img_8412.jpeg",
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2026/05/img_9727-1152x1536.jpeg"
-      ],
-      "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/%d1%85%d1%80%d0%b8%d0%b7%d0%b0%d0%bd%d1%82%d0%b5%d0%bc%d0%b0-%d0%bc%d1%83%d0%bb%d1%8c%d1%82%d0%b8%d1%84%d0%bb%d0%be%d1%80%d0%b0-branfountain-pink/"
-    },
-    {
-      "id": 2127,
-      "name": "Хризантема мультифлора Branfountain Purple",
-      "category": "Цветы однолетние",
-      "categoryKey": "annuals",
-      "price": 450,
-      "stock": 0,
-      "status": "out",
-      "description": "Условия выращивания\n• Освещение: полное солнце, минимум 6 часов прямого света; в полутени куст вытягивается и хуже цветёт\n• Температура днём: комфортно 18–24°C, переносит 28°C при достаточном поливе\n• Температура ночью: 12–18°C ускоряет окрашивание бутонов\n• Минимум: взрослое растение выдерживает короткие заморозки до −3°C, длительный минус нежелателен\n• Почва: плодородная, влагоёмкая, хорошо дренированная\n• pH почвы: 6,0–6,8, слабокислая или нейтральная\n• Полив: умеренный и регулярный, без застоя; земля держится во влажном состоянии, верхний слой подсыхает между поливами\n• Влажность воздуха: средняя, обливать соцветия не нужно — провоцирует пятнистость лепестков\nГоршок: 1л",
-      "care": {
-        "light": "полное солнце, минимум 6 часов прямого света; в полутени куст вытягива"
-      },
-      "image": "/assets/products/p2127.jpg",
-      "images": [
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2026/05/img_8416.jpeg",
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2026/05/img_8417.jpeg",
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2026/05/img_9720-1152x1536.jpeg"
-      ],
-      "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/%d1%85%d1%80%d0%b8%d0%b7%d0%b0%d0%bd%d1%82%d0%b5%d0%bc%d0%b0-%d0%bc%d1%83%d0%bb%d1%8c%d1%82%d0%b8%d1%84%d0%bb%d0%be%d1%80%d0%b0-branfountain-purple/"
-    },
-    {
-      "id": 2142,
-      "name": "Хризантема мультифлора Branfountain Salmon",
-      "category": "Цветы однолетние",
-      "categoryKey": "annuals",
-      "price": 450,
-      "stock": 2,
-      "status": "low",
-      "description": "Условия выращивания\n• Освещение: солнечное местоположение, допустима легкая полутень\n• Почва: плодородная, хорошо дренированная, нейтральная или слабокислая\n• Полив: регулярный, умеренный, без переувлажнения\n• Зимостойкость: требует укрытия или выкапывания на зиму в большинстве регионов России\n• Место посадки: контейнеры, балконные ящики, открытый грунт\nОбъём контейнера: 1л",
-      "care": {
-        "light": "солнечное местоположение, допустима легкая полутень",
-        "hardiness": "требует укрытия или выкапывания на зиму в большинстве регионов России"
-      },
-      "image": "/assets/products/p2142.jpg",
-      "images": [
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2026/05/img_8423.jpeg",
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2026/05/img_8422.jpeg",
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2026/05/img_8421.jpeg",
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2026/05/img_8420.jpeg",
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2026/05/img_9724-1152x1536.jpeg"
-      ],
-      "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/%d1%85%d1%80%d0%b8%d0%b7%d0%b0%d0%bd%d1%82%d0%b5%d0%bc%d0%b0-%d0%bc%d1%83%d0%bb%d1%8c%d1%82%d0%b8%d1%84%d0%bb%d0%be%d1%80%d0%b0-branfountain-salmon/"
-    },
-    {
-      "id": 2134,
-      "name": "Хризантема мультифлора Branfountain White",
-      "category": "Цветы однолетние",
-      "categoryKey": "annuals",
-      "price": 450,
-      "stock": 0,
-      "status": "out",
-      "description": "Условия выращивания\n• Освещение: полное солнце, минимум 5–6 часов прямого света в день\n• Температура днём: комфортная для садовой хризантемы — 18–24 °C\n• Температура ночью: 12–16 °C, не ниже 10 °C для активного роста\n• Минимум: укоренять при температуре от 10 °C, желательно с нижним подогревом субстрата\n• Почва: рыхлая, плодородная, хорошо дренированная; pH слабокислая до нейтральной (около 6,0–7,0)\n• Полив: регулярный, почва постоянно влажная, но не переувлажнённая; полив снизу предпочтительнее\n• Влажность воздуха: умеренная, для укоренения — повышенная под укрытием\nОбъём контейнера: 1л",
-      "care": {
-        "light": "полное солнце, минимум 5–6 часов прямого света в день"
-      },
-      "image": "/assets/products/p2134.jpg",
-      "images": [
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2026/05/img_8455.jpeg",
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2026/05/img_9722-1152x1536.jpeg"
-      ],
-      "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/%d1%85%d1%80%d0%b8%d0%b7%d0%b0%d0%bd%d1%82%d0%b5%d0%bc%d0%b0-%d0%bc%d1%83%d0%bb%d1%8c%d1%82%d0%b8%d1%84%d0%bb%d0%be%d1%80%d0%b0-branfountain-white/"
-    },
-    {
-      "id": 2223,
-      "name": "Хризантема мультифлора Bransound Lemon",
-      "category": "Цветы однолетние",
-      "categoryKey": "annuals",
-      "price": 450,
-      "stock": 4,
-      "status": "ok",
-      "description": "Условия выращивания\n• Освещение: полное солнце, минимум 5-6 часов прямого света в день\n• Температура днём: 18-24 °C — оптимум для роста и закладки бутонов\n• Температура ночью: 14-18 °C, прохладные ночи усиливают окраску цветка\n• Минимум: кратковременно переносит +2…+5 °C, длительный холод повреждает побеги\n• Почва и pH: рыхлая, хорошо дренированная, нейтральная или слабокислая, pH 6,5-7,0; при тяжёлых грунтах добавляйте органику\n• Полив: регулярный, у основания растения, утром; в жару — чаще, не допуская пересыхания кома\n• Влажность воздуха: умеренная, листву по верху не опрыскивайте — это провоцирует пятнистости\n• USDA-зона: 5-9 (общая для мультифлора хризантем)\nОбъём контейнера: 1л",
-      "care": {
-        "light": "полное солнце, минимум 5-6 часов прямого света в день"
-      },
-      "image": "/assets/products/p2223.jpg",
-      "images": [
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2026/05/img_8426.jpeg"
-      ],
-      "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/%d1%85%d1%80%d0%b8%d0%b7%d0%b0%d0%bd%d1%82%d0%b5%d0%bc%d0%b0-%d0%bc%d1%83%d0%bb%d1%8c%d1%82%d0%b8%d1%84%d0%bb%d0%be%d1%80%d0%b0-bransound-lemon/"
+      "sourceUrl": "https://annaflowerfarm.ru/product/%d1%81%d0%bf%d0%b8%d1%80%d0%b5%d1%8f-%d1%8f%d0%bf%d0%be%d0%bd%d1%81%d0%ba%d0%b0%d1%8f-%d1%84%d0%b0%d0%b9%d0%b5%d1%80%d0%bb%d0%b0%d0%b9%d1%82/"
     },
     {
       "id": 1500,
       "name": "ХРИЗАНТЕМА МУЛЬТИФЛОРА BRANSOUND MAGENTA",
       "category": "Цветы однолетние",
       "categoryKey": "annuals",
-      "price": 450,
-      "stock": 6,
-      "status": "ok",
-      "description": "Хризантема мультифлора BRANSOUND MAGENTA- Средне-ранний низкорослый сорт очень темного пурпурного цвета, зацветающий с конца августа, с цветками диаметром 4 см. Начало цветения: вторая половина августа. Куст компактный, шаровидный, высотой до 40-50 см.Срок цветения 36 неделя. Махровый, самостоятельно приобретающий полусферическую форму, благодаря генетике и большому количеству соцветий. Для поддержания декоративности и обильности цветения растениям необходим открытый солнечный участок с полноценным освещением в течение всего дня.\nОбъём контейнера: 1л",
-      "care": {},
-      "image": "/assets/products/p1500.jpg",
-      "images": [
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2025/09/img_2096.jpeg",
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2025/09/img_9726-1152x1536.jpeg"
-      ],
-      "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/%d1%85%d1%80%d0%b8%d0%b7%d0%b0%d0%bd%d1%82%d0%b5%d0%bc%d0%b0-%d0%bc%d1%83%d0%bb%d1%8c%d1%82%d0%b8%d1%84%d0%bb%d0%be%d1%80%d0%b0-bransound-magenta/"
-    },
-    {
-      "id": 2184,
-      "name": "Хризантема мультифлора Ditto White",
-      "category": "Цветы однолетние",
-      "categoryKey": "annuals",
-      "price": 450,
-      "stock": 0,
-      "status": "out",
-      "description": "Условия выращивания\n• Освещение: полное солнце или лёгкая полутень; не менее 6 часов прямого света\n• Температура днём: 20–24 °C в период активного роста\n• Температура ночью: 16–18 °C; прохладные ночи усиливают компактность куста\n• Минимально допустимая: около 0 °C; чувствителен к заморозкам в активной фазе\n• Почва и pH: плодородная, хорошо дренированная, богатая органикой; pH 5,3–6,6\n• Полив: умеренный, регулярный; почва стабильно влажная, без застоя\n• Влажность воздуха: средняя; в жару полезно опрыскивание утром или вечером\n• USDA-зона: 5–9\nОбъём контейнера: 1л",
+      "price": 900,
+      "stock": 2,
+      "status": "low",
+      "description": "Хризантема мультифлора BRANSOUND MAGENTA- Средне-ранний низкорослый сорт очень темного пурпурного цвета, зацветающий с конца августа, с цветками диаметром 4 см. Начало цветения: вторая половина августа. Куст компактный, шаровидный, высотой до 40-50 см.Срок цветения 36 неделя. Махровый, самостоятельно приобретающий полусферическую форму, благодаря генетике и большому количеству соцветий. Для поддержания декоративности и обильности цветения растениям необходим открытый солнечный участок с полноценным освещением в течение всего дня.\nОбъём контейнера: 3л",
       "care": {
-        "light": "полное солнце или лёгкая полутень; не менее 6 часов прямого света"
+        "bloom": "вторая половина августа",
+        "light": "м в течение всего дня"
       },
-      "image": "/assets/products/p2184.jpg",
+      "image": "https://annaflowerfarm.ru/wp-content/uploads/2025/09/img_2096.jpeg",
       "images": [
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2026/05/img_0076.jpeg"
+        "https://annaflowerfarm.ru/wp-content/uploads/2025/09/img_2096.jpeg"
       ],
-      "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/%d1%85%d1%80%d0%b8%d0%b7%d0%b0%d0%bd%d1%82%d0%b5%d0%bc%d0%b0-%d0%bc%d1%83%d0%bb%d1%8c%d1%82%d0%b8%d1%84%d0%bb%d0%be%d1%80%d0%b0-ditto-white/"
+      "sourceUrl": "https://annaflowerfarm.ru/product/%d1%85%d1%80%d0%b8%d0%b7%d0%b0%d0%bd%d1%82%d0%b5%d0%bc%d0%b0-%d0%bc%d1%83%d0%bb%d1%8c%d1%82%d0%b8%d1%84%d0%bb%d0%be%d1%80%d0%b0-bransound-magenta/"
     },
     {
       "id": 1464,
       "name": "Хризантема мультифлора GIGI DARK PINK",
       "category": "Цветы однолетние",
       "categoryKey": "annuals",
-      "price": 450,
-      "stock": 4,
-      "status": "ok",
-      "description": "Объём контейнера: 1л",
+      "price": 900,
+      "stock": 0,
+      "status": "out",
+      "description": "Объём контейнера: 3л",
       "care": {},
-      "image": "/assets/products/p1464.jpg",
+      "image": "https://annaflowerfarm.ru/wp-content/uploads/2025/08/img_1655-1152x1536.jpeg",
       "images": [
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2025/08/img_1655-1152x1536.jpeg",
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2025/08/img_9728-1152x1536.jpeg"
+        "https://annaflowerfarm.ru/wp-content/uploads/2025/08/img_1655-1152x1536.jpeg"
       ],
-      "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/%d1%85%d1%80%d0%b8%d0%b7%d0%b0%d0%bd%d1%82%d0%b5%d0%bc%d0%b0-%d0%bc%d1%83%d0%bb%d1%8c%d1%82%d0%b8%d1%84%d0%bb%d0%be%d1%80%d0%b0-gigi-dark-pink/"
-    },
-    {
-      "id": 2145,
-      "name": "Хризантема мультифлора Meridian Cherry Red",
-      "category": "Цветы однолетние",
-      "categoryKey": "annuals",
-      "price": 450,
-      "stock": 3,
-      "status": "ok",
-      "description": "Условия выращивания\n• Освещение: солнечное место, допустима легкая полутень\n• Почва: плодородная, рыхлая, хорошо дренированная\n• Полив: регулярный, умеренный, без переувлажнения\n• Температурный режим: теплолюбива, требует защиты от заморозков в период активной вегетации\n• Выращивание: в открытом грунте, контейнерах, горшках\nОбъём контейнера: 1л",
-      "care": {
-        "light": "солнечное место, допустима легкая полутень"
-      },
-      "image": "/assets/products/p2145.jpg",
-      "images": [
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2026/05/img_8432.jpeg",
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2026/05/img_9725-1152x1536.jpeg"
-      ],
-      "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/%d1%85%d1%80%d0%b8%d0%b7%d0%b0%d0%bd%d1%82%d0%b5%d0%bc%d0%b0-%d0%bc%d1%83%d0%bb%d1%8c%d1%82%d0%b8%d1%84%d0%bb%d0%be%d1%80%d0%b0-meridian-cherry-red/"
+      "sourceUrl": "https://annaflowerfarm.ru/product/%d1%85%d1%80%d0%b8%d0%b7%d0%b0%d0%bd%d1%82%d0%b5%d0%bc%d0%b0-%d0%bc%d1%83%d0%bb%d1%8c%d1%82%d0%b8%d1%84%d0%bb%d0%be%d1%80%d0%b0-gigi-dark-pink/"
     },
     {
       "id": 1495,
       "name": "ХРИЗАНТЕМА МУЛЬТИФЛОРА POWER RED",
       "category": "Цветы однолетние",
       "categoryKey": "annuals",
-      "price": 450,
+      "price": 900,
       "stock": 1,
       "status": "low",
-      "description": "Хризантема мультифлора Power Red – это отличный выбор для садоводов, которые хотят добавить красок своему участку.Высота: 40-50 см.Диаметр цветка: 4 см.Форма куста: шаровидная.Цвет: насыщенно-красный.Период цветения: август-октябрь.\nОбъём контейнера: 1л",
+      "description": "Хризантема мультифлора Power Red – это отличный выбор для садоводов, которые хотят добавить красок своему участку.Высота: 40-50 см.Диаметр цветка: 4 см.Форма куста: шаровидная.Цвет: насыщенно-красный.Период цветения: август-октябрь.\nОбъём контейнера: 3л",
       "care": {
         "height": "40-50 см",
         "bloom": "август-октябрь"
       },
-      "image": "/assets/products/p1495.jpg",
+      "image": "https://annaflowerfarm.ru/wp-content/uploads/2025/09/img_2092.jpeg",
       "images": [
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2025/09/img_2092.jpeg",
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2025/09/img_9723-1152x1536.jpeg"
+        "https://annaflowerfarm.ru/wp-content/uploads/2025/09/img_2092.jpeg"
       ],
-      "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/%d1%85%d1%80%d0%b8%d0%b7%d0%b0%d0%bd%d1%82%d0%b5%d0%bc%d0%b0-%d0%bc%d1%83%d0%bb%d1%8c%d1%82%d0%b8%d1%84%d0%bb%d0%be%d1%80%d0%b0-power-red/"
+      "sourceUrl": "https://annaflowerfarm.ru/product/%d1%85%d1%80%d0%b8%d0%b7%d0%b0%d0%bd%d1%82%d0%b5%d0%bc%d0%b0-%d0%bc%d1%83%d0%bb%d1%8c%d1%82%d0%b8%d1%84%d0%bb%d0%be%d1%80%d0%b0-power-red/"
     },
     {
-      "id": 2189,
-      "name": "Хризантема мультифлора Sunbeam Lucky Purple",
-      "category": "Цветы однолетние",
-      "categoryKey": "annuals",
-      "price": 450,
-      "stock": 3,
+      "id": 2358,
+      "name": "Шалфей дубравный «Caradonna»",
+      "category": "Цветы многолетние",
+      "categoryKey": "perennials",
+      "price": 400,
+      "stock": 19,
       "status": "ok",
-      "description": "Условия выращивания\n• Освещение: полное солнце — не менее 6 часов прямого солнечного света в день; при недостатке света цветение слабеет, куст вытягивается\n• Температура днём: комфортный диапазон для активного роста — умеренное тепло без экстремальной жары\n• Температура ночью: прохладные ночи стимулируют закладку бутонов и насыщенность окраски\n• Минимальная температура: кратковременные слабые заморозки переносит, но цветки и листья страдают; устойчивых морозов не выдерживает\n• Почва: плодородная, рыхлая, хорошо дренированная, богатая органикой; pH слабокислый — нейтральный (6,0–7,0)\n• Полив: регулярный, поддерживать умеренно влажную почву; в жару и сухие периоды — обильнее; избегать переувлажнения и застоя воды у корней\n• Влажность воздуха: умеренная; в дождливое лето особенно важна циркуляция воздуха для профилактики мучнистой росы\n• USDA-зона: вид Chrysanthemum × morifolium ориентировочно зимует в зонах 5–9\nОбъём контейнера: 1л",
+      "description": "Шалфей дубравный Карадонна — высокорослое многолетнее декоративное и лекарственное растение. Стебли прямостоячие, простые высотой густо усеяны темно – зелеными листочками.  В народе ее еще называют сальвией дубравной. Один из самых ярких сортов среди шалфеев. Выделяется в цветнике яркими фиолетовыми соцветиями – свечками и почти черными стеблями. Цветение продолжительное на протяжении всего лета, начиная с июня.\nимеет награду «За садовые заслуги» от английского королевского садоводческого общества\nШирина:  30 см\nПериод цветения:  июнь-июль, после обрезки зацветает повторно август-сентябрь\nЦветение:  повторное после обрезки\nСоцветие:  фиолетово-синее\nЛист:  узкий, зелёный\nФорма куста:  прямостоячая\nПолив:  умеренный\nПочва:  рыхлая, достаточно сухая, не любит переувлажнения\nМорозостойкость:  4 зона (-28/-34⁰C)\nПрименение:  одиночные и групповые посадки, миксбордеры, рокарии, красиво сочетается с розами. Сады в природном стиле\nУпаковка корневой системы:  0,5л",
       "care": {
-        "light": "полное солнце — не менее 6 часов прямого солнечного света в день; при"
+        "bloom": "продолжительное на протяжении всего лета, начиная с июня"
       },
-      "image": "/assets/products/p2189.jpg",
+      "image": "https://annaflowerfarm.ru/wp-content/uploads/2026/06/img_1324.jpeg",
       "images": [
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2026/05/img_8444.jpeg",
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2026/05/img_8445.jpeg",
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2026/05/img_8446.jpeg",
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2026/05/img_0075-1152x1536.jpeg"
+        "https://annaflowerfarm.ru/wp-content/uploads/2026/06/img_1324.jpeg"
       ],
-      "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/%d1%85%d1%80%d0%b8%d0%b7%d0%b0%d0%bd%d1%82%d0%b5%d0%bc%d0%b0-%d0%bc%d1%83%d0%bb%d1%8c%d1%82%d0%b8%d1%84%d0%bb%d0%be%d1%80%d0%b0-sunbeam-lucky-purple/"
+      "sourceUrl": "https://annaflowerfarm.ru/product/%d1%88%d0%b0%d0%bb%d1%84%d0%b5%d0%b9-%d0%b4%d1%83%d0%b1%d1%80%d0%b0%d0%b2%d0%bd%d1%8b%d0%b9-caradonna/"
     },
     {
       "id": 2253,
       "name": "Шалфей дубравный New Dimension Blue",
       "category": "Цветы многолетние",
       "categoryKey": "perennials",
-      "price": 300,
-      "stock": 12,
-      "status": "ok",
-      "description": "Ширина: 30-40 см\nПериод цветения: июнь-июль, после обрезки зацветает повторно август-сентябрь\nЦветение: повторное после обрезки\nСоцветие: сине-фиолетовое\nЛист: узкий, зелёный\nФорма куста: компактная, округлая\nПолив: умеренный\nПочва: рыхлая, достаточно сухая, не любит переувлажнения\nМорозостойкость: 4 зона (-28/-34⁰C)\nПрименение: одиночные и групповые посадки, миксбордеры, рокарии, красиво сочетается с розами. Сады в природном стиле\nУпаковка корневой системы: 0,5л",
+      "price": 550,
+      "stock": 0,
+      "status": "out",
+      "description": "Ширина: 30-40 см\nПериод цветения: июнь-июль, после обрезки зацветает повторно август-сентябрь\nЦветение: повторное после обрезки\nСоцветие: сине-фиолетовое\nЛист: узкий, зелёный\nФорма куста: компактная, округлая\nПолив: умеренный\nПочва: рыхлая, достаточно сухая, не любит переувлажнения\nМорозостойкость: 4 зона (-28/-34⁰C)\nПрименение: одиночные и групповые посадки, миксбордеры, рокарии, красиво сочетается с розами. Сады в природном стиле\nУпаковка корневой системы: 2л",
       "care": {
-        "bloom": "июнь-июль, после обрезки зацветает повторно август-сентябрь",
-        "hardiness": "4 зона (-28/-34⁰C)"
+        "bloom": "июнь-июль, после обрезки зацветает повторно август-сентябрь"
       },
-      "image": "/assets/products/p2253.jpg",
+      "image": "https://annaflowerfarm.ru/wp-content/uploads/2026/05/img_0317.jpeg",
       "images": [
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2026/05/img_0317.jpeg",
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2026/05/img_0304-1152x1536.jpeg",
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2026/05/img_0303-1152x1536.jpeg"
+        "https://annaflowerfarm.ru/wp-content/uploads/2026/05/img_0317.jpeg",
+        "https://annaflowerfarm.ru/wp-content/uploads/2026/05/img_1634-1152x1536.jpeg"
       ],
-      "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/%d1%88%d0%b0%d0%bb%d1%84%d0%b5%d0%b9-%d0%b4%d1%83%d0%b1%d1%80%d0%b0%d0%b2%d0%bd%d1%8b%d0%b9-new-dimension-blue/"
+      "sourceUrl": "https://annaflowerfarm.ru/product/%d1%88%d0%b0%d0%bb%d1%84%d0%b5%d0%b9-%d0%b4%d1%83%d0%b1%d1%80%d0%b0%d0%b2%d0%bd%d1%8b%d0%b9-new-dimension-blue/"
     },
     {
       "id": 2249,
       "name": "Шалфей дубравный New Dimension Rose",
       "category": "Цветы многолетние",
       "categoryKey": "perennials",
-      "price": 300,
-      "stock": 12,
-      "status": "ok",
-      "description": "Ширина: 30-40 см\nПериод цветения: июнь-июль, после обрезки зацветает повторно август-сентябрь\nЦветение: повторное после обрезки\nСоцветие: розовое\nЛист: узкий, зелёный\nФорма куста: компактная, округлая\nПолив: умеренный\nПочва: рыхлая, достаточно сухая, не любит переувлажнения\nМорозостойкость: 4 зона (-28/-34⁰C)\nПрименение: одиночные и групповые посадки, миксбордеры, рокарии, красиво сочетается с розами. Сады в природном стиле\nУпаковка корневой системы: 0,5л",
+      "price": 550,
+      "stock": 0,
+      "status": "out",
+      "description": "Ширина: 30-40 см\nПериод цветения: июнь-июль, после обрезки зацветает повторно август-сентябрь\nЦветение: повторное после обрезки\nСоцветие: розовое\nЛист: узкий, зелёный\nФорма куста: компактная, округлая\nПолив: умеренный\nПочва: рыхлая, достаточно сухая, не любит переувлажнения\nМорозостойкость: 4 зона (-28/-34⁰C)\nПрименение: одиночные и групповые посадки, миксбордеры, рокарии, красиво сочетается с розами. Сады в природном стиле\nУпаковка корневой системы: 2л",
       "care": {
-        "bloom": "июнь-июль, после обрезки зацветает повторно август-сентябрь",
-        "hardiness": "4 зона (-28/-34⁰C)"
+        "bloom": "июнь-июль, после обрезки зацветает повторно август-сентябрь"
       },
-      "image": "/assets/products/p2249.jpg",
+      "image": "https://annaflowerfarm.ru/wp-content/uploads/2026/05/img_0318.jpeg",
       "images": [
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2026/05/img_0318.jpeg",
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2026/05/img_0301-1152x1536.jpeg",
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2026/05/img_0302-1152x1536.jpeg"
+        "https://annaflowerfarm.ru/wp-content/uploads/2026/05/img_0318.jpeg",
+        "https://annaflowerfarm.ru/wp-content/uploads/2026/05/img_1633-1152x1536.jpeg"
       ],
-      "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/%d1%88%d0%b0%d0%bb%d1%84%d0%b5%d0%b9-new-dimension-rose/"
+      "sourceUrl": "https://annaflowerfarm.ru/product/%d1%88%d0%b0%d0%bb%d1%84%d0%b5%d0%b9-new-dimension-rose/"
     },
     {
       "id": 2286,
       "name": "Эхинацея Mellow Yellows",
       "category": "Цветы многолетние",
       "categoryKey": "perennials",
-      "price": 300,
-      "stock": 6,
-      "status": "ok",
+      "price": 600,
+      "stock": 2,
+      "status": "low",
       "description": "Эхинацея пурпурная Mellow Yellow (Echinacea purpurea Mellow Yellow) — многолетнее травянистое растение с крупными жёлтыми цветками. Отличается неприхотливостью, длительным периодом цветения и декоративными качествами\nХарактеристики\n• Высота. 60–80 см.\n• Диаметр цветка. Около 15 см.\n• Цвет. Лепестки окрашены в тёплые, чуть приглушённые жёлтые тона: сливочный, лимонный, тёмно-жёлтый. Центр выпуклый, зеленовато-коричневый.\n• Период цветения. С июля по сентябрь.\n• Листья. Прикорневые — овальные, зазубренные, сужаются к корешку и образуют розетку; стеблевые — сидячие, ланцетные, шершавые.\n• Зимостойкость. Зона 4 (до −29 °C или −34 °C в зависимости от источника).\n• Местоположение. Солнечное\n• Расстояние между растениями — 30–40 см.",
       "care": {
         "height": "60–80 см",
-        "bloom": "С июля по сентябрь",
-        "light": "Солнечное",
+        "bloom": "и декоративными качествами",
         "hardiness": "Зона 4 (до −29 °C или −34 °C в зависимости от источника)"
       },
-      "image": "/assets/products/p2286.png",
+      "image": "https://annaflowerfarm.ru/wp-content/uploads/2026/05/img_8644.png",
       "images": [
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2026/05/img_8644.png",
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2026/05/img_0483-1152x1536.jpeg"
+        "https://annaflowerfarm.ru/wp-content/uploads/2026/05/img_8644.png",
+        "https://annaflowerfarm.ru/wp-content/uploads/2026/05/img_2309-1152x1536.jpeg",
+        "https://annaflowerfarm.ru/wp-content/uploads/2026/05/img_2311-1152x1536.jpeg"
       ],
-      "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/%d1%8d%d1%85%d0%b8%d0%bd%d0%b0%d1%86%d0%b5%d1%8f-mellow-yellows/"
+      "sourceUrl": "https://annaflowerfarm.ru/product/%d1%8d%d1%85%d0%b8%d0%bd%d0%b0%d1%86%d0%b5%d1%8f-mellow-yellows/"
     },
     {
       "id": 2282,
       "name": "Эхинацея Пау-Вау White",
       "category": "Цветы многолетние",
       "categoryKey": "perennials",
-      "price": 300,
-      "stock": 6,
-      "status": "ok",
+      "price": 600,
+      "stock": 2,
+      "status": "low",
       "description": "Эхинацея пурпурная Пау Вау Уайт (Echinacea purpurea Pow Wow White) — многолетнее травянистое растение с крупными белыми цветками. Подходит для декоративного озеленения, создания миксбордеров, групповых посадок и срезки.\nХарактеристики\n• Высота. 40–70 см.\n• Диаметр цветка. 8–10 см.\n• Цвет. Чисто-белый с контрастным центром зеленовато-жёлтого или зеленовато-коричневого цвета.\n• Период цветения. С июня по сентябрь около 60 дней.\n• Листья. Прикорневые — широкоовальные, зазубренные, на длинных черешках; стеблевые — сидячие, ланцетные, шершавые.\n• Почва. Питательная, хорошо обработанная и дренированная.\n• Местоположение. Солнце, полутень.\n• Климатическая зона. 4 (от −34,4 до −28,9 °C).\nРастение хорошо разветвляется, образуя больше цветков, чем любой другой компактный сорт с белыми цветками.",
       "care": {
         "height": "40–70 см",
-        "bloom": "С июня по сентябрь около 60 дней",
-        "light": "Солнце, полутень"
+        "bloom": "С июня по сентябрь около 60 дней"
       },
-      "image": "/assets/products/p2282.png",
+      "image": "https://annaflowerfarm.ru/wp-content/uploads/2026/05/img_8643.png",
       "images": [
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2026/05/img_8643.png",
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2026/05/img_0482-1152x1536.jpeg"
+        "https://annaflowerfarm.ru/wp-content/uploads/2026/05/img_8643.png",
+        "https://annaflowerfarm.ru/wp-content/uploads/2026/05/img_2312-1152x1536.jpeg",
+        "https://annaflowerfarm.ru/wp-content/uploads/2026/05/img_2313-1152x1536.jpeg"
       ],
-      "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/%d1%8d%d1%85%d0%b8%d0%bd%d0%b0%d1%86%d0%b5%d1%8f-%d0%bf%d0%b0%d1%83-%d0%b2%d0%b0%d1%83-white/"
+      "sourceUrl": "https://annaflowerfarm.ru/product/%d1%8d%d1%85%d0%b8%d0%bd%d0%b0%d1%86%d0%b5%d1%8f-%d0%bf%d0%b0%d1%83-%d0%b2%d0%b0%d1%83-white/"
     },
     {
       "id": 2284,
       "name": "Эхинацея пурпурная «Бравадо»",
       "category": "Цветы многолетние",
       "categoryKey": "perennials",
-      "price": 300,
-      "stock": 0,
-      "status": "out",
-      "description": "Эхинацея пурпурная «Бравадо» (Echinacea purpurea «Bravado») — многолетнее травянистое растение с крупными тёмно-розовыми цветками. Отличается высокой декоративностью, устойчивостью к болезням и засухе, а также длительным периодом цветения.\nХарактеристики\n• Высота растения. До 100 см.\n• Диаметр соцветий. До 10–15 см.\n• Цветки. Тёмно-розовые с куполообразной сердцевиной коричневато-оранжевого оттенка. Лепестки расположены горизонтально.\n• Период цветения. С июля по сентябрь.\n• Листья. Прикорневые — овальные, зазубренные, сужаются к корешку и образуют розетку; стеблевые — сидячие, ланцетные, шершавые.\n• Морозостойкость. Выдерживает температуры до −35 °C.\n• Зона зимостойкости. 4 (подходит для Московской области и большей части России).\n• Местоположение. Солнечные участки или лёгкая полутень.",
+      "price": 600,
+      "stock": 9,
+      "status": "ok",
+      "description": "Эхинацея пурпурная «Бравадо» (Echinacea purpurea «Bravado») — многолетнее травянистое растение с крупными тёмно-розовыми цветками. Отличается высокой декоративностью, устойчивостью к болезням и засухе, а также длительным периодом цветения.\nХарактеристики\n• Высота растения. До 100 см.\n• Диаметр соцветий. До 10–15 см.\n• Цветки. Тёмно-розовые с куполообразной сердцевиной коричневато-оранжевого оттенка. Лепестки расположены горизонтально.\n• Период цветения. С июля по сентябрь.\n• Листья. Прикорневые — овальные, зазубренные, сужаются к корешку и образуют розетку; стеблевые — сидячие, ланцетные, шершавые.\n• Морозостойкость. Выдерживает температуры до −35 °C.\n• Зона зимостойкости. 4 (подходит для Московской области и большей части России).\n• Местоположение. Солнечные участки или лёгкая полутень.\nУпаковка корневой системы: 1,5л",
       "care": {
-        "height": "растения",
-        "bloom": "С июля по сентябрь",
-        "light": "Солнечные участки или лёгкая полутень",
-        "hardiness": "Выдерживает температуры до −35 °C"
+        "bloom": "Характеристики",
+        "hardiness": "4 (подходит для Московской области и большей части России)"
       },
-      "image": "/assets/products/p2284.png",
+      "image": "https://annaflowerfarm.ru/wp-content/uploads/2026/05/img_0462.png",
       "images": [
-        "https://xn----7sbbqrluc1bf5k.xn--p1ai/wp-content/uploads/2026/05/img_0462.png"
+        "https://annaflowerfarm.ru/wp-content/uploads/2026/05/img_0462.png",
+        "https://annaflowerfarm.ru/wp-content/uploads/2026/05/img_4993-1152x1536.jpeg",
+        "https://annaflowerfarm.ru/wp-content/uploads/2026/05/img_5061-1152x1536.jpeg"
       ],
-      "sourceUrl": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product/%d1%8d%d1%85%d0%b8%d0%bd%d0%b0%d1%86%d0%b5%d1%8f-%d0%bf%d1%83%d1%80%d0%bf%d1%83%d1%80%d0%bd%d0%b0%d1%8f-%d0%b1%d1%80%d0%b0%d0%b2%d0%b0%d0%b4%d0%be/"
+      "sourceUrl": "https://annaflowerfarm.ru/product/%d1%8d%d1%85%d0%b8%d0%bd%d0%b0%d1%86%d0%b5%d1%8f-%d0%bf%d1%83%d1%80%d0%bf%d1%83%d1%80%d0%bd%d0%b0%d1%8f-%d0%b1%d1%80%d0%b0%d0%b2%d0%b0%d0%b4%d0%be/"
     }
   ],
   "categories": [
@@ -1721,36 +1978,29 @@
       "id": 23,
       "name": "Гортензии",
       "key": "hydrangea",
-      "count": 15,
-      "url": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product-category/gortenzii/"
+      "count": 20,
+      "url": "https://annaflowerfarm.ru/product-category/gortenzii/"
     },
     {
       "id": 17,
       "name": "Кустарники",
       "key": "shrubs",
-      "count": 16,
-      "url": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product-category/kustarniki/"
-    },
-    {
-      "id": 40,
-      "name": "Овощная рассада",
-      "key": "vegetables",
-      "count": 1,
-      "url": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product-category/%d0%be%d0%b2%d0%be%d1%89%d0%bd%d0%b0%d1%8f-%d1%80%d0%b0%d1%81%d1%81%d0%b0%d0%b4%d0%b0/"
+      "count": 17,
+      "url": "https://annaflowerfarm.ru/product-category/kustarniki/"
     },
     {
       "id": 21,
       "name": "Цветы многолетние",
       "key": "perennials",
-      "count": 9,
-      "url": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product-category/mnogoletnie/"
+      "count": 15,
+      "url": "https://annaflowerfarm.ru/product-category/mnogoletnie/"
     },
     {
       "id": 35,
       "name": "Цветы однолетние",
       "key": "annuals",
-      "count": 48,
-      "url": "https://xn----7sbbqrluc1bf5k.xn--p1ai/product-category/%d1%86%d0%b2%d0%b5%d1%82%d1%8b-%d0%be%d0%b4%d0%bd%d0%be%d0%bb%d0%b5%d1%82%d0%bd%d0%b8%d0%b5/"
+      "count": 26,
+      "url": "https://annaflowerfarm.ru/product-category/%d1%86%d0%b2%d0%b5%d1%82%d1%8b-%d0%be%d0%b4%d0%bd%d0%be%d0%bb%d0%b5%d1%82%d0%bd%d0%b8%d0%b5/"
     }
   ],
   "orders": [
@@ -1804,13 +2054,13 @@
     "avgCheck": 2940
   },
   "heroImages": [
-    "/assets/products/p2234.jpg",
-    "/assets/products/p2236.png",
-    "/assets/products/p1080.jpg",
-    "/assets/products/p539.jpg",
-    "/assets/products/p1082.jpg",
-    "/assets/products/p2101.png",
-    "/assets/products/p1911.png",
-    "/assets/products/p1655.jpg"
+    "https://annaflowerfarm.ru/wp-content/uploads/2026/05/img_0031.jpeg",
+    "https://annaflowerfarm.ru/wp-content/uploads/2026/05/img_6847.png",
+    "https://annaflowerfarm.ru/wp-content/uploads/2026/07/img_1946.jpeg",
+    "https://annaflowerfarm.ru/wp-content/uploads/2025/03/img_5114-1152x1536.jpeg",
+    "https://annaflowerfarm.ru/wp-content/uploads/2025/03/img_4405-1152x1536.jpeg",
+    "https://annaflowerfarm.ru/wp-content/uploads/2024/12/3088bbd0-a30a-4fc4-ab94-99b668f7af40-1.jpeg",
+    "https://annaflowerfarm.ru/wp-content/uploads/2024/12/hJ6-Ciwj0UXFflcPawdbM6gECQmIYydnUGxtvf04gDdHxW3gmSig2TImvmB7QKaFSmm9PZ8DK-JNgT7oJMoGNnNi.jpg",
+    "https://annaflowerfarm.ru/wp-content/uploads/2024/12/img_4857.png"
   ]
 }

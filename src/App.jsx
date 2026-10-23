@@ -29,10 +29,14 @@ import {
 } from "@phosphor-icons/react";
 import { useEffect, useMemo, useRef, useState } from "react";
 
-const baseUrl = import.meta.env.BASE_URL || "/";
+// На WordPress тема задаёт window.ANUTKIN_BASE (URL папки темы). На GitHub Pages — BASE_URL из сборки.
+const baseUrl =
+  (typeof window !== "undefined" && window.ANUTKIN_BASE) || import.meta.env.BASE_URL || "/";
 
 function assetUrl(path) {
-  return `${baseUrl}${String(path || "").replace(/^\/+/, "")}`;
+  const s = String(path || "");
+  if (/^https?:\/\//.test(s)) return s; // абсолютные URL (живые медиа Woo) — как есть
+  return `${baseUrl}${s.replace(/^\/+/, "")}`;
 }
 
 function formatRub(value) {
@@ -46,7 +50,20 @@ function compactRub(value) {
   }).format(value || 0)}\u00a0\u20bd`;
 }
 
+function plural(n, one, few, many) {
+  const m10 = n % 10;
+  const m100 = n % 100;
+  if (m10 === 1 && m100 !== 11) return one;
+  if (m10 >= 2 && m10 <= 4 && (m100 < 12 || m100 > 14)) return few;
+  return many;
+}
+
 function stockLabel(product) {
+  if (product.kind === "guide") return `PDF · ${product.guide?.pages || ""} стр.`;
+  if (product.kind === "composition") {
+    const n = product.composition?.count || 0;
+    return `набор · ${n} ${plural(n, "растение", "растения", "растений")}`;
+  }
   if (product.stock === 0) return "нет в наличии";
   if (product.stock <= 3) return `${product.stock} шт. осталось`;
   return `${product.stock} шт.`;
@@ -56,9 +73,20 @@ function useCatalog() {
   const [data, setData] = useState(null);
 
   useEffect(() => {
-    fetch(`${baseUrl}data/catalog.json`)
-      .then((response) => response.json())
-      .then(setData);
+    // extras.json — пособия и готовые композиции (необязательный файл: на WP его может не быть)
+    const extras = fetch(`${baseUrl}data/extras.json`, { cache: "no-cache" })
+      .then((response) => (response.ok ? response.json() : null))
+      .catch(() => null);
+    Promise.all([fetch(`${baseUrl}data/catalog.json`, { cache: "no-cache" }).then((response) => response.json()), extras]).then(
+      ([catalog, more]) => {
+        if (!more) return setData(catalog);
+        setData({
+          ...catalog,
+          products: [...catalog.products, ...(more.products || [])],
+          categories: [...catalog.categories, ...(more.categories || [])],
+        });
+      },
+    );
   }, []);
 
   return data;
@@ -188,16 +216,33 @@ function StorefrontAppV2({ data, route, go, scrollMem }) {
   const cartCount = cart.reduce((sum, item) => sum + item.qty, 0);
   const lightboxProduct = lightboxIndex === null ? null : galleryProducts[lightboxIndex];
 
-  const addToCart = (product) => {
-    if (!product || product.stock === 0) return;
+  const addToCart = (product, variant = null) => {
+    if (!product) return;
+    // вариативный товар без явного выбора — берём доступный размер по умолчанию
+    if (!variant && product.variants?.length) variant = defaultVariant(product);
+    const stock = variant ? variant.stock : product.stock;
+    if (!stock || stock <= 0) return;
+    const lineKey = variant ? `${product.id}:${variant.id}` : `${product.id}`;
     setCart((items) => {
-      const existing = items.find((item) => item.id === product.id);
+      const existing = items.find((item) => item.lineKey === lineKey);
       if (existing) {
         return items.map((item) =>
-          item.id === product.id ? { ...item, qty: Math.min(item.qty + 1, product.stock) } : item,
+          item.lineKey === lineKey ? { ...item, qty: Math.min(item.qty + 1, stock) } : item,
         );
       }
-      return [...items, { ...product, qty: 1 }];
+      return [
+        ...items,
+        {
+          ...product,
+          variants: undefined,
+          lineKey,
+          qty: 1,
+          stock,
+          price: variant ? variant.price : product.price,
+          variantId: variant ? variant.id : null,
+          variantLabel: variant ? variant.label : product.cartNote || "",
+        },
+      ];
     });
     setDrawerOpen(true);
   };
@@ -206,24 +251,6 @@ function StorefrontAppV2({ data, route, go, scrollMem }) {
     const index = galleryProducts.findIndex((item) => item.id === product.id);
     setLightboxIndex(index >= 0 ? index : 0);
   };
-
-  const moveLightbox = (direction) => {
-    setLightboxIndex((current) => {
-      if (current === null || galleryProducts.length === 0) return current;
-      return (current + direction + galleryProducts.length) % galleryProducts.length;
-    });
-  };
-
-  useEffect(() => {
-    if (!lightboxProduct) return undefined;
-    const onKey = (event) => {
-      if (event.key === "Escape") setLightboxIndex(null);
-      if (event.key === "ArrowLeft") moveLightbox(-1);
-      if (event.key === "ArrowRight") moveLightbox(1);
-    };
-    window.addEventListener("keydown", onKey);
-    return () => window.removeEventListener("keydown", onKey);
-  }, [lightboxProduct, galleryProducts.length]);
 
   // Decor base (GitHub Pages / WP safe), scroll reveals, and pink-sun parallax.
   useEffect(() => {
@@ -323,9 +350,21 @@ function StorefrontAppV2({ data, route, go, scrollMem }) {
           openLightbox={openLightbox}
         />
       )}
-      {routeName === "product" && (
-        <ProductExperience product={selectedProduct} products={featured} go={go} addToCart={addToCart} openLightbox={openLightbox} />
-      )}
+      {routeName === "product" &&
+        (selectedProduct.kind === "guide" ? (
+          <GuideExperience key={selectedProduct.id} product={selectedProduct} data={data} go={go} addToCart={addToCart} />
+        ) : selectedProduct.kind === "composition" ? (
+          <CompositionExperience
+            key={selectedProduct.id}
+            product={selectedProduct}
+            data={data}
+            go={go}
+            addToCart={addToCart}
+            openLightbox={openLightbox}
+          />
+        ) : (
+          <ProductExperience product={selectedProduct} products={featured} go={go} addToCart={addToCart} openLightbox={openLightbox} />
+        ))}
       {routeName === "delivery" && <DeliveryExperience data={data} go={go} />}
       {routeName === "about" && <AboutExperience data={data} go={go} />}
       {!["home", "catalog", "product", "delivery", "about"].includes(routeName) && (
@@ -343,11 +382,7 @@ function StorefrontAppV2({ data, route, go, scrollMem }) {
       />
       <PhotoLightbox
         product={lightboxProduct}
-        products={galleryProducts}
-        index={lightboxIndex}
         onClose={() => setLightboxIndex(null)}
-        onMove={moveLightbox}
-        onPick={setLightboxIndex}
         addToCart={addToCart}
         go={go}
       />
@@ -398,9 +433,11 @@ function BrandLogo({ go, variant = "berry" }) {
 }
 
 function StoreHeader({ routeName, go, cartCount, openCart, data, setQuery, setActiveCategory }) {
+  const hasGuides = (data?.products || []).some((product) => product.kind === "guide");
   const links = [
     ["home", "Главная", "shop"],
     ["catalog", "Каталог", "catalog"],
+    ...(hasGuides ? [["guides", "Пособия", "catalog"]] : []),
     ["delivery", "Доставка", "delivery"],
     ["about", "О хозяйстве", "about"],
   ];
@@ -481,7 +518,12 @@ function StoreHeader({ routeName, go, cartCount, openCart, data, setQuery, setAc
               </div>
             </div>
           ) : (
-            <button className={routeName === key ? "active" : ""} key={key} type="button" onClick={() => go(target)}>
+            <button
+              className={routeName === key ? "active" : ""}
+              key={key}
+              type="button"
+              onClick={() => (key === "guides" ? openCategory("guides") : go(target))}
+            >
               {label}
             </button>
           ),
@@ -499,6 +541,25 @@ function StoreHeader({ routeName, go, cartCount, openCart, data, setQuery, setAc
   );
 }
 
+const SOCIALS = [
+  { key: "tg", label: "Telegram", url: "https://t.me/Anytkin_sad", vb: "0 0 496 512", d: "M248 8C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zm121.8 169.9l-40.7 191.8c-3 13.6-11.1 16.9-22.4 10.5l-62-45.7-29.9 28.8c-3.3 3.3-6.1 6.1-12.5 6.1l4.4-63.1 114.9-103.8c5-4.4-1.1-6.9-7.7-2.5l-142 89.4-61.2-19.1c-13.3-4.2-13.6-13.3 2.8-19.7l239.1-92.2c11.1-4 20.8 2.7 17.2 19.5z" },
+  { key: "vk", label: "ВКонтакте", url: "https://vk.com/anytkin_sad", vb: "0 0 576 512", d: "M545 117.7c3.7-12.5 0-21.7-17.8-21.7h-58.9c-15 0-21.9 7.9-25.6 16.7 0 0-30 73.1-72.4 120.5-13.7 13.7-20 18.1-27.5 18.1-3.7 0-9.4-4.4-9.4-16.9V117.7c0-15-4.2-21.7-16.6-21.7h-92.6c-9.4 0-15 7-15 13.5 0 14.2 21.2 17.5 23.4 57.5v86.8c0 19-3.4 22.5-10.9 22.5-20 0-68.6-73.4-97.4-157.4-5.8-16.3-11.5-22.9-26.6-22.9H38.8c-16.8 0-20.2 7.9-20.2 16.7 0 15.6 20 93.1 93.1 195.5C160.4 378.1 229 416 291.4 416c37.5 0 42.1-8.4 42.1-22.9 0-66.8-3.4-73.1 15.4-73.1 8.7 0 23.7 4.4 58.7 38.1 40 40 46.6 57.9 69 57.9h58.9c16.8 0 25.3-8.4 20.4-25-11.2-34.9-86.9-106.7-90.3-111.5-8.7-11.2-6.2-16.2 0-26.2.1-.1 72-101.3 79.4-135.6z" },
+  { key: "wa", label: "WhatsApp", url: "https://wtsp.cc/79127063040", vb: "0 0 448 512", d: "M224 122.8c-72.7 0-131.8 59.1-131.9 131.8 0 24.9 7 49.2 20.2 70.1l3.1 5-13.3 48.6 49.9-13.1 4.8 2.9c20.2 12 43.4 18.4 67.1 18.4h.1c72.6 0 133.3-59.1 133.3-131.8 0-35.2-15.2-68.3-40.1-93.2-25-25-58-38.7-93.2-38.7zm77.5 188.4c-3.3 9.3-19.1 17.7-26.7 18.8-12.6 1.9-22.4.9-47.5-9.9-39.7-17.2-65.7-57.2-67.7-59.8-2-2.6-16.2-21.5-16.2-41s10.2-29.1 13.9-33.1c3.6-4 7.9-5 10.6-5 2.6 0 5.3 0 7.6.1 2.4.1 5.7-.9 8.9 6.8 3.3 7.9 11.2 27.4 12.2 29.4s1.7 4.3.3 6.9c-7.6 15.2-15.7 14.6-11.6 21.6 15.3 26.3 30.6 35.4 53.9 47.1 4 2 6.3 1.7 8.6-1 2.3-2.6 9.9-11.6 12.5-15.5 2.6-4 5.3-3.3 8.9-2 3.6 1.3 23.1 10.9 27.1 12.9s6.6 3 7.6 4.6c.9 1.9.9 9.9-2.4 19.1zM400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48zM223.9 413.2c-26.6 0-52.7-6.7-75.8-19.3L64 416l22.5-82.2c-13.9-24-21.2-51.3-21.2-79.3C65.4 167.1 136.5 96 223.9 96c42.4 0 82.2 16.5 112.2 46.5 29.9 30 47.9 69.8 47.9 112.2 0 87.4-72.7 158.5-160.1 158.5z" },
+  { key: "yt", label: "YouTube", url: "https://youtube.com/@anytkin_sad?si=xCr2EryDQCVqnpCH", vb: "0 0 576 512", d: "M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z" },
+];
+
+function FooterSocial() {
+  return (
+    <div className="footer-social" aria-label="Мы в соцсетях">
+      {SOCIALS.map((s) => (
+        <a key={s.key} href={s.url} target="_blank" rel="noopener noreferrer" aria-label={s.label} title={s.label}>
+          <svg viewBox={s.vb} xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d={s.d} /></svg>
+        </a>
+      ))}
+    </div>
+  );
+}
+
 function StoreFooter({ data, go }) {
   return (
     <footer className="store-footer" id="contacts">
@@ -512,6 +573,7 @@ function StoreFooter({ data, go }) {
           <span>{data.categories.length} категорий</span>
           <span>СДЭК и самовывоз в Москве</span>
         </div>
+        <FooterSocial />
       </div>
 
       <div className="footer-columns">
@@ -610,11 +672,15 @@ function HomeExperience({ data, featured, galleryProducts, go, addToCart, openLi
     },
   ];
 
+  const plants = galleryProducts.filter((product) => !product.kind);
+  const compositions = data.products.filter((product) => product.kind === "composition");
+  const guides = data.products.filter((product) => product.kind === "guide");
+
   return (
     <>
       <HeroSection
-        slides={galleryProducts}
-        productCount={data.products.length}
+        slides={plants}
+        productCount={data.products.filter((product) => !product.kind).length}
         categoryCount={data.categories.length}
         go={go}
         addToCart={addToCart}
@@ -651,6 +717,8 @@ function HomeExperience({ data, featured, galleryProducts, go, addToCart, openLi
         </div>
       </section>
 
+      <CompositionsShowcase products={compositions} go={go} />
+
       <SeasonalPromo
         product={
           galleryProducts.find((item) => /спирея/i.test(item.name) && item.stock > 0) ||
@@ -682,7 +750,9 @@ function HomeExperience({ data, featured, galleryProducts, go, addToCart, openLi
         </div>
       </section>
 
-      <SignatureCollection data={data} products={galleryProducts} go={go} openLightbox={openLightbox} />
+      <GuidesShowcase products={guides} go={go} />
+
+      <SignatureCollection data={data} products={plants} go={go} openLightbox={openLightbox} />
 
       <WhyUs photo={heroProduct} openLightbox={openLightbox} />
 
@@ -1072,7 +1142,7 @@ function AvitoReviews() {
   }, []);
 
   useEffect(() => {
-    fetch(`${baseUrl}data/reviews.json`)
+    fetch(`${baseUrl}data/reviews.json`, { cache: "no-cache" })
       .then((response) => (response.ok ? response.json() : null))
       .then((json) => setData(json && json.reviews && json.reviews.length ? json : null))
       .catch(() => setData(null));
@@ -1333,8 +1403,46 @@ function CatalogExperience({ data, filtered, activeCategory, setActiveCategory, 
   );
 }
 
+// Доступный по умолчанию размер: первый в наличии, иначе первый из списка.
+function defaultVariant(product) {
+  if (!product?.variants?.length) return null;
+  return product.variants.find((v) => v.inStock) || product.variants[0];
+}
+
+// Выбор размера/объёма «как в Woo»: таблетки с ценой, недоступные — серые.
+function SizePicker({ product, selectedId, onSelect }) {
+  if (!product?.variants?.length) return null;
+  return (
+    <div className="size-picker">
+      <span className="size-picker__label">{product.variantAttr || "Размер"}</span>
+      <div className="size-picker__options" role="radiogroup" aria-label={product.variantAttr || "Размер"}>
+        {product.variants.map((v) => (
+          <button
+            key={v.id}
+            type="button"
+            role="radio"
+            aria-checked={v.id === selectedId}
+            disabled={!v.inStock}
+            className={`size-pill${v.id === selectedId ? " is-active" : ""}${v.inStock ? "" : " is-out"}`}
+            onClick={() => v.inStock && onSelect(v.id)}
+          >
+            <span className="size-pill__label">{v.label}</span>
+            <span className="size-pill__price">{v.inStock ? formatRub(v.price) : "нет"}</span>
+          </button>
+        ))}
+      </div>
+    </div>
+  );
+}
+
 function ProductExperience({ product, products, go, addToCart, openLightbox }) {
   const related = products.filter((item) => item.id !== product.id).slice(0, 4);
+  const hasVariants = !!product.variants?.length;
+  const [variantId, setVariantId] = useState(() => defaultVariant(product)?.id ?? null);
+  useEffect(() => { setVariantId(defaultVariant(product)?.id ?? null); }, [product.id]);
+  const selectedVariant = hasVariants ? product.variants.find((v) => v.id === variantId) || null : null;
+  const displayPrice = selectedVariant ? selectedVariant.price : product.price;
+  const canBuy = hasVariants ? !!selectedVariant?.inStock : product.stock > 0;
 
   return (
     <>
@@ -1359,9 +1467,10 @@ function ProductExperience({ product, products, go, addToCart, openLightbox }) {
           <h1>{product.name}</h1>
           <p>{product.description}</p>
           <div className="detail-price">
-            <strong>{formatRub(product.price)}</strong>
-            <span>{product.stock > 0 ? "можно добавить в заказ" : "нет в наличии"}</span>
+            <strong>{hasVariants ? `${formatRub(displayPrice)}` : formatRub(product.price)}</strong>
+            <span>{canBuy ? "можно добавить в заказ" : "нет в наличии"}</span>
           </div>
+          <SizePicker product={product} selectedId={variantId} onSelect={setVariantId} />
           <div className="care-facts">
             {Object.entries(product.care || {}).slice(0, 4).map(([key, value]) => (
               <article key={key}>
@@ -1371,7 +1480,7 @@ function ProductExperience({ product, products, go, addToCart, openLightbox }) {
             ))}
           </div>
           <div className="hero-actions">
-            <button className="primary-button" type="button" onClick={() => addToCart(product)} disabled={product.stock === 0}>
+            <button className="primary-button" type="button" onClick={() => addToCart(product, selectedVariant)} disabled={!canBuy}>
               Добавить в корзину
               <Plus size={18} weight="bold" />
             </button>
@@ -1543,14 +1652,38 @@ function LookbookGallery({ products, go, openLightbox }) {
   );
 }
 
-function PhotoLightbox({ product, onClose, onMove, addToCart, go }) {
+function PhotoLightbox({ product, onClose, addToCart, go }) {
   const [full, setFull] = useState(false); // фото на весь экран
   const [zoom, setZoom] = useState(null); // null | {x, y} — точка увеличения в %
+  const [idx, setIdx] = useState(0); // индекс ФОТО внутри товара
+
+  // Все фото текущего товара (а не других товаров!).
+  const images = product
+    ? (product.images && product.images.length ? product.images : [product.image]).filter(Boolean)
+    : [];
+  const total = images.length;
+  const move = (d) => setIdx((i) => (total ? (i + d + total) % total : 0));
+
   useEffect(() => {
     setFull(false);
     setZoom(null);
+    setIdx(0);
   }, [product]);
+
+  useEffect(() => {
+    if (!product) return undefined;
+    const onKey = (event) => {
+      if (event.key === "Escape") { if (full) setFull(false); else onClose(); }
+      if (event.key === "ArrowLeft") move(-1);
+      if (event.key === "ArrowRight") move(1);
+    };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [product, total, full]);
+
   if (!product) return null;
+
+  const current = assetUrl(images[idx] || product.image);
 
   const pointPct = (clientX, clientY, el) => {
     const rect = el.getBoundingClientRect();
@@ -1561,7 +1694,7 @@ function PhotoLightbox({ product, onClose, onMove, addToCart, go }) {
   };
 
   return (
-    <aside className="photo-lightbox" role="dialog" aria-modal="true" aria-label="Фотография растения">
+    <aside className="photo-lightbox" role="dialog" aria-modal="true" aria-label="Фотографии растения">
       <button className="photo-backdrop" type="button" onClick={onClose} aria-label="Закрыть фото" />
       <div className="photo-panel">
         <button className="modal-close icon-button" type="button" onClick={onClose} aria-label="Закрыть">
@@ -1574,19 +1707,41 @@ function PhotoLightbox({ product, onClose, onMove, addToCart, go }) {
             onClick={() => setFull(true)}
             aria-label="Открыть фото на весь экран"
           >
-            <img src={assetUrl(product.image)} alt={product.name} />
+            <img src={current} alt={`${product.name} — фото ${idx + 1}`} />
             <span className="photo-stage-hint">
               <MagnifyingGlass size={15} weight="bold" />
               Фото целиком
             </span>
           </button>
-          <button className="gallery-nav gallery-prev" type="button" onClick={() => onMove(-1)} aria-label="Предыдущее фото">
-            <CaretLeft size={24} weight="bold" />
-          </button>
-          <button className="gallery-nav gallery-next" type="button" onClick={() => onMove(1)} aria-label="Следующее фото">
-            <CaretRight size={24} weight="bold" />
-          </button>
+          {total > 1 && (
+            <>
+              <button className="gallery-nav gallery-prev" type="button" onClick={() => move(-1)} aria-label="Предыдущее фото">
+                <CaretLeft size={24} weight="bold" />
+              </button>
+              <button className="gallery-nav gallery-next" type="button" onClick={() => move(1)} aria-label="Следующее фото">
+                <CaretRight size={24} weight="bold" />
+              </button>
+              <span className="photo-counter">{idx + 1} / {total}</span>
+            </>
+          )}
         </figure>
+
+        {total > 1 && (
+          <div className="photo-thumbs" role="tablist" aria-label="Фотографии товара">
+            {images.map((im, i) => (
+              <button
+                key={i}
+                type="button"
+                className={`photo-thumb${i === idx ? " is-active" : ""}`}
+                onClick={() => setIdx(i)}
+                aria-label={`Фото ${i + 1}`}
+                aria-selected={i === idx}
+              >
+                <img src={assetUrl(im)} alt="" loading="lazy" />
+              </button>
+            ))}
+          </div>
+        )}
 
         {full && (
           <div className="photo-fullview" role="dialog" aria-label="Фото на весь экран">
@@ -1607,8 +1762,8 @@ function PhotoLightbox({ product, onClose, onMove, addToCart, go }) {
               }}
             >
               <img
-                src={assetUrl(product.image)}
-                alt={product.name}
+                src={current}
+                alt={`${product.name} — фото ${idx + 1}`}
                 style={zoom ? { transformOrigin: `${zoom.x}% ${zoom.y}%`, transform: "scale(2.4)" } : undefined}
               />
             </button>
@@ -1623,12 +1778,16 @@ function PhotoLightbox({ product, onClose, onMove, addToCart, go }) {
             >
               <X size={22} weight="bold" />
             </button>
-            <button className="gallery-nav gallery-prev" type="button" onClick={() => onMove(-1)} aria-label="Предыдущее фото">
-              <CaretLeft size={26} weight="bold" />
-            </button>
-            <button className="gallery-nav gallery-next" type="button" onClick={() => onMove(1)} aria-label="Следующее фото">
-              <CaretRight size={26} weight="bold" />
-            </button>
+            {total > 1 && (
+              <>
+                <button className="gallery-nav gallery-prev" type="button" onClick={() => move(-1)} aria-label="Предыдущее фото">
+                  <CaretLeft size={26} weight="bold" />
+                </button>
+                <button className="gallery-nav gallery-next" type="button" onClick={() => move(1)} aria-label="Следующее фото">
+                  <CaretRight size={26} weight="bold" />
+                </button>
+              </>
+            )}
           </div>
         )}
         <section className="photo-details">
@@ -1639,18 +1798,27 @@ function PhotoLightbox({ product, onClose, onMove, addToCart, go }) {
           </div>
           <div className="photo-foot">
             <div className="photo-meta">
-              <strong>{formatRub(product.price)}</strong>
+              <strong>{product.variants?.length ? `от ${formatRub(product.price)}` : formatRub(product.price)}</strong>
               <span>{stockLabel(product)}</span>
             </div>
             <div className="photo-actions">
-              <button className="primary-button" type="button" onClick={() => addToCart(product)} disabled={product.stock === 0}>
-                В корзину
-                <Plus size={17} weight="bold" />
-              </button>
-              <button className="round-link" type="button" onClick={() => { onClose(); go(`product/${product.id}`); }}>
-                Подробнее
-                <ArrowRight size={17} weight="bold" />
-              </button>
+              {product.variants?.length ? (
+                <button className="primary-button" type="button" onClick={() => { onClose(); go(`product/${product.id}`); }} disabled={product.stock === 0}>
+                  Выбрать размер
+                  <ArrowRight size={17} weight="bold" />
+                </button>
+              ) : (
+                <>
+                  <button className="primary-button" type="button" onClick={() => addToCart(product)} disabled={product.stock === 0}>
+                    В корзину
+                    <Plus size={17} weight="bold" />
+                  </button>
+                  <button className="round-link" type="button" onClick={() => { onClose(); go(`product/${product.id}`); }}>
+                    Подробнее
+                    <ArrowRight size={17} weight="bold" />
+                  </button>
+                </>
+              )}
             </div>
           </div>
         </section>
@@ -1659,15 +1827,373 @@ function PhotoLightbox({ product, onClose, onMove, addToCart, go }) {
   );
 }
 
-function LuxuryProductCard({ product, go, addToCart, openLightbox, index = 0, feature = false }) {
+// Книжка-превью: страницы — картинки первых страниц PDF, последняя — призыв купить.
+// DOM книги собирается вручную: page-flip сам переставляет узлы и удаляет корень при destroy,
+// поэтому React им не управляет (иначе конфликт при размонтировании).
+function Flipbook({ pages, total, onBuy }) {
+  const hostRef = useRef(null);
+  const bookRef = useRef(null);
+  const buyRef = useRef(onBuy);
+  buyRef.current = onBuy;
+  const [page, setPage] = useState(0);
+  const [count, setCount] = useState(pages.length + 1);
+  const pagesKey = pages.join("|");
+
+  useEffect(() => {
+    const host = hostRef.current;
+    if (!host) return undefined;
+    let flip = null;
+    let cancelled = false;
+    const root = document.createElement("div");
+    root.className = "flipbook-root";
+    host.appendChild(root);
+    pages.forEach((src, i) => {
+      const el = document.createElement("div");
+      el.className = "flip-page";
+      if (i === 0) el.dataset.density = "hard";
+      const img = document.createElement("img");
+      img.src = assetUrl(src);
+      img.alt = "";
+      img.draggable = false;
+      el.appendChild(img);
+      root.appendChild(el);
+    });
+    const rest = Math.max(0, (total || 0) - pages.length);
+    const end = document.createElement("div");
+    end.className = "flip-page flip-end";
+    end.dataset.density = "hard";
+    end.innerHTML = `<div class="flip-end__in"><span>Это превью</span><strong>Дальше ещё ${rest} ${plural(rest, "страница", "страницы", "страниц")}</strong><p>Полная версия в PDF придёт на почту после оплаты.</p><button type="button">Купить пособие</button></div>`;
+    end.querySelector("button").addEventListener("click", (event) => {
+      event.stopPropagation();
+      buyRef.current?.();
+    });
+    root.appendChild(end);
+
+    import("page-flip").then(({ PageFlip }) => {
+      if (cancelled) return;
+      flip = new PageFlip(root, {
+        width: 420,
+        height: 594,
+        size: "stretch",
+        minWidth: 220,
+        maxWidth: 560,
+        minHeight: 311,
+        maxHeight: 792,
+        showCover: true,
+        usePortrait: true,
+        mobileScrollSupport: true,
+        maxShadowOpacity: 0.32,
+        flippingTime: 750,
+      });
+      flip.loadFromHTML(root.querySelectorAll(".flip-page"));
+      setCount(flip.getPageCount());
+      flip.on("flip", (event) => setPage(event.data));
+      bookRef.current = flip;
+    });
+
+    return () => {
+      cancelled = true;
+      try {
+        flip?.destroy();
+      } catch {
+        /* уже удалено */
+      }
+      if (root.parentNode) root.parentNode.removeChild(root);
+      bookRef.current = null;
+    };
+  }, [pagesKey, total]);
+
   return (
-    <article className={`luxury-card elev reveal ${product.status}${feature ? " is-feature" : ""}`} style={{ "--i": index % 4 }}>
-      <button className="luxury-image" type="button" onClick={() => openLightbox(product)}>
+    <div className="flipbook">
+      <div className="flipbook-host" ref={hostRef} />
+      <div className="flipbook-nav">
+        <button type="button" onClick={() => bookRef.current?.flipPrev()} aria-label="Назад" disabled={page === 0}>
+          <CaretLeft size={20} weight="bold" />
+        </button>
+        <span>
+          {page + 1} / {count}
+        </span>
+        <button type="button" onClick={() => bookRef.current?.flipNext()} aria-label="Вперёд" disabled={page >= count - 1}>
+          <CaretRight size={20} weight="bold" />
+        </button>
+      </div>
+      <p className="flipbook-hint">Потяните за уголок страницы или нажмите на стрелки</p>
+    </div>
+  );
+}
+
+function GuideCard({ product, go }) {
+  return (
+    <button className="guide-card reveal" type="button" onClick={() => go(`product/${product.id}`)}>
+      <span className="guide-card__book">
+        <img src={assetUrl(product.image)} alt={product.name} />
+      </span>
+      <span className="guide-card__meta">
+        <strong>{product.name.replace(/^Пособие\s*/, "")}</strong>
+        <small>
+          {product.guide?.pages} стр. · PDF
+        </small>
+        <em>{formatRub(product.price)}</em>
+      </span>
+      <span className="guide-card__cta">
+        Листать превью
+        <ArrowRight size={15} weight="bold" />
+      </span>
+    </button>
+  );
+}
+
+function GuidesShowcase({ products, go }) {
+  if (!products.length) return null;
+  return (
+    <section className="guides-band reveal" aria-label="Пособия по выращиванию">
+      <div className="section-head center">
+        <p className="eyebrow">Пособия по выращиванию</p>
+        <h2 className="section-title">Растите, как в питомнике</h2>
+        <p>Пошаговые руководства от Анны: посадка, полив, подкормки, обрезка и защита от вредителей. Электронная книга в PDF.</p>
+      </div>
+      <div className="guides-row">
+        {products.map((product) => (
+          <GuideCard key={product.id} product={product} go={go} />
+        ))}
+      </div>
+    </section>
+  );
+}
+
+function GuideExperience({ product, data, go, addToCart }) {
+  const guide = product.guide || {};
+  const others = data.products.filter((item) => item.kind === "guide" && item.id !== product.id);
+  return (
+    <>
+      <section className="guide-page">
+        <div className="guide-book">
+          <Flipbook pages={guide.preview || [product.image]} total={guide.pages} onBuy={() => addToCart(product)} />
+        </div>
+        <div className="guide-copy">
+          <button className="back-link" type="button" onClick={() => go("catalog")}>
+            Каталог
+          </button>
+          <p className="eyebrow">Электронное пособие · PDF</p>
+          <h1>{product.name}</h1>
+          <p className="guide-lead">{product.description}</p>
+          <div className="guide-facts">
+            <article>
+              <span>Страниц</span>
+              <strong>{guide.pages}</strong>
+            </article>
+            <article>
+              <span>Формат</span>
+              <strong>PDF, читается с телефона</strong>
+            </article>
+            <article>
+              <span>Как получить</span>
+              <strong>на почту после оплаты</strong>
+            </article>
+            <article>
+              <span>Фото</span>
+              <strong>растения нашего питомника</strong>
+            </article>
+          </div>
+          <div className="detail-price">
+            <strong>{formatRub(product.price)}</strong>
+            <span>оплата после подтверждения заказа</span>
+          </div>
+          <div className="hero-actions">
+            <button className="primary-button" type="button" onClick={() => addToCart(product)}>
+              Купить пособие
+              <Plus size={18} weight="bold" />
+            </button>
+          </div>
+          {guide.chapters?.length > 0 && (
+            <div className="guide-toc">
+              <p className="eyebrow">Что внутри</p>
+              <ol>
+                {guide.chapters.map((title, index) => (
+                  <li key={title}>
+                    <span>{String(index + 1).padStart(2, "0")}</span>
+                    {title}
+                  </li>
+                ))}
+              </ol>
+            </div>
+          )}
+        </div>
+      </section>
+
+      {others.length > 0 && (
+        <>
+          <section className="section-head">
+            <p className="eyebrow">Другие пособия</p>
+            <h2>Ещё руководства</h2>
+          </section>
+          <section className="guides-row guides-row--compact">
+            {others.map((item) => (
+              <GuideCard key={item.id} product={item} go={go} />
+            ))}
+          </section>
+        </>
+      )}
+    </>
+  );
+}
+
+function CompositionsShowcase({ products, go }) {
+  if (!products.length) return null;
+  return (
+    <section className="comps-band reveal" aria-label="Готовые композиции">
+      <div className="section-head center">
+        <p className="eyebrow">Готовые решения</p>
+        <h2 className="section-title">Готовые композиции для сада</h2>
+        <p>Клумбы из растений нашего питомника — со схемой посадки и ценой за весь набор.</p>
+      </div>
+      <div className="comps-row">
+        {products.map((product, index) => (
+          <button className="comp-tile elev reveal" style={{ "--i": index % 5 }} key={product.id} type="button" onClick={() => go(`product/${product.id}`)}>
+            <img src={assetUrl(product.image)} alt={product.name} />
+            <span className="comp-tile__meta">
+              <strong>{product.name}</strong>
+              <small>
+                {product.composition?.size} · {stockLabel(product).replace("набор · ", "")}
+              </small>
+              <em>{formatRub(product.price)}</em>
+            </span>
+          </button>
+        ))}
+      </div>
+    </section>
+  );
+}
+
+const COMP_SLIDE_NAMES = ["Композиция", "Схема посадки", "Растения"];
+
+function CompositionExperience({ product, data, go, addToCart, openLightbox }) {
+  const comp = product.composition || {};
+  const images = product.images?.length ? product.images : [product.image];
+  const [slide, setSlide] = useState(0);
+  const others = data.products.filter((item) => item.kind === "composition" && item.id !== product.id);
+  const inCatalog = new Set(data.products.map((item) => item.id));
+  return (
+    <>
+      <section className="comp-page">
+        <div className="comp-gallery">
+          <button className="comp-main" type="button" onClick={() => openLightbox(product)}>
+            <img src={assetUrl(images[slide])} alt={`${product.name} — ${COMP_SLIDE_NAMES[slide] || ""}`} />
+            <span className="comp-zoom">
+              <MagnifyingGlass size={16} weight="bold" />
+              На весь экран
+            </span>
+          </button>
+          <div className="comp-thumbs" role="tablist" aria-label="Слайды композиции">
+            {images.map((src, index) => (
+              <button
+                key={src}
+                type="button"
+                role="tab"
+                aria-selected={index === slide}
+                className={index === slide ? "is-active" : ""}
+                onClick={() => setSlide(index)}
+              >
+                <img src={assetUrl(src)} alt="" />
+                <span>{COMP_SLIDE_NAMES[index] || `Слайд ${index + 1}`}</span>
+              </button>
+            ))}
+          </div>
+        </div>
+        <div className="comp-copy">
+          <button className="back-link" type="button" onClick={() => go("catalog")}>
+            Каталог
+          </button>
+          <p className="eyebrow">Готовая композиция</p>
+          <h1>{product.name}</h1>
+          <p className="guide-lead">{product.description}</p>
+          <div className="guide-facts">
+            <article>
+              <span>Размер клумбы</span>
+              <strong>{comp.size}</strong>
+            </article>
+            <article>
+              <span>Растений</span>
+              <strong>{comp.count}</strong>
+            </article>
+            <article>
+              <span>Место</span>
+              <strong>{comp.light}</strong>
+            </article>
+            <article>
+              <span>Цветение</span>
+              <strong>{comp.bloom}</strong>
+            </article>
+          </div>
+          <div className="detail-price">
+            <strong>{formatRub(product.price)}</strong>
+            {product.oldPrice > product.price && <s className="old-price">{formatRub(product.oldPrice)}</s>}
+            <span>за весь набор</span>
+          </div>
+          <div className="hero-actions">
+            <button className="primary-button" type="button" onClick={() => addToCart(product)} disabled={product.stock <= 0}>
+              {product.stock > 0 ? "Купить набор" : "Нет в наличии"}
+              <Plus size={18} weight="bold" />
+            </button>
+            <button className="round-link" type="button" onClick={() => setSlide(1)}>
+              Схема посадки
+              <ArrowRight size={18} weight="bold" />
+            </button>
+          </div>
+          <div className="comp-list">
+            <p className="eyebrow">Состав набора</p>
+            <ul>
+              {(comp.items || []).map((item) => (
+                <li key={item.id}>
+                  <span className="comp-dot" style={{ background: item.color }} />
+                  {inCatalog.has(item.id) ? (
+                    <button className="text-link" type="button" onClick={() => go(`product/${item.id}`)}>
+                      {item.name}
+                    </button>
+                  ) : (
+                    <span>{item.name}</span>
+                  )}
+                  <em>× {item.qty}</em>
+                  <small>{item.h}</small>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      {others.length > 0 && (
+        <>
+          <section className="section-head">
+            <p className="eyebrow">Ещё композиции</p>
+            <h2>Другие готовые решения</h2>
+          </section>
+          <section className="editorial-grid compact-grid">
+            {others.slice(0, 4).map((item) => (
+              <LuxuryProductCard key={item.id} product={item} go={go} addToCart={addToCart} openLightbox={openLightbox} />
+            ))}
+          </section>
+        </>
+      )}
+    </>
+  );
+}
+
+function LuxuryProductCard({ product, go, addToCart, openLightbox, index = 0, feature = false }) {
+  const isVariable = !!product.variants?.length;
+  const isGuide = product.kind === "guide";
+  const openImage = () => (product.kind ? go(`product/${product.id}`) : openLightbox(product));
+  return (
+    <article
+      className={`luxury-card elev reveal ${product.status}${feature ? " is-feature" : ""}${product.kind ? ` kind-${product.kind}` : ""}`}
+      style={{ "--i": index % 4 }}
+    >
+      <button className="luxury-image" type="button" onClick={openImage}>
         {product.image ? <img src={assetUrl(product.image)} alt={product.name} /> : <Leaf size={44} weight="duotone" />}
         <span>{product.category}</span>
         <em>
           <MagnifyingGlass size={15} weight="duotone" />
-          фото
+          {isGuide ? "листать" : product.kind === "composition" ? "слайды" : "фото"}
         </em>
       </button>
       <div className="luxury-body">
@@ -1676,12 +2202,19 @@ function LuxuryProductCard({ product, go, addToCart, openLightbox, index = 0, fe
         </button>
         <p>{product.description}</p>
         <div className="product-meta">
-          <strong>{formatRub(product.price)}</strong>
+          <strong>
+            {isVariable ? `от ${formatRub(product.price)}` : formatRub(product.price)}
+            {product.oldPrice > product.price && <s className="old-price">{formatRub(product.oldPrice)}</s>}
+          </strong>
           <span>{stockLabel(product)}</span>
         </div>
         <div className="card-actions">
-          <button type="button" onClick={() => addToCart(product)} disabled={product.stock === 0}>
-            {product.stock === 0 ? "Нет в наличии" : "В корзину"}
+          <button
+            type="button"
+            onClick={() => (isVariable ? go(`product/${product.id}`) : addToCart(product))}
+            disabled={product.stock === 0}
+          >
+            {product.stock === 0 ? "Нет в наличии" : isVariable ? "Выбрать размер" : isGuide ? "Купить" : "В корзину"}
           </button>
           <button type="button" onClick={() => go(`product/${product.id}`)}>
             Подробнее
@@ -2007,40 +2540,158 @@ function ProductCard({ product, addToCart }) {
 }
 
 function CartDrawer({ cart, cartTotal, open, setCart, setOpen }) {
-  const updateQty = (id, delta) => {
+  const updateQty = (key, delta) => {
     setCart((items) =>
       items
-        .map((item) => (item.id === id ? { ...item, qty: Math.max(0, Math.min(item.stock, item.qty + delta)) } : item))
+        .map((item) => ((item.lineKey ?? item.id) === key ? { ...item, qty: Math.max(0, Math.min(item.stock, item.qty + delta)) } : item))
         .filter((item) => item.qty > 0),
     );
   };
+
+  // Демо на GitHub Pages: оформление показываем в самой корзине — те же поля, что в кассе Woo.
+  const [step, setStep] = useState("cart"); // cart | form | done
+  const [form, setForm] = useState({ name: "", phone: "", email: "", comment: "" });
+  const [formError, setFormError] = useState("");
+  const [done, setDone] = useState(null);
+  const hasGuide = cart.some((item) => item.kind === "guide");
+  const hasGoods = cart.some((item) => item.kind !== "guide");
+
+  useEffect(() => {
+    if (!open && step === "done") setStep("cart");
+  }, [open, step]);
+
+  // На WordPress (window.ANUTKIN_WOO) — переносим корзину в нативный Woo и идём в его checkout
+  // (СДЭК + самовывоз + оплата при получении). На GitHub-демо — демо-оформление в корзине.
+  // Формат: ID:QTY  или  ID:QTY:VARID (выбранная вариация — размер/объём).
+  const checkout = () => {
+    const W = typeof window !== "undefined" ? window.ANUTKIN_WOO : null;
+    if (!cart.length) return;
+    if (!W) {
+      setFormError("");
+      setStep("form");
+      return;
+    }
+    const items = cart
+      .map((item) => (item.variantId ? `${item.id}:${item.qty}:${item.variantId}` : `${item.id}:${item.qty}`))
+      .join(",");
+    window.location.href = `${W.home}?anutkin_co=${encodeURIComponent(items)}`;
+  };
+
+  const submitDemo = (event) => {
+    event.preventDefault();
+    const digits = form.phone.replace(/\D/g, "");
+    if (!form.name.trim()) return setFormError("Укажите имя");
+    if (digits.length < 10) return setFormError("Укажите телефон");
+    if (hasGuide && !/\S+@\S+\.\S+/.test(form.email)) return setFormError("Для пособия нужна почта — на неё придёт PDF");
+    setDone({ email: form.email.trim(), hasGuide, hasGoods, total: cartTotal });
+    setCart([]);
+    setStep("done");
+  };
+
+  const field = (key) => ({
+    value: form[key],
+    onChange: (event) => {
+      setFormError("");
+      setForm((value) => ({ ...value, [key]: event.target.value }));
+    },
+  });
+
+  const headTitle = step === "form" ? "Оформление" : step === "done" ? "Заявка принята" : "Корзина";
+  const headSub =
+    step === "form"
+      ? "заполните контакты"
+      : step === "done"
+        ? "спасибо!"
+        : cart.length
+          ? `${cart.length} ${plural(cart.length, "позиция", "позиции", "позиций")}`
+          : "пока пусто";
 
   return (
     <aside className={open ? "cart-drawer open" : "cart-drawer"} aria-hidden={!open}>
       <div className="drawer-panel">
         <header>
           <div>
-            <span>Корзина</span>
-            <strong>{cart.length ? `${cart.length} позиций` : "пока пусто"}</strong>
+            <span>{headTitle}</span>
+            <strong>{headSub}</strong>
           </div>
           <button className="icon-button" type="button" onClick={() => setOpen(false)} aria-label="Закрыть">
             <X size={20} weight="bold" />
           </button>
         </header>
+        {step === "form" && (
+          <form className="demo-checkout" onSubmit={submitDemo} noValidate>
+            <label>
+              <span>Имя *</span>
+              <input {...field("name")} placeholder="Как к вам обращаться" autoComplete="name" />
+            </label>
+            <label>
+              <span>Телефон *</span>
+              <input {...field("phone")} type="tel" inputMode="tel" placeholder="+7 (___) ___-__-__" autoComplete="tel" />
+            </label>
+            <label>
+              <span>Email {hasGuide ? "*" : ""}</span>
+              <input
+                {...field("email")}
+                type="email"
+                inputMode="email"
+                placeholder={hasGuide ? "На неё придёт пособие" : "Для подтверждения заказа"}
+                autoComplete="email"
+              />
+            </label>
+            <label>
+              <span>Комментарий</span>
+              <textarea {...field("comment")} rows={3} placeholder="Город, удобный способ связи, СДЭК или самовывоз" />
+            </label>
+            <div className="demo-checkout__note">
+              {hasGoods && <p>Растения: соберём заказ, свяжемся с вами и пришлём итоговый счёт. Оплата при получении.</p>}
+              {hasGuide && <p>Пособие: пришлём реквизиты, после оплаты PDF придёт на почту.</p>}
+            </div>
+            {formError && <p className="demo-checkout__error">{formError}</p>}
+            <div className="demo-checkout__total">
+              <span>Итого</span>
+              <strong>{formatRub(cartTotal)}</strong>
+            </div>
+            <button className="primary-button" type="submit">
+              Отправить заявку
+              <ArrowRight size={18} weight="bold" />
+            </button>
+            <button className="demo-checkout__back" type="button" onClick={() => setStep("cart")}>
+              ← вернуться в корзину
+            </button>
+          </form>
+        )}
+        {step === "done" && done && (
+          <div className="demo-done">
+            <CheckCircle size={48} weight="duotone" />
+            <h3>{form.name.trim() ? `${form.name.trim()}, спасибо за заявку!` : "Спасибо за заявку!"}</h3>
+            {done.hasGoods && <p>Анна соберёт растения, свяжется с вами и пришлёт итоговый счёт.</p>}
+            {done.hasGuide && (
+              <p>
+                По пособию пришлём реквизиты для оплаты. После оплаты PDF придёт на <b>{done.email}</b>.
+              </p>
+            )}
+            <small>Это демо-версия сайта: заявка никуда не отправляется.</small>
+            <button className="primary-button" type="button" onClick={() => setOpen(false)}>
+              Вернуться в магазин
+            </button>
+          </div>
+        )}
+        {step === "cart" && (
+        <>
         <div className="cart-items">
           {cart.length === 0 ? (
             <p className="empty-state">Добавьте растения из каталога, чтобы оформить заказ.</p>
           ) : (
             cart.map((item) => (
-              <article key={item.id}>
+              <article key={item.lineKey ?? item.id}>
                 <img src={assetUrl(item.image)} alt="" />
                 <div>
-                  <strong>{item.name}</strong>
+                  <strong>{item.name}{item.variantLabel ? <em className="cart-variant"> · {item.variantLabel}</em> : null}</strong>
                   <span>{formatRub(item.price)}</span>
                   <div className="qty-control">
-                    <button type="button" onClick={() => updateQty(item.id, -1)}>-</button>
+                    <button type="button" onClick={() => updateQty(item.lineKey ?? item.id, -1)}>-</button>
                     <span>{item.qty}</span>
-                    <button type="button" onClick={() => updateQty(item.id, 1)}>+</button>
+                    <button type="button" onClick={() => updateQty(item.lineKey ?? item.id, 1)}>+</button>
                   </div>
                 </div>
               </article>
@@ -2052,11 +2703,13 @@ function CartDrawer({ cart, cartTotal, open, setCart, setOpen }) {
             <span>Итого</span>
             <strong>{formatRub(cartTotal)}</strong>
           </div>
-          <button className="primary-button" type="button" disabled={!cart.length}>
+          <button className="primary-button" type="button" disabled={!cart.length} onClick={checkout}>
             Оформить заказ
             <ArrowRight size={18} weight="bold" />
           </button>
         </footer>
+        </>
+        )}
       </div>
       <button className="drawer-backdrop" type="button" onClick={() => setOpen(false)} aria-label="Закрыть корзину" />
     </aside>

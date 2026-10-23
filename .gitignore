@@ -17,3 +17,14 @@ scripts/avito-raw.json
 # png allowed in app assets and the published site (global *.png is for screenshots)
 !public/**/*.png
 !docs/**/*.png
+
+# локальные проверочные скрипты: содержат доступы к стенду — не коммитить
+scripts/shot-*.mjs
+scripts/test-*.mjs
+scripts/audit-*.mjs
+scripts/inspect-*.mjs
+scripts/cmp*.mjs
+scripts/cap-co.mjs
+scripts/hero-detail.mjs
+scripts/insp-checkout.mjs
+scripts/verify-emoji.mjs

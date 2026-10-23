@@ -71,13 +71,22 @@ const toISO = (v) => {
   const d = new Date(v);
   return Number.isNaN(d.getTime()) ? null : d.toISOString();
 };
+// Эмодзи/пиктограммы из текста отзыва убираем — в карточке ведущий эмодзи рендерится огромным.
+const stripEmoji = (s) =>
+  String(s || "")
+    .replace(
+      /[\u{1F000}-\u{1FAFF}\u{2600}-\u{27BF}\u{2B00}-\u{2BFF}\u{2190}-\u{21FF}\u{2300}-\u{23FF}\u{2460}-\u{24FF}\u{25A0}-\u{25FF}\u{FE00}-\u{FE0F}\u{200D}\u{20E3}]/gu,
+      ""
+    )
+    .replace(/[ \t]{2,}/g, " ")
+    .trim();
 const reviews = all
   .map((r) => ({
     id: r.id,
-    author: r.sender?.name || r.author?.name || r.userName || r.user?.name || "Покупатель",
+    author: stripEmoji(r.sender?.name || r.author?.name || r.userName || r.user?.name || "Покупатель"),
     score: r.score ?? r.rating ?? r.stars ?? 5,
     date: toISO(r.createdAt ?? r.created_at ?? r.date ?? r.published_at),
-    text: String(r.text ?? r.comment ?? r.message ?? "").trim(),
+    text: stripEmoji(r.text ?? r.comment ?? r.message ?? ""),
   }))
   .filter((r) => r.text.length > 2)
   .sort((a, b) => (b.date || "").localeCompare(a.date || ""));
