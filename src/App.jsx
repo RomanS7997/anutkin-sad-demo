@@ -2159,32 +2159,16 @@ function GuideExperience({ product, data, go, addToCart }) {
   return (
     <>
       <section className="guide-page">
-        <header className="guide-head">
-          <div className="guide-copy">
-            <button className="back-link" type="button" onClick={() => go("catalog")}>
-              Каталог
-            </button>
-            <p className="eyebrow">Электронное пособие · PDF</p>
-            <h1>{product.name}</h1>
-            <p className="guide-lead">{product.description}</p>
-          </div>
-          <div className="guide-buy">
-            <div className="detail-price">
-              <strong>{formatRub(product.price)}</strong>
-              <span>оплата после подтверждения заказа</span>
-            </div>
-            <button className="primary-button" type="button" onClick={buy}>
-              Купить пособие
-              <Plus size={18} weight="bold" />
-            </button>
-          </div>
-        </header>
-
         <div className="guide-book">
           <Flipbook pages={guide.preview || [product.image]} total={guide.pages} onBuy={buy} onRead={guide.preview?.length ? setReading : undefined} />
         </div>
-
-        <div className="guide-info">
+        <div className="guide-copy">
+          <button className="back-link" type="button" onClick={() => go("catalog")}>
+            Каталог
+          </button>
+          <p className="eyebrow">Электронное пособие · PDF</p>
+          <h1>{product.name}</h1>
+          <p className="guide-lead">{product.description}</p>
           <div className="guide-facts">
             <article>
               <span>Страниц</span>
@@ -2202,6 +2186,16 @@ function GuideExperience({ product, data, go, addToCart }) {
               <span>Фото</span>
               <strong>растения нашего питомника</strong>
             </article>
+          </div>
+          <div className="detail-price">
+            <strong>{formatRub(product.price)}</strong>
+            <span>оплата после подтверждения заказа</span>
+          </div>
+          <div className="hero-actions">
+            <button className="primary-button" type="button" onClick={buy}>
+              Купить пособие
+              <Plus size={18} weight="bold" />
+            </button>
           </div>
           {guide.chapters?.length > 0 && (
             <div className="guide-toc">

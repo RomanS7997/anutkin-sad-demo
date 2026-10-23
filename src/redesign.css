@@ -1202,15 +1202,11 @@ body { background: var(--grad-page); color: var(--ink); font-family: var(--font-
 .redesign .guide-card__cta { display: inline-flex; align-items: center; gap: 6px; font-weight: 600; font-size: var(--fs-small); color: var(--berry); letter-spacing: .04em; }
 
 /* страница пособия / композиции */
-.redesign .guide-page { width: var(--container); margin: var(--sp-7) auto var(--sp-8); display: flex; flex-direction: column; gap: var(--sp-6); }
-.redesign .guide-head { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: var(--sp-6); align-items: end; }
-.redesign .guide-buy { display: flex; flex-direction: column; align-items: flex-end; gap: var(--sp-3); }
-.redesign .guide-buy .detail-price { margin: 0; justify-content: flex-end; }
-.redesign .guide-book { padding: var(--sp-6) var(--sp-5) var(--sp-5); border-radius: var(--r-xl); background: radial-gradient(120% 90% at 50% 0%, #f5f3de 0%, #e2e6bc 100%); }
-/* книжка во всю ширину, но разворот целиком влезает в экран по высоте */
-.redesign .flipbook-host { width: 100%; max-width: max(520px, calc((100svh - 250px) * 1.414)); margin: 0 auto; min-height: 200px; }
-.redesign .guide-info { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: var(--sp-7); align-items: start; }
-.redesign .guide-info .guide-facts { margin: 0; }
+/* книжка слева (шире, чем было: 2.1 к 1), описание справа */
+.redesign .guide-page { width: var(--container); margin: var(--sp-7) auto var(--sp-8); display: grid; grid-template-columns: minmax(0, 2.1fr) minmax(0, 1fr); gap: var(--sp-6); align-items: start; }
+.redesign .guide-book { position: sticky; top: 104px; padding: var(--sp-6) var(--sp-4) var(--sp-5); border-radius: var(--r-xl); background: radial-gradient(120% 90% at 50% 0%, #f5f3de 0%, #e2e6bc 100%); }
+/* разворот вместе со стрелками должен влезать в экран по высоте (панель липкая) */
+.redesign .flipbook-host { width: 100%; max-width: max(480px, calc((100svh - 280px) * 1.414)); margin: 0 auto; min-height: 200px; }
 .redesign .flipbook-root { margin: 0 auto; transition: transform .8s cubic-bezier(.22, .8, .24, 1); }
 .redesign .flipbook-host { opacity: 0; transition: opacity .5s ease; }
 .redesign .flipbook.is-ready .flipbook-host { opacity: 1; }
@@ -1254,14 +1250,13 @@ body { background: var(--grad-page); color: var(--ink); font-family: var(--font-
 .redesign .flipbook-nav .flipbook-read:hover { background: var(--berry); color: #fff; }
 .redesign .flipbook-nav span { min-width: 64px; text-align: center; font-weight: 700; color: var(--berry-deep); }
 .redesign .flipbook-hint { margin: var(--sp-3) 0 0; text-align: center; color: var(--muted); font-size: var(--fs-small); }
-.redesign .guide-copy h1 { margin: var(--sp-3) 0 var(--sp-4); font: 600 var(--fs-h1)/1.08 var(--font-serif); color: var(--ink); }
-.redesign .guide-lead { margin: 0; max-width: 62ch; font-size: var(--fs-lead); line-height: var(--lh-body); color: var(--muted); }
+.redesign .guide-copy h1 { margin: var(--sp-3) 0 var(--sp-4); font: 600 clamp(2rem, 3.3vw, 2.9rem)/1.08 var(--font-serif); color: var(--ink); }
+.redesign .guide-lead { margin: 0 0 var(--sp-5); font-size: var(--fs-lead); line-height: var(--lh-body); color: var(--muted); }
 .redesign .guide-facts { display: grid; grid-template-columns: 1fr 1fr; gap: var(--sp-3); margin: 0 0 var(--sp-5); }
 .redesign .guide-facts article { padding: 14px 16px; border-radius: var(--r-sm); background: var(--card); border: 1px solid var(--line); }
 .redesign .guide-facts span { display: block; font-size: var(--fs-tiny); letter-spacing: .14em; text-transform: uppercase; color: var(--muted); font-weight: 700; }
 .redesign .guide-facts strong { display: block; margin-top: 4px; color: var(--ink); font-weight: 600; line-height: 1.3; }
-.redesign .guide-toc { margin: 0; }
-.redesign .guide-toc > .eyebrow { margin-top: 0; }
+.redesign .guide-toc { margin-top: var(--sp-6); }
 .redesign .guide-toc ol { list-style: none; margin: var(--sp-3) 0 0; padding: 0; }
 .redesign .guide-toc li { display: flex; gap: var(--sp-3); align-items: baseline; padding: 10px 0; border-bottom: 1px solid var(--line); font: 500 1.05rem/1.3 var(--font-serif); color: var(--ink); }
 .redesign .guide-toc li span { min-width: 26px; font: 700 .78rem var(--font-body); color: var(--berry); letter-spacing: .08em; }
@@ -1308,10 +1303,6 @@ body { background: var(--grad-page); color: var(--ink); font-family: var(--font-
 @keyframes reader-in { from { opacity: 0; } to { opacity: 1; } }
 
 @media (max-width: 900px) {
-  .redesign .guide-head { grid-template-columns: minmax(0, 1fr); align-items: start; }
-  .redesign .guide-buy { align-items: flex-start; }
-  .redesign .guide-buy .detail-price { justify-content: flex-start; }
-  .redesign .guide-info { grid-template-columns: minmax(0, 1fr); gap: var(--sp-6); }
   .redesign .guide-page { grid-template-columns: minmax(0, 1fr); gap: var(--sp-6); }
   .redesign .guide-book { position: static; }
   .redesign .guides-row { grid-template-columns: repeat(2, minmax(0, 1fr)); }
