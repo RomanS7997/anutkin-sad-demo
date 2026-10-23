@@ -29,8 +29,8 @@ jobs:
           AVITO_PROFILE_URL: ${{ vars.AVITO_PROFILE_URL }}
         run: node scripts/fetch-avito-reviews.mjs
 
-      - name: Refetch catalog from the live site
-        run: node scripts/refetch-catalog.mjs
+      - name: Sync catalog from the live site (sizes/variants, photos from annaflowerfarm.ru)
+        run: node scripts/sync-catalog.mjs public/data/catalog.json
 
       - name: Rebuild GitHub Pages bundle
         run: npm run pages
