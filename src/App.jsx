@@ -1819,6 +1819,13 @@ function PhotoLightbox({ product, onClose, addToCart, go }) {
 // или не перелистнул. Сама книга ничего не загибает: это спорило с мышью и с прокруткой пальцем.
 // На телефоне жесты page-flip выключены — они загибали страницу при прокрутке и листали сами.
 // Там касание страницы листает вперёд (левый край — назад), свайп вбок листает, вертикаль — прокрутка.
+// Режим showCover у page-flip рассчитан на жёсткую (картонную) обложку и ломает перелистывание назад
+// на бумажную, а жёсткая при наведении даёт серую полосу. Поэтому перед обложкой стоит пустая
+// прозрачная страница: обложка — обычная бумажная страница справа, листается штатно в обе стороны.
+// Индексы page-flip: 0 — пустая, 1 — обложка, n — n-я страница превью; на экране номер = индекс.
+// При листании назад на обложку page-flip кладёт «нижнюю» страницу (нашу пустую) поверх оглавления —
+// прозрачная его не закрывает. На время такого листания пустая страница красится фоном панели
+// (тот же градиент, совмещённый с панелью), в закрытой книге она снова прозрачная.
 function Flipbook({ pages, total, onBuy, onRead }) {
   const hostRef = useRef(null);
   const rootRef = useRef(null);
@@ -1848,6 +1855,9 @@ function Flipbook({ pages, total, onBuy, onRead }) {
     setLeaving(false);
     setNoticed(false);
 
+    const blank = document.createElement("div");
+    blank.className = "flip-page flip-blank";
+    root.appendChild(blank);
     pages.forEach((src, i) => {
       const el = document.createElement("div");
       el.className = i === 0 ? "flip-page is-cover" : "flip-page";
@@ -1868,7 +1878,6 @@ function Flipbook({ pages, total, onBuy, onRead }) {
     const rest = Math.max(0, (total || 0) - pages.length);
     const end = document.createElement("div");
     end.className = "flip-page flip-end";
-    end.dataset.density = "hard";
     end.innerHTML = `<div class="flip-end__in"><span>Это превью</span><strong>Дальше ещё ${rest} ${plural(rest, "страница", "страницы", "страниц")}</strong><p>Полная версия в PDF придёт на почту после оплаты.</p><button type="button">Купить пособие</button></div>`;
     end.querySelector("button").addEventListener("click", (event) => {
       event.stopPropagation();
@@ -1893,11 +1902,11 @@ function Flipbook({ pages, total, onBuy, onRead }) {
     // телефон: свои жесты поверх page-flip (его обработчики выключены)
     const next = () => {
       if (!flip || flip.getState() !== "read") return;
-      if (flip.getCurrentPageIndex() === 0) setLeaving(true);
+      if (flip.getCurrentPageIndex() <= 1) setLeaving(true);
       flip.flipNext("bottom");
     };
     const prev = () => {
-      if (flip && flip.getState() === "read") flip.flipPrev("bottom");
+      if (flip && flip.getState() === "read" && flip.getCurrentPageIndex() > 1) flip.flipPrev("bottom");
     };
     let touch = null;
     const onTouchStart = (event) => {
@@ -1919,7 +1928,7 @@ function Flipbook({ pages, total, onBuy, onRead }) {
       }
       if (Math.abs(dx) < 10 && Math.abs(dy) < 10 && dt < 500) {
         const box = host.getBoundingClientRect();
-        if (t.clientX - box.left < box.width * 0.3 && flip.getCurrentPageIndex() > 0) prev();
+        if (t.clientX - box.left < box.width * 0.3 && flip.getCurrentPageIndex() > 1) prev();
         else next();
       }
     };
@@ -1938,8 +1947,10 @@ function Flipbook({ pages, total, onBuy, onRead }) {
         maxWidth: 560,
         minHeight: 311,
         maxHeight: 792,
-        showCover: true,
+        showCover: false,
         usePortrait: true,
+        // на узком экране страницы идут по одной — начинаем с обложки, а не с пустой страницы
+        startPage: host.clientWidth < 440 ? 1 : 0,
         mobileScrollSupport: true,
         useMouseEvents: !touchUI,
         showPageCorners: !touchUI,
@@ -1947,21 +1958,42 @@ function Flipbook({ pages, total, onBuy, onRead }) {
         flippingTime: 750,
       });
       flip.loadFromHTML(root.querySelectorAll(".flip-page"));
-      // showCover делает обложку жёсткой (картон) — нам нужна бумажная: уголок загибается
-      flip.getPage(0)?.setDensity("soft");
-      setCount(flip.getPageCount());
+      setCount(flip.getPageCount() - 1);
+      setPage(flip.getCurrentPageIndex());
+      let quiet = false;
       flip.on("flip", (event) => {
         setPage(event.data);
         setLeaving(false);
-        setNoticed(true);
+        if (!quiet) setNoticed(true);
       });
       flip.on("changeState", (event) => {
         const idx = flip.getCurrentPageIndex();
+        if (event.data === "read") delete host.dataset.turn;
+        else if (idx === 2 && !host.dataset.turn) {
+          const panel = (host.closest(".guide-book") || host).getBoundingClientRect();
+          const block = root.querySelector(".stf__block")?.getBoundingClientRect();
+          const r = flip.getBoundsRect();
+          if (block && r) {
+            host.style.setProperty("--blank-x", `${Math.round(panel.left - block.left - r.left)}px`);
+            host.style.setProperty("--blank-y", `${Math.round(panel.top - block.top - r.top)}px`);
+            host.style.setProperty("--panel-w", `${Math.round(panel.width)}px`);
+            host.style.setProperty("--panel-h", `${Math.round(panel.height)}px`);
+            host.dataset.turn = "back";
+          }
+        }
         // обложку открывают — книга одновременно съезжает в разворот
-        if (event.data === "flipping" && idx === 0) setLeaving(true);
-        if (event.data === "read" && idx === 0) setLeaving(false);
+        if (event.data === "flipping" && idx <= 1) setLeaving(true);
+        if (event.data === "read" && idx <= 1) setLeaving(false);
       });
-      flip.on("changeOrientation", () => requestAnimationFrame(measure));
+      flip.on("changeOrientation", () => {
+        // стал узкий экран, а открыта пустая страница — переходим на обложку без анимации
+        if (flip.getOrientation() === "portrait" && flip.getCurrentPageIndex() === 0) {
+          quiet = true;
+          flip.turnToPage(1);
+          quiet = false;
+        }
+        requestAnimationFrame(measure);
+      });
       bookRef.current = flip;
       requestAnimationFrame(measure);
     });
@@ -1985,7 +2017,10 @@ function Flipbook({ pages, total, onBuy, onRead }) {
   }, [pagesKey, total, touchUI]);
 
   // Закрытая книга в развороте занимает только правую половину — сдвигаем её к центру.
-  const closed = page === 0 && !leaving;
+  const closed = page <= 1 && !leaving;
+  const shown = Math.max(page, 1); // номер страницы на экране (0 — пустая страница перед обложкой)
+  const pageTotal = count + 1;
+  const lastIndex = geom?.landscape ? (pageTotal % 2 === 0 ? pageTotal - 2 : pageTotal - 1) : pageTotal - 1;
   useEffect(() => {
     const root = rootRef.current;
     if (!root || !geom) return;
@@ -2020,17 +2055,17 @@ function Flipbook({ pages, total, onBuy, onRead }) {
     <div className={`flipbook${closed ? " is-closed" : ""}${closed && !noticed ? " show-hint" : ""}${geom ? " is-ready" : ""}`}>
       <div className="flipbook-host" ref={hostRef} />
       <div className="flipbook-nav">
-        <button type="button" onClick={() => bookRef.current?.flipPrev()} aria-label="Назад" disabled={page === 0}>
+        <button type="button" onClick={() => page > 1 && bookRef.current?.flipPrev()} aria-label="Назад" disabled={page <= 1}>
           <CaretLeft size={20} weight="bold" />
         </button>
         <span>
-          {page + 1} / {count}
+          {shown} / {count}
         </span>
-        <button type="button" onClick={openBook} aria-label="Вперёд" disabled={page >= count - 1}>
+        <button type="button" onClick={openBook} aria-label="Вперёд" disabled={page >= lastIndex}>
           <CaretRight size={20} weight="bold" />
         </button>
         {onRead && (
-          <button className="flipbook-read" type="button" onClick={() => onRead(Math.min(page, pages.length - 1))}>
+          <button className="flipbook-read" type="button" onClick={() => onRead(Math.min(shown - 1, pages.length - 1))}>
             <MagnifyingGlassPlus size={18} weight="bold" />
             Читать крупно
           </button>

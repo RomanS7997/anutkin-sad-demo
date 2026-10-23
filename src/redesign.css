@@ -1211,6 +1211,8 @@ body { background: var(--grad-page); color: var(--ink); font-family: var(--font-
 .redesign .flipbook-host { opacity: 0; transition: opacity .5s ease; }
 .redesign .flipbook.is-ready .flipbook-host { opacity: 1; }
 .redesign .flip-page { background: #faf9ec; overflow: hidden; }
+.redesign .flip-page.flip-blank { background: transparent; pointer-events: none; }
+.redesign .flipbook-host[data-turn="back"] .flip-page.flip-blank { background: radial-gradient(120% 90% at 50% 0%, #f5f3de 0%, #e2e6bc 100%) var(--blank-x, 0) var(--blank-y, 0) / var(--panel-w, 100%) var(--panel-h, 100%) no-repeat; }
 /* Закрытая книга: корешок, стопка страниц по обрезу, тень на «столе» */
 .redesign .flip-page.is-cover { transition: box-shadow .45s ease; }
 .redesign .flipbook.is-closed .flip-page.is-cover {
