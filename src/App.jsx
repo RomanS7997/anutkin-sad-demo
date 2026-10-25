@@ -61,6 +61,10 @@ function plural(n, one, few, many) {
 
 function stockLabel(product) {
   if (product.kind === "guide") return `PDF · ${product.guide?.pages || ""} стр.`;
+  if (product.kind === "composition") {
+    const n = product.comp?.count || 0;
+    return `набор · ${n} ${plural(n, "растение", "растения", "растений")}`;
+  }
   if (product.stock === 0) return "нет в наличии";
   if (product.stock <= 3) return `${product.stock} шт. осталось`;
   return `${product.stock} шт.`;
@@ -350,13 +354,15 @@ function StorefrontAppV2({ data, route, go, scrollMem }) {
       {routeName === "product" &&
         (selectedProduct.kind === "guide" ? (
           <GuideExperience key={selectedProduct.id} product={selectedProduct} data={data} go={go} addToCart={addToCart} />
+        ) : selectedProduct.kind === "composition" ? (
+          <CompositionExperience key={selectedProduct.id} product={selectedProduct} data={data} go={go} addToCart={addToCart} />
         ) : (
           <ProductExperience product={selectedProduct} products={featured} go={go} addToCart={addToCart} openLightbox={openLightbox} />
         ))}
       {routeName === "delivery" && <DeliveryExperience data={data} go={go} />}
       {routeName === "about" && <AboutExperience data={data} go={go} />}
       {!["home", "catalog", "product", "delivery", "about"].includes(routeName) && (
-        <HomeExperience data={data} featured={featured} galleryProducts={galleryProducts} go={go} addToCart={addToCart} openLightbox={openLightbox} />
+        <HomeExperience data={data} featured={featured} galleryProducts={galleryProducts} go={go} addToCart={addToCart} openLightbox={openLightbox} setActiveCategory={setActiveCategory} />
       )}
 
       <StoreFooter data={data} go={go} />
@@ -422,9 +428,11 @@ function BrandLogo({ go, variant = "berry" }) {
 
 function StoreHeader({ routeName, go, cartCount, openCart, data, setQuery, setActiveCategory }) {
   const hasGuides = (data?.products || []).some((product) => product.kind === "guide");
+  const hasComps = (data?.products || []).some((product) => product.kind === "composition");
   const links = [
     ["home", "Главная", "shop"],
     ["catalog", "Каталог", "catalog"],
+    ...(hasComps ? [["compositions", "Композиции", "catalog"]] : []),
     ...(hasGuides ? [["guides", "Пособия", "catalog"]] : []),
     ["delivery", "Доставка", "delivery"],
     ["about", "О хозяйстве", "about"],
@@ -494,7 +502,14 @@ function StoreHeader({ routeName, go, cartCount, openCart, data, setQuery, setAc
                       )}
                       <span className="mega-card__text">
                         <strong>{category.label}</strong>
-                        <small>{category.count} {sortWord(category.count)}</small>
+                        <small>
+                          {category.count}{" "}
+                          {category.key === "guides"
+                            ? plural(category.count, "пособие", "пособия", "пособий")
+                            : category.key === "compositions"
+                              ? plural(category.count, "композиция", "композиции", "композиций")
+                              : sortWord(category.count)}
+                        </small>
                       </span>
                     </button>
                   ))}
@@ -510,7 +525,7 @@ function StoreHeader({ routeName, go, cartCount, openCart, data, setQuery, setAc
               className={routeName === key ? "active" : ""}
               key={key}
               type="button"
-              onClick={() => (key === "guides" ? openCategory("guides") : go(target))}
+              onClick={() => (key === "guides" || key === "compositions" ? openCategory(key) : go(target))}
             >
               {label}
             </button>
@@ -662,6 +677,7 @@ function HomeExperience({ data, featured, galleryProducts, go, addToCart, openLi
 
   const plants = galleryProducts.filter((product) => !product.kind);
   const guides = data.products.filter((product) => product.kind === "guide");
+  const comps = data.products.filter((product) => product.kind === "composition");
 
   return (
     <>
@@ -734,6 +750,8 @@ function HomeExperience({ data, featured, galleryProducts, go, addToCart, openLi
           ))}
         </div>
       </section>
+
+      <CompositionsShowcase products={comps} go={go} setActiveCategory={setActiveCategory} />
 
       <GuidesShowcase products={guides} go={go} />
 
@@ -2364,9 +2382,234 @@ function GuideExperience({ product, data, go, addToCart }) {
   );
 }
 
+// ---------- Готовые композиции: клумба под ключ из растений питомника ----------
+const metres = (n) => String(n).replace(".", ",");
+const compSize = (comp) => (comp?.size ? `${metres(comp.size[0])} × ${metres(comp.size[1])} м` : "");
+const SLIDE_NAMES = ["Клумба", "Что в наборе", "Схема посадки"];
+
+function CompositionCard({ product, go }) {
+  const comp = product.comp || {};
+  return (
+    <button className="comp-card reveal" type="button" onClick={() => go(`product/${product.id}`)}>
+      <span className="comp-card__img">
+        <img src={assetUrl(product.image)} alt={product.name} loading="lazy" />
+      </span>
+      <span className="comp-card__meta">
+        <strong>{product.name}</strong>
+        <small>
+          {compSize(comp)} · {comp.count} {plural(comp.count || 0, "растение", "растения", "растений")} · {comp.light}
+        </small>
+        <em>
+          {formatRub(product.price)}
+          {product.oldPrice > product.price && <s>{formatRub(product.oldPrice)}</s>}
+        </em>
+      </span>
+      <span className="comp-card__cta">
+        Смотреть композицию
+        <ArrowRight size={15} weight="bold" />
+      </span>
+    </button>
+  );
+}
+
+function CompositionsShowcase({ products, go, setActiveCategory }) {
+  if (!products.length) return null;
+  const shown = products.slice(0, 8);
+  const openAll = () => {
+    if (setActiveCategory) setActiveCategory("compositions");
+    go("catalog");
+  };
+  return (
+    <section className="comps-band reveal" aria-label="Готовые композиции">
+      <div className="section-head center">
+        <p className="eyebrow">Готовые композиции</p>
+        <h2 className="section-title">Клумба под ключ</h2>
+        <p>Мы подобрали растения из нашего питомника так, чтобы клумба цвела с весны до осени. К каждому набору прилагается схема посадки с расстояниями.</p>
+      </div>
+      <div className="comps-row">
+        {shown.map((product) => (
+          <CompositionCard key={product.id} product={product} go={go} />
+        ))}
+      </div>
+      {products.length > shown.length && (
+        <div className="comps-more">
+          <button className="primary-button alt" type="button" onClick={openAll}>
+            Все композиции ({products.length})
+            <ArrowRight size={16} weight="bold" />
+          </button>
+        </div>
+      )}
+    </section>
+  );
+}
+
+function CompositionExperience({ product, data, go, addToCart }) {
+  const comp = product.comp || {};
+  const slides = product.images?.length ? product.images : [product.image];
+  const [slide, setSlide] = useState(0);
+  const [zoom, setZoom] = useState(false);
+  useEffect(() => {
+    setSlide(0);
+    setZoom(false);
+  }, [product.id]);
+  useEffect(() => {
+    if (!zoom) return undefined;
+    const onKey = (event) => {
+      if (event.key === "Escape") setZoom(false);
+      if (event.key === "ArrowRight") setSlide((i) => (i + 1) % slides.length);
+      if (event.key === "ArrowLeft") setSlide((i) => (i - 1 + slides.length) % slides.length);
+    };
+    const prev = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    window.addEventListener("keydown", onKey);
+    return () => {
+      document.body.style.overflow = prev;
+      window.removeEventListener("keydown", onKey);
+    };
+  }, [zoom, slides.length]);
+  const inCatalog = new Set(data.products.map((item) => item.id));
+  const others = data.products.filter((item) => item.kind === "composition" && item.id !== product.id);
+  const saving = product.oldPrice > product.price ? product.oldPrice - product.price : 0;
+  const step = (delta) => setSlide((i) => (i + delta + slides.length) % slides.length);
+
+  return (
+    <>
+      <section className="comp-page">
+        <div className="comp-gallery">
+          <button className="comp-main" type="button" onClick={() => setZoom(true)} aria-label="Открыть крупно">
+            <img src={assetUrl(slides[slide])} alt={`${product.name}: ${SLIDE_NAMES[slide] || ""}`} />
+          </button>
+          {slides.length > 1 && (
+            <div className="comp-thumbs">
+              <button type="button" className="comp-arrow" onClick={() => step(-1)} aria-label="Назад">
+                <CaretLeft size={20} weight="bold" />
+              </button>
+              {slides.map((src, i) => (
+                <button key={src} type="button" className={i === slide ? "comp-thumb is-active" : "comp-thumb"} onClick={() => setSlide(i)}>
+                  <img src={assetUrl(src)} alt="" />
+                  <span>{SLIDE_NAMES[i] || `Слайд ${i + 1}`}</span>
+                </button>
+              ))}
+              <button type="button" className="comp-arrow" onClick={() => step(1)} aria-label="Вперёд">
+                <CaretRight size={20} weight="bold" />
+              </button>
+            </div>
+          )}
+        </div>
+        <div className="comp-copy">
+          <button className="back-link" type="button" onClick={() => go("catalog")}>
+            Каталог
+          </button>
+          <p className="eyebrow">Готовая композиция</p>
+          <h1>{product.name}</h1>
+          <p className="comp-lead">{comp.subtitle}</p>
+          <p className="comp-text">{product.description}</p>
+          <div className="guide-facts">
+            <article>
+              <span>Размер клумбы</span>
+              <strong>{compSize(comp)}</strong>
+            </article>
+            <article>
+              <span>Место</span>
+              <strong>{comp.light}</strong>
+            </article>
+            <article>
+              <span>Цветёт</span>
+              <strong>{comp.bloom}</strong>
+            </article>
+            <article>
+              <span>В наборе</span>
+              <strong>
+                {comp.count} {plural(comp.count || 0, "растение", "растения", "растений")}
+              </strong>
+            </article>
+          </div>
+          <div className="detail-price">
+            <strong>{formatRub(product.price)}</strong>
+            {saving > 0 && (
+              <span>
+                <s className="old-price">{formatRub(product.oldPrice)}</s> набором дешевле на {formatRub(saving)}
+              </span>
+            )}
+          </div>
+          <div className="hero-actions">
+            <button className="primary-button" type="button" onClick={() => addToCart(product)} disabled={!product.stock}>
+              {product.stock ? "Купить набор" : "Набор закончился"}
+              <Plus size={18} weight="bold" />
+            </button>
+            <button className="primary-button alt" type="button" onClick={() => setSlide(Math.min(2, slides.length - 1))}>
+              Схема посадки
+            </button>
+          </div>
+          {comp.plants?.length > 0 && (
+            <div className="comp-list">
+              <p className="eyebrow">Что в наборе</p>
+              <ul>
+                {comp.plants.map((plant) => (
+                  <li key={plant.id}>
+                    <img src={assetUrl(plant.thumb)} alt="" />
+                    <span>
+                      {inCatalog.has(plant.id) ? (
+                        <button type="button" className="text-link" onClick={() => go(`product/${plant.id}`)}>
+                          {plant.name}
+                        </button>
+                      ) : (
+                        <b>{plant.name}</b>
+                      )}
+                      <small>
+                        {plant.role} · {plant.h}
+                      </small>
+                    </span>
+                    <em>×{plant.qty}</em>
+                  </li>
+                ))}
+              </ul>
+              <p className="comp-note">Любое растение из набора можно купить и отдельно: нажмите на название.</p>
+            </div>
+          )}
+        </div>
+      </section>
+
+      {others.length > 0 && (
+        <>
+          <section className="section-head">
+            <p className="eyebrow">Другие композиции</p>
+            <h2>Ещё варианты клумб</h2>
+          </section>
+          <section className="comps-row comps-row--compact">
+            {others.slice(0, 4).map((item) => (
+              <CompositionCard key={item.id} product={item} go={go} />
+            ))}
+          </section>
+        </>
+      )}
+
+      {zoom && (
+        <div className="comp-zoom" role="dialog" aria-modal="true" aria-label={product.name} onClick={() => setZoom(false)}>
+          <img src={assetUrl(slides[slide])} alt="" onClick={(event) => event.stopPropagation()} />
+          <button type="button" className="comp-zoom__close" onClick={() => setZoom(false)} aria-label="Закрыть">
+            <X size={22} weight="bold" />
+          </button>
+          {slides.length > 1 && (
+            <>
+              <button type="button" className="comp-zoom__nav prev" onClick={(event) => { event.stopPropagation(); step(-1); }} aria-label="Назад">
+                <CaretLeft size={26} weight="bold" />
+              </button>
+              <button type="button" className="comp-zoom__nav next" onClick={(event) => { event.stopPropagation(); step(1); }} aria-label="Вперёд">
+                <CaretRight size={26} weight="bold" />
+              </button>
+            </>
+          )}
+        </div>
+      )}
+    </>
+  );
+}
+
 function LuxuryProductCard({ product, go, addToCart, openLightbox, index = 0, feature = false }) {
   const isVariable = !!product.variants?.length;
   const isGuide = product.kind === "guide";
+  const isComp = product.kind === "composition";
   const openImage = () => (product.kind ? go(`product/${product.id}`) : openLightbox(product));
   return (
     <article
@@ -2378,7 +2621,7 @@ function LuxuryProductCard({ product, go, addToCart, openLightbox, index = 0, fe
         <span>{product.category}</span>
         <em>
           <MagnifyingGlass size={15} weight="duotone" />
-          {isGuide ? "листать" : "фото"}
+          {isGuide ? "листать" : isComp ? "смотреть" : "фото"}
         </em>
       </button>
       <div className="luxury-body">
@@ -2399,7 +2642,7 @@ function LuxuryProductCard({ product, go, addToCart, openLightbox, index = 0, fe
             onClick={() => (isVariable ? go(`product/${product.id}`) : addToCart(product))}
             disabled={product.stock === 0}
           >
-            {product.stock === 0 ? "Нет в наличии" : isVariable ? "Выбрать размер" : isGuide ? "Купить" : "В корзину"}
+            {product.stock === 0 ? "Нет в наличии" : isVariable ? "Выбрать размер" : isGuide ? "Купить" : isComp ? "Купить набор" : "В корзину"}
           </button>
           <button type="button" onClick={() => go(`product/${product.id}`)}>
             Подробнее
