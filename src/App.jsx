@@ -2428,6 +2428,7 @@ function CompositionCard({ product, go }) {
             src={assetUrl(item.src)}
             alt={i === 0 ? product.name : ""}
             loading="lazy"
+            draggable={false}
             className={`${i === frame ? "is-on" : ""}${item.cut ? " is-cut" : " is-slide"}`}
           />
         ))}
@@ -2460,35 +2461,98 @@ function CompositionCard({ product, go }) {
   );
 }
 
-function CompositionsShowcase({ products, go, setActiveCategory }) {
-  const [filter, setFilter] = useState("all");
-  const trackRef = useRef(null);
+// Лента карточек: стрелки и перетаскивание мышью (колесом мыши её не прокрутить)
+function useCompTrack(resetKey) {
+  const ref = useRef(null);
+  const drag = useRef(null);
   const [edge, setEdge] = useState({ start: true, end: false });
-  const list = filter === "all" ? products : products.filter((item) => item.comp?.tags?.includes(filter));
-  const filters = COMP_FILTERS.map(([key, label]) => [key, label, key === "all" ? products.length : products.filter((item) => item.comp?.tags?.includes(key)).length]).filter(
-    ([, , count]) => count > 0,
-  );
   const measure = () => {
-    const el = trackRef.current;
+    const el = ref.current;
     if (!el) return;
     setEdge({ start: el.scrollLeft < 8, end: el.scrollLeft + el.clientWidth > el.scrollWidth - 8 });
   };
   useEffect(() => {
-    trackRef.current?.scrollTo({ left: 0 });
+    ref.current?.scrollTo({ left: 0 });
     measure();
-  }, [filter, products.length]);
+  }, [resetKey]);
   useEffect(() => {
     window.addEventListener("resize", measure);
     return () => window.removeEventListener("resize", measure);
   }, []);
-  if (!products.length) return null;
-  const page = (dir) => {
-    const el = trackRef.current;
-    if (!el) return;
-    const card = el.querySelector(".comp-card");
-    const stepW = card ? card.getBoundingClientRect().width + 24 : el.clientWidth * 0.8;
-    el.scrollBy({ left: dir * stepW * Math.max(1, Math.floor(el.clientWidth / stepW)), behavior: "smooth" });
+  const items = () => Array.from(ref.current?.children || []);
+  const startPad = () => parseFloat(getComputedStyle(ref.current).scrollPaddingLeft) || 0;
+  // ближайшая карточка к левому краю ленты
+  const snapLeft = (left) => {
+    const el = ref.current;
+    const base = el.getBoundingClientRect().left - el.scrollLeft + startPad();
+    const lefts = items().map((n) => n.getBoundingClientRect().left - base);
+    const max = el.scrollWidth - el.clientWidth;
+    return Math.min(max, lefts.reduce((best, x) => (Math.abs(x - left) < Math.abs(best - left) ? x : best), 0));
   };
+  const page = (dir) => {
+    const el = ref.current;
+    if (!el) return;
+    const card = items()[0];
+    const stepW = card ? card.getBoundingClientRect().width + parseFloat(getComputedStyle(el).columnGap || 24) : el.clientWidth * 0.8;
+    const n = Math.max(1, Math.floor(el.clientWidth / stepW));
+    el.scrollTo({ left: Math.max(0, snapLeft(el.scrollLeft + dir * stepW * n)), behavior: "smooth" });
+  };
+  const onPointerDown = (event) => {
+    if (event.pointerType !== "mouse" || event.button !== 0 || !ref.current) return;
+    drag.current = { x: event.clientX, left: ref.current.scrollLeft, moved: false, id: event.pointerId };
+  };
+  const onPointerMove = (event) => {
+    const d = drag.current;
+    const el = ref.current;
+    if (!d || !el) return;
+    const dx = event.clientX - d.x;
+    if (!d.moved && Math.abs(dx) > 6) {
+      d.moved = true;
+      el.classList.add("is-dragging");
+      el.setPointerCapture?.(d.id);
+    }
+    if (d.moved) el.scrollLeft = d.left - dx;
+  };
+  const onPointerEnd = () => {
+    const d = drag.current;
+    const el = ref.current;
+    drag.current = null;
+    if (!d || !d.moved || !el) return;
+    // клик, который браузер пришлёт после перетаскивания, карточку не открывает
+    const stop = (e) => {
+      e.stopPropagation();
+      e.preventDefault();
+    };
+    el.addEventListener("click", stop, { capture: true, once: true });
+    setTimeout(() => el.removeEventListener("click", stop, { capture: true }), 0);
+    el.scrollTo({ left: snapLeft(el.scrollLeft), behavior: "smooth" });
+    setTimeout(() => el.classList.remove("is-dragging"), 450);
+  };
+  const handlers = { ref, onScroll: measure, onPointerDown, onPointerMove, onPointerUp: onPointerEnd, onPointerCancel: onPointerEnd, onDragStart: (e) => e.preventDefault() };
+  return { edge, page, handlers };
+}
+
+function TrackArrows({ track }) {
+  return (
+    <div className="comps-arrows">
+      <button type="button" onClick={() => track.page(-1)} disabled={track.edge.start} aria-label="Назад">
+        <CaretLeft size={20} weight="bold" />
+      </button>
+      <button type="button" onClick={() => track.page(1)} disabled={track.edge.end} aria-label="Вперёд">
+        <CaretRight size={20} weight="bold" />
+      </button>
+    </div>
+  );
+}
+
+function CompositionsShowcase({ products, go, setActiveCategory }) {
+  const [filter, setFilter] = useState("all");
+  const track = useCompTrack(`${filter}-${products.length}`);
+  const list = filter === "all" ? products : products.filter((item) => item.comp?.tags?.includes(filter));
+  const filters = COMP_FILTERS.map(([key, label]) => [key, label, key === "all" ? products.length : products.filter((item) => item.comp?.tags?.includes(key)).length]).filter(
+    ([, , count]) => count > 0,
+  );
+  if (!products.length) return null;
   const openAll = () => {
     if (setActiveCategory) setActiveCategory("compositions");
     go("catalog");
@@ -2501,14 +2565,7 @@ function CompositionsShowcase({ products, go, setActiveCategory }) {
           <h2 className="section-title">Клумба под ключ</h2>
           <p>Растения из нашего питомника, подобранные так, чтобы клумба цвела с весны до осени. К каждому набору прилагается схема посадки.</p>
         </div>
-        <div className="comps-arrows">
-          <button type="button" onClick={() => page(-1)} disabled={edge.start} aria-label="Назад">
-            <CaretLeft size={20} weight="bold" />
-          </button>
-          <button type="button" onClick={() => page(1)} disabled={edge.end} aria-label="Вперёд">
-            <CaretRight size={20} weight="bold" />
-          </button>
-        </div>
+        <TrackArrows track={track} />
       </div>
       <div className="comps-filters" role="tablist" aria-label="Подобрать композицию">
         {filters.map(([key, label, count]) => (
@@ -2518,7 +2575,7 @@ function CompositionsShowcase({ products, go, setActiveCategory }) {
           </button>
         ))}
       </div>
-      <div className="comps-track" ref={trackRef} onScroll={measure}>
+      <div className="comps-track" {...track.handlers}>
         {list.map((product) => (
           <CompositionCard key={product.id} product={product} go={go} />
         ))}
@@ -2578,6 +2635,7 @@ function CompositionExperience({ product, data, go, addToCart }) {
   };
   const inCatalog = new Set(data.products.map((item) => item.id));
   const others = data.products.filter((item) => item.kind === "composition" && item.id !== product.id);
+  const moreTrack = useCompTrack(product.id);
   const saving = product.oldPrice > product.price ? product.oldPrice - product.price : 0;
   const current = assetUrl(slides[slide]);
 
@@ -2691,8 +2749,9 @@ function CompositionExperience({ product, data, go, addToCart }) {
               <p className="eyebrow">Другие композиции</p>
               <h2 className="section-title">Ещё варианты клумб</h2>
             </div>
+            <TrackArrows track={moreTrack} />
           </div>
-          <div className="comps-track">
+          <div className="comps-track" {...moreTrack.handlers}>
             {others.map((item) => (
               <CompositionCard key={item.id} product={item} go={go} />
             ))}
