@@ -1824,12 +1824,14 @@ function PhotoLightbox({ product, onClose, addToCart, go }) {
 // прозрачная страница: обложка — обычная бумажная страница справа, листается штатно в обе стороны.
 // Индексы page-flip: 0 — пустая, 1 — обложка, n — n-я страница превью; на экране номер = индекс.
 // Появление: книжка всплывает, стоит на обложке, чтобы её успели рассмотреть, и сама открывается.
-// Если человек уже навёл мышь, коснулся или перелистнул сам — автоматически не открываем.
+// Отменяют автооткрытие только клик по книжке, перелистывание, стрелки и «Читать крупно».
+// Наведение мыши и прокрутка страницы пальцем не мешают. Если книжку прокрутили за экран,
+// она откроется, когда снова окажется на экране.
 // При листании назад на обложку page-flip кладёт «нижнюю» страницу (нашу пустую) поверх оглавления —
 // прозрачная его не закрывает. На время такого листания пустая страница красится фоном панели
 // (тот же градиент, совмещённый с панелью), в закрытой книге она снова прозрачная.
 // появление книжки (0,9 с) + остановка на обложке, чтобы её рассмотрели
-const AUTO_OPEN_DELAY = 900 + 2600;
+const AUTO_OPEN_DELAY = 1100 + 2500;
 
 function Flipbook({ pages, total, onBuy, onRead }) {
   const hostRef = useRef(null);
@@ -1854,7 +1856,9 @@ function Flipbook({ pages, total, onBuy, onRead }) {
     let flip = null;
     let cancelled = false;
     let autoTimer = 0;
+    let retryTimer = 0;
     let io = null;
+    let onVisibility = null;
     const root = document.createElement("div");
     root.className = "flipbook-root";
     host.appendChild(root);
@@ -1906,12 +1910,14 @@ function Flipbook({ pages, total, onBuy, onRead }) {
 
     // мышь пришла на книжку — дальше подсказывают родные загибы уголков page-flip
     const onPointerEnter = (event) => {
-      if (event.pointerType === "mouse") {
-        setNoticed(true);
-        engagedRef.current = true;
-      }
+      if (event.pointerType === "mouse") setNoticed(true);
     };
     host.addEventListener("pointerenter", onPointerEnter);
+    // нажали мышью на книжку — человек листает сам
+    const onPointerDown = (event) => {
+      if (event.pointerType !== "touch") engagedRef.current = true;
+    };
+    host.addEventListener("pointerdown", onPointerDown);
 
     // телефон: свои жесты поверх page-flip (его обработчики выключены)
     const next = () => {
@@ -1924,7 +1930,6 @@ function Flipbook({ pages, total, onBuy, onRead }) {
     };
     let touch = null;
     const onTouchStart = (event) => {
-      engagedRef.current = true;
       const t = event.touches[0];
       touch = event.touches.length === 1 ? { x: t.clientX, y: t.clientY, time: Date.now() } : null;
     };
@@ -1937,11 +1942,13 @@ function Flipbook({ pages, total, onBuy, onRead }) {
       touch = null;
       if (event.target.closest("button")) return; // «Купить пособие» на последней странице
       if (Math.abs(dx) > 40 && Math.abs(dx) > Math.abs(dy) * 1.5 && dt < 800) {
+        engagedRef.current = true;
         if (dx < 0) next();
         else prev();
         return;
       }
       if (Math.abs(dx) < 10 && Math.abs(dy) < 10 && dt < 500) {
+        engagedRef.current = true;
         const box = host.getBoundingClientRect();
         if (t.clientX - box.left < box.width * 0.3 && flip.getCurrentPageIndex() > 1) prev();
         else next();
@@ -2024,21 +2031,44 @@ function Flipbook({ pages, total, onBuy, onRead }) {
       coverReady.then(() => {
         if (cancelled) return;
         setCoverLoaded(true);
-        if (window.matchMedia("(prefers-reduced-motion: reduce)").matches || !("IntersectionObserver" in window)) return;
+        if (!("IntersectionObserver" in window)) return;
+        let visible = false;
+        let due = false;
+        const stop = () => {
+          io?.disconnect();
+          io = null;
+        };
+        const tryOpen = () => {
+          if (cancelled || !flip) return;
+          if (engagedRef.current || flip.getCurrentPageIndex() > 1) return stop();
+          // книжку прокрутили за экран или вкладка в фоне — откроем, когда снова увидят
+          if (!visible || document.hidden) {
+            due = true;
+            return;
+          }
+          // мышь как раз загибает уголок — подождём, пока отпустит
+          if (flip.getState() !== "read") {
+            retryTimer = window.setTimeout(tryOpen, 800);
+            return;
+          }
+          due = false;
+          stop();
+          next();
+        };
         io = new IntersectionObserver(
           (entries) => {
-            if (!entries.some((entry) => entry.isIntersecting)) return;
-            io.disconnect();
-            io = null;
-            autoTimer = window.setTimeout(() => {
-              if (cancelled || engagedRef.current || document.hidden || !flip) return;
-              if (flip.getCurrentPageIndex() > 1 || flip.getState() !== "read") return;
-              next();
-            }, AUTO_OPEN_DELAY);
+            visible = entries.some((entry) => entry.isIntersecting);
+            if (!visible) return;
+            if (!autoTimer) autoTimer = window.setTimeout(tryOpen, AUTO_OPEN_DELAY);
+            else if (due) retryTimer = window.setTimeout(tryOpen, 700);
           },
           { threshold: 0.6 },
         );
         io.observe(host);
+        onVisibility = () => {
+          if (!document.hidden && due) retryTimer = window.setTimeout(tryOpen, 700);
+        };
+        document.addEventListener("visibilitychange", onVisibility);
       });
     });
     window.addEventListener("resize", onResize);
@@ -2046,9 +2076,12 @@ function Flipbook({ pages, total, onBuy, onRead }) {
     return () => {
       cancelled = true;
       window.clearTimeout(autoTimer);
+      window.clearTimeout(retryTimer);
       io?.disconnect();
+      if (onVisibility) document.removeEventListener("visibilitychange", onVisibility);
       window.removeEventListener("resize", onResize);
       host.removeEventListener("pointerenter", onPointerEnter);
+      host.removeEventListener("pointerdown", onPointerDown);
       host.removeEventListener("touchstart", onTouchStart);
       host.removeEventListener("touchend", onTouchEnd);
       try {
