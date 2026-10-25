@@ -1823,14 +1823,20 @@ function PhotoLightbox({ product, onClose, addToCart, go }) {
 // на бумажную, а жёсткая при наведении даёт серую полосу. Поэтому перед обложкой стоит пустая
 // прозрачная страница: обложка — обычная бумажная страница справа, листается штатно в обе стороны.
 // Индексы page-flip: 0 — пустая, 1 — обложка, n — n-я страница превью; на экране номер = индекс.
+// Появление: книжка всплывает, стоит на обложке, чтобы её успели рассмотреть, и сама открывается.
+// Если человек уже навёл мышь, коснулся или перелистнул сам — автоматически не открываем.
 // При листании назад на обложку page-flip кладёт «нижнюю» страницу (нашу пустую) поверх оглавления —
 // прозрачная его не закрывает. На время такого листания пустая страница красится фоном панели
 // (тот же градиент, совмещённый с панелью), в закрытой книге она снова прозрачная.
+// появление книжки (0,9 с) + остановка на обложке, чтобы её рассмотрели
+const AUTO_OPEN_DELAY = 900 + 2600;
+
 function Flipbook({ pages, total, onBuy, onRead }) {
   const hostRef = useRef(null);
   const rootRef = useRef(null);
   const bookRef = useRef(null);
   const placed = useRef(false);
+  const engagedRef = useRef(false); // человек сам взялся за книжку — автооткрытие отменяется
   const buyRef = useRef(onBuy);
   buyRef.current = onBuy;
   const [touchUI] = useState(() => window.matchMedia("(hover: none), (pointer: coarse)").matches);
@@ -1839,6 +1845,7 @@ function Flipbook({ pages, total, onBuy, onRead }) {
   const [geom, setGeom] = useState(null);
   const [leaving, setLeaving] = useState(false);
   const [noticed, setNoticed] = useState(false);
+  const [coverLoaded, setCoverLoaded] = useState(false);
   const pagesKey = pages.join("|");
 
   useEffect(() => {
@@ -1846,6 +1853,8 @@ function Flipbook({ pages, total, onBuy, onRead }) {
     if (!host) return undefined;
     let flip = null;
     let cancelled = false;
+    let autoTimer = 0;
+    let io = null;
     const root = document.createElement("div");
     root.className = "flipbook-root";
     host.appendChild(root);
@@ -1854,6 +1863,8 @@ function Flipbook({ pages, total, onBuy, onRead }) {
     setPage(0);
     setLeaving(false);
     setNoticed(false);
+    setCoverLoaded(false);
+    engagedRef.current = false;
 
     const blank = document.createElement("div");
     blank.className = "flip-page flip-blank";
@@ -1895,7 +1906,10 @@ function Flipbook({ pages, total, onBuy, onRead }) {
 
     // мышь пришла на книжку — дальше подсказывают родные загибы уголков page-flip
     const onPointerEnter = (event) => {
-      if (event.pointerType === "mouse") setNoticed(true);
+      if (event.pointerType === "mouse") {
+        setNoticed(true);
+        engagedRef.current = true;
+      }
     };
     host.addEventListener("pointerenter", onPointerEnter);
 
@@ -1910,6 +1924,7 @@ function Flipbook({ pages, total, onBuy, onRead }) {
     };
     let touch = null;
     const onTouchStart = (event) => {
+      engagedRef.current = true;
       const t = event.touches[0];
       touch = event.touches.length === 1 ? { x: t.clientX, y: t.clientY, time: Date.now() } : null;
     };
@@ -1996,11 +2011,42 @@ function Flipbook({ pages, total, onBuy, onRead }) {
       });
       bookRef.current = flip;
       requestAnimationFrame(measure);
+
+      // обложка загрузилась → книжка появляется; как только она на экране — пауза и открытие
+      const coverImg = root.querySelector(".is-cover img");
+      const coverReady = new Promise((resolve) => {
+        if (!coverImg || (coverImg.complete && coverImg.naturalWidth)) resolve();
+        else {
+          coverImg.addEventListener("load", resolve, { once: true });
+          coverImg.addEventListener("error", resolve, { once: true });
+        }
+      });
+      coverReady.then(() => {
+        if (cancelled) return;
+        setCoverLoaded(true);
+        if (window.matchMedia("(prefers-reduced-motion: reduce)").matches || !("IntersectionObserver" in window)) return;
+        io = new IntersectionObserver(
+          (entries) => {
+            if (!entries.some((entry) => entry.isIntersecting)) return;
+            io.disconnect();
+            io = null;
+            autoTimer = window.setTimeout(() => {
+              if (cancelled || engagedRef.current || document.hidden || !flip) return;
+              if (flip.getCurrentPageIndex() > 1 || flip.getState() !== "read") return;
+              next();
+            }, AUTO_OPEN_DELAY);
+          },
+          { threshold: 0.6 },
+        );
+        io.observe(host);
+      });
     });
     window.addEventListener("resize", onResize);
 
     return () => {
       cancelled = true;
+      window.clearTimeout(autoTimer);
+      io?.disconnect();
       window.removeEventListener("resize", onResize);
       host.removeEventListener("pointerenter", onPointerEnter);
       host.removeEventListener("touchstart", onTouchStart);
@@ -2038,9 +2084,19 @@ function Flipbook({ pages, total, onBuy, onRead }) {
     }
   }, [geom, closed]);
 
+  // стрелки: пока страница переворачивается, второй клик не листает дальше
   const openBook = () => {
+    const book = bookRef.current;
+    engagedRef.current = true;
+    if (!book || book.getState() !== "read") return;
     if (closed) setLeaving(true);
-    bookRef.current?.flipNext();
+    book.flipNext();
+  };
+  const goBack = () => {
+    const book = bookRef.current;
+    engagedRef.current = true;
+    if (!book || book.getState() !== "read" || page <= 1) return;
+    book.flipPrev();
   };
 
   const hint = closed
@@ -2052,10 +2108,10 @@ function Flipbook({ pages, total, onBuy, onRead }) {
       : "Потяните за уголок страницы или нажмите на стрелки";
 
   return (
-    <div className={`flipbook${closed ? " is-closed" : ""}${closed && !noticed ? " show-hint" : ""}${geom ? " is-ready" : ""}`}>
+    <div className={`flipbook${closed ? " is-closed" : ""}${closed && !noticed ? " show-hint" : ""}${geom && coverLoaded ? " is-ready" : ""}`}>
       <div className="flipbook-host" ref={hostRef} />
       <div className="flipbook-nav">
-        <button type="button" onClick={() => page > 1 && bookRef.current?.flipPrev()} aria-label="Назад" disabled={page <= 1}>
+        <button type="button" onClick={goBack} aria-label="Назад" disabled={page <= 1}>
           <CaretLeft size={20} weight="bold" />
         </button>
         <span>
@@ -2065,7 +2121,10 @@ function Flipbook({ pages, total, onBuy, onRead }) {
           <CaretRight size={20} weight="bold" />
         </button>
         {onRead && (
-          <button className="flipbook-read" type="button" onClick={() => onRead(Math.min(shown - 1, pages.length - 1))}>
+          <button className="flipbook-read" type="button" onClick={() => {
+              engagedRef.current = true;
+              onRead(Math.min(shown - 1, pages.length - 1));
+            }}>
             <MagnifyingGlassPlus size={18} weight="bold" />
             Читать крупно
           </button>
