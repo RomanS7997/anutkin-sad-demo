@@ -2593,7 +2593,6 @@ function CompositionExperience({ product, data, go, addToCart }) {
             onTouchEnd={onTouchEnd}
             aria-label="Открыть крупно"
           >
-            <span className="comp-main__bg" style={{ backgroundImage: `url("${current}")` }} aria-hidden="true" />
             <img key={current} src={current} alt={`${product.name}: ${names[slide] || ""}`} />
           </button>
           {slides.length > 1 && (
