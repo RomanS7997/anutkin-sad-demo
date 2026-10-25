@@ -2385,60 +2385,149 @@ function GuideExperience({ product, data, go, addToCart }) {
 // ---------- Готовые композиции: клумба под ключ из растений питомника ----------
 const metres = (n) => String(n).replace(".", ",");
 const compSize = (comp) => (comp?.size ? `${metres(comp.size[0])} × ${metres(comp.size[1])} м` : "");
-const SLIDE_NAMES = ["Клумба", "Что в наборе", "Схема посадки"];
+const plantsWord = (n) => `${n} ${plural(n || 0, "растение", "растения", "растений")}`;
+const COMP_FILTERS = [
+  ["all", "Все"],
+  ["sun", "Для солнца"],
+  ["shade", "Для полутени"],
+  ["hydrangea", "С гортензиями"],
+  ["shrubs", "Кустарники"],
+  ["hedge", "Живые изгороди"],
+];
+const canHover = () => typeof window !== "undefined" && window.matchMedia?.("(hover: hover) and (pointer: fine)").matches;
 
+// Карточка: на компьютере кадры меняются, когда ведёшь мышью по картинке (сад → клумба → схема)
 function CompositionCard({ product, go }) {
   const comp = product.comp || {};
+  const frames = comp.frames?.length ? comp.frames : [{ src: product.image, label: "" }];
+  const [armed, setArmed] = useState(false); // остальные кадры грузим только после наведения
+  const [frame, setFrame] = useState(0);
+  const onMove = (event) => {
+    if (event.pointerType !== "mouse" || frames.length < 2) return;
+    const box = event.currentTarget.getBoundingClientRect();
+    const next = Math.min(frames.length - 1, Math.max(0, Math.floor(((event.clientX - box.left) / box.width) * frames.length)));
+    if (next !== frame) setFrame(next);
+  };
+  const shown = armed ? frames : frames.slice(0, 1);
+  const tint = comp.tint ? { "--t1": comp.tint[0], "--t2": comp.tint[1] } : undefined;
   return (
-    <button className="comp-card reveal" type="button" onClick={() => go(`product/${product.id}`)}>
-      <span className="comp-card__img">
-        <img src={assetUrl(product.image)} alt={product.name} loading="lazy" />
-      </span>
-      <span className="comp-card__meta">
+    <article className={`comp-card${armed ? " is-armed" : ""}`}>
+      <button
+        className="comp-card__media"
+        type="button"
+        style={tint}
+        onClick={() => go(`product/${product.id}`)}
+        onPointerEnter={(event) => event.pointerType === "mouse" && canHover() && setArmed(true)}
+        onPointerMove={onMove}
+        onPointerLeave={() => setFrame(0)}
+        aria-label={`${product.name}: открыть композицию`}
+      >
+        {shown.map((item, i) => (
+          <img
+            key={item.src}
+            src={assetUrl(item.src)}
+            alt={i === 0 ? product.name : ""}
+            loading="lazy"
+            className={`${i === frame ? "is-on" : ""}${item.cut ? " is-cut" : " is-slide"}`}
+          />
+        ))}
+        {armed && frames.length > 1 && (
+          <>
+            <span className="comp-card__bars" aria-hidden="true">
+              {frames.map((item, i) => (
+                <i key={item.src} className={i === frame ? "is-on" : ""} />
+              ))}
+            </span>
+          </>
+        )}
+      </button>
+      <button className="comp-card__body" type="button" onClick={() => go(`product/${product.id}`)}>
         <strong>{product.name}</strong>
         <small>
-          {compSize(comp)} · {comp.count} {plural(comp.count || 0, "растение", "растения", "растений")} · {comp.light}
+          {compSize(comp)} · {plantsWord(comp.count)} · {comp.light}
         </small>
-        <em>
-          {formatRub(product.price)}
-          {product.oldPrice > product.price && <s>{formatRub(product.oldPrice)}</s>}
-        </em>
-      </span>
-      <span className="comp-card__cta">
-        Смотреть композицию
-        <ArrowRight size={15} weight="bold" />
-      </span>
-    </button>
+        <span className="comp-card__foot">
+          <em>
+            {formatRub(product.price)}
+            {product.oldPrice > product.price && <s>{formatRub(product.oldPrice)}</s>}
+          </em>
+          <span className="comp-card__go" aria-hidden="true">
+            <ArrowRight size={18} weight="bold" />
+          </span>
+        </span>
+      </button>
+    </article>
   );
 }
 
 function CompositionsShowcase({ products, go, setActiveCategory }) {
+  const [filter, setFilter] = useState("all");
+  const trackRef = useRef(null);
+  const [edge, setEdge] = useState({ start: true, end: false });
+  const list = filter === "all" ? products : products.filter((item) => item.comp?.tags?.includes(filter));
+  const filters = COMP_FILTERS.map(([key, label]) => [key, label, key === "all" ? products.length : products.filter((item) => item.comp?.tags?.includes(key)).length]).filter(
+    ([, , count]) => count > 0,
+  );
+  const measure = () => {
+    const el = trackRef.current;
+    if (!el) return;
+    setEdge({ start: el.scrollLeft < 8, end: el.scrollLeft + el.clientWidth > el.scrollWidth - 8 });
+  };
+  useEffect(() => {
+    trackRef.current?.scrollTo({ left: 0 });
+    measure();
+  }, [filter, products.length]);
+  useEffect(() => {
+    window.addEventListener("resize", measure);
+    return () => window.removeEventListener("resize", measure);
+  }, []);
   if (!products.length) return null;
-  const shown = products.slice(0, 8);
+  const page = (dir) => {
+    const el = trackRef.current;
+    if (!el) return;
+    const card = el.querySelector(".comp-card");
+    const stepW = card ? card.getBoundingClientRect().width + 24 : el.clientWidth * 0.8;
+    el.scrollBy({ left: dir * stepW * Math.max(1, Math.floor(el.clientWidth / stepW)), behavior: "smooth" });
+  };
   const openAll = () => {
     if (setActiveCategory) setActiveCategory("compositions");
     go("catalog");
   };
   return (
     <section className="comps-band reveal" aria-label="Готовые композиции">
-      <div className="section-head center">
-        <p className="eyebrow">Готовые композиции</p>
-        <h2 className="section-title">Клумба под ключ</h2>
-        <p>Мы подобрали растения из нашего питомника так, чтобы клумба цвела с весны до осени. К каждому набору прилагается схема посадки с расстояниями.</p>
-      </div>
-      <div className="comps-row">
-        {shown.map((product) => (
-          <CompositionCard key={product.id} product={product} go={go} />
-        ))}
-      </div>
-      {products.length > shown.length && (
-        <div className="comps-more">
-          <button className="primary-button alt" type="button" onClick={openAll}>
-            Все композиции ({products.length})
-            <ArrowRight size={16} weight="bold" />
+      <div className="comps-head">
+        <div>
+          <p className="eyebrow">Готовые композиции</p>
+          <h2 className="section-title">Клумба под ключ</h2>
+          <p>Растения из нашего питомника, подобранные так, чтобы клумба цвела с весны до осени. К каждому набору прилагается схема посадки.</p>
+        </div>
+        <div className="comps-arrows">
+          <button type="button" onClick={() => page(-1)} disabled={edge.start} aria-label="Назад">
+            <CaretLeft size={20} weight="bold" />
+          </button>
+          <button type="button" onClick={() => page(1)} disabled={edge.end} aria-label="Вперёд">
+            <CaretRight size={20} weight="bold" />
           </button>
         </div>
-      )}
+      </div>
+      <div className="comps-filters" role="tablist" aria-label="Подобрать композицию">
+        {filters.map(([key, label, count]) => (
+          <button key={key} type="button" role="tab" aria-selected={filter === key} className={filter === key ? "is-active" : ""} onClick={() => setFilter(key)}>
+            {label}
+            <span>{count}</span>
+          </button>
+        ))}
+      </div>
+      <div className="comps-track" ref={trackRef} onScroll={measure}>
+        {list.map((product) => (
+          <CompositionCard key={product.id} product={product} go={go} />
+        ))}
+        <button className="comps-all" type="button" onClick={openAll}>
+          <span>Все композиции</span>
+          <small>{products.length} наборов в каталоге</small>
+          <ArrowRight size={22} weight="bold" />
+        </button>
+      </div>
     </section>
   );
 }
@@ -2446,18 +2535,22 @@ function CompositionsShowcase({ products, go, setActiveCategory }) {
 function CompositionExperience({ product, data, go, addToCart }) {
   const comp = product.comp || {};
   const slides = product.images?.length ? product.images : [product.image];
+  const names = comp.scene ? ["В саду", "Клумба", "Что в наборе", "Схема посадки"] : ["Клумба", "Что в наборе", "Схема посадки"];
   const [slide, setSlide] = useState(0);
   const [zoom, setZoom] = useState(false);
+  const touch = useRef(null);
+  const swipedAt = useRef(0); // клик сразу после свайпа не открывает крупный вид
   useEffect(() => {
     setSlide(0);
     setZoom(false);
   }, [product.id]);
+  const step = (delta) => setSlide((i) => (i + delta + slides.length) % slides.length);
   useEffect(() => {
     if (!zoom) return undefined;
     const onKey = (event) => {
       if (event.key === "Escape") setZoom(false);
-      if (event.key === "ArrowRight") setSlide((i) => (i + 1) % slides.length);
-      if (event.key === "ArrowLeft") setSlide((i) => (i - 1 + slides.length) % slides.length);
+      if (event.key === "ArrowRight") step(1);
+      if (event.key === "ArrowLeft") step(-1);
     };
     const prev = document.body.style.overflow;
     document.body.style.overflow = "hidden";
@@ -2467,17 +2560,41 @@ function CompositionExperience({ product, data, go, addToCart }) {
       window.removeEventListener("keydown", onKey);
     };
   }, [zoom, slides.length]);
+  // свайп по большой картинке на телефоне
+  const onTouchStart = (event) => {
+    const t = event.touches[0];
+    touch.current = { x: t.clientX, y: t.clientY };
+  };
+  const onTouchEnd = (event) => {
+    if (!touch.current) return;
+    const t = event.changedTouches[0];
+    const dx = t.clientX - touch.current.x;
+    const dy = t.clientY - touch.current.y;
+    touch.current = null;
+    if (Math.abs(dx) > 40 && Math.abs(dx) > Math.abs(dy) * 1.3) {
+      swipedAt.current = Date.now();
+      step(dx < 0 ? 1 : -1);
+    }
+  };
   const inCatalog = new Set(data.products.map((item) => item.id));
   const others = data.products.filter((item) => item.kind === "composition" && item.id !== product.id);
   const saving = product.oldPrice > product.price ? product.oldPrice - product.price : 0;
-  const step = (delta) => setSlide((i) => (i + delta + slides.length) % slides.length);
+  const current = assetUrl(slides[slide]);
 
   return (
     <>
       <section className="comp-page">
         <div className="comp-gallery">
-          <button className="comp-main" type="button" onClick={() => setZoom(true)} aria-label="Открыть крупно">
-            <img src={assetUrl(slides[slide])} alt={`${product.name}: ${SLIDE_NAMES[slide] || ""}`} />
+          <button
+            className="comp-main"
+            type="button"
+            onClick={() => Date.now() - swipedAt.current > 450 && setZoom(true)}
+            onTouchStart={onTouchStart}
+            onTouchEnd={onTouchEnd}
+            aria-label="Открыть крупно"
+          >
+            <span className="comp-main__bg" style={{ backgroundImage: `url("${current}")` }} aria-hidden="true" />
+            <img key={current} src={current} alt={`${product.name}: ${names[slide] || ""}`} />
           </button>
           {slides.length > 1 && (
             <div className="comp-thumbs">
@@ -2487,7 +2604,7 @@ function CompositionExperience({ product, data, go, addToCart }) {
               {slides.map((src, i) => (
                 <button key={src} type="button" className={i === slide ? "comp-thumb is-active" : "comp-thumb"} onClick={() => setSlide(i)}>
                   <img src={assetUrl(src)} alt="" />
-                  <span>{SLIDE_NAMES[i] || `Слайд ${i + 1}`}</span>
+                  <span>{names[i] || `Фото ${i + 1}`}</span>
                 </button>
               ))}
               <button type="button" className="comp-arrow" onClick={() => step(1)} aria-label="Вперёд">
@@ -2519,9 +2636,7 @@ function CompositionExperience({ product, data, go, addToCart }) {
             </article>
             <article>
               <span>В наборе</span>
-              <strong>
-                {comp.count} {plural(comp.count || 0, "растение", "растения", "растений")}
-              </strong>
+              <strong>{plantsWord(comp.count)}</strong>
             </article>
           </div>
           <div className="detail-price">
@@ -2537,7 +2652,7 @@ function CompositionExperience({ product, data, go, addToCart }) {
               {product.stock ? "Купить набор" : "Набор закончился"}
               <Plus size={18} weight="bold" />
             </button>
-            <button className="primary-button alt" type="button" onClick={() => setSlide(Math.min(2, slides.length - 1))}>
+            <button className="primary-button alt" type="button" onClick={() => setSlide(slides.length - 1)}>
               Схема посадки
             </button>
           </div>
@@ -2571,23 +2686,47 @@ function CompositionExperience({ product, data, go, addToCart }) {
       </section>
 
       {others.length > 0 && (
-        <>
-          <section className="section-head">
-            <p className="eyebrow">Другие композиции</p>
-            <h2>Ещё варианты клумб</h2>
-          </section>
-          <section className="comps-row comps-row--compact">
-            {others.slice(0, 4).map((item) => (
+        <section className="comps-more-band">
+          <div className="comps-head">
+            <div>
+              <p className="eyebrow">Другие композиции</p>
+              <h2 className="section-title">Ещё варианты клумб</h2>
+            </div>
+          </div>
+          <div className="comps-track">
+            {others.map((item) => (
               <CompositionCard key={item.id} product={item} go={go} />
             ))}
-          </section>
-        </>
+          </div>
+        </section>
       )}
 
       {zoom && (
-        <div className="comp-zoom" role="dialog" aria-modal="true" aria-label={product.name} onClick={() => setZoom(false)}>
-          <img src={assetUrl(slides[slide])} alt="" onClick={(event) => event.stopPropagation()} />
-          <button type="button" className="comp-zoom__close" onClick={() => setZoom(false)} aria-label="Закрыть">
+        <div
+          className="comp-zoom"
+          role="dialog"
+          aria-modal="true"
+          aria-label={product.name}
+          onClick={() => setZoom(false)}
+          onTouchEnd={(event) => {
+            if (event.target === event.currentTarget) {
+              event.preventDefault();
+              setZoom(false);
+            }
+          }}
+        >
+          <img src={current} alt="" onClick={(event) => event.stopPropagation()} onTouchStart={onTouchStart} onTouchEnd={onTouchEnd} />
+          <button
+            type="button"
+            className="comp-zoom__close"
+            onClick={() => setZoom(false)}
+            onTouchEnd={(event) => {
+              // на телефоне закрываем по отпусканию пальца: после свайпа браузер иногда не присылает click
+              event.preventDefault();
+              setZoom(false);
+            }}
+            aria-label="Закрыть"
+          >
             <X size={22} weight="bold" />
           </button>
           {slides.length > 1 && (
@@ -2616,7 +2755,12 @@ function LuxuryProductCard({ product, go, addToCart, openLightbox, index = 0, fe
       className={`luxury-card elev reveal ${product.status}${feature ? " is-feature" : ""}${product.kind ? ` kind-${product.kind}` : ""}`}
       style={{ "--i": index % 4 }}
     >
-      <button className="luxury-image" type="button" onClick={openImage}>
+      <button
+        className="luxury-image"
+        type="button"
+        onClick={openImage}
+        style={product.comp?.tint ? { "--t1": product.comp.tint[0], "--t2": product.comp.tint[1] } : undefined}
+      >
         {product.image ? <img src={assetUrl(product.image)} alt={product.name} /> : <Leaf size={44} weight="duotone" />}
         <span>{product.category}</span>
         <em>

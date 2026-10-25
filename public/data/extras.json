@@ -231,7 +231,7 @@
     },
     {
       "id": 910001,
-      "name": "Солнечный миксбордер",
+      "name": "Летний луг",
       "category": "Композиции",
       "categoryKey": "compositions",
       "price": 4790,
@@ -241,7 +241,7 @@
       "kind": "composition",
       "description": "Многолетники, которые каждый год отрастают сами. Сзади высокие эхинацеи и рудбекии, в середине свечи шалфея, по краю котовник и бронзовый очиток. Растения переносят засуху и зимуют без укрытия, а весной их достаточно срезать у земли.",
       "care": {},
-      "image": "compositions/solnechnyj-miksborder/card.jpg",
+      "image": "compositions/solnechnyj-miksborder/cut.jpg",
       "images": [
         "compositions/solnechnyj-miksborder/1.jpg",
         "compositions/solnechnyj-miksborder/2.jpg",
@@ -303,6 +303,29 @@
             "bloom": "июль – август",
             "thumb": "compositions/plants/sed.jpg"
           }
+        ],
+        "tags": [
+          "sun",
+          "perennials"
+        ],
+        "tint": [
+          "#fbf3dc",
+          "#efdcae"
+        ],
+        "frames": [
+          {
+            "src": "compositions/solnechnyj-miksborder/cut.jpg",
+            "label": "клумба",
+            "cut": true
+          },
+          {
+            "src": "compositions/solnechnyj-miksborder/2.jpg",
+            "label": "что в наборе"
+          },
+          {
+            "src": "compositions/solnechnyj-miksborder/3.jpg",
+            "label": "схема посадки"
+          }
         ]
       }
     },
@@ -318,7 +341,7 @@
       "kind": "composition",
       "description": "Две метельчатые гортензии дают объём и цветут с июля до заморозков. Перед ними шалфей и котовник, а по краю бадан: его крупные глянцевые листья не опадают даже зимой. Клумба хорошо смотрится у дома или посреди газона.",
       "care": {},
-      "image": "compositions/klumba-s-gortenziyami/card.jpg",
+      "image": "compositions/klumba-s-gortenziyami/cut.jpg",
       "images": [
         "compositions/klumba-s-gortenziyami/1.jpg",
         "compositions/klumba-s-gortenziyami/2.jpg",
@@ -380,6 +403,30 @@
             "bloom": "апрель – май",
             "thumb": "compositions/plants/berg.jpg"
           }
+        ],
+        "tags": [
+          "sun",
+          "shade",
+          "hydrangea"
+        ],
+        "tint": [
+          "#f4f6e4",
+          "#dde5bd"
+        ],
+        "frames": [
+          {
+            "src": "compositions/klumba-s-gortenziyami/cut.jpg",
+            "label": "клумба",
+            "cut": true
+          },
+          {
+            "src": "compositions/klumba-s-gortenziyami/2.jpg",
+            "label": "что в наборе"
+          },
+          {
+            "src": "compositions/klumba-s-gortenziyami/3.jpg",
+            "label": "схема посадки"
+          }
         ]
       }
     },
@@ -395,7 +442,7 @@
       "kind": "composition",
       "description": "Кустарники закрывают забор бордовой и оранжевой листвой. Перед ними розовые и золотистые спиреи, а по краю котовник, который цветёт всё лето. Через два-три года бордюр смыкается в сплошную стену высотой около двух метров.",
       "care": {},
-      "image": "compositions/bordyur-vdol-zabora/card.jpg",
+      "image": "compositions/bordyur-vdol-zabora/cut.jpg",
       "images": [
         "compositions/bordyur-vdol-zabora/1.jpg",
         "compositions/bordyur-vdol-zabora/2.jpg",
@@ -457,6 +504,29 @@
             "bloom": "июнь – сентябрь",
             "thumb": "compositions/plants/nep.jpg"
           }
+        ],
+        "tags": [
+          "sun",
+          "shrubs"
+        ],
+        "tint": [
+          "#f8ece4",
+          "#e9cdbb"
+        ],
+        "frames": [
+          {
+            "src": "compositions/bordyur-vdol-zabora/cut.jpg",
+            "label": "клумба",
+            "cut": true
+          },
+          {
+            "src": "compositions/bordyur-vdol-zabora/2.jpg",
+            "label": "что в наборе"
+          },
+          {
+            "src": "compositions/bordyur-vdol-zabora/3.jpg",
+            "label": "схема посадки"
+          }
         ]
       }
     },
@@ -472,7 +542,7 @@
       "kind": "composition",
       "description": "Небольшая клумба для места, где солнце бывает полдня. В центре карликовая гортензия Петит Черри, вокруг вечнозелёный бадан и камнеломка, которая в мае покрывается розовыми цветками.",
       "care": {},
-      "image": "compositions/klumba-u-kryltsa/card.jpg",
+      "image": "compositions/klumba-u-kryltsa/cut.jpg",
       "images": [
         "compositions/klumba-u-kryltsa/1.jpg",
         "compositions/klumba-u-kryltsa/2.jpg",
@@ -516,6 +586,29 @@
             "bloom": "май – июнь",
             "thumb": "compositions/plants/ps.jpg"
           }
+        ],
+        "tags": [
+          "shade",
+          "hydrangea"
+        ],
+        "tint": [
+          "#faedf0",
+          "#eccfd6"
+        ],
+        "frames": [
+          {
+            "src": "compositions/klumba-u-kryltsa/cut.jpg",
+            "label": "клумба",
+            "cut": true
+          },
+          {
+            "src": "compositions/klumba-u-kryltsa/2.jpg",
+            "label": "что в наборе"
+          },
+          {
+            "src": "compositions/klumba-u-kryltsa/3.jpg",
+            "label": "схема посадки"
+          }
         ]
       }
     },
@@ -531,7 +624,7 @@
       "kind": "composition",
       "description": "Кусты, которые не нужно укрывать на зиму. В конце мая цветёт спирея Тор, летом лапчатки и японские спиреи, а осенью Тор и Файерлайт меняют цвет листьев. Ухода почти никакого: раз в год подстричь.",
       "care": {},
-      "image": "compositions/kustarniki-bez-hlopot/card.jpg",
+      "image": "compositions/kustarniki-bez-hlopot/cut.jpg",
       "images": [
         "compositions/kustarniki-bez-hlopot/1.jpg",
         "compositions/kustarniki-bez-hlopot/2.jpg",
@@ -602,12 +695,35 @@
             "bloom": "июнь – октябрь",
             "thumb": "compositions/plants/ri.jpg"
           }
+        ],
+        "tags": [
+          "sun",
+          "shrubs"
+        ],
+        "tint": [
+          "#fbefe4",
+          "#f0d3bd"
+        ],
+        "frames": [
+          {
+            "src": "compositions/kustarniki-bez-hlopot/cut.jpg",
+            "label": "клумба",
+            "cut": true
+          },
+          {
+            "src": "compositions/kustarniki-bez-hlopot/2.jpg",
+            "label": "что в наборе"
+          },
+          {
+            "src": "compositions/kustarniki-bez-hlopot/3.jpg",
+            "label": "схема посадки"
+          }
         ]
       }
     },
     {
       "id": 910006,
-      "name": "Белый сад",
+      "name": "Лунный сад",
       "category": "Композиции",
       "categoryKey": "compositions",
       "price": 4600,
@@ -617,7 +733,7 @@
       "kind": "composition",
       "description": "Только белые цветы: спирея Тор, лапчатка Абботсвуд и гортензия Вайтлайт, а по краю белая камнеломка. Такая клумба видна даже в сумерках и хорошо подходит к месту отдыха у дома.",
       "care": {},
-      "image": "compositions/belyj-sad/card.jpg",
+      "image": "compositions/belyj-sad/cut.jpg",
       "images": [
         "compositions/belyj-sad/1.jpg",
         "compositions/belyj-sad/2.jpg",
@@ -670,12 +786,36 @@
             "bloom": "май – июнь",
             "thumb": "compositions/plants/wb.jpg"
           }
+        ],
+        "tags": [
+          "sun",
+          "shade",
+          "hydrangea"
+        ],
+        "tint": [
+          "#f1f4f8",
+          "#d3dbe8"
+        ],
+        "frames": [
+          {
+            "src": "compositions/belyj-sad/cut.jpg",
+            "label": "клумба",
+            "cut": true
+          },
+          {
+            "src": "compositions/belyj-sad/2.jpg",
+            "label": "что в наборе"
+          },
+          {
+            "src": "compositions/belyj-sad/3.jpg",
+            "label": "схема посадки"
+          }
         ]
       }
     },
     {
       "id": 910007,
-      "name": "Розовый сад",
+      "name": "Зефир",
       "category": "Композиции",
       "categoryKey": "compositions",
       "price": 4000,
@@ -685,7 +825,7 @@
       "kind": "composition",
       "description": "Гортензии Пинк энд Роуз и Строберри Блоссом сзади, карликовая Литтл Рози и спиреи Литл Принцесс в середине, розовая камнеломка по краю. В мае цветёт камнеломка, в июне спиреи, с июля до осени гортензии.",
       "care": {},
-      "image": "compositions/rozovyj-sad/card.jpg",
+      "image": "compositions/rozovyj-sad/cut.jpg",
       "images": [
         "compositions/rozovyj-sad/1.jpg",
         "compositions/rozovyj-sad/2.jpg",
@@ -747,6 +887,30 @@
             "bloom": "май – июнь",
             "thumb": "compositions/plants/ps.jpg"
           }
+        ],
+        "tags": [
+          "sun",
+          "shade",
+          "hydrangea"
+        ],
+        "tint": [
+          "#fcf0f3",
+          "#f1d2db"
+        ],
+        "frames": [
+          {
+            "src": "compositions/rozovyj-sad/cut.jpg",
+            "label": "клумба",
+            "cut": true
+          },
+          {
+            "src": "compositions/rozovyj-sad/2.jpg",
+            "label": "что в наборе"
+          },
+          {
+            "src": "compositions/rozovyj-sad/3.jpg",
+            "label": "схема посадки"
+          }
         ]
       }
     },
@@ -762,7 +926,7 @@
       "kind": "composition",
       "description": "Клумба держится на листве: бордовый и оранжевый пузыреплодники, огненная спирея Файерлайт и золотая Голден Принцесс. Перед ними рудбекии и оранжевая лапчатка. Ярко с весны до поздней осени, даже когда ничего не цветёт.",
       "care": {},
-      "image": "compositions/tyoplye-kraski/card.jpg",
+      "image": "compositions/tyoplye-kraski/cut.jpg",
       "images": [
         "compositions/tyoplye-kraski/1.jpg",
         "compositions/tyoplye-kraski/2.jpg",
@@ -833,6 +997,29 @@
             "bloom": "июль – сентябрь",
             "thumb": "compositions/plants/rud.jpg"
           }
+        ],
+        "tags": [
+          "sun",
+          "shrubs"
+        ],
+        "tint": [
+          "#fcf0de",
+          "#f2d2a6"
+        ],
+        "frames": [
+          {
+            "src": "compositions/tyoplye-kraski/cut.jpg",
+            "label": "клумба",
+            "cut": true
+          },
+          {
+            "src": "compositions/tyoplye-kraski/2.jpg",
+            "label": "что в наборе"
+          },
+          {
+            "src": "compositions/tyoplye-kraski/3.jpg",
+            "label": "схема посадки"
+          }
         ]
       }
     },
@@ -848,7 +1035,7 @@
       "kind": "composition",
       "description": "Пять туй Смарагд за несколько лет вырастают в плотную зелёную изгородь. Перед ними чередуются золотистая спирея и вечнозелёный бадан, чтобы низ изгороди не выглядел голым.",
       "care": {},
-      "image": "compositions/izgorod-iz-tuj/card.jpg",
+      "image": "compositions/izgorod-iz-tuj/cut.jpg",
       "images": [
         "compositions/izgorod-iz-tuj/1.jpg",
         "compositions/izgorod-iz-tuj/2.jpg",
@@ -892,6 +1079,30 @@
             "bloom": "апрель – май",
             "thumb": "compositions/plants/berg.jpg"
           }
+        ],
+        "tags": [
+          "sun",
+          "shade",
+          "hedge"
+        ],
+        "tint": [
+          "#f1f4ea",
+          "#d4dfc6"
+        ],
+        "frames": [
+          {
+            "src": "compositions/izgorod-iz-tuj/cut.jpg",
+            "label": "клумба",
+            "cut": true
+          },
+          {
+            "src": "compositions/izgorod-iz-tuj/2.jpg",
+            "label": "что в наборе"
+          },
+          {
+            "src": "compositions/izgorod-iz-tuj/3.jpg",
+            "label": "схема посадки"
+          }
         ]
       }
     },
@@ -907,7 +1118,7 @@
       "kind": "composition",
       "description": "Рябинник Сэм с резными листьями, карликовая гортензия Литтл Рози, бадан и камнеломка двух цветов. Весной цветут бадан и камнеломка, летом рябинник и гортензия.",
       "care": {},
-      "image": "compositions/tenistyj-ugolok/card.jpg",
+      "image": "compositions/tenistyj-ugolok/cut.jpg",
       "images": [
         "compositions/tenistyj-ugolok/1.jpg",
         "compositions/tenistyj-ugolok/2.jpg",
@@ -969,6 +1180,29 @@
             "bloom": "май – июнь",
             "thumb": "compositions/plants/ps.jpg"
           }
+        ],
+        "tags": [
+          "shade",
+          "hydrangea"
+        ],
+        "tint": [
+          "#f0f3ef",
+          "#d3ddd2"
+        ],
+        "frames": [
+          {
+            "src": "compositions/tenistyj-ugolok/cut.jpg",
+            "label": "клумба",
+            "cut": true
+          },
+          {
+            "src": "compositions/tenistyj-ugolok/2.jpg",
+            "label": "что в наборе"
+          },
+          {
+            "src": "compositions/tenistyj-ugolok/3.jpg",
+            "label": "схема посадки"
+          }
         ]
       }
     },
@@ -984,7 +1218,7 @@
       "kind": "composition",
       "description": "Эхинацеи и синие свечи шалфея сзади, армерия и котовник по краю. Все растения переносят засуху: поливать нужно только в первое лето, пока они укореняются.",
       "care": {},
-      "image": "compositions/suhaya-klumba/card.jpg",
+      "image": "compositions/suhaya-klumba/cut.jpg",
       "images": [
         "compositions/suhaya-klumba/1.jpg",
         "compositions/suhaya-klumba/2.jpg",
@@ -1037,6 +1271,29 @@
             "bloom": "июнь – сентябрь",
             "thumb": "compositions/plants/nep.jpg"
           }
+        ],
+        "tags": [
+          "sun",
+          "perennials"
+        ],
+        "tint": [
+          "#f5f0f6",
+          "#ddd2e4"
+        ],
+        "frames": [
+          {
+            "src": "compositions/suhaya-klumba/cut.jpg",
+            "label": "клумба",
+            "cut": true
+          },
+          {
+            "src": "compositions/suhaya-klumba/2.jpg",
+            "label": "что в наборе"
+          },
+          {
+            "src": "compositions/suhaya-klumba/3.jpg",
+            "label": "схема посадки"
+          }
         ]
       }
     },
@@ -1052,7 +1309,7 @@
       "kind": "composition",
       "description": "Четыре гортензии высаживают в ряд, и за два-три года они смыкаются в цветущую изгородь, от белых с клубничным основанием до малиновых метёлок. Котовник и шалфей перед ними закрывают нижние ветки.",
       "care": {},
-      "image": "compositions/izgorod-iz-gortenzij/card.jpg",
+      "image": "compositions/izgorod-iz-gortenzij/cut.jpg",
       "images": [
         "compositions/izgorod-iz-gortenzij/1.jpg",
         "compositions/izgorod-iz-gortenzij/2.jpg",
@@ -1104,6 +1361,31 @@
             "h": "до 60 см",
             "bloom": "июнь – июль, повторно",
             "thumb": "compositions/plants/sal.jpg"
+          }
+        ],
+        "tags": [
+          "sun",
+          "shade",
+          "hydrangea",
+          "hedge"
+        ],
+        "tint": [
+          "#fbedf0",
+          "#eecdd5"
+        ],
+        "frames": [
+          {
+            "src": "compositions/izgorod-iz-gortenzij/cut.jpg",
+            "label": "клумба",
+            "cut": true
+          },
+          {
+            "src": "compositions/izgorod-iz-gortenzij/2.jpg",
+            "label": "что в наборе"
+          },
+          {
+            "src": "compositions/izgorod-iz-gortenzij/3.jpg",
+            "label": "схема посадки"
           }
         ]
       }
