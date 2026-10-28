@@ -155,7 +155,7 @@
       "category": "Гортензии",
       "categoryKey": "hydrangea",
       "price": 1000,
-      "stock": 13,
+      "stock": 12,
       "status": "ok",
       "description": "Собственное производство.\nВысота взрослого растения: 240 см.\nЦвет соцветий: Зеленый, белый, розовый.\nПериод цветения: июль-сентябрь.\nМесто посадки: Солнце/Полутень.\nПочва: Кислая.\nПолив: Обильный.\nЗона морозостойкости: 4.\nПрименение: в качестве акцента в цветниках, живые изгороди, групповые посадки, миксбордеры в сочетании с травами, многолетними растениями и хвойными, кашпо, контейнеры",
       "care": {
@@ -190,7 +190,7 @@
           "label": "10л",
           "price": 2500,
           "inStock": true,
-          "stock": 3
+          "stock": 2
         }
       ],
       "variantAttr": "Объем контейнера",
@@ -1233,6 +1233,234 @@
       "sourceUrl": "https://annaflowerfarm.ru/product/%d0%ba%d0%b0%d0%bc%d0%bd%d0%b5%d0%bb%d0%be%d0%bc%d0%ba%d0%b0-%d0%bb%d0%be%d1%84%d1%82%d0%b8-white-blush/"
     },
     {
+      "id": 2778,
+      "name": "Композиция «Бордюр вдоль забора»",
+      "category": "Композиции",
+      "categoryKey": "compositions",
+      "price": 3770,
+      "stock": 9,
+      "status": "ok",
+      "description": "Кустарники закрывают забор бордовой и оранжевой листвой. Перед ними розовые и золотистые спиреи, а по краю котовник, который цветёт всё лето. Через два-три года бордюр смыкается в сплошную стену высотой около двух метров.\nРазмер клумбы: 4 × 2 м. Место: солнце. Цветёт: июнь – сентябрь.\nЧто в наборе — 13 растений\n• Пузыреплодник Диабль д'Ор — 2 шт. (медно-бордовая листва, фон, до 2,5 м)\n• Пузыреплодник Амбер Джубиле — 1 шт. (оранжево-золотая листва, до 1,5 м)\n• Спирея Литл Принцесс — 3 шт. (розовые щитки на круглом кусте, до 60 см)\n• Спирея Голден Принцесс — 2 шт. (золотая листва и розовые цветки, до 70 см)\n• Котовник Фассена — 5 шт. (лавандовое облако по краю, до 40 см)\nСхема посадки с расстояниями между растениями — на фото в галерее. Набором дешевле, чем покупать растения по отдельности.",
+      "care": {},
+      "image": "https://annaflowerfarm.ru/wp-content/uploads/anutkin-extras/compositions/bordyur-vdol-zabora/1-1024x1024.jpg",
+      "images": [
+        "https://annaflowerfarm.ru/wp-content/uploads/anutkin-extras/compositions/bordyur-vdol-zabora/1-1024x1024.jpg",
+        "https://annaflowerfarm.ru/wp-content/uploads/anutkin-extras/compositions/bordyur-vdol-zabora/2-1024x1024.jpg",
+        "https://annaflowerfarm.ru/wp-content/uploads/anutkin-extras/compositions/bordyur-vdol-zabora/3-1024x1024.jpg",
+        "https://annaflowerfarm.ru/wp-content/uploads/anutkin-extras/compositions/bordyur-vdol-zabora/render.jpg"
+      ],
+      "sourceUrl": "https://annaflowerfarm.ru/product/kompoziciya-bordyur-vdol-zabora/"
+    },
+    {
+      "id": 2798,
+      "name": "Композиция «Зефир»",
+      "category": "Композиции",
+      "categoryKey": "compositions",
+      "price": 4000,
+      "stock": 2,
+      "status": "low",
+      "description": "Гортензии Пинк энд Роуз и Строберри Блоссом сзади, карликовая Литтл Рози и спиреи Литл Принцесс в середине, розовая камнеломка по краю. В мае цветёт камнеломка, в июне спиреи, с июля до осени гортензии.\nРазмер клумбы: 3 × 2 м. Место: солнце или лёгкая полутень. Цветёт: май – сентябрь.\nЧто в наборе — 10 растений\n• Гортензия Пинк энд Роуз — 1 шт. (розовые метёлки на крепких побегах, до 1,3 м)\n• Гортензия Строберри Блоссом — 1 шт. (белые метёлки с розовым основанием, до 1,2 м)\n• Спирея Литл Принцесс — 2 шт. (розовые щитки на круглом кусте, до 60 см)\n• Гортензия Литтл Рози — 1 шт. (карликовая, розовеет к осени, до 60 см)\n• Камнеломка Лофти розовая — 5 шт. (розовая подушка весной, до 20 см)\nСхема посадки с расстояниями между растениями — на фото в галерее. Набором дешевле, чем покупать растения по отдельности.",
+      "care": {},
+      "image": "https://annaflowerfarm.ru/wp-content/uploads/anutkin-extras/compositions/rozovyj-sad/1-1024x1024.jpg",
+      "images": [
+        "https://annaflowerfarm.ru/wp-content/uploads/anutkin-extras/compositions/rozovyj-sad/1-1024x1024.jpg",
+        "https://annaflowerfarm.ru/wp-content/uploads/anutkin-extras/compositions/rozovyj-sad/2-1024x1024.jpg",
+        "https://annaflowerfarm.ru/wp-content/uploads/anutkin-extras/compositions/rozovyj-sad/3-1024x1024.jpg",
+        "https://annaflowerfarm.ru/wp-content/uploads/anutkin-extras/compositions/rozovyj-sad/render.jpg"
+      ],
+      "sourceUrl": "https://annaflowerfarm.ru/product/kompoziciya-zefir/"
+    },
+    {
+      "id": 2823,
+      "name": "Композиция «Изгородь из гортензий»",
+      "category": "Композиции",
+      "categoryKey": "compositions",
+      "price": 4090,
+      "stock": 6,
+      "status": "ok",
+      "description": "Четыре гортензии высаживают в ряд, и за два-три года они смыкаются в цветущую изгородь, от белых с клубничным основанием до малиновых метёлок. Котовник и шалфей перед ними закрывают нижние ветки.\nРазмер клумбы: 4 × 1,5 м. Место: солнце или лёгкая полутень. Цветёт: июнь – сентябрь.\nЧто в наборе — 11 растений\n• Гортензия Ванила Фрайз — 2 шт. (метёлки от белого к клубничному, до 1,8 м)\n• Гортензия Даймонд Руж — 2 шт. (малиново-красные метёлки, до 1,5 м)\n• Котовник Фассена — 4 шт. (лавандовое облако по краю, до 40 см)\n• Шалфей Карадонна — 3 шт. (фиолетовые свечи, держат вертикаль, до 60 см)\nСхема посадки с расстояниями между растениями — на фото в галерее. Набором дешевле, чем покупать растения по отдельности.",
+      "care": {},
+      "image": "https://annaflowerfarm.ru/wp-content/uploads/anutkin-extras/compositions/izgorod-iz-gortenzij/1-1024x1024.jpg",
+      "images": [
+        "https://annaflowerfarm.ru/wp-content/uploads/anutkin-extras/compositions/izgorod-iz-gortenzij/1-1024x1024.jpg",
+        "https://annaflowerfarm.ru/wp-content/uploads/anutkin-extras/compositions/izgorod-iz-gortenzij/2-1024x1024.jpg",
+        "https://annaflowerfarm.ru/wp-content/uploads/anutkin-extras/compositions/izgorod-iz-gortenzij/3-1024x1024.jpg",
+        "https://annaflowerfarm.ru/wp-content/uploads/anutkin-extras/compositions/izgorod-iz-gortenzij/render.jpg"
+      ],
+      "sourceUrl": "https://annaflowerfarm.ru/product/kompoziciya-izgorod-iz-gortenzij/"
+    },
+    {
+      "id": 2808,
+      "name": "Композиция «Изгородь из туй»",
+      "category": "Композиции",
+      "categoryKey": "compositions",
+      "price": 3630,
+      "stock": 2,
+      "status": "low",
+      "description": "Пять туй Смарагд за несколько лет вырастают в плотную зелёную изгородь. Перед ними чередуются золотистая спирея и вечнозелёный бадан, чтобы низ изгороди не выглядел голым.\nРазмер клумбы: 4 × 1,5 м. Место: солнце или полутень. Цветёт: весь сезон.\nЧто в наборе — 10 растений\n• Туя Смарагд — 5 шт. (вечнозелёная колонна, до 3–4 м)\n• Спирея Голден Принцесс — 3 шт. (золотая листва и розовые цветки, до 70 см)\n• Бадан Шушайн — 2 шт. (крупные глянцевые листья круглый год, до 30 см)\nСхема посадки с расстояниями между растениями — на фото в галерее. Набором дешевле, чем покупать растения по отдельности.",
+      "care": {},
+      "image": "https://annaflowerfarm.ru/wp-content/uploads/anutkin-extras/compositions/izgorod-iz-tuj/1-1024x1024.jpg",
+      "images": [
+        "https://annaflowerfarm.ru/wp-content/uploads/anutkin-extras/compositions/izgorod-iz-tuj/1-1024x1024.jpg",
+        "https://annaflowerfarm.ru/wp-content/uploads/anutkin-extras/compositions/izgorod-iz-tuj/2-1024x1024.jpg",
+        "https://annaflowerfarm.ru/wp-content/uploads/anutkin-extras/compositions/izgorod-iz-tuj/3-1024x1024.jpg",
+        "https://annaflowerfarm.ru/wp-content/uploads/anutkin-extras/compositions/izgorod-iz-tuj/render.jpg"
+      ],
+      "sourceUrl": "https://annaflowerfarm.ru/product/kompoziciya-izgorod-iz-tuj/"
+    },
+    {
+      "id": 2773,
+      "name": "Композиция «Клумба с гортензиями»",
+      "category": "Композиции",
+      "categoryKey": "compositions",
+      "price": 4280,
+      "stock": 6,
+      "status": "ok",
+      "description": "Две метельчатые гортензии дают объём и цветут с июля до заморозков. Перед ними шалфей и котовник, а по краю бадан: его крупные глянцевые листья не опадают даже зимой. Клумба хорошо смотрится у дома или посреди газона.\nРазмер клумбы: 3 × 2 м. Место: солнце или полутень. Цветёт: июнь – октябрь.\nЧто в наборе — 10 растений\n• Гортензия Лаймлайт — 1 шт. (лаймово-белые метёлки до осени, до 2,4 м)\n• Гортензия Фантом — 1 шт. (огромные кремовые метёлки, до 2,2 м)\n• Шалфей Карадонна — 3 шт. (фиолетовые свечи, держат вертикаль, до 60 см)\n• Котовник Фассена — 3 шт. (лавандовое облако по краю, до 40 см)\n• Бадан Шушайн — 2 шт. (крупные глянцевые листья круглый год, до 30 см)\nСхема посадки с расстояниями между растениями — на фото в галерее. Набором дешевле, чем покупать растения по отдельности.",
+      "care": {},
+      "image": "https://annaflowerfarm.ru/wp-content/uploads/anutkin-extras/compositions/klumba-s-gortenziyami/1-1024x1024.jpg",
+      "images": [
+        "https://annaflowerfarm.ru/wp-content/uploads/anutkin-extras/compositions/klumba-s-gortenziyami/1-1024x1024.jpg",
+        "https://annaflowerfarm.ru/wp-content/uploads/anutkin-extras/compositions/klumba-s-gortenziyami/2-1024x1024.jpg",
+        "https://annaflowerfarm.ru/wp-content/uploads/anutkin-extras/compositions/klumba-s-gortenziyami/3-1024x1024.jpg",
+        "https://annaflowerfarm.ru/wp-content/uploads/anutkin-extras/compositions/klumba-s-gortenziyami/render.jpg"
+      ],
+      "sourceUrl": "https://annaflowerfarm.ru/product/kompoziciya-klumba-s-gortenziyami/"
+    },
+    {
+      "id": 2783,
+      "name": "Композиция «Клумба у крыльца»",
+      "category": "Композиции",
+      "categoryKey": "compositions",
+      "price": 3580,
+      "stock": 3,
+      "status": "ok",
+      "description": "Небольшая клумба для места, где солнце бывает полдня. В центре карликовая гортензия Петит Черри, вокруг вечнозелёный бадан и камнеломка, которая в мае покрывается розовыми цветками.\nРазмер клумбы: 2 × 1 м. Место: полутень. Цветёт: апрель – сентябрь.\nЧто в наборе — 8 растений\n• Бадан Шушайн — 3 шт. (крупные глянцевые листья круглый год, до 30 см)\n• Гортензия Петит Черри — 1 шт. (карликовая, метёлки темнеют до вишнёвого, до 50 см)\n• Камнеломка Лофти розовая — 4 шт. (розовая подушка весной, до 20 см)\nСхема посадки с расстояниями между растениями — на фото в галерее. Набором дешевле, чем покупать растения по отдельности.",
+      "care": {},
+      "image": "https://annaflowerfarm.ru/wp-content/uploads/anutkin-extras/compositions/klumba-u-kryltsa/1-1024x1024.jpg",
+      "images": [
+        "https://annaflowerfarm.ru/wp-content/uploads/anutkin-extras/compositions/klumba-u-kryltsa/1-1024x1024.jpg",
+        "https://annaflowerfarm.ru/wp-content/uploads/anutkin-extras/compositions/klumba-u-kryltsa/2-1024x1024.jpg",
+        "https://annaflowerfarm.ru/wp-content/uploads/anutkin-extras/compositions/klumba-u-kryltsa/3-1024x1024.jpg",
+        "https://annaflowerfarm.ru/wp-content/uploads/anutkin-extras/compositions/klumba-u-kryltsa/render.jpg"
+      ],
+      "sourceUrl": "https://annaflowerfarm.ru/product/kompoziciya-klumba-u-krylca/"
+    },
+    {
+      "id": 2788,
+      "name": "Композиция «Кустарники без хлопот»",
+      "category": "Композиции",
+      "categoryKey": "compositions",
+      "price": 3770,
+      "stock": 4,
+      "status": "ok",
+      "description": "Кусты, которые не нужно укрывать на зиму. В конце мая цветёт спирея Тор, летом лапчатки и японские спиреи, а осенью Тор и Файерлайт меняют цвет листьев. Ухода почти никакого: раз в год подстричь.\nРазмер клумбы: 3 × 2 м. Место: солнце. Цветёт: май – октябрь.\nЧто в наборе — 10 растений\n• Спирея Тор — 1 шт. (белые щитки в июне, осенью листва краснеет, до 90 см)\n• Лапчатка Абботсвуд — 1 шт. (белые цветки с июня до октября, до 1 м)\n• Спирея Файерлайт — 2 шт. (огненная молодая листва, до 60 см)\n• Спирея Голден Принцесс — 2 шт. (золотая листва и розовые цветки, до 70 см)\n• Спирея Литл Принцесс — 2 шт. (розовые щитки на круглом кусте, до 60 см)\n• Лапчатка Ред Айс — 2 шт. (оранжевые цветки всё лето, до 60 см)\nСхема посадки с расстояниями между растениями — на фото в галерее. Набором дешевле, чем покупать растения по отдельности.",
+      "care": {},
+      "image": "https://annaflowerfarm.ru/wp-content/uploads/anutkin-extras/compositions/kustarniki-bez-hlopot/1-1024x1024.jpg",
+      "images": [
+        "https://annaflowerfarm.ru/wp-content/uploads/anutkin-extras/compositions/kustarniki-bez-hlopot/1-1024x1024.jpg",
+        "https://annaflowerfarm.ru/wp-content/uploads/anutkin-extras/compositions/kustarniki-bez-hlopot/2-1024x1024.jpg",
+        "https://annaflowerfarm.ru/wp-content/uploads/anutkin-extras/compositions/kustarniki-bez-hlopot/3-1024x1024.jpg",
+        "https://annaflowerfarm.ru/wp-content/uploads/anutkin-extras/compositions/kustarniki-bez-hlopot/render.jpg"
+      ],
+      "sourceUrl": "https://annaflowerfarm.ru/product/kompoziciya-kustarniki-bez-hlopot/"
+    },
+    {
+      "id": 2768,
+      "name": "Композиция «Летний луг»",
+      "category": "Композиции",
+      "categoryKey": "compositions",
+      "price": 4790,
+      "stock": 2,
+      "status": "low",
+      "description": "Многолетники, которые каждый год отрастают сами. Сзади высокие эхинацеи и рудбекии, в середине свечи шалфея, по краю котовник и бронзовый очиток. Растения переносят засуху и зимуют без укрытия, а весной их достаточно срезать у земли.\nРазмер клумбы: 2,5 × 1,5 м. Место: солнце. Цветёт: июнь – сентябрь.\nЧто в наборе — 13 растений\n• Эхинацея Бравадо — 2 шт. (крупные розовые ромашки, высокий акцент, до 90 см)\n• Рудбекия Голдштурм — 2 шт. (золотые «солнышки» до самой осени, до 70 см)\n• Шалфей Карадонна — 4 шт. (фиолетовые свечи, держат вертикаль, до 60 см)\n• Котовник Фассена — 3 шт. (лавандовое облако по краю, до 40 см)\n• Очиток Бронз Карпет — 2 шт. (бронзовый ковёр у дорожки, до 15 см)\nСхема посадки с расстояниями между растениями — на фото в галерее. Набором дешевле, чем покупать растения по отдельности.",
+      "care": {},
+      "image": "https://annaflowerfarm.ru/wp-content/uploads/anutkin-extras/compositions/solnechnyj-miksborder/1-1024x1024.jpg",
+      "images": [
+        "https://annaflowerfarm.ru/wp-content/uploads/anutkin-extras/compositions/solnechnyj-miksborder/1-1024x1024.jpg",
+        "https://annaflowerfarm.ru/wp-content/uploads/anutkin-extras/compositions/solnechnyj-miksborder/2-1024x1024.jpg",
+        "https://annaflowerfarm.ru/wp-content/uploads/anutkin-extras/compositions/solnechnyj-miksborder/3-1024x1024.jpg",
+        "https://annaflowerfarm.ru/wp-content/uploads/anutkin-extras/compositions/solnechnyj-miksborder/render.jpg"
+      ],
+      "sourceUrl": "https://annaflowerfarm.ru/product/kompoziciya-letnij-lug/"
+    },
+    {
+      "id": 2793,
+      "name": "Композиция «Лунный сад»",
+      "category": "Композиции",
+      "categoryKey": "compositions",
+      "price": 4600,
+      "stock": 2,
+      "status": "low",
+      "description": "Только белые цветы: спирея Тор, лапчатка Абботсвуд и гортензия Вайтлайт, а по краю белая камнеломка. Такая клумба видна даже в сумерках и хорошо подходит к месту отдыха у дома.\nРазмер клумбы: 3 × 2 м. Место: солнце или лёгкая полутень. Цветёт: май – октябрь.\nЧто в наборе — 10 растений\n• Лапчатка Абботсвуд — 2 шт. (белые цветки с июня до октября, до 1 м)\n• Гортензия Вайтлайт — 1 шт. (плотные белые метёлки, компактная, до 1 м)\n• Спирея Тор — 2 шт. (белые щитки в июне, осенью листва краснеет, до 90 см)\n• Камнеломка Лофти белая — 5 шт. (белая подушка весной, до 20 см)\nСхема посадки с расстояниями между растениями — на фото в галерее. Набором дешевле, чем покупать растения по отдельности.",
+      "care": {},
+      "image": "https://annaflowerfarm.ru/wp-content/uploads/anutkin-extras/compositions/belyj-sad/1-1024x1024.jpg",
+      "images": [
+        "https://annaflowerfarm.ru/wp-content/uploads/anutkin-extras/compositions/belyj-sad/1-1024x1024.jpg",
+        "https://annaflowerfarm.ru/wp-content/uploads/anutkin-extras/compositions/belyj-sad/2-1024x1024.jpg",
+        "https://annaflowerfarm.ru/wp-content/uploads/anutkin-extras/compositions/belyj-sad/3-1024x1024.jpg",
+        "https://annaflowerfarm.ru/wp-content/uploads/anutkin-extras/compositions/belyj-sad/render.jpg"
+      ],
+      "sourceUrl": "https://annaflowerfarm.ru/product/kompoziciya-lunnyj-sad/"
+    },
+    {
+      "id": 2818,
+      "name": "Композиция «Сухая клумба у дорожки»",
+      "category": "Композиции",
+      "categoryKey": "compositions",
+      "price": 3970,
+      "stock": 2,
+      "status": "low",
+      "description": "Эхинацеи и синие свечи шалфея сзади, армерия и котовник по краю. Все растения переносят засуху: поливать нужно только в первое лето, пока они укореняются.\nРазмер клумбы: 2,5 × 1 м. Место: солнце. Цветёт: май – сентябрь.\nЧто в наборе — 9 растений\n• Шалфей Блю Куин — 2 шт. (синие свечи на компактном кусте, до 50 см)\n• Эхинацея Бравадо — 2 шт. (крупные розовые ромашки, высокий акцент, до 90 см)\n• Армерия Морнинг Стар — 3 шт. (розовые шарики над травяной кочкой, до 20 см)\n• Котовник Фассена — 2 шт. (лавандовое облако по краю, до 40 см)\nСхема посадки с расстояниями между растениями — на фото в галерее. Набором дешевле, чем покупать растения по отдельности.",
+      "care": {},
+      "image": "https://annaflowerfarm.ru/wp-content/uploads/anutkin-extras/compositions/suhaya-klumba/1-1024x1024.jpg",
+      "images": [
+        "https://annaflowerfarm.ru/wp-content/uploads/anutkin-extras/compositions/suhaya-klumba/1-1024x1024.jpg",
+        "https://annaflowerfarm.ru/wp-content/uploads/anutkin-extras/compositions/suhaya-klumba/2-1024x1024.jpg",
+        "https://annaflowerfarm.ru/wp-content/uploads/anutkin-extras/compositions/suhaya-klumba/3-1024x1024.jpg",
+        "https://annaflowerfarm.ru/wp-content/uploads/anutkin-extras/compositions/suhaya-klumba/render.jpg"
+      ],
+      "sourceUrl": "https://annaflowerfarm.ru/product/kompoziciya-suhaya-klumba-u-dorozhki/"
+    },
+    {
+      "id": 2813,
+      "name": "Композиция «Тенистый уголок»",
+      "category": "Композиции",
+      "categoryKey": "compositions",
+      "price": 3950,
+      "stock": 4,
+      "status": "ok",
+      "description": "Рябинник Сэм с резными листьями, карликовая гортензия Литтл Рози, бадан и камнеломка двух цветов. Весной цветут бадан и камнеломка, летом рябинник и гортензия.\nРазмер клумбы: 2,5 × 1,5 м. Место: полутень. Цветёт: апрель – сентябрь.\nЧто в наборе — 11 растений\n• Рябинник Сэм — 1 шт. (резные листья и кремовые метёлки, до 1,5 м)\n• Гортензия Литтл Рози — 1 шт. (карликовая, розовеет к осени, до 60 см)\n• Бадан Шушайн — 3 шт. (крупные глянцевые листья круглый год, до 30 см)\n• Камнеломка Лофти белая — 3 шт. (белая подушка весной, до 20 см)\n• Камнеломка Лофти розовая — 3 шт. (розовая подушка весной, до 20 см)\nСхема посадки с расстояниями между растениями — на фото в галерее. Набором дешевле, чем покупать растения по отдельности.",
+      "care": {},
+      "image": "https://annaflowerfarm.ru/wp-content/uploads/anutkin-extras/compositions/tenistyj-ugolok/1-1024x1024.jpg",
+      "images": [
+        "https://annaflowerfarm.ru/wp-content/uploads/anutkin-extras/compositions/tenistyj-ugolok/1-1024x1024.jpg",
+        "https://annaflowerfarm.ru/wp-content/uploads/anutkin-extras/compositions/tenistyj-ugolok/2-1024x1024.jpg",
+        "https://annaflowerfarm.ru/wp-content/uploads/anutkin-extras/compositions/tenistyj-ugolok/3-1024x1024.jpg",
+        "https://annaflowerfarm.ru/wp-content/uploads/anutkin-extras/compositions/tenistyj-ugolok/render.jpg"
+      ],
+      "sourceUrl": "https://annaflowerfarm.ru/product/kompoziciya-tenistyj-ugolok/"
+    },
+    {
+      "id": 2803,
+      "name": "Композиция «Тёплые краски»",
+      "category": "Композиции",
+      "categoryKey": "compositions",
+      "price": 3810,
+      "stock": 3,
+      "status": "ok",
+      "description": "Клумба держится на листве: бордовый и оранжевый пузыреплодники, огненная спирея Файерлайт и золотая Голден Принцесс. Перед ними рудбекии и оранжевая лапчатка. Ярко с весны до поздней осени, даже когда ничего не цветёт.\nРазмер клумбы: 3 × 2 м. Место: солнце. Цветёт: июнь – октябрь.\nЧто в наборе — 10 растений\n• Пузыреплодник Диабль д'Ор — 1 шт. (медно-бордовая листва, фон, до 2,5 м)\n• Пузыреплодник Амбер Джубиле — 1 шт. (оранжево-золотая листва, до 1,5 м)\n• Спирея Файерлайт — 2 шт. (огненная молодая листва, до 60 см)\n• Спирея Голден Принцесс — 1 шт. (золотая листва и розовые цветки, до 70 см)\n• Лапчатка Ред Айс — 1 шт. (оранжевые цветки всё лето, до 60 см)\n• Рудбекия Голдштурм — 4 шт. (золотые «солнышки» до самой осени, до 70 см)\nСхема посадки с расстояниями между растениями — на фото в галерее. Набором дешевле, чем покупать растения по отдельности.",
+      "care": {},
+      "image": "https://annaflowerfarm.ru/wp-content/uploads/anutkin-extras/compositions/tyoplye-kraski/1-1024x1024.jpg",
+      "images": [
+        "https://annaflowerfarm.ru/wp-content/uploads/anutkin-extras/compositions/tyoplye-kraski/1-1024x1024.jpg",
+        "https://annaflowerfarm.ru/wp-content/uploads/anutkin-extras/compositions/tyoplye-kraski/2-1024x1024.jpg",
+        "https://annaflowerfarm.ru/wp-content/uploads/anutkin-extras/compositions/tyoplye-kraski/3-1024x1024.jpg",
+        "https://annaflowerfarm.ru/wp-content/uploads/anutkin-extras/compositions/tyoplye-kraski/render.jpg"
+      ],
+      "sourceUrl": "https://annaflowerfarm.ru/product/kompoziciya-teplye-kraski/"
+    },
+    {
       "id": 756,
       "name": "Котовник Фассена",
       "category": "Цветы многолетние",
@@ -1467,6 +1695,94 @@
         "https://annaflowerfarm.ru/wp-content/uploads/2024/12/img_5041-1152x1536.jpeg"
       ],
       "sourceUrl": "https://annaflowerfarm.ru/product/%d0%be%d1%87%d0%b8%d1%82%d0%be%d0%ba-%d0%bb%d0%be%d0%b6%d0%bd%d1%8b%d0%b9-%d0%b1%d1%80%d0%be%d0%bd%d0%b7-%d0%ba%d0%b0%d1%80%d0%bf%d0%b5%d1%82/"
+    },
+    {
+      "id": 2756,
+      "name": "Пособие «Бегония»",
+      "category": "Пособия",
+      "categoryKey": "guides",
+      "price": 690,
+      "stock": 12,
+      "status": "ok",
+      "description": "Ампельная и элатиор: выбор рассады, посадка, уход летом, черенки и как сохранить любимые сорта до весны.\nЭлектронная книга в PDF, 20 страниц, с фото растений нашего питомника. Читается с телефона, компьютера и планшета, можно распечатать.\nЧто внутри\n• Знакомство с культурой\n• Бегонии из нашего питомника\n• Как выбрать рассаду\n• Посадка и пересадка\n• Уход летом\n• Ампельная бегония в подвесном кашпо\n• Элатиор дома и на балконе\n• Подкормки\n• Размножение\n• Как сохранить бегонию до весны\n• Вредители\n• Болезни и частые ошибки\n• Если что-то не так\n• Календарь ухода\n• Вопросы и ответы\nКак получить\nОформите заявку: мы пришлём реквизиты для оплаты. После оплаты PDF придёт на вашу почту.",
+      "care": {},
+      "image": "https://annaflowerfarm.ru/wp-content/uploads/anutkin-extras/guides/begoniya/p01.jpg",
+      "images": [
+        "https://annaflowerfarm.ru/wp-content/uploads/anutkin-extras/guides/begoniya/p01.jpg",
+        "https://annaflowerfarm.ru/wp-content/uploads/anutkin-extras/guides/begoniya/p02.jpg",
+        "https://annaflowerfarm.ru/wp-content/uploads/anutkin-extras/guides/begoniya/p03.jpg",
+        "https://annaflowerfarm.ru/wp-content/uploads/anutkin-extras/guides/begoniya/p04.jpg",
+        "https://annaflowerfarm.ru/wp-content/uploads/anutkin-extras/guides/begoniya/p05.jpg",
+        "https://annaflowerfarm.ru/wp-content/uploads/anutkin-extras/guides/begoniya/p06.jpg"
+      ],
+      "sourceUrl": "https://annaflowerfarm.ru/product/posobie-begoniya/"
+    },
+    {
+      "id": 2749,
+      "name": "Пособие «Калибрахоа»",
+      "category": "Пособия",
+      "categoryKey": "guides",
+      "price": 690,
+      "stock": 12,
+      "status": "ok",
+      "description": "Кашпо и грунт, полив, подкормки, прищипка и черенкование калибрахоа — всё, чтобы куст цвёл шаром до морозов.\nЭлектронная книга в PDF, 21 страниц, с фото растений нашего питомника. Читается с телефона, компьютера и планшета, можно распечатать.\nЧто внутри\n• Знакомство с культурой\n• Сорта из нашего питомника\n• Привезли домой: первые две недели\n• Посадка: кашпо и грунт\n• Уход летом: свет и полив\n• Подкормки\n• Прищипка и форма куста\n• С кем посадить калибрахоа в одно кашпо\n• Размножение черенками\n• Как сохранить любимый сорт до весны\n• Вредители\n• Болезни и частые ошибки\n• Если что-то пошло не так\n• Календарь ухода\n• Вопросы и ответы\nКак получить\nОформите заявку: мы пришлём реквизиты для оплаты. После оплаты PDF придёт на вашу почту.",
+      "care": {
+        "light": "и полив"
+      },
+      "image": "https://annaflowerfarm.ru/wp-content/uploads/anutkin-extras/guides/kalibrahoa/p01.jpg",
+      "images": [
+        "https://annaflowerfarm.ru/wp-content/uploads/anutkin-extras/guides/kalibrahoa/p01.jpg",
+        "https://annaflowerfarm.ru/wp-content/uploads/anutkin-extras/guides/kalibrahoa/p02.jpg",
+        "https://annaflowerfarm.ru/wp-content/uploads/anutkin-extras/guides/kalibrahoa/p03.jpg",
+        "https://annaflowerfarm.ru/wp-content/uploads/anutkin-extras/guides/kalibrahoa/p04.jpg",
+        "https://annaflowerfarm.ru/wp-content/uploads/anutkin-extras/guides/kalibrahoa/p05.jpg",
+        "https://annaflowerfarm.ru/wp-content/uploads/anutkin-extras/guides/kalibrahoa/p06.jpg"
+      ],
+      "sourceUrl": "https://annaflowerfarm.ru/product/posobie-kalibrahoa/"
+    },
+    {
+      "id": 2742,
+      "name": "Пособие «Метельчатая гортензия»",
+      "category": "Пособия",
+      "categoryKey": "guides",
+      "price": 690,
+      "stock": 12,
+      "status": "ok",
+      "description": "Как посадить, поливать, подкармливать, обрезать и сохранить гортензию зимой. С фото и характеристиками сортов из нашего питомника.\nЭлектронная книга в PDF, 25 страниц, с фото растений нашего питомника. Читается с телефона, компьютера и планшета, можно распечатать.\nЧто внутри\n• Знакомство с культурой\n• Сорта из нашего питомника\n• Саженец приехал: что делать до посадки\n• Посадка\n• Полив и мульча\n• Подкормки\n• Обрезка\n• Куст или штамб\n• Размножение\n• Зимовка\n• С чем посадить гортензию\n• Сухоцвет: метёлки на всю зиму\n• Вредители\n• Болезни\n• Если что-то не так\n• Календарь ухода\n• Вопросы и ответы\nКак получить\nОформите заявку: мы пришлём реквизиты для оплаты. После оплаты PDF придёт на вашу почту.",
+      "care": {},
+      "image": "https://annaflowerfarm.ru/wp-content/uploads/anutkin-extras/guides/gortenziya/p01.jpg",
+      "images": [
+        "https://annaflowerfarm.ru/wp-content/uploads/anutkin-extras/guides/gortenziya/p01.jpg",
+        "https://annaflowerfarm.ru/wp-content/uploads/anutkin-extras/guides/gortenziya/p02.jpg",
+        "https://annaflowerfarm.ru/wp-content/uploads/anutkin-extras/guides/gortenziya/p03.jpg",
+        "https://annaflowerfarm.ru/wp-content/uploads/anutkin-extras/guides/gortenziya/p04.jpg",
+        "https://annaflowerfarm.ru/wp-content/uploads/anutkin-extras/guides/gortenziya/p05.jpg",
+        "https://annaflowerfarm.ru/wp-content/uploads/anutkin-extras/guides/gortenziya/p06.jpg"
+      ],
+      "sourceUrl": "https://annaflowerfarm.ru/product/posobie-gortenziya/"
+    },
+    {
+      "id": 2763,
+      "name": "Пособие «Петуния»",
+      "category": "Пособия",
+      "categoryKey": "guides",
+      "price": 690,
+      "stock": 12,
+      "status": "ok",
+      "description": "От посева и рассады до пышного цветения в кашпо: прищипка, летняя стрижка, подкормки и защита от вредителей.\nЭлектронная книга в PDF, 20 страниц, с фото растений нашего питомника. Читается с телефона, компьютера и планшета, можно распечатать.\nЧто внутри\n• Знакомство с культурой\n• Какую петунию куда\n• Посев и рассада\n• Рассада по неделям\n• Если купили готовую рассаду\n• Посадка: кашпо и грунт\n• Как рассадить петунию по кашпо и ящикам\n• Уход летом\n• Подкормки\n• Прищипка и летняя стрижка\n• Размножение черенками\n• Вредители\n• Болезни и частые ошибки\n• Если что-то не так\n• Календарь ухода\n• Вопросы и ответы\nКак получить\nОформите заявку: мы пришлём реквизиты для оплаты. После оплаты PDF придёт на вашу почту.",
+      "care": {
+        "bloom": "в кашпо: прищипка, летняя стрижка, подкормки и защита от вре"
+      },
+      "image": "https://annaflowerfarm.ru/wp-content/uploads/anutkin-extras/guides/petuniya/p01.jpg",
+      "images": [
+        "https://annaflowerfarm.ru/wp-content/uploads/anutkin-extras/guides/petuniya/p01.jpg",
+        "https://annaflowerfarm.ru/wp-content/uploads/anutkin-extras/guides/petuniya/p02.jpg",
+        "https://annaflowerfarm.ru/wp-content/uploads/anutkin-extras/guides/petuniya/p03.jpg",
+        "https://annaflowerfarm.ru/wp-content/uploads/anutkin-extras/guides/petuniya/p04.jpg",
+        "https://annaflowerfarm.ru/wp-content/uploads/anutkin-extras/guides/petuniya/p05.jpg",
+        "https://annaflowerfarm.ru/wp-content/uploads/anutkin-extras/guides/petuniya/p06.jpg"
+      ],
+      "sourceUrl": "https://annaflowerfarm.ru/product/posobie-petuniya/"
     },
     {
       "id": 653,
@@ -1982,11 +2298,25 @@
       "url": "https://annaflowerfarm.ru/product-category/gortenzii/"
     },
     {
+      "id": 45,
+      "name": "Композиции",
+      "key": "compositions",
+      "count": 12,
+      "url": "https://annaflowerfarm.ru/product-category/kompozicii/"
+    },
+    {
       "id": 17,
       "name": "Кустарники",
       "key": "shrubs",
       "count": 17,
       "url": "https://annaflowerfarm.ru/product-category/kustarniki/"
+    },
+    {
+      "id": 44,
+      "name": "Пособия",
+      "key": "guides",
+      "count": 4,
+      "url": "https://annaflowerfarm.ru/product-category/posobiya/"
     },
     {
       "id": 21,
