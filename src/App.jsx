@@ -81,10 +81,35 @@ function useCatalog() {
     Promise.all([fetch(`${baseUrl}data/catalog.json`, { cache: "no-cache" }).then((response) => response.json()), extras]).then(
       ([catalog, more]) => {
         if (!more) return setData(catalog);
+        // Пособия и композиции — настоящие товары Woo: в catalog.json они уже есть (живые цена/остаток),
+        // из extras.json берём их оформление (листалка, слайды, состав) и накладываем по id.
+        const live = new Map(catalog.products.map((product) => [product.id, product]));
+        const extraIds = new Set();
+        const extraProducts = (more.products || []).map((extra) => {
+          extraIds.add(extra.id);
+          const woo = live.get(extra.id);
+          if (!woo) return extra;
+          return {
+            ...extra,
+            price: woo.price,
+            // старая цена из Woo; если сборщик её не дал, а цена не менялась — оставляем из extras
+            oldPrice: woo.oldPrice ?? (woo.price === extra.price ? extra.oldPrice : undefined),
+            stock: woo.stock,
+            status: woo.status,
+            sourceUrl: woo.sourceUrl,
+          };
+        });
+        const extraKeys = new Set((more.categories || []).map((category) => category.key));
         setData({
           ...catalog,
-          products: [...catalog.products, ...(more.products || [])],
-          categories: [...catalog.categories, ...(more.categories || [])],
+          products: [...catalog.products.filter((product) => !extraIds.has(product.id)), ...extraProducts],
+          categories: [
+            ...catalog.categories.filter((category) => !extraKeys.has(category.key)),
+            ...(more.categories || []).map((category) => ({
+              ...category,
+              count: extraProducts.filter((product) => product.categoryKey === category.key && product.stock > 0).length,
+            })),
+          ],
         });
       },
     );

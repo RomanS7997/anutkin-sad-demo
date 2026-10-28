@@ -18,6 +18,8 @@ const CAT_MAP = {
   "Овощная рассада": { prodKey: "vegetables", catKey: "vegetables" },
   "Цветы многолетние": { prodKey: "perennials", catKey: "perennials" },
   "Цветы однолетние": { prodKey: "annuals", catKey: "annuals" },
+  "Пособия": { prodKey: "guides", catKey: "guides" },
+  "Композиции": { prodKey: "compositions", catKey: "compositions" },
 };
 
 function decodeEntities(s) {

@@ -15,7 +15,7 @@
   ],
   "products": [
     {
-      "id": 900001,
+      "id": 2742,
       "name": "Пособие «Метельчатая гортензия»",
       "category": "Пособия",
       "categoryKey": "guides",
@@ -70,7 +70,7 @@
       }
     },
     {
-      "id": 900002,
+      "id": 2749,
       "name": "Пособие «Калибрахоа»",
       "category": "Пособия",
       "categoryKey": "guides",
@@ -123,7 +123,7 @@
       }
     },
     {
-      "id": 900003,
+      "id": 2756,
       "name": "Пособие «Бегония»",
       "category": "Пособия",
       "categoryKey": "guides",
@@ -176,7 +176,7 @@
       }
     },
     {
-      "id": 900004,
+      "id": 2763,
       "name": "Пособие «Петуния»",
       "category": "Пособия",
       "categoryKey": "guides",
@@ -230,7 +230,7 @@
       }
     },
     {
-      "id": 910001,
+      "id": 2768,
       "name": "Летний луг",
       "category": "Композиции",
       "categoryKey": "compositions",
@@ -330,7 +330,7 @@
       }
     },
     {
-      "id": 910002,
+      "id": 2773,
       "name": "Клумба с гортензиями",
       "category": "Композиции",
       "categoryKey": "compositions",
@@ -431,7 +431,7 @@
       }
     },
     {
-      "id": 910003,
+      "id": 2778,
       "name": "Бордюр вдоль забора",
       "category": "Композиции",
       "categoryKey": "compositions",
@@ -531,7 +531,7 @@
       }
     },
     {
-      "id": 910004,
+      "id": 2783,
       "name": "Клумба у крыльца",
       "category": "Композиции",
       "categoryKey": "compositions",
@@ -613,7 +613,7 @@
       }
     },
     {
-      "id": 910005,
+      "id": 2788,
       "name": "Кустарники без хлопот",
       "category": "Композиции",
       "categoryKey": "compositions",
@@ -722,7 +722,7 @@
       }
     },
     {
-      "id": 910006,
+      "id": 2793,
       "name": "Лунный сад",
       "category": "Композиции",
       "categoryKey": "compositions",
@@ -814,7 +814,7 @@
       }
     },
     {
-      "id": 910007,
+      "id": 2798,
       "name": "Зефир",
       "category": "Композиции",
       "categoryKey": "compositions",
@@ -915,7 +915,7 @@
       }
     },
     {
-      "id": 910008,
+      "id": 2803,
       "name": "Тёплые краски",
       "category": "Композиции",
       "categoryKey": "compositions",
@@ -1024,7 +1024,7 @@
       }
     },
     {
-      "id": 910009,
+      "id": 2808,
       "name": "Изгородь из туй",
       "category": "Композиции",
       "categoryKey": "compositions",
@@ -1107,7 +1107,7 @@
       }
     },
     {
-      "id": 910010,
+      "id": 2813,
       "name": "Тенистый уголок",
       "category": "Композиции",
       "categoryKey": "compositions",
@@ -1207,7 +1207,7 @@
       }
     },
     {
-      "id": 910011,
+      "id": 2818,
       "name": "Сухая клумба у дорожки",
       "category": "Композиции",
       "categoryKey": "compositions",
@@ -1298,7 +1298,7 @@
       }
     },
     {
-      "id": 910012,
+      "id": 2823,
       "name": "Изгородь из гортензий",
       "category": "Композиции",
       "categoryKey": "compositions",
